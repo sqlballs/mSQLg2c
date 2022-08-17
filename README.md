@@ -132,19 +132,19 @@ This is a modular workshop, and in each section, you'll learn concepts, technolo
   
   <tr><td style="vertical-align: top;background-color: AliceBlue; color: black;"><a href="#" target="_blank">02 - Auditing your Data Estate Architecture</a> <td style="vertical-align: top;background-color: AliceBlue; color: black;"> This module covers the processes and tools you can use to audit your current data estate and how to identify gaps for leveraging data to make intelligent decisions </td></tr>
 
-  <tr><td style="vertical-align: top;"><a href="#" target="_blank"> 03 - SQL Server Improvements </a></td><td>11:30AM-12:30PM</td><td style="vertical-align: top;"> Improvements in manageability, availability, performance, security and more, including:
+  <tr><td style="vertical-align: top;"><a href="#" target="_blank"> 03 - SQL Server Improvements </a></td><td>Improvements in SQL Server's manageability, availability, performance, security and more, including:
         <ul style="list-style-type:disc;">
         <li>Tools such as SQL Server Management Studio, Azure Data Studio, and more</li>
     </ul>
   </td></tr>
 
-  <tr><td style="vertical-align: top;background-color: AliceBlue; color: black;"><a href="https://github.com/microsoft/sqlworkshops-sqlg2c/blob/master/sqlgroundtocloud/04-SQLServerOnTheMicrosoftAzurePlatform.md" target="_blank">04 - Improvements in SQL on the Microsoft Azure Platform </a> </td><td style="background-color: AliceBlue; color: black;"> Covers the improvements in SQL Server technologies on the Microsoft Azure Platform, along with the fundamentals of SQL in Azure with additional deeper resources provided. Topics covered include:
+  <tr><td style="vertical-align: top;background-color: AliceBlue; color: black;"><a href="#" target="_blank">04 - Improvements in SQL on the Microsoft Azure Platform </a> </td><td style="background-color: AliceBlue; color: black;"> Covers the improvements in SQL Server technologies on the Microsoft Azure Platform, along with the fundamentals of SQL in Azure with additional deeper resources provided. Topics covered include:
       <ul style="list-style-type:disc;">
         <li>Azure SQL: SQL VMs, Single instance, Single database, Elastic pools</li>
     </ul>
   </td></tr>  
 
-  <tr><td style="vertical-align: top;"><a href="#" target="_blank"> 05 - Extending SQL Server to Azure </a></td><td>2:45PM-3:45PM</td><td style="vertical-align: top;"> Covers the methods of connecting your on-premises data systems to cloud platforms such as Microsoft Azure and Amazon's AWS, migration workflows and tools for assessing, planning, and connecting and/or migrating SQL workloads to Azure that meets the business requirements. </td></tr>
+  <tr><td style="vertical-align: top;"><a href="#" target="_blank"> 05 - Extending SQL Server to Azure </a></td><td>Covers the methods of connecting your on-premises data systems to cloud platforms such as Microsoft Azure and Amazon's AWS, migration workflows and tools for assessing, planning, and connecting and/or migrating SQL workloads to Azure that meets the business requirements.</td></tr>
 
   <tr><td style="vertical-align: top;background-color: AliceBlue; color: black;"><a href="#" target="_blank"> 06 - What to use When </a></td><td style="background-color: AliceBlue; color: black;"> Covers the decision process and provides tools for deciding on the proper technologies on-premises and in-cloud for an architecture based on requirements and constraints.</td></tr>
 
