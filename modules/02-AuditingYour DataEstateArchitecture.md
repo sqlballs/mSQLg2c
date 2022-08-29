@@ -5,9 +5,9 @@
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
-<img style="float: left; margin: 0px 15px 15px 0px;" src="./graphics/textbubble.png"> <h2>Name of Module</h2>
+<img style="float: left; margin: 0px 15px 15px 0px;" src="./graphics/textbubble.png"> <h2>02 - Auditing Your Data Estate Architecture</h2>
 
-In this workshop you'll cover using <TODO: Enter a brief description of the workshop>. 
+In this workshop you'll cover how to systematically create a modern data estate using SQL Server in on-premises, in-cloud and hybrid solutions.. 
 
 In each module you'll get more references, which you should follow up on to learn more. Also watch for links within the text - click on each one to explore that topic.
 
@@ -16,7 +16,7 @@ In each module you'll get more references, which you should follow up on to lear
 You'll cover these topics in the workshop:
 <dl>
 
-  <dt><a href="url" target="_blank">2.1 - Determine Business Uses</dt>
+  <dt><a href="url" target="_blank">2.1 - Business Process Analysis</dt>
   <dt><a href="url" target="_blank">2.2 - Identify Data Sources and Sinks</dt>
   <dt><a href="url" target="_blank">2.3 - Map Data Paths</dt>
   <dt><a href="url" target="_blank">2.4 - Gap Analysis</dt>
@@ -25,13 +25,9 @@ You'll cover these topics in the workshop:
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
-<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="./graphics/pencil2.png">1.1 TODO: Topic Name</h2>
+<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="./graphics/pencil2.png">2.1 Business Process Analysis</h2>
 
 TODO: Topic Description
-
-<br>
-
-<img style="height: 400; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" src="https://docs.microsoft.com/en-us/sql/big-data-cluster/media/concept-security/cluster_endpoints.png">
 
 <br>
 
@@ -49,7 +45,7 @@ TODO: Enter activity steps description with checkbox
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
-<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="./graphics/pencil2.png">1.2 TODO: Topic Name</h2>
+<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="./graphics/pencil2.png">2.2 Identify Data Sources and Sinks</h2>
 
 TODO: Topic Description
 
@@ -57,7 +53,7 @@ TODO: Topic Description
 
 TODO: Activity Description and tasks
 
-<p><img style="margin: 0px 15px 15px 0px;" src="./graphics/checkmark.png"><b>Description</b></p>
+<p><b>Description</b></p>
 
 TODO: Enter activity description with checkbox
 
@@ -67,6 +63,42 @@ TODO: Enter activity steps description with checkbox
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
+<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="./graphics/pencil2.png">2.3 Map Data Paths</h2>
+
+TODO: Topic Description
+
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="./graphics/point1.png"><b>Activity: TODO: Activity Name</b></p>
+
+TODO: Activity Description and tasks
+
+<p><b>Description</b></p>
+
+TODO: Enter activity description with checkbox
+
+<p><img style="margin: 0px 15px 15px 0px;" src="./graphics/checkmark.png"><b>Steps</b></p>
+
+TODO: Enter activity steps description with checkbox
+
+<p style="border-bottom: 1px solid lightgrey;"></p>
+  
+<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="./graphics/pencil2.png">2.4 Gap Analysis</h2>
+
+TODO: Topic Description
+
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="./graphics/point1.png"><b>Activity: TODO: Activity Name</b></p>
+
+TODO: Activity Description and tasks
+
+<p><b>Description</b></p>
+
+TODO: Enter activity description with checkbox
+
+<p><img style="margin: 0px 15px 15px 0px;" src="./graphics/checkmark.png"><b>Steps</b></p>
+
+TODO: Enter activity steps description with checkbox
+
+<p style="border-bottom: 1px solid lightgrey;"></p>
+  
 <p><img style="margin: 0px 15px 15px 0px;" src="./graphics/owl.png"><b>For Further Study</b></p>
 <ul>
     <li><a href="https://docs.microsoft.com/en-us/azure/architecture/framework/" target="_blank">The Microsoft Well-Architected Framework</a></li>
