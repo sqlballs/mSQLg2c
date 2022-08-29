@@ -77,7 +77,6 @@ The information covered in this workshop includes the following technologies and
   <tr><td style="vertical-align: top">SQL Server Virtual Machines in Microsoft Azure </i></td><td style="vertical-align: top">Covers the tools, processes and procedures for SQL Server Virtual Machines on the Microsoft Azure platform </td></tr>
   <tr><td style="vertical-align: top">Azure SQL </i></td><td style="vertical-align: top">Covers the tools, processes and procedures for Azure SQL (Managed Instance, Single Database, and Elastic Pool)</td></tr>
   <tr><td style="vertical-align: top">Migrating SQL Server installations to Microsoft Azure </i></td><td style="vertical-align: top">Explains the tools and processes to extend on-premises SQL Server installations to the Microsoft Azure platform </td></tr>
-  <tr><td style="vertical-align: top">"What to Use When" </i></td><td style="vertical-align: top">Teaches a complete set of tools and processes used to determine the best architecture for a given customer scenario on the Microsoft Azure platform </td></tr>
 
 </table>
 
@@ -145,8 +144,6 @@ This is a modular workshop, and in each section, you'll learn concepts, technolo
   </td></tr>  
 
   <tr><td style="vertical-align: top;"><a href="#" target="_blank"> 05 - Extending SQL Server to Azure </a></td><td>Covers the methods of connecting your on-premises data systems to cloud platforms such as Microsoft Azure and Amazon's AWS, migration workflows and tools for assessing, planning, and connecting and/or migrating SQL workloads to Azure that meets the business requirements.</td></tr>
-
-  <tr><td style="vertical-align: top;background-color: AliceBlue; color: black;"><a href="#" target="_blank"> 06 - What to use When </a></td><td style="background-color: AliceBlue; color: black;"> Covers the decision process and provides tools for deciding on the proper technologies on-premises and in-cloud for an architecture based on requirements and constraints.</td></tr>
 
 </table>
 
