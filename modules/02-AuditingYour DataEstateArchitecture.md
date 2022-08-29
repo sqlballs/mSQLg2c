@@ -1,7 +1,6 @@
 ![](../graphics/microsoftlogo.png)
 
-# Workshop: <TODO: Enter workshop name>
-
+# Workshop: Modernizing Your Data Estate With SQL Ground-to-Cloud
 #### <i>A Microsoft workshop from the SQL Server team</i>
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
