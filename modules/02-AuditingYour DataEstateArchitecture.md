@@ -16,10 +16,11 @@ In each module you'll get more references, which you should follow up on to lear
 You'll cover these topics in the workshop:
 <dl>
 
-  <dt><a href="url" target="_blank">01 - <TODO: Enter Module Name<dt>
-  <dt><a href="url" target="_blank">01 - <TODO: Enter Module Name<dt>
-  <dt><a href="url" target="_blank">01 - <TODO: Enter Module Name<dt>
-
+  <dt><a href="url" target="_blank">2.1 - Determine Business Uses</dt>
+  <dt><a href="url" target="_blank">2.2 - Identify Data Sources and Sinks</dt>
+  <dt><a href="url" target="_blank">2.3 - Map Data Paths</dt>
+  <dt><a href="url" target="_blank">2.4 - Gap Analysis</dt>
+    
 </dl>
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
@@ -68,7 +69,10 @@ TODO: Enter activity steps description with checkbox
 
 <p><img style="margin: 0px 15px 15px 0px;" src="./graphics/owl.png"><b>For Further Study</b></p>
 <ul>
-    <li><a href="url" target="_blank">TODO: Enter courses, books, posts, whatever the student needs to extend their study</a></li>
-</ul>
+    <li><a href="https://docs.microsoft.com/en-us/azure/architecture/framework/" target="_blank">The Microsoft Well-Architected Framework</a></li>
+    <li><a href="https://docs.microsoft.com/en-us/azure/architecture/data-guide/" target="_blank">Azure Data Architecture Guide</a></li>
+    <li><a href="https://docs.microsoft.com/en-us/azure/architecture/data-guide/relational-data/online-transaction-processing" target="_blank">Online transaction processing (OLTP)</a></li>
+    <li><a href="https://docs.microsoft.com/en-us/azure/architecture/data-guide/big-data/non-relational-data" target="_blank">Non-relational data and NoSQL</a></li>
+    </ul>
 
 Congratulations! You have completed this workshop on <TODO: Enter workshop name>. You now have the tools, assets, and processes you need to extrapolate this information into other applications.
