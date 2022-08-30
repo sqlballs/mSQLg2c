@@ -98,7 +98,7 @@ If you are new to these, here are a few references you can complete prior to cla
 
 <h3><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/bulletlist.png?raw=true"> Setup</h3>
 
-<a href="https://github.com/microsoft/sqlworkshops-sqlg2c/blob/master/sqlgroundtocloud/00-prerequisites.md" target="_blank">A full prerequisites document is located here</a>. These instructions should be completed before the workshop starts, since you will not have time to cover these in class. <i>Remember to "Stop" any Virtual Machines from the Azure Portal when not taking the class so that you do incur charges (shutting down the machine in the VM itself is not sufficient)</i>.
+<a href="https://github.com/sqlballs/mSQLg2c/blob/Buck/modules/01-SetupandWorkshopMethodology.md" target="_blank">A full prerequisites document is located here</a>. These instructions should be completed before the workshop starts, since you will not have time to cover these in class. <i>Remember to "Stop" any Virtual Machines from the Azure Portal when not taking the class so that you do incur charges (shutting down the machine in the VM itself is not sufficient)</i>.
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
@@ -127,23 +127,21 @@ This is a modular workshop, and in each section, you'll learn concepts, technolo
   <tr><td style="background-color: AliceBlue; color: black;"><b>Module</b></td>
   <td style="background-color: AliceBlue; color: black;"><b>Topics</b></td></tr>
 
-  <tr><td style="vertical-align: top;"><a href="#" target="_blank">01 - Setup and Workshop Methodology </a></td><td> Workshop introduction, logistics, setup checks</td></tr>
+  <tr><td style="vertical-align: top;"><a href="https://github.com/sqlballs/mSQLg2c/blob/Buck/modules/01-SetupandWorkshopMethodology.md" target="_blank">01 - Setup and Workshop Methodology </a></td><td> Workshop introduction, logistics, setup checks</td></tr>
   
-  <tr><td style="vertical-align: top;background-color: AliceBlue; color: black;"><a href="#" target="_blank">02 - Auditing your Data Estate Architecture</a> <td style="vertical-align: top;background-color: AliceBlue; color: black;"> This module covers the processes and tools you can use to audit your current data estate and how to identify gaps for leveraging data to make intelligent decisions </td></tr>
-
-  <tr><td style="vertical-align: top;"><a href="#" target="_blank"> 03 - SQL Server Improvements </a></td><td>Improvements in SQL Server's manageability, availability, performance, security and more, including:
+  <tr><td style="vertical-align: top;background-color: AliceBlue; color: black;"><a href="https://github.com/sqlballs/mSQLg2c/blob/Buck/modules/02-AuditingYour%20DataEstateArchitecture.md" target="_blank">02 - Auditing your Data Estate Architecture</a> <td style="vertical-align: top;background-color: AliceBlue; color: black;"> This module covers the processes and tools you can use to audit your current data estate and how to identify gaps for leveraging data to make intelligent decisions </td></tr>
+  <tr><td style="vertical-align: top;"><a href="https://github.com/sqlballs/mSQLg2c/blob/Buck/modules/03-SQLServerImprovements.md" target="_blank"> 03 - SQL Server Improvements </a></td><td>Improvements in SQL Server's manageability, availability, performance, security and more, including:
         <ul style="list-style-type:disc;">
         <li>Tools such as SQL Server Management Studio, Azure Data Studio, and more</li>
     </ul>
   </td></tr>
-
-  <tr><td style="vertical-align: top;background-color: AliceBlue; color: black;"><a href="#" target="_blank">04 - Improvements in SQL on the Microsoft Azure Platform </a> </td><td style="background-color: AliceBlue; color: black;"> Covers the improvements in SQL Server technologies on the Microsoft Azure Platform, along with the fundamentals of SQL in Azure with additional deeper resources provided. Topics covered include:
+  <tr><td style="vertical-align: top;background-color: AliceBlue; color: black;"><a href="https://github.com/sqlballs/mSQLg2c/blob/Buck/modules/04-ImprovementsInSQLOnTheMicrosoftAzurePlatform.md" target="_blank">04 - Improvements in SQL on the Microsoft Azure Platform </a> </td><td style="background-color: AliceBlue; color: black;"> Covers the improvements in SQL Server technologies on the Microsoft Azure Platform, along with the fundamentals of SQL in Azure with additional deeper resources provided. Topics covered include:
       <ul style="list-style-type:disc;">
         <li>Azure SQL: SQL VMs, Single instance, Single database, Elastic pools</li>
     </ul>
   </td></tr>  
 
-  <tr><td style="vertical-align: top;"><a href="#" target="_blank"> 05 - Extending SQL Server to Azure </a></td><td>Covers the methods of connecting your on-premises data systems to cloud platforms such as Microsoft Azure and Amazon's AWS, migration workflows and tools for assessing, planning, and connecting and/or migrating SQL workloads to Azure that meets the business requirements.</td></tr>
+  <tr><td style="vertical-align: top;"><a href="https://github.com/sqlballs/mSQLg2c/blob/Buck/modules/05-ExtendingSQLServerToAzure.md" target="_blank"> 05 - Extending SQL Server to Azure </a></td><td>Covers the methods of connecting your on-premises data systems to cloud platforms such as Microsoft Azure and Amazon's AWS, migration workflows and tools for assessing, planning, and connecting and/or migrating SQL workloads to Azure that meets the business requirements.</td></tr>
 
 </table>
 
@@ -157,5 +155,5 @@ This is a modular workshop, and in each section, you'll learn concepts, technolo
 
 <h2><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/geopin.png?raw=true">Next Steps</h2>
 
-Next, Continue to <a href="https://github.com/microsoft/sqlworkshops-sqlg2c/blob/master/sqlgroundtocloud/00-prerequisites.md" target="_blank"><i> Prerequisites</i></a>
+Next, Continue to <a href="https://github.com/sqlballs/mSQLg2c/blob/Buck/modules/01-SetupandWorkshopMethodology.md" target="_blank"><i> Prerequisites</i></a>
 
