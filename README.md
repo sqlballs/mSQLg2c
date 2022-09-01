@@ -20,10 +20,7 @@ This Workshop contains lecture and hands on lab work, and is particularly useful
 
 This README.MD file explains how the workshop is laid out, what you will learn, and the technologies you will use in this solution.
 
-(You can view all of the [source files for this workshop on this GitHub site, along with other workshops as well. Open this link in a new tab to find out more.](https://github.com/microsoft/sqlworkshops-sqlg2c))
-
 <p style="border-bottom: 1px solid lightgrey;"></p>
-
 
 <h3><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"> Learning Objectives</h3>
 
