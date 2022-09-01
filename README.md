@@ -16,6 +16,8 @@ You'll start by learning about auditing your current data estate and how to eval
 
 This Workshop contains lecture and hands on lab work, and is particularly useful for Solution Architects, Data Architects, Application Architects, Technical Sellers, and Application Developers. A laptop, Microsoft Azure account, and experience with SQL is considered a prerequisite.
 
+> It's best to right-click any links you see and select "Open in new Tab" for easier navigation.
+
 This README.MD file explains how the workshop is laid out, what you will learn, and the technologies you will use in this solution.
 
 (You can view all of the [source files for this workshop on this GitHub site, along with other workshops as well. Open this link in a new tab to find out more.](https://github.com/microsoft/sqlworkshops-sqlg2c))
