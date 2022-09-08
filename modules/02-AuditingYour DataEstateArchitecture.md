@@ -69,10 +69,56 @@ TODO: Enter activity steps description with checkbox
 
 <h2 id="2.2"><img style="float: left; margin: 0px 15px 15px 0px;" src="./graphics/pencil2.png">2.2 Identify Data Sources and Sinks</h2>
 
-  Data Storage versus Data Processing
+Data Storage versus Data Processing
   
-  Data Architecture Options 
+Data Architecture Options 
   
+<h3>Tools</h3>
+
+<img width="1176" alt="image" src="https://user-images.githubusercontent.com/517325/189189782-892a92dd-c54d-4f32-adac-ee3463e171ac.png">
+
+
+<h4>MAP</h4>
+Map Toolkit - https://docs.microsoft.com/en-us/previous-versions/bb977556(v=technet.10) 
+
+![image](https://user-images.githubusercontent.com/517325/189189344-e3e95758-91ca-4e41-8597-fdf35e50d2c7.png)
+
+<h4>SQL ServerMigration Assistant</h4>
+https://docs.microsoft.com/en-us/sql/ssma/sql-server-migration-assistant?view=sql-server-ver15
+
+![image](https://user-images.githubusercontent.com/517325/189189438-f0679b21-3723-498d-8be3-97b6a689bab2.png)
+
+<h4>Database Experimentation Assistant</h4>
+https://www.microsoft.com/en-us/download/details.aspx?id=54090 
+
+![image](https://user-images.githubusercontent.com/517325/189189486-1a13ed80-17c4-4f31-8607-7c15c5642315.png)
+
+<h4>Azure Database Migration Service</h4>
+https://docs.microsoft.com/en-us/azure/dms/
+
+![image](https://user-images.githubusercontent.com/517325/189189527-3554ff5b-0f0c-4ef1-8164-51bf74f2af2a.png)
+
+<h4>Data Migration Assistant</h4>
+https://docs.microsoft.com/en-us/sql/dma/dma-overview?view=sql-server-ver15#see-also
+
+![image](https://user-images.githubusercontent.com/517325/189189603-599d1fc8-5297-453d-a83d-5a9bc6c6d2c6.png)
+
+<h4>Azure Data Studio Migration Extension</h4>
+https://docs.microsoft.com/en-us/sql/azure-data-studio/extensions/azure-sql-migration-extension?view=sql-server-ver15 
+
+![image](https://user-images.githubusercontent.com/517325/189189647-bb1e5857-3ba4-416f-987e-c68812587d47.png)
+
+<h4>Azure Synapse Pathway</h4>
+https://docs.microsoft.com/en-us/sql/tools/synapse-pathway/azure-synapse-pathway-overview?view=azure-sqldw-latest
+
+![image](https://user-images.githubusercontent.com/517325/189189253-ae26dfec-3484-4fd1-8373-79ef9e0f3b1b.png)
+
+<h4>Azure Migrate</h4>
+https://docs.microsoft.com/en-us/azure/migrate/
+
+![image](https://user-images.githubusercontent.com/517325/189189693-c88cf4c0-90f4-45b0-91bb-8993796593ee.png)
+
+
 TODO: Topic Description
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="./graphics/point1.png"><b>Activity: TODO: Activity Name</b></p>
