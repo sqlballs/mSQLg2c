@@ -136,18 +136,31 @@ TODO: Enter activity steps description with checkbox
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
 <h2 id="2.3"><img style="float: left; margin: 0px 15px 15px 0px;" src="./graphics/pencil2.png">2.3 Map Data Paths</h2>
+Earlier in the process you identified the sources and sinks for your data based on the applications that use them. Now you'll want to trace the path the data takes from creation to consumption. In some cases this inolves mapping the network path of the creation of the data asset from the application directly to the sink, and in other cases you will need to trace the paths the data takes during backup operations, Extract, Transform and Load operations (ETL), and any cross-system queries that occur. This is one the most involved parts of the auditing process. 
 
-  Data Movement options
-    Indepenedent data movement systems
-    Pipelines
+You can start with the application paths, documenting the connections that are made from the application to the data source. In some cases this will be a direct connection, and in others there are layers of systems that take data requests, process them, and return the result to the application. 
+
+For the systems that move data from one sink to another, there are more options for that process. 
+
+<h3>Data Movement options</h3>
+There are multiple options your organization likely has to move data from one location to another. They are grouped into two general toolsets: a manual, scripted, or platform-specific tool (such as PowerShell or SQL Server Integration Services) and a system specifically designed to move data, called a Pipeline.
+
+<h4>Independent data movement systems</h4>
+Processes, Scripts, and Platform-Specific tools move data from a sink to another sink either on a schedule, manually, or through some data trigger. They can push the data from one system to another, or pull the data from one system into another. 
+
+The process to locate these processes and tools are to engage with the team that is repsonsible for creating and running them. You can often find those systems when you look at your Reporting and Business Intelligence outputs. 
+
+<h4>Pipelines</h4>
   
-  Security
+<h3>Security</h3>
   
-  Performance
+<h3>Performance</h3>
   
-  Cost
-  
-TODO: Topic Description
+<h3>Cost</h3>
+
+<h3>Tools</h3>
+
+<h4>Microsoft Purview</h4>
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="./graphics/point1.png"><b>Activity: TODO: Activity Name</b></p>
 
