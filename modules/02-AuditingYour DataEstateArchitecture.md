@@ -43,13 +43,22 @@ Whichever framework your organization uses - even if there is no defined framewo
   
 <h2 id="2.1"><img style="float: left; margin: 0px 15px 15px 0px;" src="./graphics/pencil2.png">2.1 Business Process Analysis</h2>
 
-TODO: Topic Description
+Business Process Analysis (BPA) evaluates an organization's actions to achieve a goal. You can use this discipline to discover the sequences the organization's members (employees) are using to get things done. While BPA is most often used to improve the efficiency of a business or organization, you can leverage the results of BPA to find data <i>Sources</i> (where data originates) and <i>Sinks</i> (the destination(s) the data moves to next) in your data estate.
 
-BA
+You can <a href="https://www.frevvo.com/blog/business-process-analysis/">learn more about Business Process Analysis and find a simple checklist to start this process at this reference</a>. 
 
-BPMN
+<h3>Working with a Business Analyst</h3>
+In many cases your organization will already have a BPA completed. If your organization has a Business Analyst role, you should contact that team to start your data investigation. Data discovery and movement is at the core of this discipline. You can <a href="https://www.indeed.com/hire/job-description/business-analyst">read more about the Business Analyst role here</a>. 
 
-Data Mapping from BPMN
+<h3>Mapping Business Processes to data with Business Process Model and Notation</h3>
+You may not have a Business Analyst (BA)at your organization or have had a BPA completed. In this case, you can start with the main applications you are aware of in your organization and create a data map from there. If you do have a BA in your organization, they will often document processes using a specific tool.
+
+Other professionals in your organization may not be as familiar with database and other technologies, and will normally describe these systems in terms if what actions they take, rather than in the systems they use. To bridge the gap between business processes and communicate effectively with your BA's, you can use <i>Business Process Model and Notation</i> (BPMN). BPMN uses a series of "swimlanes" or rectangles that capture a particular process, person, or group, and the actions they take represented by icons. When the process, person or group completes part of their process, another icon is added. If one swimlane passes off the results of an action to another process, person, or group, another rectangle is documented and arrows show the direction of flow. 
+
+![image](https://user-images.githubusercontent.com/517325/191271646-1d4d8d1d-7cdf-40fd-a785-10459a5a710f.png)
+
+
+You can <a href="https://en.wikipedia.org/wiki/Business_Process_Model_and_Notation">read more about Business Process Model and Notation here<a>.
   
 <br>
 
