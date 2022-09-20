@@ -7,11 +7,9 @@
 
 <img style="float: left; margin: 0px 15px 15px 0px;" src="./graphics/textbubble.png"> <h2>04 - SQL Server on the Microsoft Azure Platform</h2>
 
-In this workshop you'll cover using <TODO: Enter a brief description of the workshop>. 
+In the previous modules, you learned about how to <a href="https://github.com/sqlballs/mSQLg2c/blob/Josh/modules/02-AuditingYourDataEstateArchitecture.md" target="_blank"> <b>audit your data estate</b></a>, and the most recent <a href="https://github.com/sqlballs/mSQLg2c/blob/Josh/modules/03-SQLServerImprovements.md" target="_blank"><b>SQL Server improvements</a>.</b> In this module, you will learn about the different options available for running SQL Server in Azure and all the considerations that are involved with running an architecture in the cloud, like Manageability, Availability, Performance, Security, and Deployment. 
 
-In each module you'll get more references, which you should follow up on to learn more. Also watch for links within the text - click on each one to explore that topic.
-
-(<a href="file:///url" target="_blank">Make sure you check out the <b>Pre-Requisites</b> page before you start</a>. You'll need all of the items loaded there before you can proceed with the workshop.)
+(As a reminder, make sure you check out the <a href="https://github.com/sqlballs/mSQLg2c/blob/Josh/modules/01-SetupandWorkshopMethodology.md" target="_blank"><b>Pre-Requisites</b></a> page before you start. You'll need all of the items loaded there before you can proceed with the workshop.)
 
 You'll cover these topics in the workshop:
 <dl>
