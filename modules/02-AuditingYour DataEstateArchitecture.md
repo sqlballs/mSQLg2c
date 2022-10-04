@@ -55,10 +55,7 @@ You may not have a Business Analyst (BA)at your organization or have had a BPA c
 
 Other professionals in your organization may not be as familiar with database and other technologies, and will normally describe these systems in terms if what actions they take, rather than in the systems they use. To bridge the gap between business processes and communicate effectively with your BA's, you can use <i>Business Process Model and Notation</i> (BPMN). BPMN uses a series of "swimlanes" or rectangles that capture a particular process, person, or group, and the actions they take represented by icons. When the process, person or group completes part of their process, another icon is added. If one swimlane passes off the results of an action to another process, person, or group, another rectangle is documented and arrows show the direction of flow. 
 
-<img src="[img_girl.jpg](https://user-images.githubusercontent.com/517325/191271646-1d4d8d1d-7cdf-40fd-a785-10459a5a710f.png)" alt="BA" width="200">
-
-![image](https://user-images.githubusercontent.com/517325/191271646-1d4d8d1d-7cdf-40fd-a785-10459a5a710f.png)
-
+<img src="https://user-images.githubusercontent.com/517325/191271646-1d4d8d1d-7cdf-40fd-a785-10459a5a710f.png" alt="BA" width="600">
 
 You can <a href="https://en.wikipedia.org/wiki/Business_Process_Model_and_Notation">read more about Business Process Model and Notation here<a>.
   
@@ -85,51 +82,29 @@ Data Storage versus Data Processing
 Data Architecture Options 
   
 <h3>Tools</h3>
-
-<img width="1176" alt="image" src="https://user-images.githubusercontent.com/517325/189189782-892a92dd-c54d-4f32-adac-ee3463e171ac.png">
-
+<TODO:> Description
+  
+<img src="https://user-images.githubusercontent.com/517325/189189782-892a92dd-c54d-4f32-adac-ee3463e171ac.png" alt="Graphic" width="600">
 
 <h4>MAP</h4>
 Map Toolkit - https://docs.microsoft.com/en-us/previous-versions/bb977556(v=technet.10) 
 
-![image](https://user-images.githubusercontent.com/517325/189189344-e3e95758-91ca-4e41-8597-fdf35e50d2c7.png)
+<img src="https://user-images.githubusercontent.com/517325/189189344-e3e95758-91ca-4e41-8597-fdf35e50d2c7.png" alt="Graphic" width="600">
 
-<h4>SQL ServerMigration Assistant</h4>
+<h4>SQL Server Migration Assistant</h4>
 https://docs.microsoft.com/en-us/sql/ssma/sql-server-migration-assistant?view=sql-server-ver15
 
-![image](https://user-images.githubusercontent.com/517325/189189438-f0679b21-3723-498d-8be3-97b6a689bab2.png)
+<img src="https://user-images.githubusercontent.com/517325/189189438-f0679b21-3723-498d-8be3-97b6a689bab2.png" alt="Graphic" width="600">
+  
+<h4>Microsoft Purview Data Map</h4>
 
-<h4>Database Experimentation Assistant</h4>
-https://www.microsoft.com/en-us/download/details.aspx?id=54090 
+https://learn.microsoft.com/en-us/purview/purview
 
-![image](https://user-images.githubusercontent.com/517325/189189486-1a13ed80-17c4-4f31-8607-7c15c5642315.png)
+https://learn.microsoft.com/en-us/azure/purview/microsoft-purview-connector-overview
 
-<h4>Azure Database Migration Service</h4>
-https://docs.microsoft.com/en-us/azure/dms/
+<img src="https://learn.microsoft.com/en-us/azure/purview/media/overview/high-level-overview-large.png#lightbox" alt="Graphic" width="600">
 
-![image](https://user-images.githubusercontent.com/517325/189189527-3554ff5b-0f0c-4ef1-8164-51bf74f2af2a.png)
-
-<h4>Data Migration Assistant</h4>
-https://docs.microsoft.com/en-us/sql/dma/dma-overview?view=sql-server-ver15#see-also
-
-![image](https://user-images.githubusercontent.com/517325/189189603-599d1fc8-5297-453d-a83d-5a9bc6c6d2c6.png)
-
-<h4>Azure Data Studio Migration Extension</h4>
-https://docs.microsoft.com/en-us/sql/azure-data-studio/extensions/azure-sql-migration-extension?view=sql-server-ver15 
-
-![image](https://user-images.githubusercontent.com/517325/189189647-bb1e5857-3ba4-416f-987e-c68812587d47.png)
-
-<h4>Azure Synapse Pathway</h4>
-https://docs.microsoft.com/en-us/sql/tools/synapse-pathway/azure-synapse-pathway-overview?view=azure-sqldw-latest
-
-![image](https://user-images.githubusercontent.com/517325/189189253-ae26dfec-3484-4fd1-8373-79ef9e0f3b1b.png)
-
-<h4>Azure Migrate</h4>
-https://docs.microsoft.com/en-us/azure/migrate/
-
-![image](https://user-images.githubusercontent.com/517325/189189693-c88cf4c0-90f4-45b0-91bb-8993796593ee.png)
-
-
+  
 TODO: Topic Description
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="./graphics/point1.png"><b>Activity: TODO: Activity Name</b></p>
