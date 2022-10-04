@@ -43,13 +43,21 @@ Whichever framework your organization uses - even if there is no defined framewo
   
 <h2 id="2.1"><img style="float: left; margin: 0px 15px 15px 0px;" src="./graphics/pencil2.png">2.1 Business Process Analysis</h2>
 
-TODO: Topic Description
+Business Process Analysis (BPA) evaluates an organization's actions to achieve a goal. You can use this discipline to discover the sequences the organization's members (employees) are using to get things done. While BPA is most often used to improve the efficiency of a business or organization, you can leverage the results of BPA to find data <i>Sources</i> (where data originates) and <i>Sinks</i> (the destination(s) the data moves to next) in your data estate.
 
-BA
+You can <a href="https://www.frevvo.com/blog/business-process-analysis/">learn more about Business Process Analysis and find a simple checklist to start this process at this reference</a>. 
 
-BPMN
+<h3>Working with a Business Analyst</h3>
+In many cases your organization will already have a BPA completed. If your organization has a Business Analyst role, you should contact that team to start your data investigation. Data discovery and movement is at the core of this discipline. You can <a href="https://www.indeed.com/hire/job-description/business-analyst">read more about the Business Analyst role here</a>. 
 
-Data Mapping from BPMN
+<h3>Mapping Business Processes to data with Business Process Model and Notation</h3>
+You may not have a Business Analyst (BA)at your organization or have had a BPA completed. In this case, you can start with the main applications you are aware of in your organization and create a data map from there. If you do have a BA in your organization, they will often document processes using a specific tool.
+
+Other professionals in your organization may not be as familiar with database and other technologies, and will normally describe these systems in terms if what actions they take, rather than in the systems they use. To bridge the gap between business processes and communicate effectively with your BA's, you can use <i>Business Process Model and Notation</i> (BPMN). BPMN uses a series of "swimlanes" or rectangles that capture a particular process, person, or group, and the actions they take represented by icons. When the process, person or group completes part of their process, another icon is added. If one swimlane passes off the results of an action to another process, person, or group, another rectangle is documented and arrows show the direction of flow. 
+
+<img src="https://user-images.githubusercontent.com/517325/191271646-1d4d8d1d-7cdf-40fd-a785-10459a5a710f.png" alt="BA" width="600">
+
+You can <a href="https://en.wikipedia.org/wiki/Business_Process_Model_and_Notation">read more about Business Process Model and Notation here<a>.
   
 <br>
 
@@ -74,51 +82,29 @@ Data Storage versus Data Processing
 Data Architecture Options 
   
 <h3>Tools</h3>
-
-<img width="1176" alt="image" src="https://user-images.githubusercontent.com/517325/189189782-892a92dd-c54d-4f32-adac-ee3463e171ac.png">
-
+<TODO:> Description
+  
+<img src="https://user-images.githubusercontent.com/517325/189189782-892a92dd-c54d-4f32-adac-ee3463e171ac.png" alt="Graphic" width="600">
 
 <h4>MAP</h4>
 Map Toolkit - https://docs.microsoft.com/en-us/previous-versions/bb977556(v=technet.10) 
 
-![image](https://user-images.githubusercontent.com/517325/189189344-e3e95758-91ca-4e41-8597-fdf35e50d2c7.png)
+<img src="https://user-images.githubusercontent.com/517325/189189344-e3e95758-91ca-4e41-8597-fdf35e50d2c7.png" alt="Graphic" width="600">
 
-<h4>SQL ServerMigration Assistant</h4>
+<h4>SQL Server Migration Assistant</h4>
 https://docs.microsoft.com/en-us/sql/ssma/sql-server-migration-assistant?view=sql-server-ver15
 
-![image](https://user-images.githubusercontent.com/517325/189189438-f0679b21-3723-498d-8be3-97b6a689bab2.png)
+<img src="https://user-images.githubusercontent.com/517325/189189438-f0679b21-3723-498d-8be3-97b6a689bab2.png" alt="Graphic" width="600">
+  
+<h4>Microsoft Purview Data Map</h4>
 
-<h4>Database Experimentation Assistant</h4>
-https://www.microsoft.com/en-us/download/details.aspx?id=54090 
+https://learn.microsoft.com/en-us/purview/purview
 
-![image](https://user-images.githubusercontent.com/517325/189189486-1a13ed80-17c4-4f31-8607-7c15c5642315.png)
+https://learn.microsoft.com/en-us/azure/purview/microsoft-purview-connector-overview
 
-<h4>Azure Database Migration Service</h4>
-https://docs.microsoft.com/en-us/azure/dms/
+<img src="https://learn.microsoft.com/en-us/azure/purview/media/overview/high-level-overview-large.png#lightbox" alt="Graphic" width="600">
 
-![image](https://user-images.githubusercontent.com/517325/189189527-3554ff5b-0f0c-4ef1-8164-51bf74f2af2a.png)
-
-<h4>Data Migration Assistant</h4>
-https://docs.microsoft.com/en-us/sql/dma/dma-overview?view=sql-server-ver15#see-also
-
-![image](https://user-images.githubusercontent.com/517325/189189603-599d1fc8-5297-453d-a83d-5a9bc6c6d2c6.png)
-
-<h4>Azure Data Studio Migration Extension</h4>
-https://docs.microsoft.com/en-us/sql/azure-data-studio/extensions/azure-sql-migration-extension?view=sql-server-ver15 
-
-![image](https://user-images.githubusercontent.com/517325/189189647-bb1e5857-3ba4-416f-987e-c68812587d47.png)
-
-<h4>Azure Synapse Pathway</h4>
-https://docs.microsoft.com/en-us/sql/tools/synapse-pathway/azure-synapse-pathway-overview?view=azure-sqldw-latest
-
-![image](https://user-images.githubusercontent.com/517325/189189253-ae26dfec-3484-4fd1-8373-79ef9e0f3b1b.png)
-
-<h4>Azure Migrate</h4>
-https://docs.microsoft.com/en-us/azure/migrate/
-
-![image](https://user-images.githubusercontent.com/517325/189189693-c88cf4c0-90f4-45b0-91bb-8993796593ee.png)
-
-
+  
 TODO: Topic Description
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="./graphics/point1.png"><b>Activity: TODO: Activity Name</b></p>
@@ -136,18 +122,31 @@ TODO: Enter activity steps description with checkbox
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
 <h2 id="2.3"><img style="float: left; margin: 0px 15px 15px 0px;" src="./graphics/pencil2.png">2.3 Map Data Paths</h2>
+Earlier in the process you identified the sources and sinks for your data based on the applications that use them. Now you'll want to trace the path the data takes from creation to consumption. In some cases this inolves mapping the network path of the creation of the data asset from the application directly to the sink, and in other cases you will need to trace the paths the data takes during backup operations, Extract, Transform and Load operations (ETL), and any cross-system queries that occur. This is one the most involved parts of the auditing process. 
 
-  Data Movement options
-    Indepenedent data movement systems
-    Pipelines
+You can start with the application paths, documenting the connections that are made from the application to the data source. In some cases this will be a direct connection, and in others there are layers of systems that take data requests, process them, and return the result to the application. 
+
+For the systems that move data from one sink to another, there are more options for that process. 
+
+<h3>Data Movement options</h3>
+There are multiple options your organization likely has to move data from one location to another. They are grouped into two general toolsets: a manual, scripted, or platform-specific tool (such as PowerShell or SQL Server Integration Services) and a system specifically designed to move data, called a Pipeline.
+
+<h4>Independent data movement systems</h4>
+Processes, Scripts, and Platform-Specific tools move data from a sink to another sink either on a schedule, manually, or through some data trigger. They can push the data from one system to another, or pull the data from one system into another. 
+
+The process to locate these processes and tools are to engage with the team that is repsonsible for creating and running them. You can often find those systems when you look at your Reporting and Business Intelligence outputs. 
+
+<h4>Pipelines</h4>
   
-  Security
+<h3>Security</h3>
   
-  Performance
+<h3>Performance</h3>
   
-  Cost
-  
-TODO: Topic Description
+<h3>Cost</h3>
+
+<h3>Tools</h3>
+
+<h4>Microsoft Purview</h4>
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="./graphics/point1.png"><b>Activity: TODO: Activity Name</b></p>
 
