@@ -65,6 +65,38 @@ TODO: Enter activity description with checkbox
 
 TODO: Enter activity steps description with checkbox
 
+<h4>Database Experimentation Assistant</h4>
+https://www.microsoft.com/en-us/download/details.aspx?id=54090 
+
+<img src="https://user-images.githubusercontent.com/517325/189189486-1a13ed80-17c4-4f31-8607-7c15c5642315.png" alt="Graphic" width="600">
+
+<h4>Azure Database Migration Service</h4>
+https://docs.microsoft.com/en-us/azure/dms/
+
+<img src="https://user-images.githubusercontent.com/517325/189189527-3554ff5b-0f0c-4ef1-8164-51bf74f2af2a.png" alt="Graphic" width="600">
+
+<h4>Data Migration Assistant</h4>
+https://docs.microsoft.com/en-us/sql/dma/dma-overview?view=sql-server-ver15#see-also
+
+<img src="https://user-images.githubusercontent.com/517325/189189603-599d1fc8-5297-453d-a83d-5a9bc6c6d2c6.png" alt="Graphic" width="600">
+
+<h4>Azure Data Studio Migration Extension</h4>
+https://docs.microsoft.com/en-us/sql/azure-data-studio/extensions/azure-sql-migration-extension?view=sql-server-ver15 
+
+<img src="https://user-images.githubusercontent.com/517325/189189647-bb1e5857-3ba4-416f-987e-c68812587d47.png" alt="Graphic" width="600">
+
+<h4>Azure Synapse Pathway</h4>
+https://docs.microsoft.com/en-us/sql/tools/synapse-pathway/azure-synapse-pathway-overview?view=azure-sqldw-latest
+
+<img src="https://user-images.githubusercontent.com/517325/189189253-ae26dfec-3484-4fd1-8373-79ef9e0f3b1b.png" alt="Graphic" width="600">
+
+<h4>Azure Migrate</h4>
+https://docs.microsoft.com/en-us/azure/migrate/
+
+<img src="https://user-images.githubusercontent.com/517325/189189693-c88cf4c0-90f4-45b0-91bb-8993796593ee.png" alt="Graphic" width="600">
+
+    
+    
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
 <p><img style="margin: 0px 15px 15px 0px;" src="./graphics/owl.png"><b>For Further Study</b></p>
