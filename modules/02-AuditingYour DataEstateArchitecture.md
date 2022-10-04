@@ -1,11 +1,11 @@
-![](../graphics/microsoftlogo.png)
+![](https://github.com/microsoft/sqlworkshops/blob/master/graphics/microsoftlogo.png?raw=true)
 
 # Workshop: Modernizing Your Data Estate With SQL Ground-to-Cloud
 #### <i>A Microsoft workshop from the SQL Server team</i>
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
-<img style="float: left; margin: 0px 15px 15px 0px;" src="./graphics/textbubble.png"> <h2>02 - Auditing Your Data Estate Architecture</h2>
+<img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/textbubble.png?raw=true"> <h2>02 - Auditing Your Data Estate Architecture</h2>
 
 In this workshop you'll cover how to systematically create a modern data estate using SQL Server in on-premises, in-cloud and hybrid solutions.In each module you'll get more references, which you should follow up on to learn more. Also watch for links within the text - right-click each one and select "Open in New Tab" to explore that topic.
 
@@ -41,7 +41,7 @@ Some of these Frameworks focus on a top-down, central IT team approach, providin
   
 Whichever framework your organization uses - even if there is no defined framework - you should have a general map of your Data Estate. A Data Estate (for the purposes of this workshop) is the processes, platforms, and people involved in creating, storing, processing and disposing of organizational data. This includes not only the data your organization maintains, but the 
   
-<h2 id="2.1"><img style="float: left; margin: 0px 15px 15px 0px;" src="./graphics/pencil2.png">2.1 Business Process Analysis</h2>
+<h2 id="2.1"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">2.1 Business Process Analysis</h2>
 
 Business Process Analysis (BPA) evaluates an organization's actions to achieve a goal. You can use this discipline to discover the sequences the organization's members (employees) are using to get things done. While BPA is most often used to improve the efficiency of a business or organization, you can leverage the results of BPA to find data <i>Sources</i> (where data originates) and <i>Sinks</i> (the destination(s) the data moves to next) in your data estate.
 
@@ -61,7 +61,7 @@ You can <a href="https://en.wikipedia.org/wiki/Business_Process_Model_and_Notati
   
 <br>
 
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="./graphics/point1.png"><b>Activity: TODO: Activity Name</b></p>
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
 
 TODO: Activity Description and tasks
 
@@ -69,13 +69,13 @@ TODO: Activity Description and tasks
 
 TODO: Enter activity description with checkbox
 
-<p><img style="margin: 0px 15px 15px 0px;" src="./graphics/checkmark.png"><b>Steps</b></p>
+<p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
 TODO: Enter activity steps description with checkbox
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
-<h2 id="2.2"><img style="float: left; margin: 0px 15px 15px 0px;" src="./graphics/pencil2.png">2.2 Identify Data Sources and Sinks</h2>
+<h2 id="2.2"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">2.2 Identify Data Sources and Sinks</h2>
 
 Data Storage versus Data Processing
   
@@ -107,7 +107,7 @@ https://learn.microsoft.com/en-us/azure/purview/microsoft-purview-connector-over
   
 TODO: Topic Description
 
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="./graphics/point1.png"><b>Activity: TODO: Activity Name</b></p>
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
 
 TODO: Activity Description and tasks
 
@@ -115,13 +115,13 @@ TODO: Activity Description and tasks
 
 TODO: Enter activity description with checkbox
 
-<p><img style="margin: 0px 15px 15px 0px;" src="./graphics/checkmark.png"><b>Steps</b></p>
+<p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
 TODO: Enter activity steps description with checkbox
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
-<h2 id="2.3"><img style="float: left; margin: 0px 15px 15px 0px;" src="./graphics/pencil2.png">2.3 Map Data Paths</h2>
+<h2 id="2.3"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">2.3 Map Data Paths</h2>
 Earlier in the process you identified the sources and sinks for your data based on the applications that use them. Now you'll want to trace the path the data takes from creation to consumption. In some cases this inolves mapping the network path of the creation of the data asset from the application directly to the sink, and in other cases you will need to trace the paths the data takes during backup operations, Extract, Transform and Load operations (ETL), and any cross-system queries that occur. This is one the most involved parts of the auditing process. 
 
 You can start with the application paths, documenting the connections that are made from the application to the data source. In some cases this will be a direct connection, and in others there are layers of systems that take data requests, process them, and return the result to the application. 
@@ -148,7 +148,7 @@ The process to locate these processes and tools are to engage with the team that
 
 <h4>Microsoft Purview</h4>
 
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="./graphics/point1.png"><b>Activity: TODO: Activity Name</b></p>
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
 
 TODO: Activity Description and tasks
 
@@ -156,19 +156,19 @@ TODO: Activity Description and tasks
 
 TODO: Enter activity description with checkbox
 
-<p><img style="margin: 0px 15px 15px 0px;" src="./graphics/checkmark.png"><b>Steps</b></p>
+<p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
 TODO: Enter activity steps description with checkbox
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
   
-<h2 id="2.4"><img style="float: left; margin: 0px 15px 15px 0px;" src="./graphics/pencil2.png">2.4 Gap Analysis</h2>
+<h2 id="2.4"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">2.4 Gap Analysis</h2>
 
   Creating a Gap Analysis for data intelligence
   
 TODO: Topic Description
 
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="./graphics/point1.png"><b>Activity: TODO: Activity Name</b></p>
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
 
 TODO: Activity Description and tasks
 
@@ -176,13 +176,14 @@ TODO: Activity Description and tasks
 
 TODO: Enter activity description with checkbox
 
-<p><img style="margin: 0px 15px 15px 0px;" src="./graphics/checkmark.png"><b>Steps</b></p>
+<p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
 TODO: Enter activity steps description with checkbox
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
   
-<p><img style="margin: 0px 15px 15px 0px;" src="./graphics/owl.png"><b>For Further Study</b></p>
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/owl.png?raw=true"><b>For Further Study</b></p>
+<br>
 <ul>
     <li><a href="https://docs.microsoft.com/en-us/azure/architecture/framework/" target="_blank">The Microsoft Well-Architected Framework</a></li>
     <li><a href="https://docs.microsoft.com/en-us/azure/architecture/data-guide/" target="_blank">Azure Data Architecture Guide</a></li>
