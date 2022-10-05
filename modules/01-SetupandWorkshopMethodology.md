@@ -19,7 +19,7 @@ The <a href="https://github.com/sqlballs/mSQLg2c">Modernizing Your Data Estate W
 - **Microsoft Azure Defender Account**: This is the primary tool from Microsoft for securing and reporting on security for your on-premises and in-cloud environments.
 - **(Optional) Python**: A simple set of Create, Read, Update and Delete (CRUD) applications to show traffic to and from the on-premises and in-cloud environments.
 
-> All of the following activities must be completed **prior** to class - there will not be time to perform these operations during the workshop. The complete pre-requisites steps will take from 2-6 hours. You must have at least SQL Server 2022 and SQL Server Management Studio installed. An Azure account where you can create assets will allow you to complete all the Activities for the best experience. [A full set of instructions is here](https://github.com/sqlballs/mSQLg2c/blob/main/modules/01-SetupandWorkshopMethodology.md).
+> All of the following activities must be completed **prior** to class - there will not be time to perform these operations during the workshop. The complete pre-requisites steps will take from 2-6 hours. You must have at least SQL Server 2022 and SQL Server Management Studio installed. An Azure account where you can create assets will allow you to complete all the Activities allows for the best experience. [A full set of instructions for all components for the best experience is here](https://github.com/sqlballs/mSQLg2c/blob/main/modules/01-SetupandWorkshopMethodology.md).
 
 # Full Pre-Requisite Instructions
 

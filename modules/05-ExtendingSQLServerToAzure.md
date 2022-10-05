@@ -1,12 +1,11 @@
-![](https://github.com/microsoft/sqlworkshops/blob/master/graphics/microsoftlogo.png?raw=true)![](../graphics/microsoftlogo.png)
+![](https://github.com/microsoft/sqlworkshops/blob/master/graphics/microsoftlogo.png?raw=true)
 
-# Workshop: <TODO: Enter workshop name>
-
+# Workshop: Modernizing Your Data Estate With SQL Ground-to-Cloud
 #### <i>A Microsoft workshop from the SQL Server team</i>
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
-<img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/textbubble.png?raw=true"> <h2>Name of Module</h2>
+<img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/textbubble.png?raw=true"> <h2>Extending SQL Server to Microsoft Azure</h2>
 
 In this workshop you'll cover using <TODO: Enter a brief description of the workshop>. 
 
@@ -17,15 +16,15 @@ In each module you'll get more references, which you should follow up on to lear
 You'll cover these topics in the workshop:
 <dl>
 
-  <dt><a href="url" target="_blank">01 - <TODO: Enter Module Name<dt>
-  <dt><a href="url" target="_blank">01 - <TODO: Enter Module Name<dt>
-  <dt><a href="url" target="_blank">01 - <TODO: Enter Module Name<dt>
+  <dt><a href="#5.1" target="_blank">5.1 - <TODO: Enter Module Name<dt>
+  <dt><a href="#5.2" target="_blank">5.2 - <TODO: Enter Module Name<dt>
+  <dt><a href="#5.3" target="_blank">5.3 - <TODO: Enter Module Name<dt>
 
 </dl>
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
-<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">1.1 TODO: Topic Name</h2>
+<h2 id="5.1"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">5.1 TODO: Topic Name</h2>
 
 TODO: Topic Description
 
@@ -49,7 +48,7 @@ TODO: Enter activity steps description with checkbox
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
-<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">1.2 TODO: Topic Name</h2>
+<h2 id="5.2"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">5.2 TODO: Topic Name</h2>
 
 TODO: Topic Description
 

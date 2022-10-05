@@ -14,18 +14,18 @@ In the previous modules, you learned about how to <a href="https://github.com/sq
 You'll cover these topics in the workshop:
 <dl>
 
-  <dt><a href="url" target="_blank">4.1 - Deployment Options<dt>
-  <dt><a href="url" target="_blank">4.2 - Manageability<dt>
-  <dt><a href="url" target="_blank">4.3 - Availability<dt>
-  <dt><a href="url" target="_blank">4.4 - Performance<dt>
-  <dt><a href="url" target="_blank">4.5 - Security<dt>
-  <dt><a href="url" target="_blank">4.6 - Development<dt>
+  <dt><a href="#4.1" target="_blank">4.1 - Deployment Options<dt>
+  <dt><a href="#4.2" target="_blank">4.2 - Manageability<dt>
+  <dt><a href="#4.3" target="_blank">4.3 - Availability<dt>
+  <dt><a href="#4.4" target="_blank">4.4 - Performance<dt>
+  <dt><a href="#4.5" target="_blank">4.5 - Security<dt>
+  <dt><a href="#4.6" target="_blank">4.6 - Development<dt>
 
 </dl>
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
-<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">4.1 Deployment Options</h2>
+<h2 id="4.1"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">4.1 Deployment Options</h2>
 
 TODO: Topic Description
 
@@ -50,7 +50,6 @@ TODO: Topic Description
 TODO: Topic Description
 
 
-
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
 
 TODO: Activity Description and tasks
@@ -67,7 +66,7 @@ TODO: Enter activity steps description with checkbox
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
-<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">4.2 Manageability</h2>
+<h2 id="4.2"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">4.2 Manageability</h2>
 
 TODO: Topic Description
 
@@ -75,8 +74,7 @@ TODO: Topic Description
 
 TODO: Topic Description
 
-<h4>SQL Server Management Studio</h4>
-
+<h4>Azure Portal</h4>
 TODO: Topic Description
 
 <h4>Azure Data Studio</h4>
@@ -107,7 +105,7 @@ TODO: Enter activity steps description with checkbox
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
-<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">4.3 Availability</h2>
+<h2 id="4.3"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">4.3 Availability</h2>
 
 TODO: Topic Description
 
@@ -125,7 +123,7 @@ TODO: Enter activity steps description with checkbox
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
-<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">4.4 Performance</h2>
+<h2 id="4.4"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">4.4 Performance</h2>
 
 TODO: Topic Description
 
@@ -143,7 +141,7 @@ TODO: Enter activity steps description with checkbox
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
-<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">4.5 Security</h2>
+<h2 id="4.5"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">4.5 Security</h2>
 
 TODO: Topic Description
 
@@ -165,7 +163,7 @@ TODO: Enter activity steps description with checkbox
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
-<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">4.6 Development</h2>
+<h2 id="4.6"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">4.6 Development</h2>
 
 TODO: Topic Description
 
@@ -180,8 +178,6 @@ TODO: Enter activity description with checkbox
 <p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
 TODO: Enter activity steps description with checkbox
-
-
 
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/owl.png?raw=true"><b>For Further Study</b></p>

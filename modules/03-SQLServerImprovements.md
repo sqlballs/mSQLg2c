@@ -16,19 +16,19 @@ In each module you'll get more references, which you should follow up on to lear
 You'll cover these topics in the workshop:
 <dl>
 
-  <dt><a href="url" target="_blank">3.1 - Deployment Options<dt>
-  <dt><a href="url" target="_blank">3.2 - Manageability<dt>
-  <dt><a href="url" target="_blank">3.3 - Availability<dt>
-  <dt><a href="url" target="_blank">3.4 - Performance<dt>
-  <dt><a href="url" target="_blank">3.5 - Security<dt>
-  <dt><a href="url" target="_blank">3.6 - Development<dt>
+  <dt><a href="#3.1" target="_blank">3.1 - Deployment Options<dt>
+  <dt><a href="#3.2" target="_blank">3.2 - Manageability<dt>
+  <dt><a href="#3.3" target="_blank">3.3 - Availability<dt>
+  <dt><a href="#3.4" target="_blank">3.4 - Performance<dt>
+  <dt><a href="#3.5" target="_blank">3.5 - Security<dt>
+  <dt><a href="#3.6" target="_blank">3.6 - Development<dt>
 
 </dl>
 
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
-<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.1 Deployment Options</h2>
+<h2 id="3.1"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.1 Deployment Options</h2>
 
 TODO: Topic Description
 
@@ -63,7 +63,7 @@ TODO: Enter activity description with checkbox
 TODO: Enter activity steps description with checkbox
 
 
-<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.2 Manageability</h2>
+<h2 id="3.2"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.2 Manageability</h2>
 
 TODO: Topic Description
 
@@ -103,7 +103,7 @@ TODO: Enter activity steps description with checkbox
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
-<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.3 Availability</h2>
+<h2 id="3.3"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.3 Availability</h2>
 
 TODO: Topic Description
 
@@ -121,7 +121,7 @@ TODO: Enter activity steps description with checkbox
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
-<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.4 Performance</h2>
+<h2 id="3.4"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.4 Performance</h2>
 
 TODO: Topic Description
 
@@ -139,7 +139,7 @@ TODO: Enter activity steps description with checkbox
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
-<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.5 Security</h2>
+<h2 id="3.5"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.5 Security</h2>
 
 TODO: Topic Description
 
@@ -161,7 +161,7 @@ TODO: Enter activity steps description with checkbox
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
-<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.6 Development</h2>
+<h2 id="3.6"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.6 Development</h2>
 
 TODO: Topic Description
 
@@ -176,8 +176,6 @@ TODO: Enter activity description with checkbox
 <p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
 TODO: Enter activity steps description with checkbox
-
-
 
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/owl.png?raw=true"><b>For Further Study</b></p>
