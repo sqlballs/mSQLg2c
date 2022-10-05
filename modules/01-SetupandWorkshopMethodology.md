@@ -7,8 +7,11 @@
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
 <img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/textbubble.png?raw=true"><h2>01 Workshop Setup and Methodology</h2>
-
+<p></p>
 The <a href="https://github.com/sqlballs/mSQLg2c">Modernizing Your Data Estate With SQL Ground-to-Cloud workshop</a> uses the following components. Read through this list, and in the Activities that follow you will see specific steps for each installation. You can also simply read through each of these steps, and observe the activities in the workshop if you cannot install the hands-on poritions.
+<p></p>
+
+> You must have **at least** SQL Server 2022 and SQL Server Management Studio installed to take this course. An Azure account where you can create assets will allow you to complete all the Activities allows for an even better experience. [A full set of instructions for all components for the best experience is here](https://github.com/sqlballs/mSQLg2c/blob/main/modules/01-SetupandWorkshopMethodology.md).
 
 - **A Microsoft Windows 10 or Higher Workstation**: For this workshop, you will use a Microsoft Windows system as the base workstation, although Apple and Linux operating systems can be used in production. You'll see instructions for multiple options, from a physical system you have administrative access on, to Virtual Machines you can use for free on Windows, Linux and Apple systems. You can also use a VM in the cloud provider of your choice.
 - **Microsoft Azure**: This workshop uses the Microsoft Azure platform for the cloud database and the Microsoft Defender products. You can also host your workstation there if desired. You can use a free Azure account, an MSDN Account, your own account, or potentially one provided for you, as long as you can create about $100.00 (U.S.) worth of assets.
@@ -17,14 +20,14 @@ The <a href="https://github.com/sqlballs/mSQLg2c">Modernizing Your Data Estate W
 - **Wide World Importers Sample Database**: Restore the Wide World Importers database in your SQL Server Instance.
 - **Microsoft Azure SQL DB**: A Microsoft Azure SQL Database (smallest edition) allows for testing and exploration of SQL Server security on that platform.
 - **Microsoft Azure Defender Account**: This is the primary tool from Microsoft for securing and reporting on security for your on-premises and in-cloud environments.
-- **(Optional) Python**: A simple set of Create, Read, Update and Delete (CRUD) applications to show traffic to and from the on-premises and in-cloud environments.
+- **(Optional) Python**: You can create a small sample Python application to perform a simple set of Create, Read, Update and Delete (CRUD) operations to show traffic to and from the on-premises and in-cloud environments for a more real-world experience.
 
-> All of the following activities must be completed **prior** to class - there will not be time to perform these operations during the workshop. The complete pre-requisites steps will take from 2-6 hours. You must have at least SQL Server 2022 and SQL Server Management Studio installed. An Azure account where you can create assets will allow you to complete all the Activities allows for the best experience. [A full set of instructions for all components for the best experience is here](https://github.com/sqlballs/mSQLg2c/blob/main/modules/01-SetupandWorkshopMethodology.md).
+> All of the following activities must be completed **prior** to class - there will not be time to perform these operations during the workshop. The complete pre-requisites steps will take from 2-6 hours.
 
 # Full Pre-Requisite Instructions
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity 1: Set up a Microsoft Azure Account</b></p>
-
+<br>
 You have multiple options for setting up Microsoft Azure account to complete this workshop. You can use a free account, a Microsoft Developer Network (MSDN) account, a personal or corporate account, or in some cases a pass may be provided by the instructor. (For most classes, the MSDN account is best)
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="./graphics/checkbox.png"><b>Option 1 - Free Account</b></p>
@@ -52,7 +55,7 @@ Your workshop invitation may have instructed you that they will provide a Micros
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity 2: Create a Workstation and Install SQL Server Developer Edition and the Sample Application</b></p>
 <br>
 
-You will use a Windows 10 or higher workstation for this course. After you complete that installation, you will install SQL Server 2019 on this workstation, along with the SQL Server Management Studio tool, and a sample application.  
+You can use a Windows 10 or higher workstation for this course. After you complete that installation, you will install SQL Server on this workstation, along with various SQL Server tools, and an optional sample application.  
 
 > All steps and commands from here on should be done in the Workshop system you create - if you are using a Virtual Machine, ensure you are following these steps on that system, not on the host computer.
 
@@ -156,15 +159,6 @@ python SimpleConnection.py
 The instructions that follow use the Microsoft Azure Account you created earlier. If you created a Windows Virtual Machine in Microsoft Azure, use the same Resource Group for these steps.
 
 - <a href="https://docs.microsoft.com/en-us/azure/azure-sql/database/single-database-create-quickstart?view=azuresql&tabs=azure-portal" target="_blank">Navigate to this resource, and follow the steps you see there.</a>
-
-<br>
-
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity 4: Create a Microsoft Azure Defender for SQL Setup</b></p>
-<br>
-
-The instructions that follow use the Microsoft Azure Account you created earlier. If you created a Windows Virtual Machine in Microsoft Azure, use the same Resource Group for these steps.
-
-- <a href="https://docs.microsoft.com/en-us/azure/azure-sql/database/azure-defender-for-sql?view=azuresql" target="_blank">Navigate to this resource, and follow the steps you see there.</a>
 
 <br>
 
