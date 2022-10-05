@@ -64,6 +64,14 @@ TODO: Enter activity description with checkbox
 
 TODO: Enter activity steps description with checkbox
 
+<img src="https://user-images.githubusercontent.com/517325/189189782-892a92dd-c54d-4f32-adac-ee3463e171ac.png" alt="Graphic" width="600">
+
+<h4>SQL Server Migration Assistant</h4>
+https://docs.microsoft.com/en-us/sql/ssma/sql-server-migration-assistant?view=sql-server-ver15
+
+<img src="https://user-images.githubusercontent.com/517325/189189438-f0679b21-3723-498d-8be3-97b6a689bab2.png" alt="Graphic" width="600">
+  
+
 <h4>Database Experimentation Assistant</h4>
 https://www.microsoft.com/en-us/download/details.aspx?id=54090 
 
