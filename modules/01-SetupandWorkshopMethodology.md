@@ -11,10 +11,12 @@
 The <a href="https://github.com/sqlballs/mSQLg2c">Modernizing Your Data Estate With SQL Ground-to-Cloud workshop</a> uses the following components. Read through this list, and in the Activities that follow you will see specific steps for each installation. You can also simply read through each of these steps, and observe the activities in the workshop if you cannot install the hands-on poritions.
 <p></p>
 
-> You must have **at least** SQL Server 2022 and SQL Server Management Studio installed to take this course. An Azure account where you can create assets will allow you to complete all the Activities allows for an even better experience. [A full set of instructions for all components for the best experience is here](https://github.com/sqlballs/mSQLg2c/blob/main/modules/01-SetupandWorkshopMethodology.md).
+> You must have **at least** SQL Server 2022 and SQL Server Management Studio installed to take this course. 
+A Microsoft Azure account where you can create assets will allow you to complete all the Activities allows for an even better experience.
+[A full set of instructions for all components for the best experience is here](https://github.com/sqlballs/mSQLg2c/blob/main/modules/01-SetupandWorkshopMethodology.md).
 
 - **A Microsoft Windows 10 or Higher Workstation**: For this workshop, you will use a Microsoft Windows system as the base workstation, although Apple and Linux operating systems can be used in production. You'll see instructions for multiple options, from a physical system you have administrative access on, to Virtual Machines you can use for free on Windows, Linux and Apple systems. You can also use a VM in the cloud provider of your choice.
-- **Microsoft Azure**: This workshop uses the Microsoft Azure platform for the cloud database and the Microsoft Defender products. You can also host your workstation there if desired. You can use a free Azure account, an MSDN Account, your own account, or potentially one provided for you, as long as you can create about $100.00 (U.S.) worth of assets.
+- **Microsoft Azure**: This workshop uses the Microsoft Azure platform for the cloud database. You can also host your workstation there if desired. You can use a free Azure account, an MSDN Account, your own account, or potentially one provided for you, as long as you can create about $100.00 (U.S.) worth of assets.
 - **SQL Server 2022**: An installation of the SQL Server Developer Edition, all features.
 - **SQL Server Management Studio and Azure Data Studio**: Primary tools for managing and developing on SQL Server.
 - **Wide World Importers Sample Database**: Restore the Wide World Importers database in your SQL Server Instance.
