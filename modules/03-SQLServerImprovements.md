@@ -16,12 +16,12 @@ In each module you'll get more references, which you should follow up on to lear
 You'll cover these topics in the workshop:
 <dl>
 
-  <dt><a href="#3.1" target="_blank">3.1 - Deployment Options<dt>
-  <dt><a href="#3.2" target="_blank">3.2 - Manageability<dt>
-  <dt><a href="#3.3" target="_blank">3.3 - Availability<dt>
-  <dt><a href="#3.4" target="_blank">3.4 - Performance<dt>
-  <dt><a href="#3.5" target="_blank">3.5 - Security<dt>
-  <dt><a href="#3.6" target="_blank">3.6 - Development<dt>
+  <dt><a href="#3.1" target="_blank">3.1 - Deployment Options<dt></a>
+  <dt><a href="#3.2" target="_blank">3.2 - Manageability<dt></a>
+  <dt><a href="#3.3" target="_blank">3.3 - Availability<dt></a>
+  <dt><a href="#3.4" target="_blank">3.4 - Performance<dt></a>
+  <dt><a href="#3.5" target="_blank">3.5 - Security<dt></a>
+  <dt><a href="#3.6" target="_blank">3.6 - Development<dt></a>
 
 </dl>
 
