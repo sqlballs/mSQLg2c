@@ -25,7 +25,7 @@ You'll cover these topics in the workshop:
 
 </dl>
 
-SQL Server 2019 is a modern data platform designed to tackle the challenges of today's data professional. SQL Server 2019 is not just an upgrade option from previous releases of SQL Server.
+SQL Server is a modern data platform designed to tackle the challenges of today's data professional. SQL Server is not just an upgrade option from previous releases of SQL Server.
 
 The WideWorldImporters company has been evaluating upgrading several SQL Server 2008 instances along with some instances of SQL Server 2012, 2014, and even 2016. WideWorldImporters wants to know whether SQL Server 2022 will solve some of the challenges they face.
 
@@ -66,8 +66,73 @@ When you are done with the SQL Server lab you have completed Module 02 of the SQ
 <h3>SQL Server on Linux</h3>
 
 SQL Server on Linux is supported by the following platforms.
+<table border=1>
+<tr>
+  <th align="center" colspan=4>SQL Server 2017</th>
+</tr>
+  <tr>
+    <td>Platform</td>	
+    <td>File System	</td>	
+    <td>Installation Guide</td>
+  </tr>
+   <tr>
+    <td>Red Hat Enterprise Linux 7.7 - 7.9, or 8.0 - 8.5 Server</td>	
+    <td>XFS or EXT4</td>	
+    <td><a href="https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-red-hat?view=sql-server-ver16">Installation Guide</a></td>
+  </tr>
+   <tr>
+    <td>SUSE Enterprise Linux Server v12 (SP3 - SP5)</td>	
+    <td>XFS or EXT4</td>	
+    <td><a href="https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-suse?view=sql-server-ver16">Installation Guide</a></td>
+  </tr>
+   <tr>
+    <td>Ubuntu 16.04 LTS 1, 18.04 LTS</td>	
+    <td>XFS or EXT4</td>	
+    <td><a href="https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-ubuntu?view=sql-server-ver16">Installation Guide</a></td>
+  </tr>
+   <tr>
+    <td>Docker Engine 1.8+ on Linux</td>	
+    <td>N/A</td>	
+    <td><a href="https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-ver16&pivots=cs1-bash">Installation Guide</a></td>
+  </tr>
+</table>
+
 
 <table border=1>
+<tr>
+  <th align="center" colspan=4>SQL Server 2019</th>
+</tr>
+  <tr>
+    <td>Platform</td>	
+    <td>File System	</td>	
+    <td>Installation Guide</td>
+  </tr>
+   <tr>
+    <td>Red Hat Enterprise Linux 7.7 - 7.9, or 8.0 - 8.5 Server</td>	
+    <td>XFS or EXT4</td>	
+    <td><a href="https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-red-hat?view=sql-server-ver16">Installation Guide</a></td>
+  </tr>
+   <tr>
+    <td>SUSE Enterprise Linux Server v12 (SP3 - SP5) or v15</td>	
+    <td>XFS or EXT4</td>	
+    <td><a href="https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-suse?view=sql-server-ver16">Installation Guide</a></td>
+  </tr>
+   <tr>
+    <td>Ubuntu 16.04 LTS 1, 18.04 LTS, 20.04 LTS</td>	
+    <td>XFS or EXT4</td>	
+    <td><a href="https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-ubuntu?view=sql-server-ver16">Installation Guide</a></td>
+  </tr>
+   <tr>
+    <td>Docker Engine 1.8+ on Linux</td>	
+    <td>N/A</td>	
+    <td><a href="https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-ver16&pivots=cs1-bash">Installation Guide</a></td>
+  </tr>
+</table>
+
+<table border=1>
+<tr>
+  <th align="center" colspan=4>SQL Server 2022</th>
+</tr>
   <tr>
     <td>Platform</td>	
     <td>File System	</td>	
@@ -98,7 +163,17 @@ SQL Server on Linux is supported by the following platforms.
 
 <h3>SQL Server in Containers</h3>
 
-TODO: Topic Description
+SQL Server 2017
+- First SQL Server container
+- Regularly updated with CUs
+- Only supported Ubuntu 16.04-based
+
+SQL Server 2019
+- SQL server on Multipl OS containers: Red Hat, Ubuntu, Windows
+- Machine Learning, Polybase, MSDTC, & Replication in Linux Containers
+- Big Data Clusters
+
+
 
 <h3>SQL Server on Kubernetes</h3>
 
