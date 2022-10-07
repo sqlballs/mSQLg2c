@@ -7,7 +7,7 @@
 
 <img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/textbubble.png?raw=true"> <h2>03 - SQL Server Improvements</h2>
 
-In this workshop you'll cover using <TODO: Enter a brief description of the workshop>. 
+In this workshop you'll cover how to systematically create a modern data estate using SQL Server in on-premises, in-cloud and hybrid solutions. 
 
 In each module you'll get more references, which you should follow up on to learn more. Also watch for links within the text - click on each one to explore that topic.
 
@@ -25,20 +25,76 @@ You'll cover these topics in the workshop:
 
 </dl>
 
+SQL Server 2019 is a modern data platform designed to tackle the challenges of today's data professional. SQL Server 2019 is not just an upgrade option from previous releases of SQL Server.
+
+The WideWorldImporters company has been evaluating upgrading several SQL Server 2008 instances along with some instances of SQL Server 2012, 2014, and even 2016. WideWorldImporters wants to know whether SQL Server 2022 will solve some of the challenges they face.
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
 <h2 id="3.1"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.1 Deployment Options</h2>
 
-TODO: Topic Description
+Since SQL Server 2017 users have had the option of deploying SQL Server on Windows and in Linux.  Current deployment scenarios include Windows, Linux, Docker containers, and Kubernetes. 
+
+Regardless of the deployment scenario there are some key items to keep in mind.
+
 
 <h3>SQL Server on Windows</h3>
 
-TODO: Topic Description
+SQL Server has traditionally been a Windows only product.  
+
+<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>     Activity: Review SQL Server Installation Key Terms Lab</a></b></h2>
+
+In this activity, you will review key terms and concepts related to SQL Server Installations.
+
+
+<h3><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Activity Steps</b></h3>
+
+To complete this module, go to [https://learn.microsoft.com/en-us/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver16#installation-media](https://learn.microsoft.com/en-us/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver16#installation-media).
+
+Review the following:
+- Installation media
+- Considerations
+- SQL Server installation
+- Individual component installation
+
+
+When you are done with the SQL Server lab you have completed Module 02 of the SQL Server Ground to Cloud Workshop! Proceed to the next module using the link in Next Steps below.
+
+
+
 
 <h3>SQL Server on Linux</h3>
 
-TODO: Topic Description
+SQL Server on Linux is supported by the following platforms.
+
+<table border=1>
+  <tr>
+    <td>Platform</td>	
+    <td>File System	</td>	
+    <td>Installation Guide</td>
+  </tr>
+   <tr>
+    <td>Red Hat Enterprise Linux 8.0 - 8.5 Server</td>	
+    <td>XFS or EXT4</td>	
+    <td><a href="https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-red-hat?view=sql-server-ver16">Installation Guide</a></td>
+  </tr>
+   <tr>
+    <td>SUSE Enterprise Linux Server v15 (SP1 - SP3)</td>	
+    <td>XFS or EXT4</td>	
+    <td><a href="https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-suse?view=sql-server-ver16">Installation Guide</a></td>
+  </tr>
+   <tr>
+    <td>Ubuntu 20.04 LTS</td>	
+    <td>XFS or EXT4</td>	
+    <td><a href="https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-ubuntu?view=sql-server-ver16">Installation Guide</a></td>
+  </tr>
+   <tr>
+    <td>Docker Engine 1.8+ on Linux</td>	
+    <td>N/A</td>	
+    <td><a href="https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-ver16&pivots=cs1-bash">Installation Guide</a></td>
+  </tr>
+</table>
+
 
 <h3>SQL Server in Containers</h3>
 
@@ -192,9 +248,7 @@ Next, continue on to [Module 04 - SQL Server on the Microsoft Azure Platform](ht
 
 <h2><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/textbubble.png?raw=true"><b>     02 - Modernizing Your Data Estate with SQL Server 2019</b></h2>
 
-SQL Server 2019 is a modern data platform designed to tackle the challenges of today's data professional. SQL Server 2019 is not just an upgrade option from previous releases of SQL Server.
 
-The WideWorldImporters company has been evaluating upgrading several SQL Server 2008 instances along with some instances of SQL Server 2012, 2014, and even 2016. WideWorldImporters wants to know whether SQL Server 2019 will solve some of the challenges they face including:
 
 - Improving query performance without having to make application changes
 - Classifying key data columns and being able to audit access to these columns to meet the needs of GDPR compliance.
