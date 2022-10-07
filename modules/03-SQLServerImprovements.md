@@ -174,7 +174,7 @@ SQL Server 2019
 - Big Data Clusters
 
 
-
+<h3>Do we want to remove this?  This is basically Big Data Clusters?</h3>
 <h3>SQL Server on Kubernetes</h3>
 
 TODO: Topic Description
