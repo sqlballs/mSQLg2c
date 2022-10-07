@@ -22,18 +22,77 @@ You'll cover these topics in the workshop:
 
 <h2 id="5.1"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">5.1 - Extending on-Premises SQL Server Instances to Microsoft Azure</h2>
 
-<b>Raw Notes:</b> 
-- Backup/Restore to URL
-- Backup/Restore with Object Store
-- DR site: Entire VM, Always On Availability Group, Always On Failover Cluster Instance
-- Query Object Store (S3, ADB, Other)
-- Azure Data Sync between Instance and SQL DB
-- Replication Subscriber in SQL DB
-- Azure Key Vault for Always Encrypted
-
-TODO: Topic Description
-
+In many cases you may find that staying on-premises for your SQL Server and other data processing systems is the correct architecture for at least part of your data estate. You may, however, still want to leverage a cloud service as part of your modernization. There are many options you can use to connect your SQL Server Instances to the Microsoft Azure platform, giving you advantages in disaster recovery, replication, security and other considerations for your architecture.
 <br>
+
+<h3>Backup/Restore to URL</h3>
+https://learn.microsoft.com/en-us/sql/relational-databases/backup-restore/sql-server-backup-to-url?view=sql-server-ver16 
+https://learn.microsoft.com/en-us/azure/azure-sql/virtual-machines/windows/azure-storage-sql-server-backup-restore-use?view=azuresql 
+
+<h3>Backup/Restore with Object Store (s3 only)</h3>
+https://learn.microsoft.com/en-us/sql/relational-databases/backup-restore/sql-server-backup-and-restore-with-s3-compatible-object-storage?view=sql-server-ver16 
+
+<h3>DR site</h3>
+https://learn.microsoft.com/en-us/azure/site-recovery/physical-azure-disaster-Recovery
+<p></p>
+
+<b>Always On Availability Group</b>
+
+https://learn.microsoft.com/en-us/azure/azure-sql/virtual-machines/windows/availability-group-overview?view=azuresql&viewFallbackFrom=sql-server-ver16 
+https://learn.microsoft.com/en-us/azure/azure-sql/virtual-machines/windows/availability-group-overview?view=azuresql 
+ replica in VM (license free)
+<p></p>
+<b>FCI</b>
+
+https://learn.microsoft.com/en-us/azure/azure-sql/virtual-machines/windows/failover-cluster-instance-overview?view=azuresql 
+<p></p>
+
+<b>Link for MI feature</b>
+https://techcommunity.microsoft.com/t5/azure-sql-blog/managed-instance-link-connecting-sql-server-to-azure-reimagined/ba-p/2911614#:~:text=Link%20feature%20for%20Managed%20Instance%20is%20a%20new,Instance%2C%20providing%20unprecedented%20hybrid%20flexibility%20and%20database%20mobility. 
+
+Azure Site Recovery
+https://learn.microsoft.com/en-us/azure/site-recovery/site-recovery-overview 
+
+Log Shipping
+https://learn.microsoft.com/en-us/sql/database-engine/log-shipping/about-log-shipping-sql-server?view=sql-server-ver16 
+
+Replication
+https://learn.microsoft.com/en-us/azure/azure-sql/database/replication-to-sql-database?view=azuresql
+
+<h3>Data Virtualization</h3>
+SQL Server has long had the ability to query data outside of a specific database. Cross-database queries, Linked Servers, and Open Database Connectivity (ODBC) data sources are all available from all currently supported versions. 
+<p></p>
+Starting in SQL Server 2019, new methods and capabilities have been added to allow you to have a single language, security model, and query mechanism to allow SQL Server to become a "Data Hub", even without ingesting the data. Two of these changes are improvements to the ODBC function, and the <i>EXTERNAL DATA SOURCE</i> T-SQL statement.
+<p></p>
+
+<b>ODBC</b>
+https://learn.microsoft.com/en-us/sql/relational-databases/polybase/data-virtualization?view=sql-server-ver16 
+<p></p>
+
+<b>PolyBase and EXTERNAL DATA</b>
+https://learn.microsoft.com/en-us/sql/relational-databases/polybase/polybase-guide?view=sql-server-ver16
+https://learn.microsoft.com/en-us/sql/t-sql/statements/create-external-data-source-transact-sql?view=sql-server-ver16&tabs=dedicated 
+
+
+<h3>Azure Data Sync</h3>
+Between Instance and SQL DB 
+
+https://learn.microsoft.com/en-us/azure/azure-sql/database/sql-data-sync-data-sql-server-sql-database?view=azuresql 
+
+<h3>Replication Subscriber</h3> 
+in any Azure SQL
+https://learn.microsoft.com/en-us/azure/azure-sql/database/replication-to-sql-database?view=azuresql 
+
+<h3>Azure Key Vault</h3> 
+EKM - Always Encrypted
+https://learn.microsoft.com/en-us/sql/relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server?view=sql-server-ver16 
+
+<h3>Synapse Link</h3> 
+A very eye-opening chart. 
+https://www.businessinsider.com/top-ceos-make-399-times-more-than-workers-2022-10 
+
+<h3>Linked Server</h3>
+https://learn.microsoft.com/en-us/sql/relational-databases/linked-servers/create-linked-servers-sql-server-database-engine?view=sql-server-ver16 
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
 
@@ -51,13 +110,21 @@ TODO: Enter activity steps description with checkbox
 
 <h2 id="5.2"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">5.2 - Extending Microsoft Azure services to on-Premises environments</h2>
 
+In some cases you will want to leverage cloud services in your on-premises environment. This can be as little as inventoring your Instances, up to using a security platform that is always up to date, all the way to a completely managed Instance of SQL Server, residing not only in your on-premises data center, but even other cloud providers.
 
-<b>Raw Notes:</b> 
-- Defender, SQL Defender, Advanced Threat Detection
-- Purview
-- Arc, Arc and Arc
+<h3>Microsoft Defender, Microsoft SQL Defender, and Advanced Threat Protection</h3>
+https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-sql-usage 
 
-TODO: Topic Description
+
+<h3>Data Catalog and Governance with Microsoft Purview</h3>
+https://cloudblogs.microsoft.com/sqlserver/2022/08/11/microsoft-purview-access-policies-for-sql-server-2022/ 
+https://learn.microsoft.com/en-us/azure/purview/tutorial-register-scan-on-premises-sql-server 
+
+<h3>Azure Arc and SQL Server</h3>
+https://learn.microsoft.com/en-us/sql/sql-server/azure-arc/overview?view=sql-server-ver16 
+
+<h3>Connect with Azure Active Directory</h3>
+https://learn.microsoft.com/en-us/sql/relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview?view=sql-server-ver16
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
 
@@ -73,45 +140,28 @@ TODO: Enter activity steps description with checkbox
 
 <h2 id="5.3"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">5.3 - Migrating SQL Server Instances to the Microsoft Azure Platform</h2>
 
+https://learn.microsoft.com/en-us/dotnet/azure/migration/sql
+
+Offline or Online
+RPO/RTO
+App versioning - very important
+
+Database - scripts and tools and Agents, etc. Planning is essential. AG planning. MI very handy here. 
+Tools will do SKU reco
+
+BU/Res
+Online = tooling
+
+
+Link for MI
+
+Pay attention to versions
+
 TODO: Topic Description
-
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
-
-TODO: Activity Description and tasks
-
-<p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Description</b></p>
-
-TODO: Enter activity description with checkbox
-
-<p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
-
-TODO: Enter activity steps description with checkbox
-<img src="https://user-images.githubusercontent.com/517325/189189782-892a92dd-c54d-4f32-adac-ee3463e171ac.png" alt="Graphic" width="600">
-
-<h4>SQL Server Migration Assistant</h4>
-https://docs.microsoft.com/en-us/sql/ssma/sql-server-migration-assistant?view=sql-server-ver15
-
-<img src="https://user-images.githubusercontent.com/517325/189189438-f0679b21-3723-498d-8be3-97b6a689bab2.png" alt="Graphic" width="600">
-  
-<h4>Database Experimentation Assistant</h4>
-https://www.microsoft.com/en-us/download/details.aspx?id=54090 
-
-<img src="https://user-images.githubusercontent.com/517325/189189486-1a13ed80-17c4-4f31-8607-7c15c5642315.png" alt="Graphic" width="600">
-
 <h4>Azure Data Studio Migration Extension</h4>
 https://docs.microsoft.com/en-us/sql/azure-data-studio/extensions/azure-sql-migration-extension?view=sql-server-ver15 
 
 <img src="https://user-images.githubusercontent.com/517325/189189647-bb1e5857-3ba4-416f-987e-c68812587d47.png" alt="Graphic" width="600">
-
-<h4>Data Migration Assistant</h4>
-https://docs.microsoft.com/en-us/sql/dma/dma-overview?view=sql-server-ver15#see-also
-
-<img src="https://user-images.githubusercontent.com/517325/189189603-599d1fc8-5297-453d-a83d-5a9bc6c6d2c6.png" alt="Graphic" width="600">
-
-<h4>Azure Synapse Pathway</h4>
-https://docs.microsoft.com/en-us/sql/tools/synapse-pathway/azure-synapse-pathway-overview?view=azure-sqldw-latest
-
-<img src="https://user-images.githubusercontent.com/517325/189189253-ae26dfec-3484-4fd1-8373-79ef9e0f3b1b.png" alt="Graphic" width="600">
 
 <h4>Azure Database Migration Service</h4>
 https://docs.microsoft.com/en-us/azure/dms/
