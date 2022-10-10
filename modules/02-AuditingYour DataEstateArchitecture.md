@@ -21,8 +21,13 @@ You'll cover these topics in the workshop:
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
 An audit of a data estate is a massive undertaking. It's rare to start with a new implementation, so in most cases you are asked to be a detective in locating your organization's current data elements so that you can most effectively secure, tune, and update them. In smaller organizations there are fewer people that can take on the task, and in larger organizations there are so many elements that even the most dedicated team finds it difficult to be successful. However, there are tools, processes and techniques you can use to create a useful audit.
+
+###Scenario: Wide World Importers
   
-One of those tools is to use an IT Framework to create an ontology and process map for your data estate. There are many different IT Frameworks for organizing your Information Technology platforms for your organization. While almost no one can fully implement a framework completely, they still have great value in creating a structure that you can use to get started and modify your own map.
+
+To begin those improvements, the Wide World Importers (WWI) leadership team has tasked the Information Technology organization to create a comprehensive plan to audit where they are now, and how to accomplish all of the goals stated above.
+
+One of the tools WWI (and your organization) can use an IT Framework to create an ontology and process map for your data estate. There are many different IT Frameworks for organizing your Information Technology platforms for your organization. While almost no one can fully implement a framework completely, they still have great value in creating a structure that you can use to get started and modify your own map.
 
 A few primary industry IT Frameworks are:
 
@@ -58,17 +63,17 @@ You can <a href="https://en.wikipedia.org/wiki/Business_Process_Model_and_Notati
   
 <br>
 
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: Create a Simple Source to Sink Document</b></p>
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: Detail your Orgnaization's Data Estate Goals</b></p>
 <br>
-In this Activity, you will create a simple diagram of one business process in your own or an example organization, using the basic BPMN icons. You can use any tool for this Activity, including paper and pencil.
-
-This Activity can be completed alone or as a group.
+In this Activity, you will create a list of goals for your Data Estate similar to the one WWI created above.. You can use any tool for this Activity, including paper and pencil. This Activity can be completed alone or as a group.
 
 <p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
+- Review the Wide World Importers Scenario above.
+- Briefly review the IT Frameworks described above, and bookmark them for later reference for a discussion with your larger IT organization to see if you are using any of them, or should be leveraging them.
 - Open [this reference in a new tab](https://i.pinimg.com/originals/3b/58/d7/3b58d79b6b60a579f4ea9635d910977e.png) to see some basic BPMN icons.
-- Using the Contoso graphic shown earlier as an example, model one simple business process (such as "Customer Returns Product) and ensure you enter the data elements.
-- Be ready to discuss your design.
+- Review the Contoso graphic shown earlier and review how the data elements show a process flow.
+- Document at least three areas of emphasis for your data estate for your current organization. 
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
@@ -86,8 +91,8 @@ You can see an example of a Data Architecture Diagram below:
 
 For data source discovery, you can often start with the tier-1 applications you organization uses, and find the Sources and Sinks they use by tracing their path. You can also check with your storage team to evaluate data storage elements that do not fall within a data processing engine.  
 
-<h4>MAP</h4>
-To discover database engines, there are multiple tools you can use. One of the oldest and simplest is the Microsoft Assessment and Planning (MAP) tool. You can <a href="https://docs.microsoft.com/en-us/previous-versions/bb977556(v=technet.10)"> read more about it here</a>.
+<h4>The MAP Toolkit</h4>
+To discover database engines, there are multiple tools you can use. One of the oldest and simplest is the Microsoft Assessment and Planning (MAP) Toolkit. You can <a href="https://docs.microsoft.com/en-us/previous-versions/bb977556(v=technet.10)"> read more about it here</a>.
 <br>
 <img src="https://user-images.githubusercontent.com/517325/189189344-e3e95758-91ca-4e41-8597-fdf35e50d2c7.png" alt="Graphic" width="600">
 
@@ -99,14 +104,33 @@ Once you start the Collection action, the Toolkit produces several reports that 
 <br>
 <img src="https://th.bing.com/th/id/R.d903b7cb753f85ca93280b71deaad375?rik=exKbfXl8xryqxQ&riu=http%3a%2f%2fsocial.technet.microsoft.com%2fwiki%2fcfs-file.ashx%2f__key%2fcommunityserver-wikis-components-files%2f00-00-00-00-05%2f4846.MAPUI.PNG&ehk=o0ldFgKymvCecw3IG5EwkKX%2fdokj%2f9bcCbfolbzCIuM%3d&risl=&pid=ImgRaw&r=0" alt="Graphic" width="600">
 
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: Evaluate and Bookmark the MAP Toolkit</b></p>
+<br>
+In this Activity, you will will complete a Learning Path for the MAP Toolkit. If time is limited, bookmark this Path for future use.
+This Activity can be completed alone or as a group.
 
+<p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
+
+- Open [this reference in a new tab](https://learn.microsoft.com/en-us/training/modules/sql-server-discovery-using-map/) and complete the Learning Path.
+
+<p style="border-bottom: 1px solid lightgrey;"></p>
 <h4>Microsoft Purview Data Map</h4>
+<a href="https://learn.microsoft.com/en-us/purview/purview">Microsoft Purview</a> is a suite of tools for data governance, risk assessment and management, and compliance that allow you to   govern, protect, and manage your entire data estate. For Data Discovery, this section focuses on the <i>Data Map</i> feature.
 
-https://learn.microsoft.com/en-us/purview/purview
+<img src="https://learn.microsoft.com/en-us/azure/purview/media/overview/high-level-overview-large.png#lightbox" alt="Graphic" width="600">
+
+The Process to create a Data Map using Purview involves: 
+
+- Create an account in the Microsoft Purview governance portal
+- Create a collection and assign permissions in the Microsoft Purview Data Map
+- Create and manage Sources and Scans in the Microsoft Purview Data Map
+- Apply classifications and Labels on assets in Microsoft Purview
+- 
+
+
 
 https://learn.microsoft.com/en-us/azure/purview/microsoft-purview-connector-overview
 
-<img src="https://learn.microsoft.com/en-us/azure/purview/media/overview/high-level-overview-large.png#lightbox" alt="Graphic" width="600">
 
   
 TODO: Topic Description
@@ -121,7 +145,8 @@ TODO: Enter activity description with checkbox
 
 <p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
-TODO: Enter activity steps description with checkbox
+- <a href="https://learn.microsoft.com/en-us/azure/purview/register-scan-on-premises-sql-server">Open this link and review the steps you see there</a>. Bookmark for later reference.
+- <a href="https://learn.microsoft.com/en-us/training/modules/intro-to-microsoft-purview/">If time permits, open this Learning Path and complete only the Introduction</a>. Bookmark for later reference.
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
@@ -130,7 +155,7 @@ Earlier in the process you identified the sources and sinks for your data based 
 
 You can start with the application paths, documenting the connections that are made from the application to the data source. In some cases this will be a direct connection, and in others there are layers of systems that take data requests, process them, and return the result to the application. 
 
-For the systems that move data from one sink to another, there are more options for that process. 
+For the systems that move data from one sink to another, there are more options for that process.
 
 <h3>Data Movement options</h3>
 There are multiple options your organization likely has to move data from one location to another. They are grouped into two general toolsets: a manual, scripted, or platform-specific tool (such as PowerShell or SQL Server Integration Services) and a system specifically designed to move data, called a Pipeline.
