@@ -39,6 +39,8 @@ Tailspin Toys is hoping that migrating their services from on-premises to the cl
 
 > If you'd like to conduct a deep whiteboard design session for this scenario, it is available [here](https://github.com/microsoft/MCW-Migrating-SQL-databases-to-Azure/tree/master/Whiteboard%20design%20session).
 
+ ![Azure SQL Overview](https://github.com/microsoft/sqlworkshops-azuresqllabs/blob/master/graphics/azuresql-overview.png?raw=true)  
+
 <h3>SQL Server on Microsoft Azure VM's</h3>
 
 Azure SQL VMs don't have specific service tiers, but there are decisions to be made around which images to choose, how to configure storage and what sizes, etc. This isn't the focus of this workshop, but if you're considering Azure SQL VMs, you'll want to review the [guidance on images to choose from](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview), the [quick checklist](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-performance) to obtain optimal performance of Azure SQL VMs, and the guidance for [storage configuration](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-storage-configuration).  
@@ -274,7 +276,7 @@ Tailspin Toys has requested your help in determining where and how they should l
 <!-- TODO: point to Ninar's blog and video when they god live (August 21)-->
 
 There are several different options within Azure SQL, and one visual is shown below.  
- ![Azure SQL Overview](https://github.com/microsoft/sqlworkshops-azuresqllabs/blob/master/graphics/azuresql-overview.png?raw=true)  
+
 
 > Recently, we announced [Azure SQL Database Instance Pools in preview](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-instance-pools), which provide a convenient and cost-efficient way to migrate smaller SQL instances to the cloud at scale.   
 
