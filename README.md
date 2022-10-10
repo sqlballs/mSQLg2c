@@ -49,19 +49,7 @@ The concepts and skills taught in this workshop form the starting points for:
 <p style="border-bottom: 1px solid lightgrey;"></p>
 <h2><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/building1.png?raw=true"> Business Applications of this Workshop</h2>
 
-Businesses require near real-time insights from ever-larger sets of data from a variety of sources. Many have not explored the improvements made in the latest versions of SQL Server, and some are only now exploring the cloud as a computing platform. As time has progressed, a more dramatic upgrade process may be required.
-
-In addition to traditional Online Transaction Processing (OLTP) and Online Analytic Processing (OLAP) workloads, some industry examples of data processing from multiple sources of data at scale are:
-<table style="tr:nth-child(even) {background-color: #f2f2f2;}; text-align: left; display: table; border-collapse: collapse; border-spacing: 2px; border-color: gray;">
-<tr><th style="background-color: #1b20a1; color: white;">Industry</th><th style="background-color: #1b20a1; color: white;">Example</th></tr>
-<tr><td style="vertical-align: top">Retail</td><td style="vertical-align: top">Demand Prediction<br/>Market-Basket Analysis</td></tr>
-<tr><td style="vertical-align: top">Finance</td><td style="vertical-align: top">Fraud detection<br/>customer segmentation</td></tr>
-<tr><td style="vertical-align: top">Healthcare</td><td style="vertical-align: top">Fiscal control analytics<br/>Disease Prevention prediction and classification<br/> Clinical Trials optimization</td></tr>
-<tr><td style="vertical-align: top">Public Sector</td><td style="vertical-align: top">Revenue prediction<br/>Education effectiveness analysis</td></tr>
-<tr><td style="vertical-align: top">Manufacturing</td><td style="vertical-align: top">Predictive Maintenance<br/>Anomaly Detection</td></tr>
-<tr><td style="vertical-align: top">Agriculture</td><td style="vertical-align: top">Food Safety analysis<br/>Crop forecasting</td></tr>
-</table>
-
+Businesses require near real-time insights from ever-larger sets of data from a variety of sources. Many have not explored the improvements made in the latest versions of SQL Server, and some are only now exploring the cloud as a computing platform. As time has progressed, a more dramatic upgrade process may be required. Business and Organizations may not be aware of the security, performance, reliability and programming capabilities in the latest version of SQL Server and the improvements in Microsoft Azure, and need to know how to evaulate those improvements to see if they warrant a change in their data estate.
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
 <h2><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/listcheck.png?raw=true"> <a name="technologies">Technologies and Topics covered in this Workshop</a></h2>
@@ -128,11 +116,11 @@ This is a modular workshop, and in each section, you'll learn concepts, technolo
 
   <tr><td style="vertical-align: top;"><a href="https://github.com/sqlballs/mSQLg2c/blob/Buck/modules/01-SetupandWorkshopMethodology.md" target="_blank">01 - Setup and Workshop Methodology </a></td><td> Workshop introduction, logistics, setup checks</td></tr>
   
-  <tr><td style="vertical-align: top;background-color: AliceBlue; color: black;"><a href="https://github.com/sqlballs/mSQLg2c/blob/Buck/modules/02-AuditingYour%20DataEstateArchitecture.md" target="_blank">02 - Auditing your Data Estate Architecture</a> <td style="vertical-align: top;background-color: AliceBlue; color: black;"> This module covers the processes and tools you can use to audit your current data estate and how to identify gaps for leveraging data to make intelligent decisions </td></tr>
-  <tr><td style="vertical-align: top;"><a href="https://github.com/sqlballs/mSQLg2c/blob/Buck/modules/03-SQLServerImprovements.md" target="_blank"> 03 - SQL Server Improvements </a></td><td>Improvements in SQL Server's manageability, availability, performance, security and more.</td></tr>
+  <tr><td style="vertical-align: top;background-color: AliceBlue; color: black;"><a href="https://github.com/sqlballs/mSQLg2c/blob/Buck/modules/02-AuditingYour%20DataEstateArchitecture.md" target="_blank">02 - Auditing your Data Estate Architecture</a> <td style="vertical-align: top;background-color: AliceBlue; color: black;"> This module shows the processes and tools you can use to audit your current data estate and how to identify gaps for leveraging data to make intelligent decisions </td></tr>
+  <tr><td style="vertical-align: top;"><a href="https://github.com/sqlballs/mSQLg2c/blob/Buck/modules/03-SQLServerImprovements.md" target="_blank"> 03 - SQL Server Improvements </a></td><td>Explains the improvements in SQL Server's manageability, availability, performance, security and more.</td></tr>
   <tr><td style="vertical-align: top;background-color: AliceBlue; color: black;"><a href="https://github.com/sqlballs/mSQLg2c/blob/Buck/modules/04-ImprovementsInSQLOnTheMicrosoftAzurePlatform.md" target="_blank">04 - Improvements in SQL on the Microsoft Azure Platform </a> </td><td style="background-color: AliceBlue; color: black;"> Covers the improvements in SQL Server technologies on the Microsoft Azure Platform, along with the fundamentals of SQL in Azure with additional deeper resources provided.</td></tr>  
 
-  <tr><td style="vertical-align: top;"><a href="https://github.com/sqlballs/mSQLg2c/blob/Buck/modules/05-ExtendingSQLServerToAzure.md" target="_blank"> 05 - Extending SQL Server to Azure </a></td><td>Covers the methods of connecting your on-premises data systems to cloud platforms such as Microsoft Azure and Amazon's AWS, migration workflows and tools for assessing, planning, and connecting and/or migrating SQL workloads to Azure that meets the business requirements.</td></tr>
+  <tr><td style="vertical-align: top;"><a href="https://github.com/sqlballs/mSQLg2c/blob/Buck/modules/05-ExtendingSQLServerToAzure.md" target="_blank"> 05 - Extending SQL Server to Azure </a></td><td>Details the methods of connecting your on-premises data systems to cloud platforms such as Microsoft Azure and Amazon's AWS, migration workflows and tools for assessing, planning, and connecting and/or migrating SQL workloads to Azure that meets the business requirements.</td></tr>
 
 </table>
 
