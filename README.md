@@ -73,7 +73,7 @@ The information covered in this workshop includes the following technologies and
 
 You'll need a local system or Virtual Machine that you are able to install software on. The workshop demonstrations use Microsoft Windows as an operating system and all examples use Windows for the workshop. Optionally, you can use a Microsoft Azure Virtual Machine (VM) to install the software on and work with the solution.
 
-You must have a Microsoft Azure account with the ability to create assets, specifically the Azure Kubernetes Service (AKS).
+You must have a Microsoft Azure account with the ability to create assets, specifically a Microsoft Azure SQL Database.
 
 This workshop expects that you understand data structures and working with SQL Server and computer networks. This workshop does not expect you to have any prior data science knowledge, but a basic knowledge of statistics and data science is helpful in the Data Science sections. Knowledge of SQL Server, Azure Data and AI services, Python, and Jupyter Notebooks is helpful but not required. AI techniques are implemented in R and Python packages. Solution templates are implemented using Azure services, development tools, and SDKs. You should have experience working with the Microsoft Azure Platform.
 
