@@ -163,18 +163,16 @@ SQL Server on Linux is supported by the following platforms.
 
 <h3>SQL Server in Containers</h3>
 
-SQL Server 2017
-- First SQL Server container
-- Regularly updated with CUs
-- Only supported Ubuntu 16.04-based
 
-SQL Server 2019
+
+SQL Server 2022
+- Regularly updated with CUs
 - SQL server on Multipl OS containers: Red Hat, Ubuntu, Windows
 - Machine Learning, Polybase, MSDTC, & Replication in Linux Containers
-- Big Data Clusters
 
 
-<h3>Do we want to remove this?  This is basically Big Data Clusters?</h3>
+
+
 <h3>SQL Server on Kubernetes</h3>
 
 TODO: Topic Description
@@ -197,6 +195,9 @@ TODO: Enter activity steps description with checkbox
 <h2 id="3.2"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.2 Manageability</h2>
 
 TODO: Topic Description
+SQL Server continues to add advances towards deployment managability
+
+https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver16#management
 
 <h3>Tools</h3>
 
@@ -212,11 +213,7 @@ TODO: Topic Description
 
 TODO: Topic Description
 
-<br>
 
-<img style="height: 400; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" src="https://docs.microsoft.com/en-us/sql/big-data-cluster/media/concept-security/cluster_endpoints.png">
-
-<br>
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
 
@@ -234,7 +231,9 @@ TODO: Enter activity steps description with checkbox
 
 <h2 id="3.3"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.3 Availability</h2>
 
-TODO: Topic Description
+SQL Server has multiple availability features
+
+https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver16#availability
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
 
@@ -252,7 +251,15 @@ TODO: Enter activity steps description with checkbox
 
 <h2 id="3.4"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.4 Performance</h2>
 
-TODO: Topic Description
+Performance is key for any SQL Server installation.
+
+https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver16#performance
+
+Additionally, performance is enhanced by the Query Store and intelligent query processing
+
+https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver16#query-store-and-intelligent-query-processing
+
+<p><img src="https://learn.microsoft.com/en-us/sql/relational-databases/performance/media/iqp-feature-family.svg?view=sql-server-ver16">
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
 
@@ -270,7 +277,10 @@ TODO: Enter activity steps description with checkbox
 
 <h2 id="3.5"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.5 Security</h2>
 
-TODO: Topic Description
+The integration of Azure and SQL Server has been enhanced to its best level yet. 
+
+https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver16#security
+
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
 
@@ -284,6 +294,9 @@ TODO: Enter activity description with checkbox
 
 TODO: Enter activity steps description with checkbox
 
+<p>
+<img src="https://cloudblogs.microsoft.com/uploads/prod/sites/32/2022/05/SQL-Server-2022-slide_2022.05.22-update.webp">
+
 <p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
 TODO: Enter activity steps description with checkbox
@@ -292,7 +305,10 @@ TODO: Enter activity steps description with checkbox
 
 <h2 id="3.6"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.6 Development</h2>
 
-TODO: Topic Description
+There are many advancements that assist with development.
+
+https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver16#language
+
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
 
@@ -315,56 +331,3 @@ TODO: Enter activity steps description with checkbox
 Next, continue on to [Module 04 - SQL Server on the Microsoft Azure Platform](https://github.com/sqlballs/mSQLg2c/blob/main/modules/04-ImprovementsInSQLOnTheMicrosoftAzurePlatform.md)
 
 
-# Workshop: SQL Ground-to-Cloud
-
-#### <i>A Microsoft workshop from the SQL Server team</i>
-
-<p style="border-bottom: 1px solid lightgrey;"></p>
-
-<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/textbubble.png?raw=true"><b>     02 - Modernizing Your Data Estate with SQL Server 2019</b></h2>
-
-
-
-- Improving query performance without having to make application changes
-- Classifying key data columns and being able to audit access to these columns to meet the needs of GDPR compliance.
-- Providing better database availability when applications use long-running transactions.
-- Allowing the WideWorldImporters team to access data from sources like Oracle, Azure SQL Database, and Azure CosmosDB without having to develop expensive ETL jobs.
-- The database team at WideWorldImporters has evaluated SQL Server on Linux but SQL Server 2017 didn't include Replication, a feature they need for their application. They would like to evaluate how SQL Server Replication on Linux works. They also want to understand more about container technology and how it can be used with SQL Server
-- WideWorldImporters also would like to know other capabilities exist in SQL Server 2019 that might help them before more efficient and extend the capabilities of T-SQL.
-- WideWorldImporters also would like to learn more about how they can plan and execute a migration to SQL Server 2019 and reduce their risk for upgrades.
-- WideWorldImporters is also evaluating Azure SQL so wants to know what features in SQL Server 2019 also work in Azure.
-
-In this workshop module, you will see the capabilities in SQL Server 2019 that can provide solutions for these challenges.
-
-> **NOTE**: <a href="https://github.com/microsoft/sqlworkshops-sqlg2c/blob/master/sqlgroundtocloud/00-prerequisites.md" target="_blank">Make sure you check out the <b>prerequisite</b> page before you start.</a> You'll need all of the items loaded there before you can proceed with the workshop. Instructor led workshops may have provided all the resources in the prerequisites.
-
-<p style="border-bottom: 1px solid lightgrey;"></p>
-
-<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>     Activity: SQL Server 2019 Lab</a></b></h2>
-
-In this activity, you will complete a series of modules from the **SQL Server 2019 Lab**.
-
-Instructor led workshops will use modules from the SQL Server 2019 lab along with the PowerPoint slides <a href="https://github.com/microsoft/sqlworkshops/blob/master/SQLGroundToCloud/slides/SQL%20Server%202019%20Modern%20Data%20Platform.pptx">SQL Server 2019 Modern Data Platform</a>. Instructor led labs may not go through all modules in the SQL Server 2019 lab.
-
-<h3><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Activity Steps</b></h3>
-
-To complete this module, go to [https://github.com/microsoft/sqlworkshops/blob/master/sql2019lab/README.md](https://github.com/microsoft/sqlworkshops-sql2019lab).
-
-When you are done with the SQL Server 2019 lab you have completed Module 02 of the SQL Server Ground to Cloud Workshop! Proceed to the next module using the link in Next Steps below.
-
-<p style="border-bottom: 1px solid lightgrey;"></p>
-
-<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/owl.png?raw=true"><b>     For Further Study</b></h2>
-
-<ul>
-    <li><a href="https://docs.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-ver15" target="_blank">What's new in SQL Server 2019</a></li>
-    <li><a href="https://github.com/microsoft/sqlworkshops/tree/master/sql2019lab" target="_blank">The SQL Server 2019 Lab</a></li>
-    <li><a href="https://aka.ms/ss19
-" target="_blank">Download and try SQL Server 2019</a></li>
-</ul>
-
-<p style="border-bottom: 1px solid lightgrey;"></p>
-
-<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/geopin.png?raw=true"><b>  Next Steps</b></h2>
-
-Next, Continue to <a href="https://github.com/microsoft/sqlworkshops-sqlg2c/blob/master/sqlgroundtocloud/03-WorkingWithBigDataAndDataScienceBigDataClustersForSQLServer2019.md" target="_blank"><i> 03 - Working with Big Data Clusters on SQL Server 2019</i></a>.
