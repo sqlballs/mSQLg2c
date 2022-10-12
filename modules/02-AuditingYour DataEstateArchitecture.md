@@ -211,7 +211,6 @@ Although complex in its implementation, Azure Data Factory (ADF) has a simple se
 
 You can <a href="https://learn.microsoft.com/en-us/azure/data-factory/introduction ">learn more about Azure Data Factory at this reference</a>.
 
-
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: SSIS and ADF Overview</b></p>
 
 In this Activity you have a choice of reviewing one of two training modules: one for Azure Data Factory, and the other for SQL Server Integration Services. You can bookmark this reference to do both courses on your own schedule later.
