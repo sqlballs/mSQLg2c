@@ -40,7 +40,7 @@ Regardless of the deployment scenario there are some key items to keep in mind.
 
 <h3>SQL Server on Windows</h3>
 
-SQL Server has traditionally been a Windows only product.  
+When deploying SQL Server on Windows or any other platform it is critical to understand SQL Server Editions.
 
 <p>
 
@@ -72,131 +72,39 @@ When you are done with the SQL Server lab you have completed Module 02 of the SQ
 
 <h3>SQL Server on Linux</h3>
 
-SQL Server on Linux is supported by the following platforms.
-<table border=1>
-<tr>
-  <th align="center" colspan=4>SQL Server 2017</th>
-</tr>
-  <tr>
-    <td>Platform</td>	
-    <td>File System	</td>	
-    <td>Installation Guide</td>
-  </tr>
-   <tr>
-    <td>Red Hat Enterprise Linux 7.7 - 7.9, or 8.0 - 8.5 Server</td>	
-    <td>XFS or EXT4</td>	
-    <td><a href="https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-red-hat?view=sql-server-ver16">Installation Guide</a></td>
-  </tr>
-   <tr>
-    <td>SUSE Enterprise Linux Server v12 (SP3 - SP5)</td>	
-    <td>XFS or EXT4</td>	
-    <td><a href="https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-suse?view=sql-server-ver16">Installation Guide</a></td>
-  </tr>
-   <tr>
-    <td>Ubuntu 16.04 LTS 1, 18.04 LTS</td>	
-    <td>XFS or EXT4</td>	
-    <td><a href="https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-ubuntu?view=sql-server-ver16">Installation Guide</a></td>
-  </tr>
-   <tr>
-    <td>Docker Engine 1.8+ on Linux</td>	
-    <td>N/A</td>	
-    <td><a href="https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-ver16&pivots=cs1-bash">Installation Guide</a></td>
-  </tr>
-</table>
+SQL Server now runs on the Linux Platform.  It runs on the Red Hat, SUSE, Ubuntu, & Docker platform.  You can learn more about that architecture here https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-overview?view=sql-server-ver16
 
+<p>
+Some reasons to consider SQL Server on Linux could be if your orginization is more familar with running Linux than Windows, command line installation on Linux platform, and quick deployments of non-production environments.
 
-<table border=1>
-<tr>
-  <th align="center" colspan=4>SQL Server 2019</th>
-</tr>
-  <tr>
-    <td>Platform</td>	
-    <td>File System	</td>	
-    <td>Installation Guide</td>
-  </tr>
-   <tr>
-    <td>Red Hat Enterprise Linux 7.7 - 7.9, or 8.0 - 8.5 Server</td>	
-    <td>XFS or EXT4</td>	
-    <td><a href="https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-red-hat?view=sql-server-ver16">Installation Guide</a></td>
-  </tr>
-   <tr>
-    <td>SUSE Enterprise Linux Server v12 (SP3 - SP5) or v15</td>	
-    <td>XFS or EXT4</td>	
-    <td><a href="https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-suse?view=sql-server-ver16">Installation Guide</a></td>
-  </tr>
-   <tr>
-    <td>Ubuntu 16.04 LTS 1, 18.04 LTS, 20.04 LTS</td>	
-    <td>XFS or EXT4</td>	
-    <td><a href="https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-ubuntu?view=sql-server-ver16">Installation Guide</a></td>
-  </tr>
-   <tr>
-    <td>Docker Engine 1.8+ on Linux</td>	
-    <td>N/A</td>	
-    <td><a href="https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-ver16&pivots=cs1-bash">Installation Guide</a></td>
-  </tr>
-</table>
+<p>
 
-<table border=1>
-<tr>
-  <th align="center" colspan=4>SQL Server 2022</th>
-</tr>
-  <tr>
-    <td>Platform</td>	
-    <td>File System	</td>	
-    <td>Installation Guide</td>
-  </tr>
-   <tr>
-    <td>Red Hat Enterprise Linux 8.0 - 8.5 Server</td>	
-    <td>XFS or EXT4</td>	
-    <td><a href="https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-red-hat?view=sql-server-ver16">Installation Guide</a></td>
-  </tr>
-   <tr>
-    <td>SUSE Enterprise Linux Server v15 (SP1 - SP3)</td>	
-    <td>XFS or EXT4</td>	
-    <td><a href="https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-suse?view=sql-server-ver16">Installation Guide</a></td>
-  </tr>
-   <tr>
-    <td>Ubuntu 20.04 LTS</td>	
-    <td>XFS or EXT4</td>	
-    <td><a href="https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-ubuntu?view=sql-server-ver16">Installation Guide</a></td>
-  </tr>
-   <tr>
-    <td>Docker Engine 1.8+ on Linux</td>	
-    <td>N/A</td>	
-    <td><a href="https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-ver16&pivots=cs1-bash">Installation Guide</a></td>
-  </tr>
-</table>
+<b>Exercise Introduction to SQL Server on Linux</b>: https://learn.microsoft.com/en-us/training/modules/introduction-sql-server-linux/ (26 minutes)
+<p>
+Additional learning MS Learn module SQL Server on Linux: https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-overview?view=sql-server-ver16
 
 
 <h3>SQL Server in Containers</h3>
 
-
+SQL Server runs in containers on the Docker platform. 
 
 SQL Server 2022
 - Regularly updated with CUs
 - SQL server on Multipl OS containers: Red Hat, Ubuntu, Windows
 - Machine Learning, Polybase, MSDTC, & Replication in Linux Containers
 
+To understand how to deploy SQL Server to a Docker container see following Microsoft Learn article: https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-ver16&pivots=cs1-powershell
 
-
+<p>
 
 <h3>SQL Server on Kubernetes</h3>
 
-TODO: Topic Description
+SQL Server containers can also be deployed to Kubernetes using Helm charts.  To understand how to deploy a container to Kubernetes see this Microsoft Learn article: https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-containers-deploy-helm-charts-kubernetes?view=sql-server-ver16
+
+<p>
 
 
 
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
-
-TODO: Activity Description and tasks
-
-<p><b>Description</b></p>
-
-TODO: Enter activity description with checkbox
-
-<p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
-
-TODO: Enter activity steps description with checkbox
 
 
 <h2 id="3.2"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.2 Manageability</h2>
