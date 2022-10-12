@@ -42,6 +42,13 @@ Regardless of the deployment scenario there are some key items to keep in mind.
 
 SQL Server has traditionally been a Windows only product.  
 
+<p>
+
+SQL Server Editions
+
+https://learn.microsoft.com/en-us/sql/sql-server/editions-and-components-of-sql-server-2019?view=sql-server-ver16#-editions
+
+
 <h2><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>     Activity: Review SQL Server Installation Key Terms Lab</a></b></h2>
 
 In this activity, you will review key terms and concepts related to SQL Server Installations.
@@ -263,7 +270,9 @@ https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?v
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
 
-TODO: Activity Description and tasks
+Go to this link and read the MS Learn Article on using the Query Data Store
+
+https://learn.microsoft.com/en-us/training/modules/explore-query-performance-optimization/5-explore-query-store
 
 <p><b>Description</b></p>
 
