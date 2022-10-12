@@ -131,40 +131,71 @@ Starting in SQL Server 2019, new methods and capabilities have been added to all
 <p></p>
 
 <b>ODBC</b>
-https://learn.microsoft.com/en-us/sql/relational-databases/polybase/data-virtualization?view=sql-server-ver16 
-<p></p>
+Open Database Connectivity (ODBC) is a driver system application programming interface (API) for accessing data. Depending on the source and target software using the driver, ODBC provides a translation layer for data. Data targets can be anything from a text file to Microsoft Excel spreadsheets, other Relational Database Management Systems (RDBMS) such as SQL Server or Oracle, and dozens of other sources. 
+
+The latest versions of SQL Server make use of an ODBC connection directly within code using a connection string, or using the EXTERNAL DATA SOURCE commands. You can learn more about <a href="https://learn.microsoft.com/en-us/sql/integration-services/connection-manager/odbc-connection-manager?view=sql-server-ver16">accessing data in other systems using ODBC at this reference</a>. 
+
+> A third-party company called <a href="https://www.cdata.com/odbc/">CDATA has created dozens of ODBC drivers which can greatly expand your data access within SQL Server</a>.
+
+You can <a href="https://learn.microsoft.com/en-us/sql/relational-databases/polybase/data-virtualization?view=sql-server-ver16">learn more about creating an External table with a wizard in the tools for SQL Server at this reference</a>.
 
 <b>PolyBase and EXTERNAL DATA</b>
-https://learn.microsoft.com/en-us/sql/relational-databases/polybase/polybase-guide?view=sql-server-ver16
-https://learn.microsoft.com/en-us/sql/t-sql/statements/create-external-data-source-transact-sql?view=sql-server-ver16&tabs=dedicated 
+PolyBase is a feature that enables you to query data with T-SQL in your current Instance from sources such as SQL Server, Oracle, Teradata, MongoDB, Hadoop clusters, Cosmos DB, and S3-compatible object storage. You do not have to install client connection software for these systems. You can also use an ODBC connector to query additional providers. PolyBase allows your T-SQL queries to join the data from external sources to relational tables stored in an instance of SQL Server.
 
-<h3>Linked Server</h3>
-https://learn.microsoft.com/en-us/sql/relational-databases/linked-servers/create-linked-servers-sql-server-database-engine?view=sql-server-ver16 
+One key use-case for data virtualization with the PolyBase feature is to allow the data to stay in its original location and format. You can virtualize the external data through the SQL Server instance, so that it can be queried in place like any other table in SQL Server.
+
+You can <a href="https://learn.microsoft.com/en-us/sql/relational-databases/polybase/polybase-guide?view=sql-server-ver16">learn more about PolyBase in for SQL Server at this reference</a>.
+
+To use PolyBase, you need to set up a network connection between the source and your SQL Server Instance, provide any credentials, set a format for the data (if required) and then create an External Table to the source. You can <a href="https://learn.microsoft.com/en-us/sql/relational-databases/polybase/polybase-t-sql-objects?source=recommendations&view=sql-server-ver16">learn more about that process and the T-SQL commands used at this reference</a>.
+
+<h4>Linked Servers</h4>
+The Linked Servers feature enables SQL Server to execute a Transact-SQL statement that references tables in another Instance of SQL Server or other specific database engines such as Oracle. Many types of data sources can be configured as linked servers, including third-party database providers and Azure Cosmos DB. After a linked server is created, distributed queries can be run against this server, and queries can join tables from more than one data source. If the linked server is defined as an instance of SQL Server or an Azure SQL Managed Instance, you can also execute remote stored procedures. The capabilities and required arguments of the linked server can vary significantly, based on the target you are connecting to.
+<p></p>
+
+> Linked Servers can have significant security and performance implications, and you should carefully review the documentation below prior to implementing them.
+
+<p></p>
+<img src="https://learn.microsoft.com/en-us/sql/relational-databases/linked-servers/media/lsvr.gif?view=sql-server-ver16" width=400>
+<p></p>
+
+You can <a href="https://learn.microsoft.com/en-us/sql/relational-databases/linked-servers/linked-servers-database-engine?view=sql-server-ver16">learn more about the Linked Servers feature at this reference</a>.
 
 <h3>Azure Data Sync</h3>
-Between Instance and SQL DB 
+Another connection mechanism between a SQL Server Instance and Azure SQL Database is Azure Data Sync.  SQL Data Sync is a Microsoft Azure service that can synchronize data bi-directionally  - across multiple databases, both on-premises and in the cloud.
 
-https://learn.microsoft.com/en-us/azure/azure-sql/database/sql-data-sync-data-sql-server-sql-database?view=azuresql 
+<p></p>
+<img src="https://learn.microsoft.com/en-us/azure/azure-sql/database/media/sql-data-sync-data-sql-server-sql-database/sync-data-overview.png?view=azuresql" width=500>
+<p></p>
+
+You can <a href="https://learn.microsoft.com/en-us/azure/azure-sql/database/sql-data-sync-data-sql-server-sql-database?view=azuresql">learn more about the Linked Servers feature at this reference</a>.
 
 <h3>Azure Key Vault</h3> 
-EKM - Always Encrypted
-https://learn.microsoft.com/en-us/sql/relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server?view=sql-server-ver16 
+Keys are used throughout a Data Estate, inside and outside SQL Server for purposes as varied as database backups and connections to other systems. SQL Server has various keys it uses from a Service Master Key (SMK) to a Database Master Key (DBMK). Those keys, in turn, should be protected outside of the system to prevent high-level compromise. The system that allows this separation of protection is calle <i>Extensible Key Management</i> (EKM). 
+
+The EKM system with the latest versions of SQL Server can leverage the Azure Key Vault, an Azure service that provides high-grade protection of secrets and allows separation of duties.  
+
+<p></p>
+<img src="https://learn.microsoft.com/en-us/sql/relational-databases/security/encryption/media/ekm-key-hierarchy-traditional.png?view=sql-server-ver16" width=400>
+<p></p>
+
+You can <a href="https://learn.microsoft.com/en-us/sql/relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server?view=sql-server-ver16">learn more about using Azure Key Vault with SQL Server at this reference</a>.
 
 <h3>Synapse Link</h3> 
-A very eye-opening chart. 
-https://www.businessinsider.com/top-ceos-make-399-times-more-than-workers-2022-10 
+Setting up a <i>link connection</i> maps a connection between a SQL Server 2022 and an Azure Synapse Analytics dedicated SQL pool. You can use the Synapse Poprtal to create, manage, monitor and delete link connections in your Synapse workspace. This allows the operational data from your source database to be automatically replicated to the destination Synapse dedicated SQL pool. This gives you near-real time analytics from ground to cloud.
 
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
+<p></p>
+<img src="https://learn.microsoft.com/en-us/azure/synapse-analytics/media/sql-synapse-link-overview/synapse-link-sql-architecture.png" width=400>
+<p></p>
 
-TODO: Activity Description and tasks
+You can <a href="https://learn.microsoft.com/en-us/azure/synapse-analytics/synapse-link/sql-server-2022-synapse-link">learn more about using SQL Server Synpase Link at this reference</a>.
 
-<p><b>Description</b></p>
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: Detail Ground-to-Cloud features of Interest</b></p>
 
-TODO: Enter activity description with checkbox
+In this Activity, you will continue your notes from the first Activity, and record any areas of interest for follow-up study.
 
 <p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
-TODO: Enter activity steps description with checkbox
+- Using the notes you made in the first Activity, record any of the features that work from a SQL Server Instance to the Microsoft Azure platform that you think might assist your organization in their Data Estate. Make note of the resources in this section for follow-up study on those features. 
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
@@ -182,6 +213,13 @@ https://learn.microsoft.com/en-us/azure/purview/tutorial-register-scan-on-premis
 
 <h3>Azure Arc and SQL Server</h3>
 https://learn.microsoft.com/en-us/sql/sql-server/azure-arc/overview?view=sql-server-ver16 
+Microsoft Azure Arc
+Microsoft Azure Arc for SQL Server
+Microsoft Azure Arc for Data Services
+
+
+https://azurearcjumpstart.io/overview/
+https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/hybrid/enterprise-scale-landing-zone 
 
 <h3>Connect with Azure Active Directory</h3>
 https://learn.microsoft.com/en-us/sql/relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview?view=sql-server-ver16
