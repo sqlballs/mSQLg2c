@@ -81,7 +81,8 @@ Some reasons to consider SQL Server on Linux could be if your orginization is mo
 
 <b>Exercise Introduction to SQL Server on Linux</b>: https://learn.microsoft.com/en-us/training/modules/introduction-sql-server-linux/ (26 minutes)
 <p>
-Additional learning MS Learn module SQL Server on Linux: https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-overview?view=sql-server-ver16
+Additional learning MS Learn module SQL Server on Linux: <a href="https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-overview?view=sql-server-ver16">MS Learn Moduel SQL Server Linux Overview</a>
+
 
 
 <h3>SQL Server in Containers</h3>
