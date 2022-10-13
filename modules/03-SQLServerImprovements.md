@@ -165,8 +165,19 @@ TODO: Enter activity steps description with checkbox
 
 <h2 id="3.3"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.3 Availability</h2>
 
-SQL Server has multiple availability features
+Once we have deployed and connected to our SQL Server instance we must have a conversation about Availability.  SQL Server has many capabilities to extend your availability.
 
+<h3>Always On</h3>
+<img src="https://learn.microsoft.com/en-us/sql/database-engine/availability-groups/windows/media/aoag-agintrofigure.gif?view=sql-server-ver16">
+
+<p>
+asdf
+<p>
+<h3>Link to Azure SQL Managed Instance</h3>
+<img src="https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/media/managed-instance-link-feature-overview/mi-link-ag-dag.png?view=azuresql">
+<p>
+asdf
+<p>
 https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver16#availability
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
