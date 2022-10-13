@@ -105,30 +105,48 @@ SQL Server containers can also be deployed to Kubernetes using Helm charts.  To 
 <p>
 
 
-
+<p style="border-bottom: 1px solid lightgrey;"></p>
 
 
 <h2 id="3.2"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.2 Manageability</h2>
 
-TODO: Topic Description
-SQL Server continues to add advances towards deployment managability
+Once we Deploy SQL Server how do we access it and manage it?  
 
-https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver16#management
+<p height="10">
 
 <h3>Tools</h3>
+We have some key tools that you should understand how to use.  A quick note we will be talking about Azure Data Studio later in this course, for now we will  discuss SQL Server Management Studio & Copmmand-Line Utilities.
 
-TODO: Topic Description
 
+<p height="10">
 <h4>SQL Server Management Studio</h4>
+SQL Server Management Studio, SSMS, has been in use since 2005 and is a staple of any orginization with DBA's running SQL Server.
+<p>
+It is key understand <a href="https://learn.microsoft.com/en-us/sql/ssms/quickstarts/ssms-connect-query-sql-server?view=sql-server-ver16">how to connect to SSMS</a> to any SQL Server Instance.
 
-TODO: Topic Description
+<p>
+SSMS can be used to <a href="https://learn.microsoft.com/en-us/sql/ssms/tutorials/scripting-ssms?view=sql-server-ver16">script out objects</a>, <a href="https://learn.microsoft.com/en-us/sql/relational-databases/import-export/import-flat-file-wizard?view=sql-server-ver16">import flat files</a>, and <a href="https://learn.microsoft.com/en-us/sql/ssms/tutorials/ssms-tricks?view=sql-server-ver16">we even have some tips and tricks documented</a>.
+<p>
+Additional actvities you can use SSMS to do:
+<li>Write Queries
+<li>View the AlwaysOn AG Dashboard
+<li>View SQL Server Log Files
+<li>Crete & Schedule SQL Agent Jobs
+<li>Create Extended Events
+<li>Generate and evaluate execution plans
+<li>View Query Data Store Built In Reports
 
-
-
+<p>
+<p>
 <h4>Command-Line Utilities</h4>
+<p>
+SQLCMD is an importiant tool because it allows you to connect to SQL Instances via a command-line utility in Windows or in Linux.  To learn more about installing sqlcmd go to the following MS Learn article <a href="https://learn.microsoft.com/en-us/sql/tools/sqlcmd-utility?view=sql-server-ver16#download-and-install-sqlcmd">https://learn.microsoft.com/en-us/sql/tools/sqlcmd-utility?view=sql-server-ver16#download-and-install-sqlcmd</a> . 
+
+<p>
+If your SQL Server installation is set up to support remote connects than you can use the dedicated adminstrative connect, DAC, with sqlcmd.  To learn more about how to connect to the DAC see this MS Learn article <a href="https://learn.microsoft.com/en-us/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-ver16#connect-with-dac">https://learn.microsoft.com/en-us/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-ver16#connect-with-dac</a>
+
 
 TODO: Topic Description
-
 
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
@@ -182,6 +200,12 @@ https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?v
 Go to this link and read the MS Learn Article on using the Query Data Store
 
 https://learn.microsoft.com/en-us/training/modules/explore-query-performance-optimization/5-explore-query-store
+
+
+<h4>SQL Just Runs Better</h4>
+
+There are a lot of improvements made inside SQL Server to enhance the function of 
+
 
 <p><b>Description</b></p>
 
