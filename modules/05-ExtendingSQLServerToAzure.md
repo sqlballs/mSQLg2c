@@ -204,6 +204,8 @@ In this Activity, you will continue your notes from the first Activity, and reco
 In some cases you will want to leverage cloud services in your on-premises environment. This can be as little as inventoring your Instances, up to using a security platform that is always up to date, all the way to a completely managed Instance of SQL Server, residing not only in your on-premises data center, but even other cloud providers.
 
 <h3>Microsoft Defender, Microsoft SQL Defender, and Advanced Threat Protection</h3>
+Computing security, and in specific data security, is essential in any organization. However, keeping on top of methods and processes to secure computing and data security elements, along with keeping up with threats and mitigations is very difficult
+
 https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-sql-usage 
 
 
@@ -237,43 +239,55 @@ TODO: Enter activity description with checkbox
 TODO: Enter activity steps description with checkbox
 
 <h2 id="5.3"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">5.3 - Migrating SQL Server Instances to the Microsoft Azure Platform</h2>
+In some cases, you may decide that a particular data workload should move to the cloud. Benefits of using a cloud service include enhanced security, cost optimization, and elastic scale. It also assists with licensing and monitoring and management centralization. 
 
-https://learn.microsoft.com/en-us/dotnet/azure/migration/sql
+<h4>Process and Planning</h4> 
+Planning is essential for successful migrations. You should thoroughly document your application and database engine versions, settings and options installed, and understand how they are used. Of special importance are the HA/DR and security implications in each application to data path. 
 
-Offline or Online
-RPO/RTO
-App versioning - very important
+You should also careful check any automated scripts, SQL Server Agent Jobs, and other connection points into the data engine so that you plan for their migration as well.
 
-Database - scripts and tools and Agents, etc. Planning is essential. AG planning. MI very handy here. 
-Tools will do SKU reco
+Building on your audit from the first Module in this course, your first decision when you upgrade is whether the upgrade can be performed online or offline. In the case of an offline migration, it can be as simple a matter as backing up the local database and restoring it to any of the Azure SQL platforms in the Microsoft Azure environment. From there, you hook up your connections from the applications and then set the security (logins, users, and so on) and begin your unit, functional, and acceptance testing. 
 
-BU/Res
-Online = tooling
+For online (and offline) migrations, Microsoft provides various tools to assist you not only in the migration effort, but in much of the planning such as recommending the proper version and size of the target, and much more. Also, the features you learned earlier (such as Link for Managed Instance) can assist you in your migration. 
 
-
-Link for MI
-
-Pay attention to versions
-
-TODO: Topic Description
 <h4>Azure Data Studio Migration Extension</h4>
-https://docs.microsoft.com/en-us/sql/azure-data-studio/extensions/azure-sql-migration-extension?view=sql-server-ver15 
+In a previous Module you learned about the <a href="https://learn.microsoft.com/en-us/sql/azure-data-studio/?view=sql-server-ver15">Azure Data Studio tool</a> that you can use to manage, monitor and program your SQL Server and Azure SQL database environments. This tool also includes a full migration extension you can use to assess your migration, get advice on the Azure recommendations for sizing and migrate your SQL Server databases to Azure.
 
-<img src="https://user-images.githubusercontent.com/517325/189189647-bb1e5857-3ba4-416f-987e-c68812587d47.png" alt="Graphic" width="600">
+<p></p>
+<img src="https://user-images.githubusercontent.com/517325/189189647-bb1e5857-3ba4-416f-987e-c68812587d47.png" width=800>
+<p></p>
 
-<h4>Azure Database Migration Service</h4>
-https://docs.microsoft.com/en-us/azure/dms/
-<br>
+You can <a href="https://docs.microsoft.com/en-us/sql/azure-data-studio/extensions/azure-sql-migration-extension?view=sql-server-ver15 ">learn more about the Azure SQL migration extension for Azure Data Studio at this reference</a>.
 
-<img src="https://user-images.githubusercontent.com/517325/189189527-3554ff5b-0f0c-4ef1-8164-51bf74f2af2a.png" alt="Graphic" width="600">
+The Azure SQL migration extension for Azure Data Studio uses the Azure Database Migration Service (DMS). The DMS enables migrations from multiple database sources to Azure Data platforms with minimal downtime. The service uses the Data Migration Assistant to generate assessment reports that provide recommendations to guide you through the changes required before performing a migration. When you're ready to begin the migration process, Azure Database Migration Service performs all the required steps.
+
+<p></p>
+<img src="https://user-images.githubusercontent.com/517325/189189527-3554ff5b-0f0c-4ef1-8164-51bf74f2af2a.png" width=800>
+<p></p>
+
+You can <a href="https://docs.microsoft.com/en-us/azure/dms/)">learn more about the Azure Database Migration Service at this reference</a>.
 
 <h4>Azure Migrate</h4>
-https://docs.microsoft.com/en-us/azure/migrate/
-<br>
-<img src="https://user-images.githubusercontent.com/517325/189189693-c88cf4c0-90f4-45b0-91bb-8993796593ee.png" alt="Graphic" width="600">
+Azure Migrate is a very comprehensive service that provides a simplified migration, modernization, and optimization of data sources to Azure. All pre-migration steps such as discovery, assessments, and right-sizing of on-premises resources are included for infrastructure, data, and applications. Azure Migrate’s extensible framework allows for integration of third-party tools, thus expanding the scope of supported use-cases. You should consider starting with this service if you have an Enterprise or complex migration. 
 
-    
-    
+<p></p>
+<img src="https://user-images.githubusercontent.com/517325/189189693-c88cf4c0-90f4-45b0-91bb-8993796593ee.png" width=800>
+<p></p>
+
+You can <a href="https://docs.microsoft.com/en-us/azure/migrate/)">learn more about Azure Migrate at this reference</a>.
+
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
+
+TODO: Activity Description and tasks
+
+<p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Description</b></p>
+
+TODO: Enter activity description with checkbox
+
+<p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
+
+- Open <a href="https://learn.microsoft.com/en-us/dotnet/azure/migration/choose">this resource, and review and bookmark the information you see there</a>.      
+
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/owl.png?raw=true"><b>For Further Study</b></p>
