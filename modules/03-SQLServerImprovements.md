@@ -202,35 +202,45 @@ TODO: Enter activity steps description with checkbox
 
 <h2 id="3.4"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.4 Performance</h2>
 
-Performance is key for any SQL Server installation.
+SQL Server is one of the most widely used Enterprise relational database platforms because of the high level of performance that can be achieved.  
+<p>
+Enhancements are made in SQL Server to imporve function over previous releases for more on these features read the following MS Learn article https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver16#performance
+<p>
 
-https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver16#performance
+<h3>Intelligent Query Processing</h3>
 
-Additionally, performance is enhanced by the Query Store and intelligent query processing
 
-https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver16#query-store-and-intelligent-query-processing
+
 
 <p><img src="https://learn.microsoft.com/en-us/sql/relational-databases/performance/media/iqp-feature-family.svg?view=sql-server-ver16">
 
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
+<p>
+The intelligent query processing (IQP) feature family includes features with broad impact that improve the performance of existing workloads with minimal implementation effort to adopt. The following graphic details the family of IQP features and when they were first introduced for SQL Server. All IQP features are available in Azure SQL Managed Instance and Azure SQL Database. Some features depend on the database's compatibility level.
+<p>
+To read more about IQP read this MS Learn article https://learn.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-ver16
+<p>
+To read about the new features that are a part of IQP read this MS Learn article https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver16#query-store-and-intelligent-query-processing
 
-Go to this link and read the MS Learn Article on using the Query Data Store
+<p>
+<p>
+<h3>The Query Data Store </h3>
+<p>
+The Query Store feature provides you with insight on query plan choice and performance for SQL Server, Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics. The Query Store simplifies performance troubleshooting by helping you quickly find performance differences caused by query plan changes. Query Store automatically captures a history of queries, plans, and runtime statistics, and retains these for your review. It separates data by time windows so you can see database usage patterns and understand when query plan changes.  To read more about the Query Data Store see this MS Learn article https://learn.microsoft.com/en-us/training/modules/explore-query-performance-optimization/5-explore-query-store
 
-https://learn.microsoft.com/en-us/training/modules/explore-query-performance-optimization/5-explore-query-store
-
-
-<h4>SQL Just Runs Better</h4>
-
-There are a lot of improvements made inside SQL Server to enhance the function of 
 
 
 <p><b>Description</b></p>
 
-TODO: Enter activity description with checkbox
+Learn about the Query Data Store
 
 <p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
-TODO: Enter activity steps description with checkbox
+Go to Unit 5 of the Explore query performance optimization Learn module and read about the Query Data Store (13 minutes) https://learn.microsoft.com/en-us/training/modules/explore-query-performance-optimization/5-explore-query-store
+
+
+
+<h3>Additional Resources</h3>
+For more on SQL Server Performance see the MS Learn Module Explore query performance optimization https://learn.microsoft.com/en-us/training/modules/explore-query-performance-optimization/
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
