@@ -171,14 +171,20 @@ Once we have deployed and connected to our SQL Server instance we must have a co
 <img src="https://learn.microsoft.com/en-us/sql/database-engine/availability-groups/windows/media/aoag-agintrofigure.gif?view=sql-server-ver16">
 
 <p>
-asdf
+Always On Availability Groups are a key capability used by customers when planning High Availability or Business Continuity process for SQL Server Instances.
+
+To learn more about Always On Availability Groups read this MS Learn article https://learn.microsoft.com/en-us/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-ver16
+
+
 <p>
 <h3>Link to Azure SQL Managed Instance</h3>
 <img src="https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/media/managed-instance-link-feature-overview/mi-link-ag-dag.png?view=azuresql">
 <p>
-asdf
+The new link feature in Azure SQL Managed Instance connects your SQL Servers hosted anywhere to SQL Managed Instance, providing hybrid flexibility and database mobility. With an approach that uses near real-time data replication to the cloud, you can offload workloads to a read-only secondary in Azure to take advantage of Azure-only features, performance, and scale.
+
+To learn more about Link to Azure SQL Managed Instance read this MS Learn article https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/managed-instance-link-feature-overview?view=azuresql
+
 <p>
-https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver16#availability
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
 
@@ -196,76 +202,90 @@ TODO: Enter activity steps description with checkbox
 
 <h2 id="3.4"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.4 Performance</h2>
 
-Performance is key for any SQL Server installation.
+SQL Server is one of the most widely used Enterprise relational database platforms because of the high level of performance that can be achieved.  
+<p>
+Enhancements are made in SQL Server to imporve function over previous releases for more on these features read the following MS Learn article https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver16#performance
+<p>
 
-https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver16#performance
+<h3>Intelligent Query Processing</h3>
 
-Additionally, performance is enhanced by the Query Store and intelligent query processing
 
-https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver16#query-store-and-intelligent-query-processing
+
 
 <p><img src="https://learn.microsoft.com/en-us/sql/relational-databases/performance/media/iqp-feature-family.svg?view=sql-server-ver16">
 
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
+<p>
+The intelligent query processing (IQP) feature family includes features with broad impact that improve the performance of existing workloads with minimal implementation effort to adopt. The following graphic details the family of IQP features and when they were first introduced for SQL Server. All IQP features are available in Azure SQL Managed Instance and Azure SQL Database. Some features depend on the database's compatibility level.
+<p>
+To read more about IQP read this MS Learn article https://learn.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-ver16
+<p>
+To read about the new features that are a part of IQP read this MS Learn article https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver16#query-store-and-intelligent-query-processing
 
-Go to this link and read the MS Learn Article on using the Query Data Store
+<p>
+<p>
+<h3>The Query Data Store </h3>
+<p>
+The Query Store feature provides you with insight on query plan choice and performance for SQL Server, Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics. The Query Store simplifies performance troubleshooting by helping you quickly find performance differences caused by query plan changes. Query Store automatically captures a history of queries, plans, and runtime statistics, and retains these for your review. It separates data by time windows so you can see database usage patterns and understand when query plan changes.  To read more about the Query Data Store see this MS Learn article https://learn.microsoft.com/en-us/training/modules/explore-query-performance-optimization/5-explore-query-store
 
-https://learn.microsoft.com/en-us/training/modules/explore-query-performance-optimization/5-explore-query-store
-
-
-<h4>SQL Just Runs Better</h4>
-
-There are a lot of improvements made inside SQL Server to enhance the function of 
 
 
 <p><b>Description</b></p>
 
-TODO: Enter activity description with checkbox
+Learn about the Query Data Store
 
 <p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
-TODO: Enter activity steps description with checkbox
+Go to Unit 5 of the Explore query performance optimization Learn module and read about the Query Data Store (13 minutes) https://learn.microsoft.com/en-us/training/modules/explore-query-performance-optimization/5-explore-query-store
+
+
+
+<h3>Additional Resources</h3>
+For more on SQL Server Performance see the MS Learn Module Explore query performance optimization https://learn.microsoft.com/en-us/training/modules/explore-query-performance-optimization/
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
 <h2 id="3.5"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.5 Security</h2>
 
-The integration of Azure and SQL Server has been enhanced to its best level yet. 
+Over the past ten years, SQL Server has had fewer vulnerabilities than the <a href="https://nvd.nist.gov/">competition</a>. Building on this, the new ledger feature creates an immutable track record of data modifications over time. This protects data from tampering by malicious actors and is beneficial for scenarios such as internal and external audits.
 
-https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver16#security
+SQL Server is integrated with Azure and brings the capabilities of Azure Defender where ever your SQL Server resides. 
 
+<h3>Ledger</h3>
 
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
+<p><img style="margin: 0px 15px 15px 0px;" src="https://learn.microsoft.com/en-us/sql/relational-databases/security/ledger/media/ledger/ledger-table-architecture.png?view=sql-server-ver16">
+</p>
 
-TODO: Activity Description and tasks
-
-<p><b>Description</b></p>
-
-TODO: Enter activity description with checkbox
-
-<p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
-
-TODO: Enter activity steps description with checkbox
-
+Establishing trust around the integrity of data stored in database systems has been a longstanding problem for all organizations that manage financial, medical, or other sensitive data. The ledger feature provides tamper-evidence capabilities in your database. You can cryptographically attest to other parties, such as auditors or other business parties, that your data hasn't been tampered with.
 <p>
-<img src="https://cloudblogs.microsoft.com/uploads/prod/sites/32/2022/05/SQL-Server-2022-slide_2022.05.22-update.webp">
+To read more about how to use Ledger in SQL read this MS Learn article https://learn.microsoft.com/en-us/sql/relational-databases/security/ledger/ledger-overview?view=sql-server-ver16
+<p>
+To understand how to configure Ledger on a SQL Server read this MS Learn article https://learn.microsoft.com/en-us/sql/relational-databases/security/ledger/ledger-how-to-configure-ledger-database?view=sql-server-ver16&tabs=Portal&pivots=as1-sql-server
 
-<p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
+<h3>Microsoft Defender</h3>
+<p><img style="margin: 0px 15px 15px 0px;" src="https://learn.microsoft.com/en-us/azure/defender-for-cloud/media/security-center-advanced-iaas-data/data-and-storage-sqldb-vulns-on-vm.png">
+</p>
 
-TODO: Enter activity steps description with checkbox
+Microsoft Defender for SQL servers on machines extends the protections for your Azure-native SQL Servers to fully support hybrid environments and protect SQL servers (all supported version) hosted in Azure, other cloud environments, and even on-premises machines.
+<p>
 
+ACTIVITY
+<p>
+To understand more about how Microsoft Defender can help protect your SQL Server read Unit 2 of the Ennable and manage Microsoft Defender for Cloud MS Learn Module, Review the cyber kill chain https://learn.microsoft.com/en-us/training/modules/azure-security-center/2-cyber-kill-chain
+<p>
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
 <h2 id="3.6"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.6 Development</h2>
 
-There are many advancements that assist with development.
+SQL Server continues to expand its T-SQL foot print to assist developers of all types.  New time series, JSON, aggregate, T-SQL, and Bit manipulation functions have all been added. 
 
-https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver16#language
+
+To read more about each individual update read this MS Learn article https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver16#language
 
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
 
-TODO: Activity Description and tasks
+Open the the GENERATE_SERIES MS Learn article and execute the demos (2 minutes)
+https://learn.microsoft.com/en-us/sql/t-sql/functions/generate-series-transact-sql?view=sql-server-ver16
 
 <p><b>Description</b></p>
 
@@ -273,7 +293,8 @@ TODO: Enter activity description with checkbox
 
 <p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
-TODO: Enter activity steps description with checkbox
+Open the the JSON_OBJECT MS Learn article and execute the demos (2 minutes)
+https://learn.microsoft.com/en-us/sql/t-sql/functions/json-object-transact-sql?view=sql-server-ver16
 
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/owl.png?raw=true"><b>For Further Study</b></p>
