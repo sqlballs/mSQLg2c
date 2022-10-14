@@ -40,33 +40,25 @@ Regardless of the deployment scenario there are some key items to keep in mind.
 
 <h3>SQL Server on Windows</h3>
 
-When deploying SQL Server on Windows or any other platform it is critical to understand SQL Server Editions.
+The development teams have collaborated closely to ensure that the very best experience for data professionals emerges when you take advantage of the synergies built into the Windows Server OS and the SQL Server data platform.  
 
 <p>
 
-SQL Server Editions
+<h3>SQL Server Editions</h3>
+Installation requirements vary based on your application needs. The different editions of SQL Server accommodate the unique performance, runtime, and price requirements of organizations and individuals. The SQL Server components that you install also depend on your specific requirements. The following sections help you understand how to make the best choice among the editions and components available in SQL Server.
 
-https://learn.microsoft.com/en-us/sql/sql-server/editions-and-components-of-sql-server-2019?view=sql-server-ver16#-editions
 
 
-<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>     Activity: Review SQL Server Installation Key Terms Lab</a></b></h2>
+<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>     Activity: Review SQL Server Editions Lab</a></b></h2>
 
-In this activity, you will review key terms and concepts related to SQL Server Installations.
+In this activity, you will review the different editions of SQL Server.
 
 
 <h3><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Activity Steps</b></h3>
 
-To complete this module, go to [https://learn.microsoft.com/en-us/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver16#installation-media](https://learn.microsoft.com/en-us/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver16#installation-media).
+To complete this activity, go to [https://learn.microsoft.com/en-us/sql/sql-server/editions-and-components-of-sql-server-2019?view=sql-server-ver16#-editions](https://learn.microsoft.com/en-us/sql/sql-server/editions-and-components-of-sql-server-2019?view=sql-server-ver16#-editions).
 
-Review the following:
-- Installation media
-- Considerations
-- SQL Server installation
-- Individual component installation
-
-
-When you are done with the SQL Server lab you have completed Module 02 of the SQL Server Ground to Cloud Workshop! Proceed to the next module using the link in Next Steps below.
-
+Review the Editions available for SQL Server.
 
 
 
@@ -77,11 +69,19 @@ SQL Server now runs on the Linux Platform.  It runs on the Red Hat, SUSE, Ubuntu
 <p>
 Some reasons to consider SQL Server on Linux could be if your orginization is more familar with running Linux than Windows, command line installation on Linux platform, and quick deployments of non-production environments.
 
-<p>
+<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>     Activity: Review SQL Server on Linux Lab</a></b></h2>
 
-<b>Exercise Introduction to SQL Server on Linux</b>: https://learn.microsoft.com/en-us/training/modules/introduction-sql-server-linux/ (26 minutes)
-<p>
-Additional learning MS Learn module SQL Server on Linux: <a href="https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-overview?view=sql-server-ver16">MS Learn Moduel SQL Server Linux Overview</a>
+In this activity, you will review the Introduction to SQL Server on Linux MS Learn Module, Unit 2.
+
+
+<h3><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Activity Steps</b></h3>
+
+To complete this activity, go to [https://learn.microsoft.com/en-us/training/modules/introduction-sql-server-linux/2-what-sql-server-linux
+](https://learn.microsoft.com/en-us/training/modules/introduction-sql-server-linux/2-what-sql-server-linux
+).
+
+Review Unit 2 What is SQL Server on Linux? (5 minutes)
+
 
 
 
@@ -146,26 +146,34 @@ SQLCMD is an importiant tool because it allows you to connect to SQL Instances v
 If your SQL Server installation is set up to support remote connects than you can use the dedicated adminstrative connect, DAC, with sqlcmd.  To learn more about how to connect to the DAC see this MS Learn article <a href="https://learn.microsoft.com/en-us/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-ver16#connect-with-dac">https://learn.microsoft.com/en-us/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-ver16#connect-with-dac</a>
 
 
-TODO: Topic Description
+SQL Server Management Studio: Tips & Tricks
 
 
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Tips and Tricks for SSMS</b></p>
 
-TODO: Activity Description and tasks
+Go to the link provided and execute the scripts in the exercises
 
 <p><b>Description</b></p>
 
-TODO: Enter activity description with checkbox
+Find some tips and tricks for working with SSMS
 
 <p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
-TODO: Enter activity steps description with checkbox
+Go to this <a href="https://learn.microsoft.com/en-us/sql/ssms/tutorials/ssms-tricks?view=sql-server-ver16">link</a>.  Copy code from the link and execute as instructed in SSMS.
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
 <h2 id="3.3"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.3 Availability</h2>
 
 Once we have deployed and connected to our SQL Server instance we must have a conversation about Availability.  SQL Server has many capabilities to extend your availability.
+<p>
+There are some very importiant terms and concepts for us to cover.  High Availability, Disaster Recovery, & Business Continutiy. 
+<p>
+<b>High Availability</b>, HA, is the ability for your systems to recover from localized events in an automated way.
+<p>
+<b>Disaster Recovery</b>, DR, is the process of recoving from a diaster of some sort.  A natural or man-made disaster has occured and manual intervention may be required.  While some things can be automated, other items may require manual intervention.  
+<p>
+<b>Business Continuity</b> is the planning process for how businesses and their IT systems will react in the event of an outage.  This planning will typically be for DR, but it could also include HA planning. 
 
 <h3>Always On</h3>
 <img src="https://learn.microsoft.com/en-us/sql/database-engine/availability-groups/windows/media/aoag-agintrofigure.gif?view=sql-server-ver16">
@@ -186,17 +194,17 @@ To learn more about Link to Azure SQL Managed Instance read this MS Learn articl
 
 <p>
 
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: Understand how synchronization works on a secondary replica</b></p>
 
-TODO: Activity Description and tasks
+
 
 <p><b>Description</b></p>
 
-TODO: Enter activity description with checkbox
+Gain an understanding of how synchronization works on a secondary replica
 
 <p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
-TODO: Enter activity steps description with checkbox
+Click on this <a href="https://learn.microsoft.com/en-us/sql/database-engine/availability-groups/windows/availability-modes-always-on-availability-groups?view=sql-server-ver16#HowSyncWorks">link</a> and read How Synchronization Works on a Secondary Replica
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
@@ -228,6 +236,11 @@ To read about the new features that are a part of IQP read this MS Learn article
 The Query Store feature provides you with insight on query plan choice and performance for SQL Server, Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics. The Query Store simplifies performance troubleshooting by helping you quickly find performance differences caused by query plan changes. Query Store automatically captures a history of queries, plans, and runtime statistics, and retains these for your review. It separates data by time windows so you can see database usage patterns and understand when query plan changes.  To read more about the Query Data Store see this MS Learn article https://learn.microsoft.com/en-us/training/modules/explore-query-performance-optimization/5-explore-query-store
 
 
+<p>
+
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: Learn about the Query Data Store</b></p>
+
+
 
 <p><b>Description</b></p>
 
@@ -235,12 +248,11 @@ Learn about the Query Data Store
 
 <p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
-Go to Unit 5 of the Explore query performance optimization Learn module and read about the Query Data Store (13 minutes) https://learn.microsoft.com/en-us/training/modules/explore-query-performance-optimization/5-explore-query-store
+Click on this <a href="https://learn.microsoft.com/en-us/training/modules/explore-query-performance-optimization/5-explore-query-store">link</a> and go to Unit 5 of the Explore query performance optimization Learn module and read about the Query Data Store (13 minutes) 
 
 
 
-<h3>Additional Resources</h3>
-For more on SQL Server Performance see the MS Learn Module Explore query performance optimization https://learn.microsoft.com/en-us/training/modules/explore-query-performance-optimization/
+
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
@@ -260,6 +272,7 @@ Establishing trust around the integrity of data stored in database systems has b
 To read more about how to use Ledger in SQL read this MS Learn article https://learn.microsoft.com/en-us/sql/relational-databases/security/ledger/ledger-overview?view=sql-server-ver16
 <p>
 To understand how to configure Ledger on a SQL Server read this MS Learn article https://learn.microsoft.com/en-us/sql/relational-databases/security/ledger/ledger-how-to-configure-ledger-database?view=sql-server-ver16&tabs=Portal&pivots=as1-sql-server
+
 
 <h2 id="3.6"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.6 Development</h2>
 
@@ -284,8 +297,13 @@ https://learn.microsoft.com/en-us/sql/t-sql/functions/json-object-transact-sql?v
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/owl.png?raw=true"><b>For Further Study</b></p>
 <ul>
-    <li><a href="url" target="_blank">TODO: Enter courses, books, posts, whatever the student needs to extend their study</a></li>
+    <li><a href="https://learn.microsoft.com/en-us/training/modules/introduction-sql-server-linux/" target="_blank">Introduction to SQL Server on Linux</a></li>
+    <li><a href="https://learn.microsoft.com/en-us/training/modules/explore-query-performance-optimization/" target="_blank">Explore query performance optimization</a></li>
+    <li><a href="https://learn.microsoft.com/en-us/training/modules/azure-security-center/" target="_blank">Enable and manage Microsoft Defender for Cloud</a></li>
+    <li><a href="https://learn.microsoft.com/en-us/sql/relational-databases/security/ledger/ledger-overview?view=sql-server-ver16" target="_blank">Ledger overview</a></li>
+    <li><a href="https://learn.microsoft.com/en-us/sql/database-engine/sql-server-business-continuity-dr?view=sql-server-ver16#sql-server-scenarios-using-the-availability-features" target="_blank">Business continuity and database recovery - SQL Server</a></li>
 </ul>
+
 
 Next, continue on to [Module 04 - SQL Server on the Microsoft Azure Platform](https://github.com/sqlballs/mSQLg2c/blob/main/modules/04-ImprovementsInSQLOnTheMicrosoftAzurePlatform.md)
 
