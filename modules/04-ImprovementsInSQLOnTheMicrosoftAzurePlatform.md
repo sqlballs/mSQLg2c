@@ -94,25 +94,38 @@ Basically, Gen4 hardware offers substantially more memory per vCore. However, Ge
 > Note: If you choose General Purpose within Single databases and want to use the serverless compute tier, Gen5 hardware is the only option.  
 
 <h3>Azure SQL Database Hyperscale</h3>
+<img src="https://learn.microsoft.com/en-us/azure/azure-sql/database/media/service-tier-hyperscale/hyperscale-architecture.png?view=azuresql">
+The Hyperscale service tier in Azure SQL Database is the newest service tier in the vCore-based purchasing model. This service tier is a highly scalable storage and compute performance tier that uses the Azure architecture to scale out the storage and compute resources for an Azure SQL Database substantially beyond the limits available for the General Purpose and Business Critical service tiers.
 
-TODO: Topic Description
+<p>
+
+
+
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Review Azure SQL Hyperscale architecture</b></p>
+
+Gain a fuller understanding of the compute, page server, log service, and how Hyperscale works with Azure storage. 
+
+<p><b>In this activity we will review the architecture of Azure SQL Hyperscale</b></p>
+
+Click on the following <a href="https://learn.microsoft.com/en-us/azure/azure-sql/database/hyperscale-architecture?view=azuresql#hyperscale-architecture-overview">Link</a>.
+
+
+<p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Review these sections of the document</b></p>
+
+- Hyperscale architecture overview
+- Compute
+- Page server
+- Log service
+- Azure storage
 
 <h3>Microsoft Azure Synapse</h3>
+<img src="https://learn.microsoft.com/en-us/azure/synapse-analytics/media/overview-what-is/synapse-architecture.png">
+Azure Synapse is an enterprise analytics service that accelerates time to insight across data warehouses and big data systems. Azure Synapse brings together the best of SQL technologies used in enterprise data warehousing, Spark technologies used for big data, Data Explorer for log and time series analytics, Pipelines for data integration and ETL/ELT, and deep integration with other Azure services such as Power BI, CosmosDB, and AzureML.
 
-TODO: Topic Description
+<p>
+For a deeper overview of Azure Synapse read this MS Learn article <a href="https://learn.microsoft.com/en-us/azure/synapse-analytics/overview-what-is">Azure Synapse Overview - What is Azure Synapse?</a>
 
 
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
-
-TODO: Activity Description and tasks
-
-<p><b>Description</b></p>
-
-TODO: Enter activity description with checkbox
-
-<p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
-
-TODO: Enter activity steps description with checkbox
 
 ### *Summary*  
 As you've hopefully noticed, while there are a lot of options, Azure is able to provide flexibility so you get exactly what you need, nothing less. A summary of the service tier options with some additional considerations is included below, but be sure to check out [pricing information](https://azure.microsoft.com/en-us/pricing/details/sql-database/managed/) for the latest details.
