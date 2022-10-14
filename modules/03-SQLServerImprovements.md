@@ -171,14 +171,20 @@ Once we have deployed and connected to our SQL Server instance we must have a co
 <img src="https://learn.microsoft.com/en-us/sql/database-engine/availability-groups/windows/media/aoag-agintrofigure.gif?view=sql-server-ver16">
 
 <p>
-asdf
+Always On Availability Groups are a key capability used by customers when planning High Availability or Business Continuity process for SQL Server Instances.
+
+To learn more about Always On Availability Groups read this MS Learn article https://learn.microsoft.com/en-us/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-ver16
+
+
 <p>
 <h3>Link to Azure SQL Managed Instance</h3>
 <img src="https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/media/managed-instance-link-feature-overview/mi-link-ag-dag.png?view=azuresql">
 <p>
-asdf
+The new link feature in Azure SQL Managed Instance connects your SQL Servers hosted anywhere to SQL Managed Instance, providing hybrid flexibility and database mobility. With an approach that uses near real-time data replication to the cloud, you can offload workloads to a read-only secondary in Azure to take advantage of Azure-only features, performance, and scale.
+
+To learn more about Link to Azure SQL Managed Instance read this MS Learn article https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/managed-instance-link-feature-overview?view=azuresql
+
 <p>
-https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver16#availability
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
 
