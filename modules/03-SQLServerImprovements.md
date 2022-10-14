@@ -276,14 +276,16 @@ To understand more about how Microsoft Defender can help protect your SQL Server
 
 <h2 id="3.6"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.6 Development</h2>
 
-There are many advancements that assist with development.
+SQL Server continues to expand its T-SQL foot print to assist developers of all types.  New time series, JSON, aggregate, T-SQL, and Bit manipulation functions have all been added. 
 
-https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver16#language
+
+To read more about each individual update read this MS Learn article https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver16#language
 
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
 
-TODO: Activity Description and tasks
+Open the the GENERATE_SERIES MS Learn article and execute the demos (2 minutes)
+https://learn.microsoft.com/en-us/sql/t-sql/functions/generate-series-transact-sql?view=sql-server-ver16
 
 <p><b>Description</b></p>
 
@@ -291,7 +293,8 @@ TODO: Enter activity description with checkbox
 
 <p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
-TODO: Enter activity steps description with checkbox
+Open the the JSON_OBJECT MS Learn article and execute the demos (2 minutes)
+https://learn.microsoft.com/en-us/sql/t-sql/functions/json-object-transact-sql?view=sql-server-ver16
 
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/owl.png?raw=true"><b>For Further Study</b></p>
