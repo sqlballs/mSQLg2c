@@ -40,263 +40,250 @@ Regardless of the deployment scenario there are some key items to keep in mind.
 
 <h3>SQL Server on Windows</h3>
 
-SQL Server has traditionally been a Windows only product.  
+The development teams have collaborated closely to ensure that the very best experience for data professionals emerges when you take advantage of the synergies built into the Windows Server OS and the SQL Server data platform.  
 
-<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>     Activity: Review SQL Server Installation Key Terms Lab</a></b></h2>
+<p>
 
-In this activity, you will review key terms and concepts related to SQL Server Installations.
+<h3>SQL Server Editions</h3>
+Installation requirements vary based on your application needs. The different editions of SQL Server accommodate the unique performance, runtime, and price requirements of organizations and individuals. The SQL Server components that you install also depend on your specific requirements. The following sections help you understand how to make the best choice among the editions and components available in SQL Server.
+
+
+
+<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>     Activity: Review SQL Server Editions Lab</a></b></h2>
+
+In this activity, you will review the different editions of SQL Server.
 
 
 <h3><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Activity Steps</b></h3>
 
-To complete this module, go to [https://learn.microsoft.com/en-us/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver16#installation-media](https://learn.microsoft.com/en-us/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver16#installation-media).
+To complete this activity, go to [https://learn.microsoft.com/en-us/sql/sql-server/editions-and-components-of-sql-server-2019?view=sql-server-ver16#-editions](https://learn.microsoft.com/en-us/sql/sql-server/editions-and-components-of-sql-server-2019?view=sql-server-ver16#-editions).
 
-Review the following:
-- Installation media
-- Considerations
-- SQL Server installation
-- Individual component installation
-
-
-When you are done with the SQL Server lab you have completed Module 02 of the SQL Server Ground to Cloud Workshop! Proceed to the next module using the link in Next Steps below.
-
+Review the Editions available for SQL Server.
 
 
 
 <h3>SQL Server on Linux</h3>
 
-SQL Server on Linux is supported by the following platforms.
-<table border=1>
-<tr>
-  <th align="center" colspan=4>SQL Server 2017</th>
-</tr>
-  <tr>
-    <td>Platform</td>	
-    <td>File System	</td>	
-    <td>Installation Guide</td>
-  </tr>
-   <tr>
-    <td>Red Hat Enterprise Linux 7.7 - 7.9, or 8.0 - 8.5 Server</td>	
-    <td>XFS or EXT4</td>	
-    <td><a href="https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-red-hat?view=sql-server-ver16">Installation Guide</a></td>
-  </tr>
-   <tr>
-    <td>SUSE Enterprise Linux Server v12 (SP3 - SP5)</td>	
-    <td>XFS or EXT4</td>	
-    <td><a href="https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-suse?view=sql-server-ver16">Installation Guide</a></td>
-  </tr>
-   <tr>
-    <td>Ubuntu 16.04 LTS 1, 18.04 LTS</td>	
-    <td>XFS or EXT4</td>	
-    <td><a href="https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-ubuntu?view=sql-server-ver16">Installation Guide</a></td>
-  </tr>
-   <tr>
-    <td>Docker Engine 1.8+ on Linux</td>	
-    <td>N/A</td>	
-    <td><a href="https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-ver16&pivots=cs1-bash">Installation Guide</a></td>
-  </tr>
-</table>
+SQL Server now runs on the Linux Platform.  It runs on the Red Hat, SUSE, Ubuntu, & Docker platform.  You can learn more about that architecture here https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-overview?view=sql-server-ver16
+
+<p>
+Some reasons to consider SQL Server on Linux could be if your orginization is more familar with running Linux than Windows, command line installation on Linux platform, and quick deployments of non-production environments.
+
+<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>     Activity: Review SQL Server on Linux Lab</a></b></h2>
+
+In this activity, you will review the Introduction to SQL Server on Linux MS Learn Module, Unit 2.
 
 
-<table border=1>
-<tr>
-  <th align="center" colspan=4>SQL Server 2019</th>
-</tr>
-  <tr>
-    <td>Platform</td>	
-    <td>File System	</td>	
-    <td>Installation Guide</td>
-  </tr>
-   <tr>
-    <td>Red Hat Enterprise Linux 7.7 - 7.9, or 8.0 - 8.5 Server</td>	
-    <td>XFS or EXT4</td>	
-    <td><a href="https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-red-hat?view=sql-server-ver16">Installation Guide</a></td>
-  </tr>
-   <tr>
-    <td>SUSE Enterprise Linux Server v12 (SP3 - SP5) or v15</td>	
-    <td>XFS or EXT4</td>	
-    <td><a href="https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-suse?view=sql-server-ver16">Installation Guide</a></td>
-  </tr>
-   <tr>
-    <td>Ubuntu 16.04 LTS 1, 18.04 LTS, 20.04 LTS</td>	
-    <td>XFS or EXT4</td>	
-    <td><a href="https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-ubuntu?view=sql-server-ver16">Installation Guide</a></td>
-  </tr>
-   <tr>
-    <td>Docker Engine 1.8+ on Linux</td>	
-    <td>N/A</td>	
-    <td><a href="https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-ver16&pivots=cs1-bash">Installation Guide</a></td>
-  </tr>
-</table>
+<h3><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Activity Steps</b></h3>
 
-<table border=1>
-<tr>
-  <th align="center" colspan=4>SQL Server 2022</th>
-</tr>
-  <tr>
-    <td>Platform</td>	
-    <td>File System	</td>	
-    <td>Installation Guide</td>
-  </tr>
-   <tr>
-    <td>Red Hat Enterprise Linux 8.0 - 8.5 Server</td>	
-    <td>XFS or EXT4</td>	
-    <td><a href="https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-red-hat?view=sql-server-ver16">Installation Guide</a></td>
-  </tr>
-   <tr>
-    <td>SUSE Enterprise Linux Server v15 (SP1 - SP3)</td>	
-    <td>XFS or EXT4</td>	
-    <td><a href="https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-suse?view=sql-server-ver16">Installation Guide</a></td>
-  </tr>
-   <tr>
-    <td>Ubuntu 20.04 LTS</td>	
-    <td>XFS or EXT4</td>	
-    <td><a href="https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-ubuntu?view=sql-server-ver16">Installation Guide</a></td>
-  </tr>
-   <tr>
-    <td>Docker Engine 1.8+ on Linux</td>	
-    <td>N/A</td>	
-    <td><a href="https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-ver16&pivots=cs1-bash">Installation Guide</a></td>
-  </tr>
-</table>
+To complete this activity, go to [https://learn.microsoft.com/en-us/training/modules/introduction-sql-server-linux/2-what-sql-server-linux
+](https://learn.microsoft.com/en-us/training/modules/introduction-sql-server-linux/2-what-sql-server-linux
+).
+
+Review Unit 2 What is SQL Server on Linux? (5 minutes)
+
+
 
 
 <h3>SQL Server in Containers</h3>
 
-SQL Server 2017
-- First SQL Server container
-- Regularly updated with CUs
-- Only supported Ubuntu 16.04-based
+SQL Server runs in containers on the Docker platform. 
 
-SQL Server 2019
+SQL Server 2022
+- Regularly updated with CUs
 - SQL server on Multipl OS containers: Red Hat, Ubuntu, Windows
 - Machine Learning, Polybase, MSDTC, & Replication in Linux Containers
-- Big Data Clusters
 
+To understand how to deploy SQL Server to a Docker container see following Microsoft Learn article: https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-ver16&pivots=cs1-powershell
 
-<h3>Do we want to remove this?  This is basically Big Data Clusters?</h3>
+<p>
+
 <h3>SQL Server on Kubernetes</h3>
 
-TODO: Topic Description
+SQL Server containers can also be deployed to Kubernetes using Helm charts.  To understand how to deploy a container to Kubernetes see this Microsoft Learn article: https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-containers-deploy-helm-charts-kubernetes?view=sql-server-ver16
+
+<p>
 
 
-
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
-
-TODO: Activity Description and tasks
-
-<p><b>Description</b></p>
-
-TODO: Enter activity description with checkbox
-
-<p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
-
-TODO: Enter activity steps description with checkbox
+<p style="border-bottom: 1px solid lightgrey;"></p>
 
 
 <h2 id="3.2"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.2 Manageability</h2>
 
-TODO: Topic Description
+Once we Deploy SQL Server how do we access it and manage it?  
+
+<p height="10">
 
 <h3>Tools</h3>
+We have some key tools that you should understand how to use.  A quick note we will be talking about Azure Data Studio later in this course, for now we will  discuss SQL Server Management Studio & Copmmand-Line Utilities.
 
-TODO: Topic Description
 
+<p height="10">
 <h4>SQL Server Management Studio</h4>
+SQL Server Management Studio, SSMS, has been in use since 2005 and is a staple of any orginization with DBA's running SQL Server.
+<p>
+It is key understand <a href="https://learn.microsoft.com/en-us/sql/ssms/quickstarts/ssms-connect-query-sql-server?view=sql-server-ver16">how to connect to SSMS</a> to any SQL Server Instance.
 
-TODO: Topic Description
+<p>
+SSMS can be used to <a href="https://learn.microsoft.com/en-us/sql/ssms/tutorials/scripting-ssms?view=sql-server-ver16">script out objects</a>, <a href="https://learn.microsoft.com/en-us/sql/relational-databases/import-export/import-flat-file-wizard?view=sql-server-ver16">import flat files</a>, and <a href="https://learn.microsoft.com/en-us/sql/ssms/tutorials/ssms-tricks?view=sql-server-ver16">we even have some tips and tricks documented</a>.
+<p>
+Additional actvities you can use SSMS to do:
+<li>Write Queries
+<li>View the AlwaysOn AG Dashboard
+<li>View SQL Server Log Files
+<li>Crete & Schedule SQL Agent Jobs
+<li>Create Extended Events
+<li>Generate and evaluate execution plans
+<li>View Query Data Store Built In Reports
 
-
-
+<p>
+<p>
 <h4>Command-Line Utilities</h4>
+<p>
+SQLCMD is an importiant tool because it allows you to connect to SQL Instances via a command-line utility in Windows or in Linux.  To learn more about installing sqlcmd go to the following MS Learn article <a href="https://learn.microsoft.com/en-us/sql/tools/sqlcmd-utility?view=sql-server-ver16#download-and-install-sqlcmd">https://learn.microsoft.com/en-us/sql/tools/sqlcmd-utility?view=sql-server-ver16#download-and-install-sqlcmd</a> . 
 
-TODO: Topic Description
+<p>
+If your SQL Server installation is set up to support remote connects than you can use the dedicated adminstrative connect, DAC, with sqlcmd.  To learn more about how to connect to the DAC see this MS Learn article <a href="https://learn.microsoft.com/en-us/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-ver16#connect-with-dac">https://learn.microsoft.com/en-us/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-ver16#connect-with-dac</a>
 
-<br>
 
-<img style="height: 400; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" src="https://docs.microsoft.com/en-us/sql/big-data-cluster/media/concept-security/cluster_endpoints.png">
+SQL Server Management Studio: Tips & Tricks
 
-<br>
 
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Tips and Tricks for SSMS</b></p>
 
-TODO: Activity Description and tasks
+Go to the link provided and execute the scripts in the exercises
 
 <p><b>Description</b></p>
 
-TODO: Enter activity description with checkbox
+Find some tips and tricks for working with SSMS
 
 <p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
-TODO: Enter activity steps description with checkbox
+Go to this <a href="https://learn.microsoft.com/en-us/sql/ssms/tutorials/ssms-tricks?view=sql-server-ver16">link</a>.  Copy code from the link and execute as instructed in SSMS.
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
 <h2 id="3.3"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.3 Availability</h2>
 
-TODO: Topic Description
+Once we have deployed and connected to our SQL Server instance we must have a conversation about Availability.  SQL Server has many capabilities to extend your availability.
+<p>
+There are some very importiant terms and concepts for us to cover.  High Availability, Disaster Recovery, & Business Continutiy. 
+<p>
+<b>High Availability</b>, HA, is the ability for your systems to recover from localized events in an automated way.
+<p>
+<b>Disaster Recovery</b>, DR, is the process of recoving from a diaster of some sort.  A natural or man-made disaster has occured and manual intervention may be required.  While some things can be automated, other items may require manual intervention.  
+<p>
+<b>Business Continuity</b> is the planning process for how businesses and their IT systems will react in the event of an outage.  This planning will typically be for DR, but it could also include HA planning. 
 
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
+<h3>Always On</h3>
+<img src="https://learn.microsoft.com/en-us/sql/database-engine/availability-groups/windows/media/aoag-agintrofigure.gif?view=sql-server-ver16">
 
-TODO: Activity Description and tasks
+<p>
+Always On Availability Groups are a key capability used by customers when planning High Availability or Business Continuity process for SQL Server Instances.
+
+To learn more about Always On Availability Groups read this MS Learn article https://learn.microsoft.com/en-us/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-ver16
+
+
+<p>
+<h3>Link to Azure SQL Managed Instance</h3>
+<img src="https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/media/managed-instance-link-feature-overview/mi-link-ag-dag.png?view=azuresql">
+<p>
+The new link feature in Azure SQL Managed Instance connects your SQL Servers hosted anywhere to SQL Managed Instance, providing hybrid flexibility and database mobility. With an approach that uses near real-time data replication to the cloud, you can offload workloads to a read-only secondary in Azure to take advantage of Azure-only features, performance, and scale.
+
+To learn more about Link to Azure SQL Managed Instance read this MS Learn article https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/managed-instance-link-feature-overview?view=azuresql
+
+<p>
+
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: Understand how synchronization works on a secondary replica</b></p>
+
+
 
 <p><b>Description</b></p>
 
-TODO: Enter activity description with checkbox
+Gain an understanding of how synchronization works on a secondary replica
 
 <p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
-TODO: Enter activity steps description with checkbox
+Click on this <a href="https://learn.microsoft.com/en-us/sql/database-engine/availability-groups/windows/availability-modes-always-on-availability-groups?view=sql-server-ver16#HowSyncWorks">link</a> and read How Synchronization Works on a Secondary Replica
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
 <h2 id="3.4"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.4 Performance</h2>
 
-TODO: Topic Description
+SQL Server is one of the most widely used Enterprise relational database platforms because of the high level of performance that can be achieved.  
+<p>
+Enhancements are made in SQL Server to imporve function over previous releases for more on these features read the following MS Learn article https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver16#performance
+<p>
 
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
+<h3>Intelligent Query Processing</h3>
 
-TODO: Activity Description and tasks
+
+
+
+<p><img src="https://learn.microsoft.com/en-us/sql/relational-databases/performance/media/iqp-feature-family.svg?view=sql-server-ver16">
+
+<p>
+The intelligent query processing (IQP) feature family includes features with broad impact that improve the performance of existing workloads with minimal implementation effort to adopt. The following graphic details the family of IQP features and when they were first introduced for SQL Server. All IQP features are available in Azure SQL Managed Instance and Azure SQL Database. Some features depend on the database's compatibility level.
+<p>
+To read more about IQP read this MS Learn article https://learn.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-ver16
+<p>
+To read about the new features that are a part of IQP read this MS Learn article https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver16#query-store-and-intelligent-query-processing
+
+<p>
+<p>
+<h3>The Query Data Store </h3>
+<p>
+The Query Store feature provides you with insight on query plan choice and performance for SQL Server, Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics. The Query Store simplifies performance troubleshooting by helping you quickly find performance differences caused by query plan changes. Query Store automatically captures a history of queries, plans, and runtime statistics, and retains these for your review. It separates data by time windows so you can see database usage patterns and understand when query plan changes.  To read more about the Query Data Store see this MS Learn article https://learn.microsoft.com/en-us/training/modules/explore-query-performance-optimization/5-explore-query-store
+
+
+<p>
+
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: Learn about the Query Data Store</b></p>
+
+
 
 <p><b>Description</b></p>
 
-TODO: Enter activity description with checkbox
+Learn about the Query Data Store
 
 <p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
-TODO: Enter activity steps description with checkbox
+Click on this <a href="https://learn.microsoft.com/en-us/training/modules/explore-query-performance-optimization/5-explore-query-store">link</a> and go to Unit 5 of the Explore query performance optimization Learn module and read about the Query Data Store (13 minutes) 
+
+
+
+
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
 <h2 id="3.5"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.5 Security</h2>
 
-TODO: Topic Description
+Over the past ten years, SQL Server has had fewer vulnerabilities than the <a href="https://nvd.nist.gov/">competition</a>. Building on this, the new ledger feature creates an immutable track record of data modifications over time. This protects data from tampering by malicious actors and is beneficial for scenarios such as internal and external audits.
 
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
+SQL Server is integrated with Azure and brings the capabilities of Azure Defender where ever your SQL Server resides. 
 
-TODO: Activity Description and tasks
+<h3>Ledger</h3>
 
-<p><b>Description</b></p>
+<p><img style="margin: 0px 15px 15px 0px;" src="https://learn.microsoft.com/en-us/sql/relational-databases/security/ledger/media/ledger/ledger-table-architecture.png?view=sql-server-ver16">
+</p>
 
-TODO: Enter activity description with checkbox
+Establishing trust around the integrity of data stored in database systems has been a longstanding problem for all organizations that manage financial, medical, or other sensitive data. The ledger feature provides tamper-evidence capabilities in your database. You can cryptographically attest to other parties, such as auditors or other business parties, that your data hasn't been tampered with.
+<p>
+To read more about how to use Ledger in SQL read this MS Learn article https://learn.microsoft.com/en-us/sql/relational-databases/security/ledger/ledger-overview?view=sql-server-ver16
+<p>
+To understand how to configure Ledger on a SQL Server read this MS Learn article https://learn.microsoft.com/en-us/sql/relational-databases/security/ledger/ledger-how-to-configure-ledger-database?view=sql-server-ver16&tabs=Portal&pivots=as1-sql-server
 
-<p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
-
-TODO: Enter activity steps description with checkbox
-
-<p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
-
-TODO: Enter activity steps description with checkbox
-
-<p style="border-bottom: 1px solid lightgrey;"></p>
 
 <h2 id="3.6"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.6 Development</h2>
 
-TODO: Topic Description
+SQL Server continues to expand its T-SQL foot print to assist developers of all types.  New time series, JSON, aggregate, T-SQL, and Bit manipulation functions have all been added. 
+
+To read more about each individual update read this MS Learn article https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver16#language
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
 
-TODO: Activity Description and tasks
+Open the the GENERATE_SERIES MS Learn article and execute the demos (2 minutes)
+https://learn.microsoft.com/en-us/sql/t-sql/functions/generate-series-transact-sql?view=sql-server-ver16
 
 <p><b>Description</b></p>
 
@@ -304,67 +291,20 @@ TODO: Enter activity description with checkbox
 
 <p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
-TODO: Enter activity steps description with checkbox
+Open the the JSON_OBJECT MS Learn article and execute the demos (2 minutes)
+https://learn.microsoft.com/en-us/sql/t-sql/functions/json-object-transact-sql?view=sql-server-ver16
 
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/owl.png?raw=true"><b>For Further Study</b></p>
 <ul>
-    <li><a href="url" target="_blank">TODO: Enter courses, books, posts, whatever the student needs to extend their study</a></li>
+    <li><a href="https://learn.microsoft.com/en-us/training/modules/introduction-sql-server-linux/" target="_blank">Introduction to SQL Server on Linux</a></li>
+    <li><a href="https://learn.microsoft.com/en-us/training/modules/explore-query-performance-optimization/" target="_blank">Explore query performance optimization</a></li>
+    <li><a href="https://learn.microsoft.com/en-us/training/modules/azure-security-center/" target="_blank">Enable and manage Microsoft Defender for Cloud</a></li>
+    <li><a href="https://learn.microsoft.com/en-us/sql/relational-databases/security/ledger/ledger-overview?view=sql-server-ver16" target="_blank">Ledger overview</a></li>
+    <li><a href="https://learn.microsoft.com/en-us/sql/database-engine/sql-server-business-continuity-dr?view=sql-server-ver16#sql-server-scenarios-using-the-availability-features" target="_blank">Business continuity and database recovery - SQL Server</a></li>
 </ul>
+
 
 Next, continue on to [Module 04 - SQL Server on the Microsoft Azure Platform](https://github.com/sqlballs/mSQLg2c/blob/main/modules/04-ImprovementsInSQLOnTheMicrosoftAzurePlatform.md)
 
 
-# Workshop: SQL Ground-to-Cloud
-
-#### <i>A Microsoft workshop from the SQL Server team</i>
-
-<p style="border-bottom: 1px solid lightgrey;"></p>
-
-<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/textbubble.png?raw=true"><b>     02 - Modernizing Your Data Estate with SQL Server 2019</b></h2>
-
-
-
-- Improving query performance without having to make application changes
-- Classifying key data columns and being able to audit access to these columns to meet the needs of GDPR compliance.
-- Providing better database availability when applications use long-running transactions.
-- Allowing the WideWorldImporters team to access data from sources like Oracle, Azure SQL Database, and Azure CosmosDB without having to develop expensive ETL jobs.
-- The database team at WideWorldImporters has evaluated SQL Server on Linux but SQL Server 2017 didn't include Replication, a feature they need for their application. They would like to evaluate how SQL Server Replication on Linux works. They also want to understand more about container technology and how it can be used with SQL Server
-- WideWorldImporters also would like to know other capabilities exist in SQL Server 2019 that might help them before more efficient and extend the capabilities of T-SQL.
-- WideWorldImporters also would like to learn more about how they can plan and execute a migration to SQL Server 2019 and reduce their risk for upgrades.
-- WideWorldImporters is also evaluating Azure SQL so wants to know what features in SQL Server 2019 also work in Azure.
-
-In this workshop module, you will see the capabilities in SQL Server 2019 that can provide solutions for these challenges.
-
-> **NOTE**: <a href="https://github.com/microsoft/sqlworkshops-sqlg2c/blob/master/sqlgroundtocloud/00-prerequisites.md" target="_blank">Make sure you check out the <b>prerequisite</b> page before you start.</a> You'll need all of the items loaded there before you can proceed with the workshop. Instructor led workshops may have provided all the resources in the prerequisites.
-
-<p style="border-bottom: 1px solid lightgrey;"></p>
-
-<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>     Activity: SQL Server 2019 Lab</a></b></h2>
-
-In this activity, you will complete a series of modules from the **SQL Server 2019 Lab**.
-
-Instructor led workshops will use modules from the SQL Server 2019 lab along with the PowerPoint slides <a href="https://github.com/microsoft/sqlworkshops/blob/master/SQLGroundToCloud/slides/SQL%20Server%202019%20Modern%20Data%20Platform.pptx">SQL Server 2019 Modern Data Platform</a>. Instructor led labs may not go through all modules in the SQL Server 2019 lab.
-
-<h3><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Activity Steps</b></h3>
-
-To complete this module, go to [https://github.com/microsoft/sqlworkshops/blob/master/sql2019lab/README.md](https://github.com/microsoft/sqlworkshops-sql2019lab).
-
-When you are done with the SQL Server 2019 lab you have completed Module 02 of the SQL Server Ground to Cloud Workshop! Proceed to the next module using the link in Next Steps below.
-
-<p style="border-bottom: 1px solid lightgrey;"></p>
-
-<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/owl.png?raw=true"><b>     For Further Study</b></h2>
-
-<ul>
-    <li><a href="https://docs.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-ver15" target="_blank">What's new in SQL Server 2019</a></li>
-    <li><a href="https://github.com/microsoft/sqlworkshops/tree/master/sql2019lab" target="_blank">The SQL Server 2019 Lab</a></li>
-    <li><a href="https://aka.ms/ss19
-" target="_blank">Download and try SQL Server 2019</a></li>
-</ul>
-
-<p style="border-bottom: 1px solid lightgrey;"></p>
-
-<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/geopin.png?raw=true"><b>  Next Steps</b></h2>
-
-Next, Continue to <a href="https://github.com/microsoft/sqlworkshops-sqlg2c/blob/master/sqlgroundtocloud/03-WorkingWithBigDataAndDataScienceBigDataClustersForSQLServer2019.md" target="_blank"><i> 03 - Working with Big Data Clusters on SQL Server 2019</i></a>.

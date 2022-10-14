@@ -97,7 +97,7 @@ The focus of your design is locating where data originates, and how it moves thr
 Creating a data map is a non-trivial task, and you should bias towards having the tier-1 application's data documented at the very least, as opposed to only creating the Architecture Diagram if everything is documented. You can always add information later.
 
 <h3>Tools</h3>
-You can create a [Data Architecture Diagram](https://learn.microsoft.com/en-us/azure/architecture/data-guide/databases-architecture-design) using many different tools, from manual-entry systems or spreadsheets through automated systems that collect the location and information about your data Sinks and Sources. In any case, the discovery of data sources is the most labor-intensive part of the effort, followed by ensuring the Diagram is up to date, discoverable, and usable by those who need to access it.
+You can create a <a href="https://learn.microsoft.com/en-us/azure/architecture/data-guide/databases-architecture-design">Data Architecture Diagram</a> using many different tools, from manual-entry systems or spreadsheets through automated systems that collect the location and information about your data Sinks and Sources. In any case, the discovery of data sources is the most labor-intensive part of the effort, followed by ensuring the Diagram is up to date, discoverable, and usable by those who need to access it.
 <p></p>
 You can see an example of a Data Architecture Diagram below: 
 
@@ -125,7 +125,7 @@ This Activity can be completed alone or as a group.
 
 <p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
-- Open [this reference in a new tab](https://learn.microsoft.com/en-us/training/modules/sql-server-discovery-using-map/) and complete the Learning Path.
+- Open <a href="https://learn.microsoft.com/en-us/training/modules/sql-server-discovery-using-map/">this reference in a new tab</a> and complete the Learning Path.
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 <h4>Microsoft Purview Data Map</h4>
@@ -163,63 +163,72 @@ You can start with the application paths, documenting the connections that are m
 For the systems that move data from one sink to another, there are more options for that process.
 
 <h3>Data Movement options</h3>
-There are multiple options your organization likely has to move data from one location to another. They are grouped into two general toolsets: a manual, scripted, or platform-specific tool (such as PowerShell or SQL Server Integration Services) and a system specifically designed to move data, called a <i>Pipeline</i>.
+There are multiple options your organization likely has to move data from one location to another. They are grouped into two general toolsets: a manual, scripted, or platform-specific tool (such as PowerShell or SQL Server Integration Services) and a system specifically designed to move and ppotentially operate on data, called a <i>Pipeline</i>.
 
 The process to locate these processes and tools are to engage with the team that is repsonsible for creating and running them. You can often find those systems when you look at your Reporting and Business Intelligence outputs.
 
 <h4>Pipelines</h4>
-  
-- Security
-- Performance
-- Cost
+A <i>Data Pipeline</i> is any process or set of processes that moves data along a processing path. It might be as simple as copying data from one storage location to another, or as complex as extracting data from a database system, altering that data in some fashion, distributing it to several locations, all with retry logic, notification systems, and scheduling.  
+
+There are several decision points to consider when designing or purchasing a Data Pipeline:
+
+- Security: Does the system take into account the sensitivity of the data and ensure that security as it moves through the pipeline
+- Complexity: Is the system simple enough to ensure that it can be monitored and maintained
+- Interoperability: Does the system interact with all of the data sources and sinks you have, and will it interface with the ingestion and exports of other systems in a seamless way
+- Performance: Can the system move the data quickly enough through the Data Pipeline such that the ingestion and refresh of data sources do not clash
+- Cost: What is the budget of the organization - not just the licensing costs of the system, but the costs it generates and the personnel costs to operate it
 
 <h3>Tools</h3>
-Description
+There are various levels of tools you can use to build a pipeline, from using a scripting or command language, all the way to a fully dedicated Data Pipeline environment. Each has benefits and costs to consider.
 
 <h4>Non-Dedicated Data Movement Systems</h4>
-Processes, Scripts, and Platform-Specific tools move data from a sink to another sink either on a schedule, manually, or through some data trigger. They can push the data from one system to another, or pull the data from one system into another. 
+Processes, Scripts, and Platform-Specific tools move data from a sink to another sink either on a schedule, manually, or through some data trigger. They can push the data from one system to another, or pull the data from one system into another.
 
+PowerShell is a tool shipped with all modern version of Microsoft Windows, and it is available for other platforms as well. It has the ability to work with files, e-mail, schedules, cloud environments such as Microsoft Azure, it can interface with SQL Server on-premises as well as all major database vendors, and much more. It is possibile to build a complete Data Piepeline with a scripting language such as PowerShell, but care should be taken to ensure that security and maintainability are considered when defining a manual Data Pipeline. 
+
+You can find a <a href="https://www.powershellgallery.com/">large variety of code examples and libraries in the PowerShell Gallery</a>.
 
 <h4>SQL Server Integration Services</h4>
-Description
-https://learn.microsoft.com/en-us/sql/integration-services/sql-server-integration-services?view=sql-server-ver16 
+One of the most mature tools in the SQL Server ecostructure is <a href="https://learn.microsoft.com/en-us/sql/integration-services/sql-server-integration-services?view=sql-server-ver16">SQL Server Integration Services</a>, or SSIS. SSIS can run in an on-premises and in-VM SQL Server, and its packages can also work within the Azure Data Factory tool described next. SSIS is a complete platform for building data integration and data transformations solutions. SSIS can copy or extract files, load data into databases or data warehouses, clean and mine data, and manage SQL Server objects and data.
+<p></p>
+In SSIS, you define data connections, and tie them together with tasks. You have full visibility into the metadata of SSIS, and it has routing, notification, alerting, retry logic, and rudimentary path logic included.
+<p></p>
+
+<img src="https://learn.microsoft.com/en-us/sql/integration-services/media/mw-dts-01.gif?view=sql-server-ver16" alt="Graphic" width="300">
+
+You can find a complete <a href="https://learn.microsoft.com/en-us/sql/integration-services/integration-services-programming-overview?view=sql-server-ver16">programming overview of SQL Server Integration Services at this reference</a>.
 
 <h4>Microsoft Azure Data Factory</h4>
-Description
-https://learn.microsoft.com/en-us/azure/data-factory/introduction 
+Microsoft Azure Data Factory is a managed cloud service in Azure that's built for complex hybrid extract-transform-load (ETL), extract-load-transform (ELT), and data integration projects.
+<p></p>
+<img src="https://learn.microsoft.com/en-us/azure/data-factory/media/data-flow/overview.svg" alt="Graphic" width="600">
+<p></p>
 
+Although complex in its implementation, Azure Data Factory (ADF) has a simple set of primitives to learn: 
+<p></p>
+<img src="https://learn.microsoft.com/en-us/azure/data-factory/media/concepts-pipelines-activities/relationship-between-dataset-pipeline-activity.png" alt="Graphic" width="600">
+<p></p>
 
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
+You can <a href="https://learn.microsoft.com/en-us/azure/data-factory/introduction ">learn more about Azure Data Factory at this reference</a>.
 
-TODO: Activity Description and tasks
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: SSIS and ADF Overview</b></p>
 
-<p><b>Description</b></p>
-
-TODO: Enter activity description with checkbox
+In this Activity you have a choice of reviewing one of two training modules: one for Azure Data Factory, and the other for SQL Server Integration Services. You can bookmark this reference to do both courses on your own schedule later.
 
 <p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
-TODO: Enter activity steps description with checkbox
+- Open <a href="https://learn.microsoft.com/en-us/training/modules/intro-to-azure-data-factory/">this reference on Azure Data Factory and review the Module you see there</a>.
+- Open <a href="https://learn.microsoft.com/en-us/sql/integration-services/ssis-how-to-create-an-etl-package?view=sql-server-ver16">this reference on SQL Server Integration Services and review the Lessons you see there</a>.
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
   
 <h2 id="2.4"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">2.4 Gap Analysis</h2>
 
-  Creating a Gap Analysis for data intelligence
-  
-TODO: Topic Description
+Gap Analysis is simply comparing your current state with the desired state in your organization. For the Data Estate, you began this process with the first Activity where you detailed some concerns you wanted to address using this Workshop.
 
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
+<a href="https://www.smartsheet.com/gap-analysis-method-examples">You can read more about performing a Gap Analysis at this reference</a>.
 
-TODO: Activity Description and tasks
-
-<p><b>Description</b></p>
-
-TODO: Enter activity description with checkbox
-
-<p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
-
-TODO: Enter activity steps description with checkbox
+After you complete the rest of the Modules in this Workshop, you should return to this section to develop your Gap Analysis using your system audit you created using this Module, and then create a business plan for your modernization effort. 
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
   
