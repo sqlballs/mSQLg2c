@@ -328,23 +328,21 @@ Procede to Unit 9 Learn about Data classification, dynamic data masking, and SQL
 
 <h2 id="4.6"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">4.6 Development</h2>
 
-TODO: Topic Description
+When you have your envrionment in Azure there is a world of additional options availble to your architecture and development practices.  In this section we will explore some of the development features in Azure SQL and in Azure. 
 
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
 
-TODO: Activity Description and tasks
+* <b>[Azure Synapse Link](https://learn.microsoft.com/en-us/azure/synapse-analytics/synapse-link/sql-server-2022-synapse-link)</b> - You can use the Azure Synapse Link for SQL functionality to replicate your operational data into an Azure Synapse Analytics dedicated SQL pool from Azure SQL or SQL Server 2022.
 
-<p><b>Description</b></p>
+* <b>[Configure Azure Synapse Link for Azure SQL Database](https://learn.microsoft.com/en-us/training/modules/implement-synapse-link-for-sql/3-synapse-link-azure-sql)</b> - Azure Synapse Link for Azure SQL Database uses a link connection to map one or more tables in an Azure SQL Database instance to tables in a dedicated SQL pool in Azure Synapse Analytics. When the link connection is started, the tables are initialized by copying a snapshot of the source tables to the target tables. Subsequently, the change feed process applies all modifications made in the source tables to the target tables.
 
-TODO: Enter activity description with checkbox
+* <b>[Spider-man Homecoming Twitter Sentiment Analysis](https://learn.microsoft.com/en-us/archive/blogs/deeperinsights/how-to-measure-twitter-sentiment-with-azure-logic-apps-sql-database-and-power-bi)</b> - A true Azure Development story showing how in less than an hour and a few clicks you can get real world data, use Congnative Services, evaluate sentiment, and enrich data in your Azure SQL Database.  Then you can report off of it in Power BI. 
 
-<p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
-TODO: Enter activity steps description with checkbox
 
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/owl.png?raw=true"><b>For Further Study</b></p>
 <ul>
+    <li><a href="https://learn.microsoft.com/en-us/training/modules/implement-synapse-link-for-sql/" target="_blank">Implement Azure Synapse Link for SQL</a></li>
     <li><a href="url" target="_blank">TODO: Enter courses, books, posts, whatever the student needs to extend their study</a></li>
 </ul>
 
