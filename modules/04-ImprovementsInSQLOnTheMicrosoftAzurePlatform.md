@@ -201,11 +201,20 @@ Azure Data Studio is a great cross platform management tool for your Azure data 
 
 <h2 id="4.3"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">4.3 Availability</h2>
 
+Earlier we reviewed some of the key concepts around Availability.  With an understanding of those concepts it is importaint to understand some of the key features you gain in Azure SQL.
+
+<img src="https://learn.microsoft.com/en-us/azure/availability-zones/media/availability-zones.png">
+
+* [Azure Availability Zones](https://learn.microsoft.com/en-us/azure/availability-zones/az-overview) are physically separate locations within each Azure region that are tolerant to local failures.
 * [Business continuity](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-business-continuity) enables your business to continue operating in the face of disruption, particularly to its computing infrastructure.
-* [High availability](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-high-availability) of Azure SQL Database guarantees your databases are up and running 99.99% of the time, no need to worry about maintenance/downtimes.
+
+* [Azure SQL Database High availability](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-high-availability) of Azure SQL Database guarantees your databases are up and running 99.99% of the time, no need to worry about maintenance/downtimes.
+
+* [Azure SQL Managed Instance Auto-Failover Groups](https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/auto-failover-group-sql-mi?view=azuresql&tabs=azure-powershell) feature allows you to manage the replication and failover of all user databases in a managed instance to another Azure region.
+
 * [Automated backups](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-automated-backups) are created and use Azure read-access geo-redundant storage (RA-GRS) to provide geo-redundancy.
 * [Long term backup retention](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-long-term-retention) enables you to store specific full databases for up to 10 years.
-* [Geo-replication](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-active-geo-replication) by creating readable replicas of your database in the same or different data center (region).
+* [Geo-replication](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-active-geo-replication) by creating readable replicas of your database in the same or different Azure Region.
 ![Active Geo Replication](https://learn.microsoft.com/en-us/azure/azure-sql/database/media/active-geo-replication-overview/geo-replication-updated.png?view=azuresql)
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: Azure SQL Availability</b></p>
