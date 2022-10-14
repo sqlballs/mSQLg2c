@@ -169,11 +169,11 @@ Once we have deployed and connected to our SQL Server instance we must have a co
 <p>
 There are some very importiant terms and concepts for us to cover.  High Availability, Disaster Recovery, & Business Continutiy. 
 <p>
-High Availability, HA, is the ability for your systems to recover from localized events in an automated way.
+<b>High Availability</b>, HA, is the ability for your systems to recover from localized events in an automated way.
 <p>
-Disaster Recovery, DR, is the process of recoving from a diaster of some sort.  A natural or man-made disaster has occured and manual intervention may be required.  While some things can be automated, other items may require manual intervention.  
+<b>Disaster Recovery</b>, DR, is the process of recoving from a diaster of some sort.  A natural or man-made disaster has occured and manual intervention may be required.  While some things can be automated, other items may require manual intervention.  
 <p>
-Business Continuity is the planning process for how businesses and their IT systems will react in the event of an outage.  This planning will typically be for DR, but it could also include HA planning. 
+<b>Business Continuity</b> is the planning process for how businesses and their IT systems will react in the event of an outage.  This planning will typically be for DR, but it could also include HA planning. 
 
 <h3>Always On</h3>
 <img src="https://learn.microsoft.com/en-us/sql/database-engine/availability-groups/windows/media/aoag-agintrofigure.gif?view=sql-server-ver16">
@@ -325,6 +325,7 @@ https://learn.microsoft.com/en-us/sql/t-sql/functions/json-object-transact-sql?v
     <li><a href="https://learn.microsoft.com/en-us/training/modules/explore-query-performance-optimization/" target="_blank">Explore query performance optimization</a></li>
     <li><a href="https://learn.microsoft.com/en-us/training/modules/azure-security-center/" target="_blank">Enable and manage Microsoft Defender for Cloud</a></li>
     <li><a href="https://learn.microsoft.com/en-us/sql/relational-databases/security/ledger/ledger-overview?view=sql-server-ver16" target="_blank">Ledger overview</a></li>
+    <li><a href="https://learn.microsoft.com/en-us/sql/database-engine/sql-server-business-continuity-dr?view=sql-server-ver16#sql-server-scenarios-using-the-availability-features" target="_blank">Business continuity and database recovery - SQL Server</a></li>
 </ul>
 
 
