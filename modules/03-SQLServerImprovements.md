@@ -261,26 +261,11 @@ To read more about how to use Ledger in SQL read this MS Learn article https://l
 <p>
 To understand how to configure Ledger on a SQL Server read this MS Learn article https://learn.microsoft.com/en-us/sql/relational-databases/security/ledger/ledger-how-to-configure-ledger-database?view=sql-server-ver16&tabs=Portal&pivots=as1-sql-server
 
-<h3>Microsoft Defender</h3>
-<p><img style="margin: 0px 15px 15px 0px;" src="https://learn.microsoft.com/en-us/azure/defender-for-cloud/media/security-center-advanced-iaas-data/data-and-storage-sqldb-vulns-on-vm.png">
-</p>
-
-Microsoft Defender for SQL servers on machines extends the protections for your Azure-native SQL Servers to fully support hybrid environments and protect SQL servers (all supported version) hosted in Azure, other cloud environments, and even on-premises machines.
-<p>
-
-ACTIVITY
-<p>
-To understand more about how Microsoft Defender can help protect your SQL Server read Unit 2 of the Ennable and manage Microsoft Defender for Cloud MS Learn Module, Review the cyber kill chain https://learn.microsoft.com/en-us/training/modules/azure-security-center/2-cyber-kill-chain
-<p>
-<p style="border-bottom: 1px solid lightgrey;"></p>
-
 <h2 id="3.6"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.6 Development</h2>
 
 SQL Server continues to expand its T-SQL foot print to assist developers of all types.  New time series, JSON, aggregate, T-SQL, and Bit manipulation functions have all been added. 
 
-
 To read more about each individual update read this MS Learn article https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver16#language
-
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
 

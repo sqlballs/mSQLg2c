@@ -181,7 +181,7 @@ The EKM system with the latest versions of SQL Server can leverage the Azure Key
 You can <a href="https://learn.microsoft.com/en-us/sql/relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server?view=sql-server-ver16">learn more about using Azure Key Vault with SQL Server at this reference</a>.
 
 <h3>Synapse Link</h3> 
-Setting up a <i>link connection</i> maps a connection between a SQL Server 2022 and an Azure Synapse Analytics dedicated SQL pool. You can use the Synapse Poprtal to create, manage, monitor and delete link connections in your Synapse workspace. This allows the operational data from your source database to be automatically replicated to the destination Synapse dedicated SQL pool. This gives you near-real time analytics from ground to cloud.
+Setting up a <i>link connection</i> maps a connection between SQL Server and an Azure Synapse Analytics dedicated SQL pool. You can use the Synapse Poprtal to create, manage, monitor and delete link connections in your Synapse workspace. This allows the operational data from your source database to be automatically replicated to the destination Synapse dedicated SQL pool. This gives you near-real time analytics from ground to cloud.
 
 <p></p>
 <img src="https://learn.microsoft.com/en-us/azure/synapse-analytics/media/sql-synapse-link-overview/synapse-link-sql-architecture.png" width=400>
@@ -204,39 +204,84 @@ In this Activity, you will continue your notes from the first Activity, and reco
 In some cases you will want to leverage cloud services in your on-premises environment. This can be as little as inventoring your Instances, up to using a security platform that is always up to date, all the way to a completely managed Instance of SQL Server, residing not only in your on-premises data center, but even other cloud providers.
 
 <h3>Microsoft Defender, Microsoft SQL Defender, and Advanced Threat Protection</h3>
-Computing security, and in specific data security, is essential in any organization. However, keeping on top of methods and processes to secure computing and data security elements, along with keeping up with threats and mitigations is very difficult
+Computing security, and in specific data security, is essential in any organization. However, keeping on top of methods and processes to secure computing and data security elements, along with keeping up with threats and mitigations is very difficult and time-consuming. As covered in an earlier Module, SQL Server Management Studio (SSMS) has a built-in vulnerability scanner, and there are also older tools you can use to detect issues and protect your servers.
 
-https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-sql-usage 
+<p></p>
+A better solution is a dedicated service that is kept up-to-date in a central location, where the latest protections and detections are stored and updated constantly. Microsoft Azure Defender has a full set of features that extend the power of the protections and monitoring offered in Azure to your on-premises systems.  
 
+<p></p>
+Microsoft Defender for SQL servers on machines extends the protections for your Azure-native SQL Servers to fully support hybrid environments and protect SQL servers (all supported version) hosted in Azure, other cloud environments, and even on-premises machines.
 
-<h3>Data Catalog and Governance with Microsoft Purview</h3>
-https://cloudblogs.microsoft.com/sqlserver/2022/08/11/microsoft-purview-access-policies-for-sql-server-2022/ 
-https://learn.microsoft.com/en-us/azure/purview/tutorial-register-scan-on-premises-sql-server 
+<p></p>
+<img style="margin: 0px 15px 15px 0px;" src="https://learn.microsoft.com/en-us/azure/defender-for-cloud/media/security-center-advanced-iaas-data/data-and-storage-sqldb-vulns-on-vm.png" width=800>
+<p></p>
 
-<h3>Azure Arc and SQL Server</h3>
-https://learn.microsoft.com/en-us/sql/sql-server/azure-arc/overview?view=sql-server-ver16 
-Microsoft Azure Arc
-Microsoft Azure Arc for SQL Server
-Microsoft Azure Arc for Data Services
+Microsoft Defender for SQL Servers on machines provides protection support for hybrid environments, and protects SQL Server Instances (all supported version) hosted in Azure, other cloud environments, and even on-premises machines. The integrated vulnerability assessment scanner discovers, tracks, and helps you remediate potential database vulnerabilities. Assessment scans findings provide an overview of your SQL machines' security state, and details of any security findings.
 
+> Scans are lightweight, safe, and normally only takes a few seconds per database to run. They are entirely read-only. Scans do not make any changes to your database.
 
-https://azurearcjumpstart.io/overview/
-https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/hybrid/enterprise-scale-landing-zone 
+<p></p>
+<img style="margin: 0px 15px 15px 0px;" src="https://learn.microsoft.com/en-us/azure/defender-for-cloud/media/defender-for-sql-on-machines-vulnerability-assessment/sql-vulnerability-findings.png" width=800>
+<p></p>
 
-<h3>Connect with Azure Active Directory</h3>
-https://learn.microsoft.com/en-us/sql/relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview?view=sql-server-ver16
+You can <a href="https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-sql-introduction">learn more about Microsoft Defender for SQL at this reference</a>, and you can <a href="https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-sql-usage">find the steps for implementing the service on your Instances at this reference</a>.
 
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: Review a Deployment of Microsoft Defender</b></p>
 
-TODO: Activity Description and tasks
-
-<p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Description</b></p>
-
-TODO: Enter activity description with checkbox
+In this Activity, you will review a section of the <i>Deployment of Microsoft Defender</i> training series. 
 
 <p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
-TODO: Enter activity steps description with checkbox
+- Open <a href="https://learn.microsoft.com/en-us/training/modules/azure-security-center/3-implement-azure-security-center">this reference for the training module called Implement Microsoft Defender for Cloud</a>, and continue through the Module called <a href="https://learn.microsoft.com/en-us/training/modules/azure-security-center/7-azure-defender">Deploy Microsoft Defender for Cloud</a>.
+- Bookmark these pages if you would like to return and complete the entire training plan. 
+
+<p style="border-bottom: 1px solid lightgrey;"></p>
+
+<h3>Data Governance with Microsoft Purview</h3>
+In the first Module you learned how to create a Data Catalog with Microsoft Purview. You can also govern your on-premises latest version SQL Server Instances with Purview Policies. 
+<p></p>
+Purview Policies allow you to define a range of SQL Server Instances, set up Policies for access (such as Read, Write and so on), and then publish the policies down to the Instances. The latest version of SQL Server is instrumented to accept these policies and handle the Data Control Language (DCL) T-SQL Statements to apply the applicable permissions and user logins to the Instance. 
+<p></p> 
+
+You can <a href="https://cloudblogs.microsoft.com/sqlserver/2022/08/11/microsoft-purview-access-policies-for-sql-server-2022/">learn more about Microsoft Purview Policies for SQL at this reference</a>.
+
+<h3>Azure Arc and SQL Server</h3>
+Microsoft Azure Arc is a set of technologies that allow you to manage your entire environment together by projecting your existing non-Azure and/or on-premises resources into Azure Resource Manager. It can help you manage virtual machines, Kubernetes clusters, and databases as if they are running in Azure, using familiar Azure services and management capabilities, regardless of where they live. Azure Arc technologies allow you to continue using traditional ITOps while introducing DevOps practices to support new cloud native patterns in your environment, configure custom locations as an abstraction layer on top of Azure Arc-enabled Kubernetes clusters and cluster extensions.
+<p></p>
+Azure Arc allows you to manage various resources hosted outside of Azure including Servers, Kubernetes clusters, Azure data services such as SQL Managed Instance and PostgreSQL server, SQL Server Instances, and Virtual machines. 
+
+<p></p>
+<img style="margin: 0px 15px 15px 0px;" src="https://learn.microsoft.com/en-us/azure/azure-arc/media/overview/azure-arc-control-plane.png" width=800>
+<p></p>
+
+You can <a href="https://learn.microsoft.com/en-us/azure/azure-arc/overview">learn more about Microsoft Azure Arc at this reference</a>.
+
+There are two Azure Arc implementations that allow you to extend various Microsoft Azure resources to your on-premises environment.
+
+<b>Microsoft Azure Arc-enabled SQL Server</b>
+The first method you can use to extend Microsoft Azure resources to your environment is Microsoft Azure Arc-enabled SQL Server. This deployment method allows you to use monitoring, security, and inventory systems in Microsoft Azure on your local SQL Servers. 
+
+To enable Azure services, you <i>>onboard</i> a  SQL Server Instance to Azure Arc. The onboarding process installs a Azure extension for SQL Server to the Connected Machine agent, which in turn will create an Azure resource for each SQL Server instance. 
+
+You can <a href="https://learn.microsoft.com/en-us/sql/sql-server/azure-arc/overview?view=sql-server-ver16">learn more about Microsoft Azure Arc-enabled SQL Server at this reference</a>.
+
+<b>Microsoft Azure Arc-enabled data services</b>
+Azure Arc-enabled data services uses your Kubernetes environment to run SQL managed instance and PostgreSQL server. They will automatically receive updates on a frequent basis including servicing patches and new features similar to the experience in Azure. Updates from the Microsoft Container Registry are provided to you and deployment cadences are set by you in accordance with your policies. You also get elasticity for your on-premises systems which enables you to scale databases up or down dynamically in much the same way as they do in Azure, based on the available capacity of your infrastructure. 
+
+Azure Arc also provides other cloud benefits such as fast deployment and automation at scale. You can deploy a database in seconds using either GUI or CLI tools. It also allows you to use familiar tools such as the Azure portal, Azure Data Studio, and the Azure CLI to get a unified view of all your data assets deployed with Azure Arc. You also get logs and telemetry from Kubernetes APIs to analyze the underlying infrastructure capacity and health. Besides having localized log analytics and performance monitoring, you can now leverage Azure Monitor for comprehensive operational insights across your entire estate.
+
+You can <a href="https://learn.microsoft.com/en-us/azure/azure-arc/data/overview">learn more about Microsoft Azure Arc-enabled SQL Server at this reference</a>.
+
+You can try these scenarios using the <a href="https://azurearcjumpstart.io/overview/"> Azure Arc Jumpstart</a> site. There are also <a href="https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/hybrid/enterprise-scale-landing-zone">additional learning resources for Azure Arc at this reference</a>. 
+ 
+<h3>Connect with Azure Active Directory</h3>
+Fully securing your Data Estate requires strong access and authentication mechanisms. The newest versions of SQL Server now support connecting to SQL Server using Azure AD identities with Azure Active Directory Password, Azure Active Directory Integrated, Azure Active Directory Universal with Multi-Factor Authentication, and Azure Active Directory access token authentication modes. 
+
+> Current connection methods such as SQL authentication and Windows authentication remain unchanged
+
+As a central authentication repository used by Azure, Azure AD allows you to store objects such as users, groups, or service principals as identities. Azure AD also allows you to use those identities to authenticate with different Azure services.
+
+You can <a href="https://learn.microsoft.com/en-us/sql/relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview?view=sql-server-ver16">learn more about Microsoft Azure Arc-enabled SQL Server at this reference</a>.
 
 <h2 id="5.3"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">5.3 - Migrating SQL Server Instances to the Microsoft Azure Platform</h2>
 In some cases, you may decide that a particular data workload should move to the cloud. Benefits of using a cloud service include enhanced security, cost optimization, and elastic scale. It also assists with licensing and monitoring and management centralization. 
@@ -268,7 +313,7 @@ The Azure SQL migration extension for Azure Data Studio uses the Azure Database 
 You can <a href="https://docs.microsoft.com/en-us/azure/dms/)">learn more about the Azure Database Migration Service at this reference</a>.
 
 <h4>Azure Migrate</h4>
-Azure Migrate is a very comprehensive service that provides a simplified migration, modernization, and optimization of data sources to Azure. All pre-migration steps such as discovery, assessments, and right-sizing of on-premises resources are included for infrastructure, data, and applications. Azure Migrate’s extensible framework allows for integration of third-party tools, thus expanding the scope of supported use-cases. You should consider starting with this service if you have an Enterprise or complex migration. 
+Azure Migrate is a very comprehensive service that provides a simplified migration, modernization, and optimization of data sources to Azure. All pre-migration steps such as discovery, assessments, and right-sizing of on-premises resources are included for infrastructure, data, and applications. Azure Migrate’s extensible framework allows for integration of third-party tools, thus expanding the scope of supported use-cases. You should consider starting with this service if you have an Enterprise or complex migration.
 
 <p></p>
 <img src="https://user-images.githubusercontent.com/517325/189189693-c88cf4c0-90f4-45b0-91bb-8993796593ee.png" width=800>
@@ -276,23 +321,20 @@ Azure Migrate is a very comprehensive service that provides a simplified migrati
 
 You can <a href="https://docs.microsoft.com/en-us/azure/migrate/)">learn more about Azure Migrate at this reference</a>.
 
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: Formalize your Modernization Plan</b></p>
 
-TODO: Activity Description and tasks
-
-<p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Description</b></p>
-
-TODO: Enter activity description with checkbox
+In the first Module of this course, you laid out a few areas you would like to focus on for your organization's modernization efforts. In this last Activity, you will take what you have learned and expand that list with a more formal set of objectives to take back to your office. 
 
 <p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
-- Open <a href="https://learn.microsoft.com/en-us/dotnet/azure/migration/choose">this resource, and review and bookmark the information you see there</a>.      
+- Open the document you started in Module 1
+- Add any new objectives, areas, or functions you think would be valuable to research further, and link the modules and resources you have found in this course that would assist you in that exploration. 
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/owl.png?raw=true"><b>For Further Study</b></p>
 <ul>
-    <li><a href="url" target="_blank">TODO: Enter courses, books, posts, whatever the student needs to extend their study</a></li>
+    <li><a href="url" target="_blank">A whitepaper on <i>Five Steps to Modernizing Your Data</i> is available here</a>.</li>
 </ul>
 
 Congratulations! You have completed this workshop on Modernizing Your Data Estate With SQL Ground-to-Cloud. You now have the tools, assets, and processes you need to extrapolate this information into other applications.
