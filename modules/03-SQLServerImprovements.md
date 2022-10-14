@@ -166,6 +166,14 @@ Go to this <a href="https://learn.microsoft.com/en-us/sql/ssms/tutorials/ssms-tr
 <h2 id="3.3"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.3 Availability</h2>
 
 Once we have deployed and connected to our SQL Server instance we must have a conversation about Availability.  SQL Server has many capabilities to extend your availability.
+<p>
+There are some very importiant terms and concepts for us to cover.  High Availability, Disaster Recovery, & Business Continutiy. 
+<p>
+High Availability, HA, is the ability for your systems to recover from localized events in an automated way.
+<p>
+Disaster Recovery, DR, is the process of recoving from a diaster of some sort.  A natural or man-made disaster has occured and manual intervention may be required.  While some things can be automated, other items may require manual intervention.  
+<p>
+Business Continuity is the planning process for how businesses and their IT systems will react in the event of an outage.  This planning will typically be for DR, but it could also include HA planning. 
 
 <h3>Always On</h3>
 <img src="https://learn.microsoft.com/en-us/sql/database-engine/availability-groups/windows/media/aoag-agintrofigure.gif?view=sql-server-ver16">
