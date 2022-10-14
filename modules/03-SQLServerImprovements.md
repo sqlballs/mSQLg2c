@@ -246,30 +246,32 @@ For more on SQL Server Performance see the MS Learn Module Explore query perform
 
 <h2 id="3.5"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.5 Security</h2>
 
-The integration of Azure and SQL Server has been enhanced to its best level yet. 
+Over the past ten years, SQL Server has had fewer vulnerabilities than the <a href="https://nvd.nist.gov/">competition</a>. Building on this, the new ledger feature creates an immutable track record of data modifications over time. This protects data from tampering by malicious actors and is beneficial for scenarios such as internal and external audits.
 
-https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver16#security
+SQL Server is integrated with Azure and brings the capabilities of Azure Defender where ever your SQL Server resides. 
 
+<h3>Ledger</h3>
 
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
+<p><img style="margin: 0px 15px 15px 0px;" src="https://learn.microsoft.com/en-us/sql/relational-databases/security/ledger/media/ledger/ledger-table-architecture.png?view=sql-server-ver16">
+</p>
 
-TODO: Activity Description and tasks
-
-<p><b>Description</b></p>
-
-TODO: Enter activity description with checkbox
-
-<p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
-
-TODO: Enter activity steps description with checkbox
-
+Establishing trust around the integrity of data stored in database systems has been a longstanding problem for all organizations that manage financial, medical, or other sensitive data. The ledger feature provides tamper-evidence capabilities in your database. You can cryptographically attest to other parties, such as auditors or other business parties, that your data hasn't been tampered with.
 <p>
-<img src="https://cloudblogs.microsoft.com/uploads/prod/sites/32/2022/05/SQL-Server-2022-slide_2022.05.22-update.webp">
+To read more about how to use Ledger in SQL read this MS Learn article https://learn.microsoft.com/en-us/sql/relational-databases/security/ledger/ledger-overview?view=sql-server-ver16
+<p>
+To understand how to configure Ledger on a SQL Server read this MS Learn article https://learn.microsoft.com/en-us/sql/relational-databases/security/ledger/ledger-how-to-configure-ledger-database?view=sql-server-ver16&tabs=Portal&pivots=as1-sql-server
 
-<p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
+<h3>Microsoft Defender</h3>
+<p><img style="margin: 0px 15px 15px 0px;" src="https://learn.microsoft.com/en-us/azure/defender-for-cloud/media/security-center-advanced-iaas-data/data-and-storage-sqldb-vulns-on-vm.png">
+</p>
 
-TODO: Enter activity steps description with checkbox
+Microsoft Defender for SQL servers on machines extends the protections for your Azure-native SQL Servers to fully support hybrid environments and protect SQL servers (all supported version) hosted in Azure, other cloud environments, and even on-premises machines.
+<p>
 
+ACTIVITY
+<p>
+To understand more about how Microsoft Defender can help protect your SQL Server read Unit 2 of the Ennable and manage Microsoft Defender for Cloud MS Learn Module, Review the cyber kill chain https://learn.microsoft.com/en-us/training/modules/azure-security-center/2-cyber-kill-chain
+<p>
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
 <h2 id="3.6"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.6 Development</h2>
