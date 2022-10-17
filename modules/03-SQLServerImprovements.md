@@ -13,58 +13,75 @@ In each module you'll get more references, which you should follow up on to lear
 
 (<a href="file:///url" target="_blank">Make sure you check out the <b>Pre-Requisites</b> page before you start</a>. You'll need all of the items loaded there before you can proceed with the workshop.)
 
-You'll cover these topics in the workshop:
+Using the <a href="https://github.com/sqlballs/mSQLg2c/blob/main/modules/02-AuditingYour%20DataEstateArchitecture.md">processes, tools and procedures from the Auditing  Module</a>, the WideWorldImporters company has completed an initial audit of their data estate.They found multiple sources of data in their organization, including text files, spreadsheets, and Relational Database Management Systems (RDBMS) including SQL Server 2008 Instances along with some Instances of SQL Server 2012, 2014, and 2016 versions. 
+
+WideWorldImporters <a href="https://learn.microsoft.com/en-us/sql/sql-server/end-of-support/sql-server-end-of-support-overview?view=sql-server-ver16#lifecycle-dates">needs to upgrade the software that is out of support</a> and also evaulate which versions and editions will solve their problems. They have settled on evaulating the delta between SQL Server 2017 and the latest version of the on-premises SQL Server product, and they have divided their evaluation into various categories that they are interested in:
+
 <dl>
-
-  <dt><a href="#3.1" target="_blank">3.1 - Deployment Options<dt></a>
-  <dt><a href="#3.2" target="_blank">3.2 - Manageability<dt></a>
-  <dt><a href="#3.3" target="_blank">3.3 - Availability<dt></a>
-  <dt><a href="#3.4" target="_blank">3.4 - Performance<dt></a>
-  <dt><a href="#3.5" target="_blank">3.5 - Security<dt></a>
-  <dt><a href="#3.6" target="_blank">3.6 - Development<dt></a>
-
+  <dt><a href="#3.1" target="_blank">3.1 - Deployment Options</dt></a>
+  <dt><a href="#3.2" target="_blank">3.2 - Manageability</dt></a>
+  <dt><a href="#3.3" target="_blank">3.3 - Availability</dt></a>
+  <dt><a href="#3.4" target="_blank">3.4 - Performance</dt></a>
+  <dt><a href="#3.5" target="_blank">3.5 - Security</dt></a>
+  <dt><a href="#3.6" target="_blank">3.6 - Development</dt></a>
+  <dt><a href="#3.7" target="_blank">3.7 - Analytics</dt></a>
 </dl>
 
-SQL Server is a modern data platform designed to tackle the challenges of today's data professional. SQL Server is not just an upgrade option from previous releases of SQL Server.
+<TODO: Review - Add - Edit Main Themes>
 
-The WideWorldImporters company has been evaluating upgrading several SQL Server 2008 instances along with some instances of SQL Server 2012, 2014, and even 2016. WideWorldImporters wants to know whether SQL Server 2022 will solve some of the challenges they face.
+- Deployment 
+  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2019?view=sql-server-ver15#platform-choice
+  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver15#platform
+- Manageability 
+  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver15#management 
+  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver15#tools
+- HA 
+  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2019?view=sql-server-ver15#high-availability
+  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver15#availability 
+- Perf 
+  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2019?view=sql-server-ver15#intelligent-database
+  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver15#performance
+  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver15#query-store-and-intelligent-query-processing 
+- Security 
+  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2019?view=sql-server-ver15#mission-critical-security
+  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver15#security 
+- Developer 
+  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2019?view=sql-server-ver15#developer-experience 
+  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2019?view=sql-server-ver15#ml
+  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver15#platform
+  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver15#sql-machine-learning-services 
+- Analytics 
+  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2019?view=sql-server-ver15#sql-server-analysis-services
+  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2019?view=sql-server-ver15#sql-server-integration-services
+  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2019?view=sql-server-ver15#sql-server-
+  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2019?view=sql-server-ver15#sql-server-reporting-services
+  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver15#analytics
+  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver15#sql-server-analysis-services
+  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver15#sql-server-reporting-services 
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
-<h2 id="3.1"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.1 Deployment Options</h2>
+<h2 id="3.1"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.1 Deployment Improvements</h2>
+In the latest version, you can deploy SQL Server to the Microsoft Windows operating systems as well as various distributions of the Linux operating system.  Newer deployment scenarios also include deploying SQL Server on Containers, Kubernetes, and new options in the Microsoft Azure platform such as Azure SQL Edge.
+<p></p>
 
-Since SQL Server 2017 users have had the option of deploying SQL Server on Windows and in Linux.  Current deployment scenarios include Windows, Linux, Docker containers, and Kubernetes. 
+> WideWorld Importers has decided to evaluate the on-premises latest version of SQL Server separately from the Microsoft Azure platform deployment options. They also want to evaluate the on-premises to cloud and cloud to on-premises interactions separately.
 
-Regardless of the deployment scenario there are some key items to keep in mind.
-
+<p></p>
 
 <h3>SQL Server on Windows</h3>
+The latest version of SQL Server is supported on all current Microsoft Windows desktop and server operating systems, including Windows 11 (Developer and Express Editions) and Windows 2022 Server. You can <a href="https://learn.microsoft.com/en-us/troubleshoot/sql/general/use-sql-server-in-windows">learn more about each version of the Microsoft Windows operating system and the SQL Server version it supports at this reference</a>.
 
-The development teams have collaborated closely to ensure that the very best experience for data professionals emerges when you take advantage of the synergies built into the Windows Server OS and the SQL Server data platform.  
+Your selection of features and components should be based on your application needs. The different <i>Editions</a> of SQL Server have unique features, performance, runtime, and cost implications. You can <a href="https://learn.microsoft.com/en-us/sql/sql-server/editions-and-components-of-sql-server-2019?view=sql-server-ver16#-editions">learn more about the Editions of SQL Server and the features supported in each at this reference</a>.
 
-<p>
-
-<h3>SQL Server Editions</h3>
-Installation requirements vary based on your application needs. The different editions of SQL Server accommodate the unique performance, runtime, and price requirements of organizations and individuals. The SQL Server components that you install also depend on your specific requirements. The following sections help you understand how to make the best choice among the editions and components available in SQL Server.
-
-
-
-<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>     Activity: Review SQL Server Editions Lab</a></b></h2>
-
-In this activity, you will review the different editions of SQL Server.
-
-
-<h3><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Activity Steps</b></h3>
-
-To complete this activity, go to [https://learn.microsoft.com/en-us/sql/sql-server/editions-and-components-of-sql-server-2019?view=sql-server-ver16#-editions](https://learn.microsoft.com/en-us/sql/sql-server/editions-and-components-of-sql-server-2019?view=sql-server-ver16#-editions).
-
-Review the Editions available for SQL Server.
-
-
+All features in each Edition for the latest version of SQL Server are supported on the Microsoft Windows operating system.
 
 <h3>SQL Server on Linux</h3>
+In the latest version, SQL Server runs on Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu Linux. 
 
-SQL Server now runs on the Linux Platform.  It runs on the Red Hat, SUSE, Ubuntu, & Docker platform.  You can learn more about that architecture here https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-overview?view=sql-server-ver16
+There are specific versions and support considerations for each 
+
+You can learn more about that architecture here https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-overview?view=sql-server-ver16
 
 <p>
 Some reasons to consider SQL Server on Linux could be if your orginization is more familar with running Linux than Windows, command line installation on Linux platform, and quick deployments of non-production environments.
@@ -113,6 +130,9 @@ SQL Server containers can also be deployed to Kubernetes using Helm charts.  To 
 Once we Deploy SQL Server how do we access it and manage it?  
 
 <p height="10">
+
+<p style="border-bottom: 1px solid lightgrey;"></p>
+
 
 <h3>Tools</h3>
 We have some key tools that you should understand how to use.  A quick note we will be talking about Azure Data Studio later in this course, for now we will  discuss SQL Server Management Studio & Copmmand-Line Utilities.
@@ -294,6 +314,16 @@ TODO: Enter activity description with checkbox
 Open the the JSON_OBJECT MS Learn article and execute the demos (2 minutes)
 https://learn.microsoft.com/en-us/sql/t-sql/functions/json-object-transact-sql?view=sql-server-ver16
 
+<h2 id="3.7"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.7 Analytics</h2>
+
+Content
+
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
+
+<p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
+
+Open the the JSON_OBJECT MS Learn article and execute the demos (2 minutes)
+https://learn.microsoft.com/en-us/sql/t-sql/functions/json-object-transact-sql?view=sql-server-ver16
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/owl.png?raw=true"><b>For Further Study</b></p>
 <ul>
