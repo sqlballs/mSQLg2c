@@ -134,5 +134,4 @@ This is a modular workshop, and in each section, you'll learn concepts, technolo
 
 <h2><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/geopin.png?raw=true">Next Steps</h2>
 
-Next, Continue to <a href="https://github.com/sqlballs/mSQLg2c/blob/Buck/modules/01-SetupandWorkshopMethodology.md" target="_blank"><i> Prerequisites</i></a>
-
+Next, Continue to <a href="https://github.com/sqlballs/mSQLg2c/blob/main/modules/01-SetupandWorkshopMethodology.md" target="_blank"><i> Prerequisites</i></a>

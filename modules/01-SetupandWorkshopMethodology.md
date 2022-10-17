@@ -171,6 +171,49 @@ The instructions that follow use the Microsoft Azure Account you created earlier
 
 You now have a testing and classroom environment for this course. You will add more to this environment as you progress through the modules, and all steps from here on out should be taken on that system. 
 
+<h2>Workshop Scenario</h2>
+
+This solution uses an example of a retail organization that has multiple data sources, but it has many applications to the other industries listed above. It serves as an end-to-end scenario where you will learn the technologies and processes you can use to create multiple solutions. 
+
+<img width="600" src="https://github.com/microsoft/sqlworkshops-bdc/blob/master/graphics/WWI-001.png?raw=true">
+
+Wide World Importers (WWI) is a traditional brick and mortar business with a long track record of success, generating profits through strong retail store sales of their unique offering of affordable products from around the world. They have a great training program for new employees, that focuses on connecting with their customers and providing great face-to-face customer service. This strong focus on customer relationships has helped set WWI apart from their competitors. 
+
+WWI has now added web and mobile commerce to their platform, which has generated a significant amount of additional data, and data formats. These new platforms have been added without integrating into the OLTP system data or Business Intelligence infrastructures. As a result, "silos" of data stores have developed.
+
+Now they want to expand their reach to customers around the world through web and mobile e-commerce. But they don't want to just simply make their inventory available online. They want to build upon their track record of strong customer connections, and engage with their customers through personalized, high-quality application experiences that incorporate data and intelligence.
+
+The technology team at WWI has recognized that moving to an omni-channel strategy has quickly outgrown their ability to handle data. They anticipate the following solutions needed to reach more customers and grow the business:
+
+ - Scale data systems to reach more consumers
+ - Unlock business insights from multiple sources of structured and unstructured data
+ - Apply deep analytics with high-performance responses
+ - Enable AI into apps to actively engage with customers
+
+Prior to expanding to their current omni-channel strategy, WWI had a simple Point of Sale (POS) application that handled customer orders at each retail store. The back-end was a series of service layers used to process orders and store them in a SQL database. They had designed their systems and tuned them to handle this level of data.
+
+<img width="600" src="https://github.com/microsoft/sqlworkshops-bdc/blob/master/graphics/WWI-002.png?raw=true">
+
+
+As they added new e-commerce channels to expand the customer base, consumer demand also increased. This increased demand from more customers ordering products through more channels generated more data. Now WWI has new challenges to address:
+
+ - Increased consumer demand, leading to increased app data
+ - They are unable to determine business trends because of siloed insights
+ - They have a rising data management footprint, increasing cost and complexity
+ - New development challenges resulting from more deployment targets and duplicated code
+
+<br>
+<img width="600" src="https://github.com/microsoft/sqlworkshops-bdc/blob/master/graphics/WWI-003.png?raw=true">
+<br>
+
+WideWorld Importers has started the process for modernization for their data estate, and quickly learned that they are discovering data elements they did not know about, and others they thought were in place had changed significantly or were no longer available. In the Modules that follow, you'll learn how the team solves each of these challenges.
+
+You can read more about <a href="https://azure-scenarios-experience.azurewebsites.net/big-data.html#the-wide-world-importers-sample-customer-scenario" target="_blank">Wide World Importers here</a>.
+
+<br>
+<p style="border-bottom: 1px solid lightgrey;"></p>
+<br>
+
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/geopin.png?raw=true"><b >Next Steps</b></p>
 
 Next, Continue to <a href="https://github.com/sqlballs/mSQLg2c/blob/main/modules/02-AuditingYour%20DataEstateArchitecture.md" target="_blank"><i> 02 - Auditing Your Data Estate Architecture</i></a>.

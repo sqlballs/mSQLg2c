@@ -21,6 +21,7 @@ You'll cover these topics in the workshop:
   <dt><a href="#4.5" target="_blank">4.5 - Security<dt>
   <dt><a href="#4.6" target="_blank">4.6 - Development<dt>
 
+
 </dl>
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
@@ -159,6 +160,56 @@ The Azure Portal is the first stop in managing your Azure environment. The porta
 Azure Data Studio is a highly extensible tool that helps developers to manage and develop against multiple data processing and storage engines. Its versatility through the use of application extensions allows it to be as useful as the developer can make it.
 
 For instance, there are extensions for helping developers to migrate to Azure SQL, develop "clean" looking code, monitor and manage Azure Synapse, work on PostgreSQL instances, or even develop using Jupyter Notebooks
+
+
+<h4>Jupyter Notebooks</h4>
+
+A Jupyter *Notebook* is a web-page-based interface consisting of *Cells* that can contain text (using the Markdown specification) or code. The code depends on the Kernel that has been installed for the Notebook. Traditionally, Python and R Kernels are installed by default. 
+
+*Notebook Servers* run **.ipynb** files (the Notebooks). You can install a Notebook Server locally, remotely, or you can use something like <a href="https://notebooks.azure.com" target="_blank">Azure Notebooks</a> which provides a free, quick, easy way to work with and share Notebooks. (It's all a bit like a specific kind of web server). 
+
+*Libraries* are a container on your Notebook server where you can have Notebooks, code, directories and other files. 
+
+Notebooks are JSON files that contain areas called *Cells*, which have text or code in them. When you double-click a Notebook, the Notebook server renders and can display text or run code, such as R or Python, using a *Kernel*. Cells can hold text (such as *Markdown*, *HTML*, or *LaTeX*) which you can mix together, or Code. Double-click a Cell in a Notebook to edit it, and then click the "Run" button to render what you typed. Code runs and displays an output below the cell. You can toggle the result for code to show or hide it.
+
+*Markdown* is a simplified markup language for text. Use it for general text and simple graphics. You can <a href="https://www.markdowntutorial.com/" target="_blank">read more about Markdown here</a>, and <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" target="_blank">there's a great cheat-sheet on Markdown here</a>. 
+
+You'll use Notebooks within Azure Data Studio to work with Spark, which you'll learn about in a moment. Learn <a href="https://jupyter-notebook.readthedocs.io/en/stable/" target="_blank">more about Jupyter Notebooks here</a>.  
+
+<h4>Azure Data Studio</h4>
+
+*Azure Data Studio* is a cross-platform database tool to manage and program on-premises and cloud data platforms on Windows, MacOS, and Linux. It is extensible, and one of these extensions is how you work with Azure Data Studio code and Jupyter Notebooks. It is built on the Visual Studio Code shell. The editor in Azure Data Studio has Intellisense, code snippets, source control integration, and an integrated terminal. 
+
+If you have not completed the prerequisites for this workshop you can <a href="https://docs.microsoft.com/en-us/sql/azure-data-studio/download?view=sql-server-2017
+" target="_blank">install Azure Data Studio from this location</a>, and you will install the Extension to work with SQL Server big data clusters in a future module</a>.
+
+You can <a href="https://docs.microsoft.com/en-us/sql/azure-data-studio/what-is?view=sql-server-2017 
+" target="_blank">learn more about Azure Data Studio here</a>.
+
+<br>
+<p><img style="height: 300; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"  src="../graphics/ads.png"></p> 	 	
+<br>
+
+You'll explore further operations with the Azure Data Studio in the <i>Operationalization</i> module.
+
+<br>
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/point1.png"><b>Activity: Practice with Notebooks</b></p>
+
+<p><b>Steps</b></p>
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/checkbox.png"><a href="https://notebooks.azure.com/BuckWoodyNoteBooks/projects/AzureNotebooks" target="_blank">Open this reference, and review the instructions you see there</a>. You can clone this Notebook to work with it later.</p>
+
+<br>
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/point1.png"><b>Activity: Azure Data Studio Notebooks Overview</b></p>
+
+<p><b>Steps</b></p>
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/checkbox.png"><a href="https://docs.microsoft.com/en-us/sql/azure-data-studio/sql-notebooks?view=sql-server-2017" target="_blank">Open this reference, and read the tutorial - you do not have to follow the steps, but you can if time permits.</p>
+
+
+<br>
+<p style="border-bottom: 1px solid lightgrey;"></p>
+<br>
+
+
 
 <h4>Command-Line Utilities</h4>
 

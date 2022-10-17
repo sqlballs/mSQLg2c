@@ -29,15 +29,6 @@ WideWorldImporters <a href="https://learn.microsoft.com/en-us/sql/sql-server/end
 
 <TODO: Review - Add - Edit Main Themes>
 
-- Deployment 
-  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2019?view=sql-server-ver15#platform-choice
-  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver15#platform
-- Manageability 
-  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver15#management 
-  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver15#tools
-- HA 
-  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2019?view=sql-server-ver15#high-availability
-  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver15#availability 
 - Perf 
   - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2019?view=sql-server-ver15#intelligent-database
   - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver15#performance
@@ -72,164 +63,230 @@ In the latest version, you can deploy SQL Server to the Microsoft Windows operat
 <h3>SQL Server on Windows</h3>
 The latest version of SQL Server is supported on all current Microsoft Windows desktop and server operating systems, including Windows 11 (Developer and Express Editions) and Windows 2022 Server. You can <a href="https://learn.microsoft.com/en-us/troubleshoot/sql/general/use-sql-server-in-windows">learn more about each version of the Microsoft Windows operating system and the SQL Server version it supports at this reference</a>.
 
-Your selection of features and components should be based on your application needs. The different <i>Editions</a> of SQL Server have unique features, performance, runtime, and cost implications. You can <a href="https://learn.microsoft.com/en-us/sql/sql-server/editions-and-components-of-sql-server-2019?view=sql-server-ver16#-editions">learn more about the Editions of SQL Server and the features supported in each at this reference</a>.
+Your selection of features and components should be based on your application needs. The different <i>Editions</i> of SQL Server have unique features, performance, runtime, and cost implications. You can <a href="https://learn.microsoft.com/en-us/sql/sql-server/editions-and-components-of-sql-server-2019?view=sql-server-ver16#-editions">learn more about the Editions of SQL Server and the features supported in each at this reference</a>.
 
-All features in each Edition for the latest version of SQL Server are supported on the Microsoft Windows operating system.
+All features in each Edition for the latest version of SQL Server are supported on the Microsoft Windows operating system, including:
+- Hybrid buffer pool with direct write, which reduces the number of memcpy commands that need to be performed on modified data or index pages residing on PMEM devices
+- Integrated acceleration & offloading acceleration technologies from partners such as Intel to provide extended capabilities, such as Intel® QuickAssist Technology (QAT) which provides backup compression and hardware offloading
+- Leverages new hardware capabilities, including the Advanced Vector Extension (AVX) 512 extension to improve batch mode operations
+
+<h3>SQL Server on Virtual Machines</h3>
+Bare-metal installations of an operating system such as Windows are deployed on hardware using an operating system <i>Kernel</i>, and additional software to bring all of the hardware into a set of calls to the "Big Four": CPU, Memory, Storage, and Networking. 
+
+One abstraction layer above installing software directly on hardware is using a <i>Hypervisor</i>. In essence, this layer uses the base operating system to emulate hardware. You install an operating system (called a Guest OS) on the Hypervisor (called the Host), and the Guest OS acts as if it is on bare-metal.
+
+<img src="https://techcommunity.microsoft.com/t5/image/serverpage/image-id/44539iF185A2EF8FFAB4FF?v=1.0" width=400>
+
+In this abstraction level, you have full control (and responsibility) for the entire operating system, but not the hardware. This isolates all process space and provides an entire "Virtual Machine" to applications. For scale-out systems, a Virtual Machine allows for a distribution and control of complete computer environments using only software.
+
+You can read <a href="https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/tlfs">the details of Microsoft's Hypervisor at this reference</a>.
+
+The latest version of SQL Server supports all of the features associated with the applicable Edition for both Windows and Linux in a Virtualized environemnt, with <a href="https://learn.microsoft.com/en-us/troubleshoot/sql/general/support-policy-hardware-virtualization-product">the considerations described at this reference</a>.
 
 <h3>SQL Server on Linux</h3>
-In the latest version, SQL Server runs on Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu Linux. 
+In the latest version, SQL Server runs on Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu Linux. WideWorld Importers is currently running Red Hat Linux at one of their processing plants, and is interested in some of the workloads that might be useful on that platform. As they test, their primary concern is the performance aspect of SQL Server in Linux, and they find that performance is on-par with the Windows deployments due to the architecture of the Platform Abstration Layer (PAL) implemented to run the SQL Server Engine code on Linux:
 
-There are specific versions and support considerations for each 
+<p></p>
+<img src="https://cloudblogs.microsoft.com/uploads/prod/2016/12/04_thumb.png" width=300>
+<p></p>
 
-You can learn more about that architecture here https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-overview?view=sql-server-ver16
+The latest version of SQL Server on Linux supports the following improvements:
+- Replication
+- Support for the Microsoft Distributed Transaction Coordinator (MSDTC)
+- OpenLDAP support for third-party AD providers
+- Machine Learning Services on Linux
+- TempDB improvements, such as multiple TempDB data files, similar to the default SQL Server installation on Windows
+- PolyBase
+- PolyBase type mapping
+- Change Data Capture (CDC) support
+- Linux distributions supported
 
-<p>
-Some reasons to consider SQL Server on Linux could be if your orginization is more familar with running Linux than Windows, command line installation on Linux platform, and quick deployments of non-production environments.
+There are specific versions and support considerations for each distrivution of Linux. A <a href="https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-whats-new-2019?view=sql-server-ver16">list of these requirements is available at this reference</a>, and a <a href="https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-editions-and-components-2022?view=sql-server-ver16">list of Editions and supported features for SQL Server on Linux is at this reference</a>. 
 
-<h2><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>     Activity: Review SQL Server on Linux Lab</a></b></h2>
-
-In this activity, you will review the Introduction to SQL Server on Linux MS Learn Module, Unit 2.
-
-
-<h3><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Activity Steps</b></h3>
-
-To complete this activity, go to [https://learn.microsoft.com/en-us/training/modules/introduction-sql-server-linux/2-what-sql-server-linux
-](https://learn.microsoft.com/en-us/training/modules/introduction-sql-server-linux/2-what-sql-server-linux
-).
-
-Review Unit 2 What is SQL Server on Linux? (5 minutes)
-
-
-
+You can <a href="https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-overview?view=sql-server-ver16">learn more about the SQL Server on Linux architecture at this reference</a>.
 
 <h3>SQL Server in Containers</h3>
+The introduction of SQL Server running on Linux allows for the next level of hardware abstraction, called a Container. There are various types of Container technologies, in this workshop, you will focus on the docker container format, as implemented in the Moby framework.
 
-SQL Server runs in containers on the Docker platform. 
+A Container is provided by the Container Runtime (Such as containerd]) runtime engine, which sits above the operating system (Windows or Linux). In this abstraction, you do not control the hardware or the operating system. The Container has a very small Kernel in it, and can contain binaries such as Python, R, SQL Server, or other binaries. A Container with all its binaries is called an Image. You create a container from a file.
 
-SQL Server 2022
-- Regularly updated with CUs
-- SQL server on Multipl OS containers: Red Hat, Ubuntu, Windows
-- Machine Learning, Polybase, MSDTC, & Replication in Linux Containers
+You can see the difference between Virtual Machines and Container technologies here: 
 
-To understand how to deploy SQL Server to a Docker container see following Microsoft Learn article: https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-ver16&pivots=cs1-powershell
+<img src="https://cloudblogs.microsoft.com/uploads/prod/sites/37/2019/07/Demystifying-containers_image1.png" width=600>
 
-<p>
+
+This abstraction holds everything for an application to isolate it from other running processes. It is also completely portable - you can create an image on one system, and another system can run it so long as the Container Runtimes (Such as Docker) Runtime is installed. Containers also start very quickly, are easy to create (called Composing) using a simple text file with instructions of what to install on the image. The instructions pull the base Kernel, and then any binaries you want to install. Several pre-built Containers are already available, SQL Server is one of these. You can <a href="https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017">read more about installing SQL Server on Container Runtimes (Such as Docker) at this reference</a>.
+
+You can have several Containers running at any one time, based on the amount of hardware resources where you run it. For scale-out systems, a Container allows for distribution and control of complete applications using only declarative commands.
+
+You can <a href="https://hackernoon.com/docker-commands-the-ultimate-cheat-sheet-994ac78e2888">read more about Container Runtimes (Such as Docker) at this reference</a>.
 
 <h3>SQL Server on Kubernetes</h3>
 
-SQL Server containers can also be deployed to Kubernetes using Helm charts.  To understand how to deploy a container to Kubernetes see this Microsoft Learn article: https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-containers-deploy-helm-charts-kubernetes?view=sql-server-ver16
+For Big Data systems, having lots of Containers is very advantageous to segment purpose and performance profiles. However, dealing with many Container Images, allowing persisted storage, and interconnecting them for network and internetwork communications is a complex task. One such Container Orchestration tool is <i>Kubernetes</i>, an open source Container orchestrator, which can scale Container deployments according to need. The following table defines some important Container Orchestration Tools (Such as Kubernetes or OpenShift) terminology:
 
-<p>
+<table style="tr:nth-child(even) {background-color: #f2f2f2;}; text-align: left; display: table; border-collapse: collapse; border-spacing: 5px; border-color: gray;">
+  <tr><td style="background-color: AliceBlue; color: black;"><b>Component</b></td><td style="background-color: AliceBlue; color: black;"><b>Used for</b></td></tr>
+  <tr><td>Cluster</td><td> Container Orchestration (Such as Kubernetes or OpenShift) cluster is a set of machines, known as nodes. One node controls the cluster and is designated the master node; the remaining nodes are worker nodes. The Container Orchestration *master* is responsible for distributing work between the workers, and for monitoring the health of the cluster.</td></tr>
+  <tr><td style="background-color: AliceBlue; color: black;">Node</td><td td style="background-color: AliceBlue; color: black;"> A node runs containerized applications. It can be either a physical machine or a virtual machine. A Cluster can contain a mixture of physical machine and virtual machines as Nodes.</td></tr>
+  <tr><td>Pod</td><td> A Pod is the atomic deployment unit of a Cluster. A pod is a logical group of one or more Containers and associated resources needed to run an application. Each Pod runs on a Node; a Node can run one or more Pods. The Cluster master automatically assigns Pods to Nodes in the Cluster.</td></tr>
+</table>
+	
+<br> 
+<img src="https://github.com/microsoft/sqlworkshops-bdc/blob/master/graphics/KubernetesCluster.png?raw=true" width=600>
+<br>
 
+You can <a href="https://kubernetes.io/docs/tutorials/kubernetes-basics/" target="_blank">learn much more about Container Orchestration systems here</a>. You can implement a Kubernetes environment using the Azure Kubernetes Service (AKS), and <a href="https://aksworkshop.io/" target="_blank">you can find a set of tutorials for you to learn more at this reference</a>.
 
-<p style="border-bottom: 1px solid lightgrey;"></p>
+> You can <a href="https://kubernetes.io/docs/tutorials/kubernetes-basics/create-cluster/cluster-interactive/">practice with Kubernetes using online emulator to work with the `minikube` platform</a>.  
 
+You can deploy the latest version of SQL Server deployments on Kubernetes. In this case, the Container Orchestration system (Such as Kubernetes or OpenShift) is responsible for the state of the BDC; it is responsible for building and configuring the Nodes, assigns Pods to Nodes,creates and manages the Persistent Volumes (durable storage), and manages the operation of the Cluster.
 
-<h2 id="3.2"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.2 Manageability</h2>
+You can learn more about <a href="https://learn.microsoft.com/en-us/shows/data-exposed/deploying-sql-server-2019-in-kubernetes">deploying SQL Server to Kubernetes at this reference</a>. SQL Server containers can also be deployed to Kubernetes using Helm charts.  To understand how to deploy a container to Kubernetes see this Microsoft Learn article: https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-containers-deploy-helm-charts-kubernetes?view=sql-server-ver16
 
-Once we Deploy SQL Server how do we access it and manage it?  
+<p></p>
 
-<p height="10">
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: Review the process for running SQL Server in a Container</b></p>
 
-<p style="border-bottom: 1px solid lightgrey;"></p>
+In this Activity you will review the process for pulling the latest version of a SQL Server container and running it on the Docker platform, and connecting to it with a query. 
 
-
-<h3>Tools</h3>
-We have some key tools that you should understand how to use.  A quick note we will be talking about Azure Data Studio later in this course, for now we will  discuss SQL Server Management Studio & Copmmand-Line Utilities.
-
-
-<p height="10">
-<h4>SQL Server Management Studio</h4>
-SQL Server Management Studio, SSMS, has been in use since 2005 and is a staple of any orginization with DBA's running SQL Server.
-<p>
-It is key understand <a href="https://learn.microsoft.com/en-us/sql/ssms/quickstarts/ssms-connect-query-sql-server?view=sql-server-ver16">how to connect to SSMS</a> to any SQL Server Instance.
-
-<p>
-SSMS can be used to <a href="https://learn.microsoft.com/en-us/sql/ssms/tutorials/scripting-ssms?view=sql-server-ver16">script out objects</a>, <a href="https://learn.microsoft.com/en-us/sql/relational-databases/import-export/import-flat-file-wizard?view=sql-server-ver16">import flat files</a>, and <a href="https://learn.microsoft.com/en-us/sql/ssms/tutorials/ssms-tricks?view=sql-server-ver16">we even have some tips and tricks documented</a>.
-<p>
-Additional actvities you can use SSMS to do:
-<li>Write Queries
-<li>View the AlwaysOn AG Dashboard
-<li>View SQL Server Log Files
-<li>Crete & Schedule SQL Agent Jobs
-<li>Create Extended Events
-<li>Generate and evaluate execution plans
-<li>View Query Data Store Built In Reports
-
-<p>
-<p>
-<h4>Command-Line Utilities</h4>
-<p>
-SQLCMD is an importiant tool because it allows you to connect to SQL Instances via a command-line utility in Windows or in Linux.  To learn more about installing sqlcmd go to the following MS Learn article <a href="https://learn.microsoft.com/en-us/sql/tools/sqlcmd-utility?view=sql-server-ver16#download-and-install-sqlcmd">https://learn.microsoft.com/en-us/sql/tools/sqlcmd-utility?view=sql-server-ver16#download-and-install-sqlcmd</a> . 
-
-<p>
-If your SQL Server installation is set up to support remote connects than you can use the dedicated adminstrative connect, DAC, with sqlcmd.  To learn more about how to connect to the DAC see this MS Learn article <a href="https://learn.microsoft.com/en-us/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-ver16#connect-with-dac">https://learn.microsoft.com/en-us/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-ver16#connect-with-dac</a>
-
-
-SQL Server Management Studio: Tips & Tricks
-
-
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Tips and Tricks for SSMS</b></p>
-
-Go to the link provided and execute the scripts in the exercises
-
-<p><b>Description</b></p>
-
-Find some tips and tricks for working with SSMS
+> If you have a Linux or Windows operating system with Docker installed and running, you can implement this tutorial, otherwise watch the instructor as they perform the pull.
 
 <p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
-Go to this <a href="https://learn.microsoft.com/en-us/sql/ssms/tutorials/ssms-tricks?view=sql-server-ver16">link</a>.  Copy code from the link and execute as instructed in SSMS.
+- <a href="https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-ver16&pivots=cs1-powershel">Open this link and review the steps you see there</a>. Bookmark for later reference.
+- <i>Optional</i>: If time permits, you can install the Docker platform on your test system and complete the steps to depploy SQL Server on Linux and connect with a test to that environment.
+
+<p style="border-bottom: 1px solid lightgrey;"></p>
+
+<h2 id="3.2"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.2 Manageability</h2>
+
+For the administration team for the Data Estate, manageability includes everything from the interface to the system, to being able to deploy and configure it. The latest version of SQL Server includes the following improvements:
+
+- An integrated setup experience for the Azure extension for SQL Server	Install the Azure extension for SQL Server at setup. Required for Azure integration features
+- Using the SQL Server Configuration Manager to manage an Azure extension for SQL Server service, allowing you to create Azure Arc-enabled SQL Server instances, and for other Azure connected features
+- Upgraded max server memory calculations
+- There are several improvements to address persistent version store (PVS) storage and improve overall scalability, including a persistent version store cleaner thread per database instead of per instance and the memory footprint for PVS page tracker has been improved. There are also a number of ADR efficiency improvements, such as concurrency improvements that help the cleanup process to work more efficiently. ADR cleans pages that couldn't previously be cleaned due to locking
+- Shrink database WAIT_AT_LOW_PRIORITY
+- XML compression
+- Asynchronous auto update statistics concurrency
+
+<h3>Tools</h3>
+There are several tools you can use to connect to, query, and manage a SQL Server Instance. The two broad groups are Graphical User Interfaces (GUI) and Command-Line or Scripting Interfaces. 
+
+New improvements include:
+
+- Azure Data Studio includes connection and management support for the latest version of SQL Server
+- SQL Server Management Studio connects and manages the latest version of SQL Server, and includes several other improvements
+- SqlPackage.exe provides support for the latest version of SQL Server
+- VS Code	The latest release of VS Code now supports the latest version of SQL Server
+
+<p></p>
+
+> This Module focuses on the use and improvements in the SQL Server Management Studio (SSMS) and Command-Line utilities. The Azure SQL Module will focus more on the Azure Data Studio (ADS) tool, although both SSMS and ADS can be used to connect to and manage either platform.
+
+<p></p>
+
+<h4>SQL Server Management Studio</h4>
+SQL Server Management Studio (SSMS) is a graphical interface for the Microsoft Windows operating system used to manage, monitor and program SQL Server Instances. The latest version of this tool supports connecting to and managing the latest versions of SQL Server for the following activities:
+- Connect to SQL Server and see object status
+- Creation of databases and database objects
+- Configuration of connection options
+- Scripting database options
+- Creation of SQL Server Agent Jobs and Schedules
+- Creation of Maintance plans, backup and restore operations
+- Multiple out-of-the-box reports and the ability to create custom reports
+- Multiple "wizards" for tasks such as security compliance and risk reports
+- Multiple graphical tools to view and report performance and query plans and the query store feature
+- View the AlwaysOn AG Dashboard
+- View SQL Server Log Files
+- Create Extended Events
+
+New and enhanced features in SQL Server Management Studio include: 
+- Support for Azure AD authentication, including Multi-Factor Authentication (MFA) 
+- Azure Data Studio installation integration	Installation of SSMS installs Azure Data Studio
+- Object Explorer	Dropped Columns folder now exists under the Columns folder for Ledger tables, which have been altered to remove one or more columns
+- Scripting	Compatibility level defaults to 160 when scripting
+- Added Showplan support for Hyperscale Optimized Query Processing
+- Analysis Services	Connection to Analysis Services is now available
+- Added missing options in SqlParser for CREATE USER and CREATE LOGIN.
+- The “Schedule…” menu item in SQL Server Integration Services is now visible in the Azure SSIS Catalog
+- Added the ability to explicitly configure an attestation protocol in the "Connect To Server" dialog when using Always Encrypted with secure enclaves (column encryption).
+- Client Driver changed to Microsoft.Data.SqlClient
+- Added support for Contained Always On Availability Groups
+- Improvements to Data Classification user interface
+- Added support for Ledger feature Database ledger
+- Improved checks for open connections.
+- Updated Query Tuning Assistant user interface for improved accessibility
+- The showplan XML schema has been updated
+
+You can <a href="https://learn.microsoft.com/en-us/sql/ssms/sql-server-management-studio-ssms?view=sql-server-ver16">find a complete overview of the SSMS product at this reference</a>.
+
+<h4>Command-Line Utilities</h4>
+<p>
+The SQLCMD utility allows you to connect to SQL Instances via a command-line utility in Windows or in Linux. It allows you to send commands to the Instance in an immediate query/response mode, or send in scripts, and will also create output streams in an automated way.
+
+Improvements to SQLCMD include:
+- Support for Azure AD authentication, including Multi-Factor Authentication (MFA) 
+- Support for SQL Database, Azure Synapse Analytics, and Always Encrypted features
+
+You can <a href="https://learn.microsoft.com/en-us/sql/tools/sqlcmd-utility?view=sql-server-ver16">learn more about the SQLCMD utility at this reference</a>.
+
+<p></p>
+
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: SQL Server Management Studio Tips</b></p>
+
+In this Activity you will review a few tips and tricks you may not have been familiar with in SQL Server Management Studio. The instructor may also reference additional interesting tasks and features you might not be familiar with.  
+
+<p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
+
+- <a href="https://learn.microsoft.com/en-us/sql/ssms/tutorials/ssms-tricks?view=sql-server-ver16">Open this link and perform the steps you see there</a>. Bookmark for later reference.
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
 <h2 id="3.3"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.3 Availability</h2>
 
-Once we have deployed and connected to our SQL Server instance we must have a conversation about Availability.  SQL Server has many capabilities to extend your availability.
-<p>
-There are some very importiant terms and concepts for us to cover.  High Availability, Disaster Recovery, & Business Continutiy. 
-<p>
-<b>High Availability</b>, HA, is the ability for your systems to recover from localized events in an automated way.
-<p>
-<b>Disaster Recovery</b>, DR, is the process of recoving from a diaster of some sort.  A natural or man-made disaster has occured and manual intervention may be required.  While some things can be automated, other items may require manual intervention.  
-<p>
-<b>Business Continuity</b> is the planning process for how businesses and their IT systems will react in the event of an outage.  This planning will typically be for DR, but it could also include HA planning. 
+One of the important considerations for WideWorld Importers is ensuring Business Continuity. As part of their strategy, the Data Estate is an important component. The general area for Business Continuity in Data is <i>High Availablity</i>, which in turn contains important concepts such as Recovery Point Objectives (RPO) and Recovery Time Objectives (RTO). A few key terms are important to note as we dsicuss the improvements in this area of the latest version of SQL Server: 
 
-<h3>Always On</h3>
-<img src="https://learn.microsoft.com/en-us/sql/database-engine/availability-groups/windows/media/aoag-agintrofigure.gif?view=sql-server-ver16">
+- <b>High Availability</b> (HA): The ability for your systems to recover from localized events in an automated way
+- <b>Disaster Recovery</b> (DR): The process of recoving from a diaster of some sort.  A natural or man-made disaster has occured and manual intervention may be required.  While some things can be automated, other items may require manual intervention  
+- <b>Business Continuity</b>: The planning process for how businesses and their IT systems will react in the event of an outage.  This planning will typically be for DR, but it could also include HA planning
 
-<p>
-Always On Availability Groups are a key capability used by customers when planning High Availability or Business Continuity process for SQL Server Instances.
+There are multiple capabilities in SQL Server that serve as part of an overall Availability strategy, including several that have new improvements in the latest version:
+- Database Backups
+  - <a href="https://learn.microsoft.com/en-us/sql/relational-databases/integrated-acceleration/overview?view=sql-server-ver16">Intel QAT backup hardware offloading support</a> 
+  - T-SQL Snapshot Backup, <a href="https://learn.microsoft.com/en-us/sql/relational-databases/backup-restore/create-a-transact-sql-snapshot-backup?view=sql-server-ver16">adding Transact-SQL support for freezing and thawing I/O without requiring a VDI client</a>
+  - <i>backupset</i> (Transact-SQL) improvements to add additional columns
+  - <a href="https://learn.microsoft.com/en-us/sql/relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage?view=sql-server-ver16">Backup and restore to S3-compatible object storage</a>
+- Database and Database article Replication
+  - "Last Writer Wins" conflict detection
+- Database Log Shipping 
+- Failover Clustering 
+  - simplfied Failover Clustering setup for Virtual Machines 
+- Always-On Availability Groups - <a href="https://learn.microsoft.com/en-us/sql/database-engine/availability-groups/windows/contained-availability-groups-overview?view=sql-server-ver16">Improvements in the latest version of SQL Server include</a>:
+  - Up to five synchronous replicas	<a href="https://learn.microsoft.com/en-us/sql/database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups?view=sql-server-ver16">starting in SQL Server 2019 (15.x) increases the maximum number of synchronous replicas to 5, up from 3 in SQL Server 2017 (14.x)</a>. You can configure this group of five replicas to have automatic failover within the group. There is one primary replica, plus four synchronous secondary replicas
+  - Secondary-to-primary replica connection redirection	allows client application connections to be directed to the primary replica regardless of the target server specified in the connection string
+  - Create an <a href="https://learn.microsoft.com/en-us/sql/database-engine/availability-groups/windows/contained-availability-groups-overview?view=sql-server-ver16">Always On Contained Availability Group</a> that manages its own metadata objects (users, logins, permissions, SQL Agent jobs etc.) at the availability group level in addition to the instance level, and includes specialized contained system databases within the availability group
 
-To learn more about Always On Availability Groups read this MS Learn article https://learn.microsoft.com/en-us/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-ver16
+> The latest version of SQL Server also has the ability to participate in Availablity to and from the Microsoft Azure Platform. These improvements will be detailed in the last Module of this Workshop.
 
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: Examine the new Information in the backupset system table</b></p>
 
-<p>
-<h3>Link to Azure SQL Managed Instance</h3>
-<img src="https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/media/managed-instance-link-feature-overview/mi-link-ag-dag.png?view=azuresql">
-<p>
-The new link feature in Azure SQL Managed Instance connects your SQL Servers hosted anywhere to SQL Managed Instance, providing hybrid flexibility and database mobility. With an approach that uses near real-time data replication to the cloud, you can offload workloads to a read-only secondary in Azure to take advantage of Azure-only features, performance, and scale.
-
-To learn more about Link to Azure SQL Managed Instance read this MS Learn article https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/managed-instance-link-feature-overview?view=azuresql
-
-<p>
-
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: Understand how synchronization works on a secondary replica</b></p>
-
-
-
-<p><b>Description</b></p>
-
-Gain an understanding of how synchronization works on a secondary replica
+The <i>backupset</i> table in the <i>msdb</i> system database contains a row for each backup set. A backup set contains the backup from a single, successful backup operation. You can use this information to check for your backup status, time to run, and much more.
 
 <p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
-Click on this <a href="https://learn.microsoft.com/en-us/sql/database-engine/availability-groups/windows/availability-modes-always-on-availability-groups?view=sql-server-ver16#HowSyncWorks">link</a> and read How Synchronization Works on a Secondary Replica
+- Back Up your WideWorld Importers database to disk
+- <a href="https://learn.microsoft.com/en-us/sql/relational-databases/system-tables/backupset-transact-sql?view=sql-server-ver16#examples">Open this link and perform the steps you see there</a> to revoiew the new information for backups. Bookmark for later reference.
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
 <h2 id="3.4"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.4 Performance</h2>
 
+
+Online clustered columnstore index build and rebuild	See Perform Index Operations Online.
+Resumable online rowstore index build	See Perform Index Operations Online.
+Suspend and resume initial scan for Transparent Data Encryption (TDE)	See Transparent Data Encryption (TDE) scan - suspend and resume.
 SQL Server is one of the most widely used Enterprise relational database platforms because of the high level of performance that can be achieved.  
 <p>
 Enhancements are made in SQL Server to imporve function over previous releases for more on these features read the following MS Learn article https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver16#performance
@@ -282,7 +339,12 @@ Over the past ten years, SQL Server has had fewer vulnerabilities than the <a hr
 
 SQL Server is integrated with Azure and brings the capabilities of Azure Defender where ever your SQL Server resides. 
 
-<h3>Ledger</h3>
+<h4>Data Classification</h4>
+
+<h4>Always Encrypted with Secure Enclaves</h4>
+
+
+<h4>Ledger</h4>
 
 <p><img style="margin: 0px 15px 15px 0px;" src="https://learn.microsoft.com/en-us/sql/relational-databases/security/ledger/media/ledger/ledger-table-architecture.png?view=sql-server-ver16">
 </p>
@@ -318,6 +380,7 @@ https://learn.microsoft.com/en-us/sql/t-sql/functions/json-object-transact-sql?v
 
 Content
 
+
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
 
 <p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
@@ -325,16 +388,25 @@ Content
 Open the the JSON_OBJECT MS Learn article and execute the demos (2 minutes)
 https://learn.microsoft.com/en-us/sql/t-sql/functions/json-object-transact-sql?view=sql-server-ver16
 
+<p></p>
+
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/owl.png?raw=true"><b>For Further Study</b></p>
+<br>
 <ul>
     <li><a href="https://learn.microsoft.com/en-us/training/modules/introduction-sql-server-linux/" target="_blank">Introduction to SQL Server on Linux</a></li>
     <li><a href="https://learn.microsoft.com/en-us/training/modules/explore-query-performance-optimization/" target="_blank">Explore query performance optimization</a></li>
     <li><a href="https://learn.microsoft.com/en-us/training/modules/azure-security-center/" target="_blank">Enable and manage Microsoft Defender for Cloud</a></li>
     <li><a href="https://learn.microsoft.com/en-us/sql/relational-databases/security/ledger/ledger-overview?view=sql-server-ver16" target="_blank">Ledger overview</a></li>
     <li><a href="https://learn.microsoft.com/en-us/sql/database-engine/sql-server-business-continuity-dr?view=sql-server-ver16#sql-server-scenarios-using-the-availability-features" target="_blank">Business continuity and database recovery - SQL Server</a></li>
+        <li><a href = "https://docs.microsoft.com/en-us/sql/samples/wide-world-importers-what-is?view=sql-server-2017" target="_blank">Official Documentation for this section - Wide World Importers Data Dictionary and company description</a></li>
+    <li><a href = "https://www.simplilearn.com/data-science-vs-big-data-vs-data-analytics-article" target="_blank">Understanding the Big Data Landscape</a></li>
+    <li><a href = "http://www.admin-magazine.com/Articles/Linux-Essentials-for-Windows-Admins-Part-1" target="_blank">Linux for the Windows Admin</a></li>
+    <li><a href = "https://docs.docker.com/v17.09/engine/userguide/" target="_blank">Container Runtimes (Such as Docker) Guide</a></li>
+    <li><a href = "https://www.youtube.com/playlist?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT" target="_blank">Video introduction to Kubernetes</a></li>
+    <li><a href = "https://github.com/vlele/k8onazure" target="_blank">Complete course on the Azure Kubernetes Service (AKS)</a></li>
+    <li><a href = "https://kube.academy/courses" target="_blank">KubeAcademy</a></li>
+     <li><a href = "https://www.kdnuggets.com/2019/01/practical-apache-spark-10-minutes.html" target="_blank">Working with Spark</a></li>
+    <li><a href="https://realpython.com/jupyter-notebook-introduction/" target="_blank">Full tutorial on Jupyter Notebooks</a></li>
 </ul>
 
-
-Next, continue on to [Module 04 - SQL Server on the Microsoft Azure Platform](https://github.com/sqlballs/mSQLg2c/blob/main/modules/04-ImprovementsInSQLOnTheMicrosoftAzurePlatform.md)
-
-
+Next, continue on to <a href="https://github.com/sqlballs/mSQLg2c/blob/main/modules/04-ImprovementsInSQLOnTheMicrosoftAzurePlatform.md">Module 04 - SQL Server on the Microsoft Azure Platform</a>

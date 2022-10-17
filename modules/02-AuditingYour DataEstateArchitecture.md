@@ -22,22 +22,22 @@ You'll cover these topics in the workshop:
 
 An audit of a data estate is a massive undertaking. It's rare to start with a new implementation, so in most cases you are asked to be a detective in locating your organization's current data elements so that you can most effectively secure, tune, and update them. In smaller organizations there are fewer people that can take on the task, and in larger organizations there are so many elements that even the most dedicated team finds it difficult to be successful. However, there are tools, processes and techniques you can use to create a useful audit.
 
-###Scenario: Wide World Importers
-Wide World Importers is a global import and export business. They are currently using SQL Server 2017 on premises, and have started an investigation into using Cloud services such as Microsoft Azure. 
+<h3>Scenario: Wide World Importers</h3>
+The Setup section introduced Wide World Importers and their growing challenges.
 
-The IT team has begun a modernization effort, and the Data Team has been asked to survey their users to see if there are improvements that need to be considered. The Data Estate at Wide World Importers is a mix of 3rd-party applications which cannot be altered, custom applications that have legacy code that is being evaluated for security, performance and availability improvementss, and also analytic workloads such as Business Intelligence and Data Science projects. The organization would also like to understand more about the Data Lake architecture to see if it would help in their environment. 
+The IT team has begun a modernization effort, and the Data Team has been asked to survey their users to see if there are improvements that need to be considered. The Data Estate at Wide World Importers is a mix of 3rd-party applications which cannot be altered, custom applications that have legacy code that is being evaluated for security, performance and availability improvements, and also analytic workloads such as Business Intelligence and Data Science projects. The organization would also like to understand more about the Data Lake architecture to see if it would help in their environment.
 
 The Data Team has compiled a list of objectives for evaluation to see if newer versions or platforms would be useful:
 
+- The ability to audit and track their Data Estate components
 - Improving query performance without having to make application changes
-- Classifying key data columns and being able to audit access to these columns to meet the needs of GDPR compliance.
-- Providing better database availability when applications use long-running transactions.
-- Allowing the WideWorldImporters team to access data from sources like Oracle, Azure SQL Database, and Azure CosmosDB without having to develop expensive ETL jobs.
+- Classifying key data columns and being able to audit access to these columns to meet the needs of GDPR compliance
+- Providing better database availability when applications use long-running transactions
+- Allowing the WideWorldImporters team to access data from sources like Oracle, Azure SQL Database, and Azure CosmosDB without having to develop expensive ETL jobs
 - The database team at WideWorldImporters has evaluated SQL Server on Linux but SQL Server 2017 didn't include Replication, a feature they need for their application. They would like to evaluate how SQL Server Replication on Linux works. They also want to understand more about container technology and how it can be used with SQL Server
-- WideWorldImporters also would like to know other capabilities exist in the latest versions of SQL Server that might help them before more efficient and extend the capabilities of T-SQL.
-- WideWorldImporters also would like to learn more about how they can plan and execute a migration to the latest version of SQL Server and reduce their risk for upgrades.
-- WideWorldImporters is also evaluating Azure SQL so wants to know what features in SQL Server also work in Azure.
-
+- WideWorldImporters also would like to know other capabilities exist in the latest versions of SQL Server that might help them before more efficient and extend the capabilities of T-SQL
+- WideWorldImporters also would like to learn more about how they can plan and execute a migration to the latest version of SQL Server and reduce their risk for upgrades
+- WideWorldImporters is also evaluating Azure SQL so wants to know what features in SQL Server also work in Azure
 
 To begin those improvements, the Wide World Importers (WWI) leadership team has tasked the Information Technology organization to create a comprehensive plan to audit where they are now, and how to accomplish all of the goals stated above.
 
