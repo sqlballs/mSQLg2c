@@ -282,24 +282,44 @@ The <i>backupset</i> table in the <i>msdb</i> system database contains a row for
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
 <h2 id="3.4"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.4 Performance</h2>
+The latest version of SQL Server includes multiple features to enable higher performance, some without even altering your code. These improvements include: 
+
+- Online clustered columnstore index build and rebuild
+- Resumable online rowstore index build	See Perform Index Operations Online.
+- Suspend and resume initial scan for Transparent Data Encryption (TDE)
+- In-Memory Database - leverages memory to store more data in memory to to unlock a new level of scalability across all your database workloads. Improvements in the latest version of SQL Server include:
+  - In-memory online transaction processing (OLTP)
+  - <a href="https://learn.microsoft.com/en-us/sql/database-engine/configure-windows/hybrid-buffer-pool?view=sql-server-ver15">Hybrid buffer pool</a>, where database pages sitting on database files placed on a persistent memory (PMEM) device will be directly accessed when required
+  - <a href="https://learn.microsoft.com/en-us/sql/relational-databases/databases/tempdb-database?view=sql-server-ver15#memory-optimized-tempdb-metadata">Memory-optimized TempDB metadata</a> allows effectively removes tempDB metadata bottlenecks and unlocks a new level of scalability for TempDB heavy workloads. The system tables involved in managing temporary table metadata can be moved into latch-free non-durable memory-optimized tables
+  - <a href="https://learn.microsoft.com/en-us/sql/relational-databases/databases/database-snapshots-sql-server?view=sql-server-ver15">In-Memory OLTP support for Database Snapshots</a> which includes memory-optimized filegroups
+- Intelligent performance - These improvements help overcome known resource bottlenecks and provide options for configuring your database server to provide predictable performance across all your workloads. New improvements include:
+  - OPTIMIZE_FOR_SEQUENTIAL_KEY	whcih turns on an optimization within the SQL Server Database Engine that helps improve throughput for high-concurrency inserts into the index. This option is intended for indexes that are prone to last-page insert contention, which is typically seen with indexes that have a sequential key, such as an identity column, sequence, or date/time column
+  - Forcing fast forward and static cursors, which provides Query Store plan forcing support for fast forward and static cursors. See Plan forcing support for fast forward and static cursors
+  - Resource governance has a new configurable value for the REQUEST_MAX_MEMORY_GRANT_PERCENT option of CREATE WORKLOAD GROUP and ALTER WORKLOAD GROUP has been changed from an integer to a float data type, to allow more granular control of memory limits. See ALTER WORKLOAD GROUP and CREATE WORKLOAD GROUP
+  - Reduced recompilations for workloads which improves performance when using temporary tables across multiple scopes by reducing unnecessary recompilations
+  - Indirect checkpoint scalability
+  - Concurrent Page Free Space (PFS) pages, which are special pages within a database file that SQL Server uses to help locate free space when it allocates space for an object
+  - Scheduler worker migration allows an idle scheduler to migrate a worker from the runnable queue of another scheduler on the same NUMA node and immediately resume the task of the migrated worker. This enhancement provides more balanced CPU usage in situations where long-running tasks happen to be assigned to the same scheduler
+
+You can <a href="https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver16#performance">find more information on features at this reference</a>.
+
+<h4>Intelligent Query Processing</h3>
+https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2019?view=sql-server-ver15#intelligent-database 
+https://learn.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-ver15
+
+Of special importance in the newest performance improvements is a family of features in the SQL Server Database Engine called <i>Intelligent Query Processing</i> (IQP). Introduced in the latest versions of SQL Server, this family of features constantly adapts to queries in the safest way to ensure that your workloads get the highest possible performance, all without adding indexes or changing code. Some of the latest improvements in SQL Server in the IQP include:
 
 
-Online clustered columnstore index build and rebuild	See Perform Index Operations Online.
-Resumable online rowstore index build	See Perform Index Operations Online.
-Suspend and resume initial scan for Transparent Data Encryption (TDE)	See Transparent Data Encryption (TDE) scan - suspend and resume.
-SQL Server is one of the most widely used Enterprise relational database platforms because of the high level of performance that can be achieved.  
-<p>
-Enhancements are made in SQL Server to imporve function over previous releases for more on these features read the following MS Learn article https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver16#performance
-<p>
-
-<h3>Intelligent Query Processing</h3>
+Row mode memory grant feedback	Expands on the batch mode memory grant feedback feature by adjusting memory grant sizes for both batch and row mode operators. This adjustment can automatically correct excessive grants, which result in wasted memory and reduced concurrency. It can also correct insufficient memory grants that cause expensive spills to disk. See Row mode memory grant feedback.
+Batch mode on rowstore	Enables batch mode execution without requiring columnstore indexes. Batch mode execution uses CPU more efficiently during analytical workloads but, until SQL Server 2019 (15.x), it was used only when a query included operations with columnstore indexes. However, some applications might use features that aren't supported with columnstore indexes and, therefore, can't leverage batch mode. Starting with SQL Server 2019 (15.x), batch mode is enabled on eligible analytical workloads whose queries include operations with any type of index (rowstore or columnstore). See Batch mode on rowstore.
+Scalar UDF Inlining	Automatically transforms scalar UDFs into relational expressions and embeds them in the calling SQL query. This transformation improves the performance of workloads that take advantage of scalar UDFs. See Scalar UDF Inlining.
+Table variable deferred compilation	Improves plan quality and overall performance for queries that reference table variables. During optimization and initial compilation, this feature propagates cardinality estimates that are based on actual table variable row counts. This accurate row count information optimizes downstream plan operations. See Table variable deferred compilation.
+Approximate query processing with APPROX_COUNT_DISTINCT	For scenarios when absolute precision isn't important but responsiveness is critical, APPROX_COUNT_DISTINCT aggregates across large datasets while using fewer resources than COUNT(DISTINCT()) for superior concurrency. See Approximate query processing.
 
 
 
+<p><img src="https://learn.microsoft.com/en-us/sql/relational-databases/performance/media/iqp-feature-family.svg?view=sql-server-ver16" width=600></p>
 
-<p><img src="https://learn.microsoft.com/en-us/sql/relational-databases/performance/media/iqp-feature-family.svg?view=sql-server-ver16">
-
-<p>
 The intelligent query processing (IQP) feature family includes features with broad impact that improve the performance of existing workloads with minimal implementation effort to adopt. The following graphic details the family of IQP features and when they were first introduced for SQL Server. All IQP features are available in Azure SQL Managed Instance and Azure SQL Database. Some features depend on the database's compatibility level.
 <p>
 To read more about IQP read this MS Learn article https://learn.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-ver16

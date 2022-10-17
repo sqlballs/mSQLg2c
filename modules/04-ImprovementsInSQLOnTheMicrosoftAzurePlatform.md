@@ -11,17 +11,20 @@ In the previous modules, you learned about how to <a href="https://github.com/sq
 
 (As a reminder, make sure you check out the <a href="https://github.com/sqlballs/mSQLg2c/blob/Josh/modules/01-SetupandWorkshopMethodology.md" target="_blank"><b>Pre-Requisites</b></a> page before you start. You'll need all of the items loaded there before you can proceed with the workshop.)
 
-You'll cover these topics in the workshop:
+Using the <a href="https://github.com/sqlballs/mSQLg2c/blob/main/modules/02-AuditingYour%20DataEstateArchitecture.md">processes, tools and procedures from the Auditing  Module</a>, the WideWorldImporters company has completed an initial audit of their data estate. They have settled on many architectural improvements in the latest version of SQL Server on-premises, and have decided to move to the latest version for many of their systems, using the Compatibilit settings where required. They have also started a test installation of SQL Server running on Red Hat Linux, and developers are now using SQL Server in Containers. 
+
+WideWorldImporters is now turning its attention to workloads they can use in the Microsoft Azure platform. They are particularly interested in the security, availability and elastic scale available in a cloud service. 
+
+ evaluation into various categories that they are interested in:
+
 <dl>
-
-  <dt><a href="#4.1" target="_blank">4.1 - Deployment Options<dt>
-  <dt><a href="#4.2" target="_blank">4.2 - Manageability<dt>
-  <dt><a href="#4.3" target="_blank">4.3 - Availability<dt>
-  <dt><a href="#4.4" target="_blank">4.4 - Performance<dt>
-  <dt><a href="#4.5" target="_blank">4.5 - Security<dt>
-  <dt><a href="#4.6" target="_blank">4.6 - Development<dt>
-
-
+  <dt><a href="#4.1" target="_blank">4.1 - Deployment Options</dt>
+  <dt><a href="#4.2" target="_blank">4.2 - Manageability</dt>
+  <dt><a href="#4.3" target="_blank">4.3 - Availability</dt>
+  <dt><a href="#4.4" target="_blank">4.4 - Performance</dt>
+  <dt><a href="#4.5" target="_blank">4.5 - Security</dt>
+  <dt><a href="#4.6" target="_blank">4.6 - Development</dt>
+  <dt><a href="#4.7" target="_blank">4.7 - Analytics</dt>
 </dl>
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
