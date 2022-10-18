@@ -30,8 +30,7 @@ WideWorldImporters <a href="https://learn.microsoft.com/en-us/sql/sql-server/end
 <TODO: Review - Add - Edit Main Themes>
 
 - Developer 
-  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2019?view=sql-server-ver15#developer-experience 
-  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2019?view=sql-server-ver15#ml
+  - 
   - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver15#platform
   - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver15#sql-machine-learning-services 
 - Analytics 
@@ -406,26 +405,45 @@ The latest version of SQL Server includes a new feature called <i>Ledger</i> whi
 
 <p><img src="https://learn.microsoft.com/en-us/sql/relational-databases/security/ledger/media/ledger/ledger-table-architecture.png?view=sql-server-ver16" width=400></p>
 
-
 You can <a href="https://learn.microsoft.com/en-us/sql/relational-databases/security/ledger/ledger-overview?view=sql-server-ver16">read more about how to use Ledger in SQL Server at this reference</a>.
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: Implement a Ledger on your Test Database</b></p>
-<br>
 In this Activity, you will implement Ledger for SQL Server on your test system. You can use any sample database, or make one specifically for this exercise.
 
 <p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
-
 - Open this <a href="https://learn.microsoft.com/en-us/sql/relational-databases/security/ledger/ledger-how-to-append-only-ledger-tables?view=sql-server-ver16">resource and complete the steps you see there.
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
-
 <h2 id="3.6"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.6 Development</h2>
+Developer enhancements include not only new Transact-SQL (T-SQL) changes including new time series, JSON improvments, aggregate changes, and Bit manipulation functions, but also data types and changes to features such as using SQL Server as a Graph Database and new Unicode feature support. A few of the improvements in teh latest version of SQL Server are:
 
-SQL Server continues to expand its T-SQL foot print to assist developers of all types.  New time series, JSON, aggregate, T-SQL, and Bit manipulation functions have all been added. 
+- Graph enhancements
+  - <a href="https://learn.microsoft.com/en-us/sql/relational-databases/tables/graph-edge-constraints?view=sql-server-ver15">Edge constraint cascade delete actions</a> allow you to define cascaded delete actions on an edge constraint in a graph database
+  - A new graph function - SHORTEST_PATH - exists inside MATCH to find the shortest path between any two nodes in a graph or to perform arbitrary length traversals
+  - Graph tables now support table and index partitioning
+  - You can now use derived tables or view aliases in a <a href="https://learn.microsoft.com/en-us/sql/t-sql/queries/match-sql-graph?view=sql-server-ver15">graph match query</a>
+- Unicode support improvements include <a href="https://learn.microsoft.com/en-us/sql/relational-databases/collations/collation-and-unicode-support?view=sql-server-ver15">support for UTF-8 character encoding</a> for import and export encoding, and as database-level or column-level collation for string data. Support includes PolyBase external tables, and Always Encrypted (when not used with Enclaves)
+- Language extensions
+  - A new <a href="https://learn.microsoft.com/en-us/sql/language-extensions/how-to/extensibility-sdk-java-sql-server?view=sql-server-ver15">Java language SDK</a> that simplifies the development of Java programs that can be run from SQL Server
+  - The Microsoft Extensibility SDK for Java for Microsoft SQL Server is now <a href="https://github.com/microsoft/sql-server-language-extensions">open source and available on GitHub</a>
+  - Support for <a href="https://learn.microsoft.com/en-us/sql/language-extensions/how-to/java-to-sql-data-types?view=sql-server-ver15">new Java data types</a>
+  - SQL Server <a href="https://cloudblogs.microsoft.com/sqlserver/2019/07/24/free-supported-java-in-sql-server-2019-is-now-available/">now includes Azul Systems Zulu Embedded</a> for Java support throughout the product
+  - SQL Server a href="https://learn.microsoft.com/en-us/sql/language-extensions/language-extensions-overview?view=sql-server-ver15>Language Extensions</a> allows you to execute external code with the extensibility framework
+  - A new Data Definition Language (DDL), <a href="https://learn.microsoft.com/en-us/sql/t-sql/statements/create-external-language-transact-sql?view=sql-server-ver15">CREATE EXTERNAL LANGUAGE</a>, registers external languages, such as Java, in SQL Server
+- New spatial reference identifiers (SRIDs), <a href="http://www.ga.gov.au/scientific-topics/positioning-navigation/geodesy/datums-projections/gda2020">using the Australian GDA2020 which provides a more robust and accurate datum</a> that's more closely aligned with global positioning systems. The new SRIDs are: 7843 for geographic 2D, 7844 for geographic 3D
+- Error messages include a href="https://learn.microsoft.com/en-us/sql/t-sql/statements/alter-database-scoped-configuration-transact-sql?view=sql-server-ver15#verbose-truncation">verbose truncation warnings</a> - the data truncation error message defaults to include table and column names, and the truncated value
 
-To read more about each individual update read this MS Learn article https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver16#language
+You can <a href="https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver16#language">learn more details about each individual language improvement at this reference</a>. 
 
+<h4>SQL Server Machine Learning Services</h4>
+SQL Server Machine Learning Services provides a mechanism to create, train, and deploy Machine Learning models that stay in the database where the source data lives. It can use the R, Java, and Python languages and libraries, and includes the ability to add other languages if desired. Improvements to this feature in the latest version of SQL Server include:
+	
+- You can process external scripts per partition of your data by using the new parameters added to sp_execute_external_script. This functionality supports training many small models (one model per partition of data) instead of one large model
+- You can configure high availability for Machine Learning Services on a Windows Server Failover Cluster
+
+You can <a href="https://www.bing.com/ck/a?!&&p=a1c642dd7492b7a8JmltdHM9MTY2NjA1MTIwMCZpZ3VpZD0yZjZmYzk3Ni1jZGE5LTYzZDMtMmY2NC1kOWY1Y2M2YjYyMzgmaW5zaWQ9NTQ0Mg&ptn=3&hsh=3&fclid=2f6fc976-cda9-63d3-2f64-d9f5cc6b6238&psq=sql+server+machine+learning++site%3amicrosoft.com&u=a1aHR0cHM6Ly9sZWFybi5taWNyb3NvZnQuY29tL2VuLXVzL3NxbC9tYWNoaW5lLWxlYXJuaW5nL3NxbC1zZXJ2ZXItbWFjaGluZS1sZWFybmluZy1zZXJ2aWNlcz92aWV3PXNxbC1zZXJ2ZXItdmVyMTYjOn46dGV4dD1NYWNoaW5lJTIwTGVhcm5pbmclMjBTZXJ2aWNlcyUyMGlzJTIwYSUyMGZlYXR1cmUlMjBpbiUyMFNRTCxSJTIwcGFja2FnZXMlMkMlMjBmb3IlMjBwcmVkaWN0aXZlJTIwYW5hbHl0aWNzJTIwYW5kJTIwbWFjaGluZSUyMGxlYXJuaW5nLg&ntb=1">learn more about Machine Learning Services in SQL Server at this reference, which also contains multiple tutorials</a>.
+	
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
 
 Open the the GENERATE_SERIES MS Learn article and execute the demos (2 minutes)
@@ -443,7 +461,6 @@ https://learn.microsoft.com/en-us/sql/t-sql/functions/json-object-transact-sql?v
 <h2 id="3.7"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.7 Analytics</h2>
 
 Content
-
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
 
