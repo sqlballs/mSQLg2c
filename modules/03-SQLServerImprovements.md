@@ -7,13 +7,13 @@
 
 <img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/textbubble.png?raw=true"> <h2>03 - SQL Server Improvements</h2>
 
-In this workshop you'll cover how to systematically create a modern data estate using SQL Server in on-premises, in-cloud and hybrid solutions. 
+In this workshop you'll cover how to systematically create a modern data estate using SQL Server in on-premises, in-cloud and hybrid solutions.
 
 In each module you'll get more references, which you should follow up on to learn more. Also watch for links within the text - click on each one to explore that topic.
 
 (<a href="file:///url" target="_blank">Make sure you check out the <b>Pre-Requisites</b> page before you start</a>. You'll need all of the items loaded there before you can proceed with the workshop.)
 
-Using the <a href="https://github.com/sqlballs/mSQLg2c/blob/main/modules/02-AuditingYour%20DataEstateArchitecture.md">processes, tools and procedures from the Auditing  Module</a>, the WideWorldImporters company has completed an initial audit of their data estate.They found multiple sources of data in their organization, including text files, spreadsheets, and Relational Database Management Systems (RDBMS) including SQL Server 2008 Instances along with some Instances of SQL Server 2012, 2014, and 2016 versions. 
+Using the <a href="https://github.com/sqlballs/mSQLg2c/blob/main/modules/02-AuditingYour%20DataEstateArchitecture.md">processes, tools and procedures from the Auditing  Module</a>, the WideWorldImporters company has completed an initial audit of their data estate.They found multiple sources of data in their organization, including text files, spreadsheets, and Relational Database Management Systems (RDBMS) including SQL Server 2012 Instances along with some Instances of SQL Server 2017 for <a href = "https://docs.microsoft.com/en-us/sql/samples/wide-world-importers-what-is?view=sql-server-2017" target="_blank">their primary Line of Business (LOB) databases</a>.
 
 WideWorldImporters <a href="https://learn.microsoft.com/en-us/sql/sql-server/end-of-support/sql-server-end-of-support-overview?view=sql-server-ver16#lifecycle-dates">needs to upgrade the software that is out of support</a> and also evaulate which versions and editions will solve their problems. They have settled on evaulating the delta between SQL Server 2017 and the latest version of the on-premises SQL Server product, and they have divided their evaluation into various categories that they are interested in:
 
@@ -29,10 +29,7 @@ WideWorldImporters <a href="https://learn.microsoft.com/en-us/sql/sql-server/end
 
 <TODO: Review - Add - Edit Main Themes>
 
-- Perf 
-  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2019?view=sql-server-ver15#intelligent-database
-  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver15#performance
-  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver15#query-store-and-intelligent-query-processing 
+
 - Security 
   - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2019?view=sql-server-ver15#mission-critical-security
   - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver15#security 
@@ -253,17 +250,17 @@ One of the important considerations for WideWorld Importers is ensuring Business
 - <b>Business Continuity</b>: The planning process for how businesses and their IT systems will react in the event of an outage.  This planning will typically be for DR, but it could also include HA planning
 
 There are multiple capabilities in SQL Server that serve as part of an overall Availability strategy, including several that have new improvements in the latest version:
-- Database Backups
+- <b>Database Backups</b>
   - <a href="https://learn.microsoft.com/en-us/sql/relational-databases/integrated-acceleration/overview?view=sql-server-ver16">Intel QAT backup hardware offloading support</a> 
   - T-SQL Snapshot Backup, <a href="https://learn.microsoft.com/en-us/sql/relational-databases/backup-restore/create-a-transact-sql-snapshot-backup?view=sql-server-ver16">adding Transact-SQL support for freezing and thawing I/O without requiring a VDI client</a>
   - <i>backupset</i> (Transact-SQL) improvements to add additional columns
   - <a href="https://learn.microsoft.com/en-us/sql/relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage?view=sql-server-ver16">Backup and restore to S3-compatible object storage</a>
-- Database and Database article Replication
+- <b>Database and Database article Replication</b>
   - "Last Writer Wins" conflict detection
-- Database Log Shipping 
-- Failover Clustering 
-  - simplfied Failover Clustering setup for Virtual Machines 
-- Always-On Availability Groups - <a href="https://learn.microsoft.com/en-us/sql/database-engine/availability-groups/windows/contained-availability-groups-overview?view=sql-server-ver16">Improvements in the latest version of SQL Server include</a>:
+- <b>Database Log Shipping</b>
+- <b>Failover Clustering</b> 
+  - Simplfied Failover Clustering setup for Virtual Machines 
+- <b>Always-On Availability Groups</b> - <a href="https://learn.microsoft.com/en-us/sql/database-engine/availability-groups/windows/contained-availability-groups-overview?view=sql-server-ver16">Improvements in the latest version of SQL Server include</a>:
   - Up to five synchronous replicas	<a href="https://learn.microsoft.com/en-us/sql/database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups?view=sql-server-ver16">starting in SQL Server 2019 (15.x) increases the maximum number of synchronous replicas to 5, up from 3 in SQL Server 2017 (14.x)</a>. You can configure this group of five replicas to have automatic failover within the group. There is one primary replica, plus four synchronous secondary replicas
   - Secondary-to-primary replica connection redirection	allows client application connections to be directed to the primary replica regardless of the target server specified in the connection string
   - Create an <a href="https://learn.microsoft.com/en-us/sql/database-engine/availability-groups/windows/contained-availability-groups-overview?view=sql-server-ver16">Always On Contained Availability Group</a> that manages its own metadata objects (users, logins, permissions, SQL Agent jobs etc.) at the availability group level in addition to the instance level, and includes specialized contained system databases within the availability group
@@ -272,7 +269,7 @@ There are multiple capabilities in SQL Server that serve as part of an overall A
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: Examine the new Information in the backupset system table</b></p>
 
-The <i>backupset</i> table in the <i>msdb</i> system database contains a row for each backup set. A backup set contains the backup from a single, successful backup operation. You can use this information to check for your backup status, time to run, and much more.
+The <i>backupset</i> table in the <i>msdb</i> system database contains a row for each backup set. A backup set contains the backup from a single, successful backup operation. You can use this information to check for your backup status, time to run, and much more. These checks should be integrated into your overall Disaster Recovery strategy.
 
 <p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
@@ -292,82 +289,95 @@ The latest version of SQL Server includes multiple features to enable higher per
   - <a href="https://learn.microsoft.com/en-us/sql/database-engine/configure-windows/hybrid-buffer-pool?view=sql-server-ver15">Hybrid buffer pool</a>, where database pages sitting on database files placed on a persistent memory (PMEM) device will be directly accessed when required
   - <a href="https://learn.microsoft.com/en-us/sql/relational-databases/databases/tempdb-database?view=sql-server-ver15#memory-optimized-tempdb-metadata">Memory-optimized TempDB metadata</a> allows effectively removes tempDB metadata bottlenecks and unlocks a new level of scalability for TempDB heavy workloads. The system tables involved in managing temporary table metadata can be moved into latch-free non-durable memory-optimized tables
   - <a href="https://learn.microsoft.com/en-us/sql/relational-databases/databases/database-snapshots-sql-server?view=sql-server-ver15">In-Memory OLTP support for Database Snapshots</a> which includes memory-optimized filegroups
-- Intelligent performance - These improvements help overcome known resource bottlenecks and provide options for configuring your database server to provide predictable performance across all your workloads. New improvements include:
-  - OPTIMIZE_FOR_SEQUENTIAL_KEY	whcih turns on an optimization within the SQL Server Database Engine that helps improve throughput for high-concurrency inserts into the index. This option is intended for indexes that are prone to last-page insert contention, which is typically seen with indexes that have a sequential key, such as an identity column, sequence, or date/time column
-  - Forcing fast forward and static cursors, which provides Query Store plan forcing support for fast forward and static cursors. See Plan forcing support for fast forward and static cursors
-  - Resource governance has a new configurable value for the REQUEST_MAX_MEMORY_GRANT_PERCENT option of CREATE WORKLOAD GROUP and ALTER WORKLOAD GROUP has been changed from an integer to a float data type, to allow more granular control of memory limits. See ALTER WORKLOAD GROUP and CREATE WORKLOAD GROUP
-  - Reduced recompilations for workloads which improves performance when using temporary tables across multiple scopes by reducing unnecessary recompilations
-  - Indirect checkpoint scalability
-  - Concurrent Page Free Space (PFS) pages, which are special pages within a database file that SQL Server uses to help locate free space when it allocates space for an object
-  - Scheduler worker migration allows an idle scheduler to migrate a worker from the runnable queue of another scheduler on the same NUMA node and immediately resume the task of the migrated worker. This enhancement provides more balanced CPU usage in situations where long-running tasks happen to be assigned to the same scheduler
 
 You can <a href="https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver16#performance">find more information on features at this reference</a>.
 
-<h4>Intelligent Query Processing</h3>
-https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2019?view=sql-server-ver15#intelligent-database 
-https://learn.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-ver15
+Two "families" of performance improvement in the newest version of SQL Server are important to call out: 
 
-Of special importance in the newest performance improvements is a family of features in the SQL Server Database Engine called <i>Intelligent Query Processing</i> (IQP). Introduced in the latest versions of SQL Server, this family of features constantly adapts to queries in the safest way to ensure that your workloads get the highest possible performance, all without adding indexes or changing code. Some of the latest improvements in SQL Server in the IQP include:
+1. Intelligent Performance
+2. Intelligent Query Processing 
 
+<h4>Intelligent Performance</h4>
+This <a href="https://www.linkedin.com/pulse/sql-server-2019-intelligent-performance-bob-ward/">group of improvements</a> help overcome known resource bottlenecks and provide options for configuring your database server to provide predictable performance across all your workloads. 
 
-Row mode memory grant feedback	Expands on the batch mode memory grant feedback feature by adjusting memory grant sizes for both batch and row mode operators. This adjustment can automatically correct excessive grants, which result in wasted memory and reduced concurrency. It can also correct insufficient memory grants that cause expensive spills to disk. See Row mode memory grant feedback.
-Batch mode on rowstore	Enables batch mode execution without requiring columnstore indexes. Batch mode execution uses CPU more efficiently during analytical workloads but, until SQL Server 2019 (15.x), it was used only when a query included operations with columnstore indexes. However, some applications might use features that aren't supported with columnstore indexes and, therefore, can't leverage batch mode. Starting with SQL Server 2019 (15.x), batch mode is enabled on eligible analytical workloads whose queries include operations with any type of index (rowstore or columnstore). See Batch mode on rowstore.
-Scalar UDF Inlining	Automatically transforms scalar UDFs into relational expressions and embeds them in the calling SQL query. This transformation improves the performance of workloads that take advantage of scalar UDFs. See Scalar UDF Inlining.
-Table variable deferred compilation	Improves plan quality and overall performance for queries that reference table variables. During optimization and initial compilation, this feature propagates cardinality estimates that are based on actual table variable row counts. This accurate row count information optimizes downstream plan operations. See Table variable deferred compilation.
-Approximate query processing with APPROX_COUNT_DISTINCT	For scenarios when absolute precision isn't important but responsiveness is critical, APPROX_COUNT_DISTINCT aggregates across large datasets while using fewer resources than COUNT(DISTINCT()) for superior concurrency. See Approximate query processing.
+<br>
+<img src="https://media-exp1.licdn.com/dms/image/C4E12AQGrvOC-No_rTg/article-inline_image-shrink_1000_1488/0/1568637964576?e=1671667200&v=beta&t=6yv0A0sjfnzOI3EQmnGdd-5aB-jlL8VIZE4cch1wh9U" width=400>
+<br>
 
+New improvements include:
 
+  - <a href="https://techcommunity.microsoft.com/t5/sql-server-blog/behind-the-scenes-on-optimize-for-sequential-key/ba-p/806888">OPTIMIZE_FOR_SEQUENTIAL_KEY</a>	which turns on an optimization within the SQL Server Database Engine that helps improve throughput for high-concurrency inserts into the index. This option is intended for indexes that are prone to last-page insert contention, which is typically seen with indexes that have a sequential key, such as an identity column, sequence, or date/time column
+  - <a href="https://techcommunity.microsoft.com/t5/sql-server-blog/understanding-sql-server-fast-forward-server-cursors/ba-p/383556">Forcing fast forward and static cursors</a>, which provides Query Store plan forcing support for fast forward and static cursors. See Plan forcing support for fast forward and static cursors
+  - Resource governance has a new configurable value for the <a href="https://techcommunity.microsoft.com/t5/sql-server-blog/understanding-sql-server-memory-grant/ba-p/383595">REQUEST_MAX_MEMORY_GRANT_PERCENT option of CREATE WORKLOAD GROUP and ALTER WORKLOAD GROUP</a> has been changed from an integer to a float data type, to allow more granular control of memory limits. See ALTER WORKLOAD GROUP and CREATE WORKLOAD GROUP
+  - <a href="https://techcommunity.microsoft.com/t5/azure-sql-blog/reduced-recompilations-for-workloads-using-temporary-tables/ba-p/388391">Reduced recompilations for workloads</a> which improves performance when using temporary tables across multiple scopes by reducing unnecessary recompilations
+  - <a href="https://cloudblogs.microsoft.com/sqlserver/2022/07/21/improve-scalability-with-system-page-latch-concurrency-enhancements-in-sql-server-2022/">Concurrent Page Free Space (PFS) pages</a>, which are special pages within a database file that SQL Server uses to help locate free space when it allocates space for an object
+  - <a href="https://techcommunity.microsoft.com/t5/sql-server-blog/sql-server-2019-intelligent-performance-worker-migration/ba-p/939610">Scheduler worker migration</a> allows an idle scheduler to migrate a worker from the runnable queue of another scheduler on the same NUMA node and immediately resume the task of the migrated worker. This enhancement provides more balanced CPU usage in situations where long-running tasks happen to be assigned to the same scheduler
+
+<h4>Intelligent Query Processing</h4>
+Of special importance in the newest performance improvements is a family of features in the SQL Server Database Engine called <a href="https://learn.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-ver15">Intelligent Query Processing</a> (IQP). Introduced in the latest versions of SQL Server, this family of features constantly adapts to queries in the safest way to ensure that your workloads get the highest possible performance, all without adding indexes or changing code. Some of the latest improvements in SQL Server in the IQP include:
+
+- <a href="https://learn.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing-details?view=sql-server-ver15#batch-mode-adaptive-joins">Adaptive Joins (Batch Mode)</a> dynamically select a join type during runtime based on actual input rows
+- <a href="https://learn.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing-details?view=sql-server-ver15#approximate-query-processing">Approximate Count Distinct</a> provides approximate COUNT DISTINCT for big data scenarios with the benefit of high performance and a low memory footprint
+- <a href="https://learn.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing-details?view=sql-server-ver15#batch-mode-on-rowstore">Batch Mode on Rowstore</a> provides batch mode for CPU-bound relational DW workloads without requiring columnstore indexes
+- <a href="https://learn.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing-feedback?view=sql-server-ver15#cardinality-estimation-ce-feedback">Cardinality estimation (CE) feedback</a> automatically adjusts cardinality estimates for repeating queries to optimize workloads where inefficient CE assumptions cause poor query performance. CE feedback will identify and use a model assumption that better fits a given query and data distribution to improve query execution plan quality
+- <a href="https://learn.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing-details?view=sql-server-ver15#dop-feedback">Degrees of Parallelism (DOP) feedback</a> automatically adjusts degree of parallelism for repeating queries to optimize for workloads where inefficient parallelism can cause performance issues
+- <a href="https://learn.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing-details?view=sql-server-ver15#interleaved-execution-for-mstvfs">Interleaved Execution</a> uses the actual cardinality of the multi-statement table valued function encountered on first compilation instead of a fixed guess
+- <a href="https://learn.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing-feedback?view=sql-server-ver15#batch-mode-memory-grant-feedback">Memory grant feedback (Batch Mode)</a> is used if a batch mode query has operations that spill to disk, adding more memory for consecutive executions. If a query wastes > 50% of the memory allocated to it, it reduces the memory grant size for consecutive executions
+- <a href="https://learn.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing-feedback?view=sql-server-ver15#row-mode-memory-grant-feedback">Memory grant feedback (Row Mode)</a> is used if row mode query has operations that spill to disk, add more memory for consecutive executions. If a query wastes > 50% of the memory allocated to it, it reduces the memory grant size for consecutive executions.
+- <a href="https://learn.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing-feedback?view=sql-server-ver15#percentile-and-persistence-mode-memory-grant-feedback">Memory grant feedback (Percentile)</a> addresses existing limitations of memory grant feedback in a non-intrusive way by incorporating past query execution to refine feedback
+- <a href="https://learn.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing-feedback?view=sql-server-ver15#percentile-and-persistence-mode-memory-grant-feedback">Memory Grant, CE, and DOP feedback persistence</a> provides new functionality to persist memory grant feedback. CE and DOP feedback is always persisted. Requires Query Store to be enabled for the database and in READ_WRITE mode
+- <a href="https://learn.microsoft.com/en-us/sql/relational-databases/performance/optimized-plan-forcing-query-store?view=sql-server-ver15">Optimized plan forcing</a> reduces compilation overhead for repeating forced queries. For more information, see Optimized plan forcing with Query Store
+- <a href="https://learn.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing-details?view=sql-server-ver15#scalar-udf-inlining">Scalar UDF Inlining</a> transforms Scalar UDFs into equivalent relational expressions that are "inlined" into the calling query, often resulting in significant performance gains
+- <a href="https://learn.microsoft.com/en-us/sql/relational-databases/performance/parameter-sensitivity-plan-optimization?view=sql-server-ver15">Parameter Sensitivity Plan Optimization</a> addresses the scenario where a single cached plan for a parameterized query is not optimal for all possible incoming parameter values, for example non-uniform data distributions
+- <a href="https://learn.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing-details?view=sql-server-ver15#table-variable-deferred-compilation">Table Variable Deferred Compilation</a> uses the actual cardinality of the table variable encountered on first compilation instead of a fixed guess
+
+The following graphic details the family of IQP features and when they were first introduced for SQL Server. All IQP features are available in Azure SQL Managed Instance and Azure SQL Database (Some features depend on the database's compatibility level):
 
 <p><img src="https://learn.microsoft.com/en-us/sql/relational-databases/performance/media/iqp-feature-family.svg?view=sql-server-ver16" width=600></p>
 
-The intelligent query processing (IQP) feature family includes features with broad impact that improve the performance of existing workloads with minimal implementation effort to adopt. The following graphic details the family of IQP features and when they were first introduced for SQL Server. All IQP features are available in Azure SQL Managed Instance and Azure SQL Database. Some features depend on the database's compatibility level.
-<p>
-To read more about IQP read this MS Learn article https://learn.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-ver16
-<p>
-To read about the new features that are a part of IQP read this MS Learn article https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver16#query-store-and-intelligent-query-processing
+<h4>The Query Data Store </h4>
+The Query Store feature provides you with insight on query plan choice and performance for SQL Server, Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics. The Query Store simplifies performance troubleshooting by helping you quickly find performance differences caused by query plan changes. Query Store automatically captures a history of queries, plans, and runtime statistics, and retains these for your review. It separates data by time windows so you can see database usage patterns and understand when query plan changes. the Query Store is used by all the Intelligent Database and Intelligent Query Performance improvements. Improvements in the latest version of SQL Server for Query Store include:
 
-<p>
-<p>
-<h3>The Query Data Store </h3>
-<p>
-The Query Store feature provides you with insight on query plan choice and performance for SQL Server, Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics. The Query Store simplifies performance troubleshooting by helping you quickly find performance differences caused by query plan changes. Query Store automatically captures a history of queries, plans, and runtime statistics, and retains these for your review. It separates data by time windows so you can see database usage patterns and understand when query plan changes.  To read more about the Query Data Store see this MS Learn article https://learn.microsoft.com/en-us/training/modules/explore-query-performance-optimization/5-explore-query-store
+- <a href="https://learn.microsoft.com/en-us/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store?view=sql-server-ver15#query-store-for-secondary-replicas">Query Store on secondary replicas</a> enables the same Query Store functionality on secondary replica workloads that is available for primary replicas
+- <a href="https://learn.microsoft.com/en-us/sql/relational-databases/performance/query-store-hints?view=sql-server-ver15">Query Store hints</a> leverage the Query Store to provide a method to shape query plans without changing application code. Previously only available on Azure SQL Database and Azure SQL Managed Instance, Query Store hints are now available in the latest version of on-premises SQL Server
+- Query Store is enabled by default for newly created databases int he latest version of SQL Server
+- Every query recompilation SQL Server compares the runtime stats of the query using existing feedback to the runtime stats of the previous compilation with the existing feedback
 
+You can <a href="https://learn.microsoft.com/en-us/training/modules/explore-query-performance-optimization/5-explore-query-store">learn more about the Query Data Store at this reference</a>.
 
-<p>
-
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: Learn about the Query Data Store</b></p>
-
-
-
-<p><b>Description</b></p>
-
-Learn about the Query Data Store
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: Learn and use Query Data Store</b></p>
+<br>
+In this Activity, you will learn more about the Query Data Store, and find a resource to implement it on your test system.
 
 <p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
-Click on this <a href="https://learn.microsoft.com/en-us/training/modules/explore-query-performance-optimization/5-explore-query-store">link</a> and go to Unit 5 of the Explore query performance optimization Learn module and read about the Query Data Store (13 minutes) 
-
-
-
-
+- Open this <a href="https://learn.microsoft.com/en-us/training/modules/explore-query-performance-optimization/5-explore-query-store">resource and move to Unit 5 of the "Explore query performance optimization" Learn module to learn more about the Query Data Store.
+- Open <a href = "https://learn.microsoft.com/en-us/sql/relational-databases/performance/tune-performance-with-the-query-store?view=sql-server-ver16">this reference and run the queries you see there</a>. Bookmark for later reference. 
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
 <h2 id="3.5"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.5 Security</h2>
+Over the past ten years, <a href="https://nvd.nist.gov/">SQL Server has had fewer vulnerabilities than any other major database platform </a>. Building on this security posture, several new improvements and features have been added to increase security for the platform.
 
-Over the past ten years, SQL Server has had fewer vulnerabilities than the <a href="https://nvd.nist.gov/">competition</a>. Building on this, the new ledger feature creates an immutable track record of data modifications over time. This protects data from tampering by malicious actors and is beneficial for scenarios such as internal and external audits.
+<h4>Data Classification and Access Control Enhancements</h4>
+Data Discovery and Classification is a new set of commands and metadata that allow you to "tag" columns of data in your databases with standard or configurable labels, from Transact-SQL statements or by using the graphical interface in SQL Server Management Studio (SSMS).
+<p></p>
+<img src="https://learn.microsoft.com/en-us/sql/relational-databases/security/media/sql-data-discovery-and-classification/0-data-classification-explorer.png?view=sql-server-ver16" width=600>
+<p></p>
+You can <a href="https://learn.microsoft.com/en-us/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver16&tabs=t-sql">learn more about Data Classification and Discovery at this reference.</a>
 
-SQL Server is integrated with Azure and brings the capabilities of Azure Defender where ever your SQL Server resides. 
+There are a new set of Server-level Roles in the newest version of SQL Server to enable least privileged access for administrative tasks that apply to the whole SQL Server Instance. You can <a href="https://learn.microsoft.com/en-us/sql/relational-databases/security/authentication-access/server-level-roles?view=sql-server-ver15#fixed-server-level-roles-introduced-in-sql-server-2022">learn more about these roles at this reference</a>.
 
-<h4>Data Classification</h4>
+<h4>Data Masking and Encrytion Enhancements</h4>
 
-<h4>Always Encrypted with Secure Enclaves</h4>
+<b>Always Encrypted with Secure Enclaves</b>
 
+<h4>Auditing Enhancements</h4>>
+https://learn.microsoft.com/en-us/sql/t-sql/statements/add-sensitivity-classification-transact-sql?view=sql-server-ver15
 
 <h4>Ledger</h4>
 
-<p><img style="margin: 0px 15px 15px 0px;" src="https://learn.microsoft.com/en-us/sql/relational-databases/security/ledger/media/ledger/ledger-table-architecture.png?view=sql-server-ver16">
-</p>
+<p><img src="https://learn.microsoft.com/en-us/sql/relational-databases/security/ledger/media/ledger/ledger-table-architecture.png?view=sql-server-ver16" width=400></p>
 
 Establishing trust around the integrity of data stored in database systems has been a longstanding problem for all organizations that manage financial, medical, or other sensitive data. The ledger feature provides tamper-evidence capabilities in your database. You can cryptographically attest to other parties, such as auditors or other business parties, that your data hasn't been tampered with.
 <p>
@@ -418,7 +428,6 @@ https://learn.microsoft.com/en-us/sql/t-sql/functions/json-object-transact-sql?v
     <li><a href="https://learn.microsoft.com/en-us/training/modules/azure-security-center/" target="_blank">Enable and manage Microsoft Defender for Cloud</a></li>
     <li><a href="https://learn.microsoft.com/en-us/sql/relational-databases/security/ledger/ledger-overview?view=sql-server-ver16" target="_blank">Ledger overview</a></li>
     <li><a href="https://learn.microsoft.com/en-us/sql/database-engine/sql-server-business-continuity-dr?view=sql-server-ver16#sql-server-scenarios-using-the-availability-features" target="_blank">Business continuity and database recovery - SQL Server</a></li>
-        <li><a href = "https://docs.microsoft.com/en-us/sql/samples/wide-world-importers-what-is?view=sql-server-2017" target="_blank">Official Documentation for this section - Wide World Importers Data Dictionary and company description</a></li>
     <li><a href = "https://www.simplilearn.com/data-science-vs-big-data-vs-data-analytics-article" target="_blank">Understanding the Big Data Landscape</a></li>
     <li><a href = "http://www.admin-magazine.com/Articles/Linux-Essentials-for-Windows-Admins-Part-1" target="_blank">Linux for the Windows Admin</a></li>
     <li><a href = "https://docs.docker.com/v17.09/engine/userguide/" target="_blank">Container Runtimes (Such as Docker) Guide</a></li>
