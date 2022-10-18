@@ -37,7 +37,7 @@ The Data Team has compiled a list of objectives for evaluation to see if newer v
 - The database team at WideWorldImporters has evaluated SQL Server on Linux but SQL Server 2017 didn't include Replication, a feature they need for their application. They would like to evaluate how SQL Server Replication on Linux works. They also want to understand more about container technology and how it can be used with SQL Server
 - WideWorldImporters also would like to know other capabilities exist in the latest versions of SQL Server that might help them before more efficient and extend the capabilities of T-SQL
 - WideWorldImporters also would like to learn more about how they can plan and execute a migration to the latest version of SQL Server and reduce their risk for upgrades
-- WideWorldImporters is also evaluating Azure SQL so wants to know what features in SQL Server also work in Azure
+- WideWorldImporters is also evaluating Azure SQL so they want to know what features in SQL Server also work in Azure
 
 To begin those improvements, the Wide World Importers (WWI) leadership team has tasked the Information Technology organization to create a comprehensive plan to audit where they are now, and how to accomplish all of the goals stated above.
 
