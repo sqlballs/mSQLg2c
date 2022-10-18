@@ -29,10 +29,6 @@ WideWorldImporters <a href="https://learn.microsoft.com/en-us/sql/sql-server/end
 
 <TODO: Review - Add - Edit Main Themes>
 
-
-- Security 
-  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2019?view=sql-server-ver15#mission-critical-security
-  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver15#security 
 - Developer 
   - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2019?view=sql-server-ver15#developer-experience 
   - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2019?view=sql-server-ver15#ml
@@ -365,25 +361,63 @@ Data Discovery and Classification is a new set of commands and metadata that all
 <img src="https://learn.microsoft.com/en-us/sql/relational-databases/security/media/sql-data-discovery-and-classification/0-data-classification-explorer.png?view=sql-server-ver16" width=600>
 <p></p>
 You can <a href="https://learn.microsoft.com/en-us/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver16&tabs=t-sql">learn more about Data Classification and Discovery at this reference.</a>
-
+<p></p>
 There are a new set of Server-level Roles in the newest version of SQL Server to enable least privileged access for administrative tasks that apply to the whole SQL Server Instance. You can <a href="https://learn.microsoft.com/en-us/sql/relational-databases/security/authentication-access/server-level-roles?view=sql-server-ver15#fixed-server-level-roles-introduced-in-sql-server-2022">learn more about these roles at this reference</a>.
 
-<h4>Data Masking and Encrytion Enhancements</h4>
+<h4>Dynamic Data Masking, Row-Level Security and Always Encrypted Improvements</h4>
+Fine-grained encryption and data-level masking are important tools for the administrators and developers of data applications to completely secure data access, all while reducing the coding load. Several new improvements provide these capabilities.
+
+<b>Dynamic Data Masking</b>
+Dynamic data masking (DDM) helps prevent unauthorized access to sensitive data by enabling you to specify how much sensitive data to reveal, all with minimal impact on the application layer. DDM can be configured on designated database fields to hide sensitive data in the result sets of queries. 
+
+> With DDM, the data in the database isn't changed. DDM is easy to use with existing applications, since masking rules are applied in the query results.
+
+<p></p>
+<img src="https://learn.microsoft.com/en-us/sql/relational-databases/security/media/dynamic-data-masking.png?view=sql-server-ver16" width=300>
+<p></p>
+
+You can <a href="https://learn.microsoft.com/en-us/sql/relational-databases/security/dynamic-data-masking?view=sql-server-ver16">learn more about Dynamic Data Masking and find a tutorial on implementing it at this reference</a>.
+
+<b>Row-Level Security</b>
+Row-Level Security enables you to use Role membership or execution context to control access to rows in a database table. Row-Level Security (RLS) simplifies the design and coding of security in your application, since the access restriction logic is located in the database tier rather than away from the data in another application tier.
+
+<p></p>
+<img src="https://learn.microsoft.com/en-us/sql/relational-databases/security/media/row-level-security/row-level-security-graphic.png?view=sql-server-ver16" width=300>
+<p></p>
+
+You can <a href="https://learn.microsoft.com/en-us/sql/relational-databases/security/row-level-security?view=sql-server-ver16">learn more about Row-Level Security and find a tutorial on implementing it at this reference</a>.
 
 <b>Always Encrypted with Secure Enclaves</b>
+the latest version of SQL Server expands on the <i>Always Encrypted</i> fesatures with in-place encryption and rich computations by enabling computations on plaintext data inside a server-side secure enclave. In-place encryption improves the performance and the reliability of cryptographic operations (encrypting columns, rotating columns, encryption keys, and so on), because it avoids moving data out of the database.
 
-<h4>Auditing Enhancements</h4>>
-https://learn.microsoft.com/en-us/sql/t-sql/statements/add-sensitivity-classification-transact-sql?view=sql-server-ver15
+This improvement also supports rich computations (pattern matching and comparison operations) which unlocks Always Encrypted to a much broader set of scenarios and applications that demand sensitive data protection, while also requiring richer functionality in Transact-SQL queries.
+
+You can <a href="https://learn.microsoft.com/en-us/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sql-server-ver15">read more about Always Encrypted with Secure Enclaves at this reference</a>.
+
+<h4>Auditing Enhancements</h4>
+Auditing in SQL Server is now improved to include a new field called <i>data_sensitivity_information</i> in the audit log record, which contains the sensitivity classifications (labels) of the actual data that was returned by the query, which leverages the Data Classification features shown earlier.
+
+You can <a href="https://learn.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-database-engine?view=sql-server-ver15">learn more about Auditing in SQL Server at this reference</a>.
 
 <h4>Ledger</h4>
+Establishing trust around the integrity of data stored in database systems has been a longstanding problem for all organizations that manage financial, medical, or other sensitive data. The ledger feature provides tamper-evidence capabilities in your database. You can cryptographically attest to other parties, such as auditors or other business parties, that your data hasn't been tampered with.
+
+The latest version of SQL Server includes a new feature called <i>Ledger</i> which, once enabled on a table, adds a hashed value (a Block) at the end of each row of data, and a computed hashed value from those Blocks (representing a Chain of Blocks) to uniquely identify the data in the database. A Digest is created for those values, which can be in separate, protected storage, to compare the state of the internal blockchain to an immutable copy, which can prove whether data has been tampered with.
 
 <p><img src="https://learn.microsoft.com/en-us/sql/relational-databases/security/ledger/media/ledger/ledger-table-architecture.png?view=sql-server-ver16" width=400></p>
 
-Establishing trust around the integrity of data stored in database systems has been a longstanding problem for all organizations that manage financial, medical, or other sensitive data. The ledger feature provides tamper-evidence capabilities in your database. You can cryptographically attest to other parties, such as auditors or other business parties, that your data hasn't been tampered with.
-<p>
-To read more about how to use Ledger in SQL read this MS Learn article https://learn.microsoft.com/en-us/sql/relational-databases/security/ledger/ledger-overview?view=sql-server-ver16
-<p>
-To understand how to configure Ledger on a SQL Server read this MS Learn article https://learn.microsoft.com/en-us/sql/relational-databases/security/ledger/ledger-how-to-configure-ledger-database?view=sql-server-ver16&tabs=Portal&pivots=as1-sql-server
+
+You can <a href="https://learn.microsoft.com/en-us/sql/relational-databases/security/ledger/ledger-overview?view=sql-server-ver16">read more about how to use Ledger in SQL Server at this reference</a>.
+
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: Implement a Ledger on your Test Database</b></p>
+<br>
+In this Activity, you will implement Ledger for SQL Server on your test system. You can use any sample database, or make one specifically for this exercise.
+
+<p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
+
+- Open this <a href="https://learn.microsoft.com/en-us/sql/relational-databases/security/ledger/ledger-how-to-append-only-ledger-tables?view=sql-server-ver16">resource and complete the steps you see there.
+
+<p style="border-bottom: 1px solid lightgrey;"></p>
 
 
 <h2 id="3.6"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.6 Development</h2>
