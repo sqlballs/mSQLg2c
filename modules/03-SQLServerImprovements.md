@@ -27,21 +27,6 @@ WideWorldImporters <a href="https://learn.microsoft.com/en-us/sql/sql-server/end
   <dt><a href="#3.7" target="_blank">3.7 - Analytics</dt></a>
 </dl>
 
-<TODO: Review - Add - Edit Main Themes>
-
-- Developer 
-  - 
-  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver15#platform
-  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver15#sql-machine-learning-services 
-- Analytics 
-  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2019?view=sql-server-ver15#sql-server-analysis-services
-  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2019?view=sql-server-ver15#sql-server-integration-services
-  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2019?view=sql-server-ver15#sql-server-
-  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2019?view=sql-server-ver15#sql-server-reporting-services
-  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver15#analytics
-  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver15#sql-server-analysis-services
-  - https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver15#sql-server-reporting-services 
-
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
 <h2 id="3.1"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.1 Deployment Improvements</h2>
@@ -63,7 +48,7 @@ All features in each Edition for the latest version of SQL Server are supported 
 - Leverages new hardware capabilities, including the Advanced Vector Extension (AVX) 512 extension to improve batch mode operations
 
 <h3>SQL Server on Virtual Machines</h3>
-Bare-metal installations of an operating system such as Windows are deployed on hardware using an operating system <i>Kernel</i>, and additional software to bring all of the hardware into a set of calls to the "Big Four": CPU, Memory, Storage, and Networking. 
+Bare-metal installations of an operating system such as Windows are deployed on hardware using an operating system <i>Kernel</i>, and additional software to bring all of the hardware into a set of calls to the "Big Four": CPU, Memory, Storage, and Networking.
 
 One abstraction layer above installing software directly on hardware is using a <i>Hypervisor</i>. In essence, this layer uses the base operating system to emulate hardware. You install an operating system (called a Guest OS) on the Hypervisor (called the Host), and the Guest OS acts as if it is on bare-metal.
 
@@ -91,30 +76,27 @@ The latest version of SQL Server on Linux supports the following improvements:
 - PolyBase
 - PolyBase type mapping
 - Change Data Capture (CDC) support
-- Linux distributions supported
 
-There are specific versions and support considerations for each distrivution of Linux. A <a href="https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-whats-new-2019?view=sql-server-ver16">list of these requirements is available at this reference</a>, and a <a href="https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-editions-and-components-2022?view=sql-server-ver16">list of Editions and supported features for SQL Server on Linux is at this reference</a>. 
+There are specific versions and support considerations for each distribution of Linux. A <a href="https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-whats-new-2019?view=sql-server-ver16">list of these requirements is available at this reference</a>, and a <a href="https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-editions-and-components-2022?view=sql-server-ver16">list of Editions and supported features for SQL Server on Linux is at this reference</a>. 
 
 You can <a href="https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-overview?view=sql-server-ver16">learn more about the SQL Server on Linux architecture at this reference</a>.
 
 <h3>SQL Server in Containers</h3>
-The introduction of SQL Server running on Linux allows for the next level of hardware abstraction, called a Container. There are various types of Container technologies, in this workshop, you will focus on the docker container format, as implemented in the Moby framework.
+The introduction of SQL Server running on Linux allows for the next level of hardware abstraction, called a <i>Container</i>. There are various types of Container technologies, in this workshop, you will focus on the Docker container format, as implemented in Windows using the <i>Moby</i> framework.
 
-A Container is provided by the Container Runtime (Such as containerd]) runtime engine, which sits above the operating system (Windows or Linux). In this abstraction, you do not control the hardware or the operating system. The Container has a very small Kernel in it, and can contain binaries such as Python, R, SQL Server, or other binaries. A Container with all its binaries is called an Image. You create a container from a file.
+A Container is provided by the Container Runtime (Such as <i>containerd</i>) runtime engine, which sits above the operating system (Windows or Linux). In this abstraction, you do not control the hardware or the operating system. The Container has a specific protected memory space, and can contain binaries such as Python, R, SQL Server, or other binaries. A Container with all its binaries is called an Image. You create a container from a file.
 
-You can see the difference between Virtual Machines and Container technologies here: 
+You can see the difference between Virtual Machines and Container technologies here:
 
 <img src="https://cloudblogs.microsoft.com/uploads/prod/sites/37/2019/07/Demystifying-containers_image1.png" width=600>
 
-
-This abstraction holds everything for an application to isolate it from other running processes. It is also completely portable - you can create an image on one system, and another system can run it so long as the Container Runtimes (Such as Docker) Runtime is installed. Containers also start very quickly, are easy to create (called Composing) using a simple text file with instructions of what to install on the image. The instructions pull the base Kernel, and then any binaries you want to install. Several pre-built Containers are already available, SQL Server is one of these. You can <a href="https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017">read more about installing SQL Server on Container Runtimes (Such as Docker) at this reference</a>.
+This abstraction holds everything for an application to isolate it from other running processes. It is also completely portable - you can create an image on one system, and another system can run it so long as the same Container Runtime (Such as Docker) is installed. Containers also start very quickly, are easy to create (called Composing) using a simple text file with instructions of what to install (called a manifest or Dockerfile) on the image. The instructions pull the base image, and then any binaries you want to install. Several pre-built Containers are already available, and SQL Server is one of these. You can <a href="https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017">read more about installing SQL Server on Container Runtimes (Such as Docker) at this reference</a>.
 
 You can have several Containers running at any one time, based on the amount of hardware resources where you run it. For scale-out systems, a Container allows for distribution and control of complete applications using only declarative commands.
 
 You can <a href="https://hackernoon.com/docker-commands-the-ultimate-cheat-sheet-994ac78e2888">read more about Container Runtimes (Such as Docker) at this reference</a>.
 
 <h3>SQL Server on Kubernetes</h3>
-
 For Big Data systems, having lots of Containers is very advantageous to segment purpose and performance profiles. However, dealing with many Container Images, allowing persisted storage, and interconnecting them for network and internetwork communications is a complex task. One such Container Orchestration tool is <i>Kubernetes</i>, an open source Container orchestrator, which can scale Container deployments according to need. The following table defines some important Container Orchestration Tools (Such as Kubernetes or OpenShift) terminology:
 
 <table style="tr:nth-child(even) {background-color: #f2f2f2;}; text-align: left; display: table; border-collapse: collapse; border-spacing: 5px; border-color: gray;">
@@ -147,7 +129,7 @@ In this Activity you will review the process for pulling the latest version of a
 <p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
 - <a href="https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-ver16&pivots=cs1-powershel">Open this link and review the steps you see there</a>. Bookmark for later reference.
-- <i>Optional</i>: If time permits, you can install the Docker platform on your test system and complete the steps to depploy SQL Server on Linux and connect with a test to that environment.
+- <i>Optional</i>: If time permits, you can install the Docker platform on your test system and complete the steps to deploy SQL Server on Linux and connect with a test to that environment.
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
@@ -155,23 +137,23 @@ In this Activity you will review the process for pulling the latest version of a
 
 For the administration team for the Data Estate, manageability includes everything from the interface to the system, to being able to deploy and configure it. The latest version of SQL Server includes the following improvements:
 
-- An integrated setup experience for the Azure extension for SQL Server	Install the Azure extension for SQL Server at setup. Required for Azure integration features
-- Using the SQL Server Configuration Manager to manage an Azure extension for SQL Server service, allowing you to create Azure Arc-enabled SQL Server instances, and for other Azure connected features
-- Upgraded max server memory calculations
+- An integrated setup experience for the Azure extension for SQL Server which installs the Azure extension for SQL Server at setup
+- You can now use the SQL Server Configuration Manager to manage an Azure extension for SQL Server service, allowing you to create Azure Arc-enabled SQL Server instances, and for other Azure connected features
+- There are new upgraded max server memory calculations
 - There are several improvements to address persistent version store (PVS) storage and improve overall scalability, including a persistent version store cleaner thread per database instead of per instance and the memory footprint for PVS page tracker has been improved. There are also a number of ADR efficiency improvements, such as concurrency improvements that help the cleanup process to work more efficiently. ADR cleans pages that couldn't previously be cleaned due to locking
-- Shrink database WAIT_AT_LOW_PRIORITY
-- XML compression
-- Asynchronous auto update statistics concurrency
+- A new shrink database option has been added: WAIT_AT_LOW_PRIORITY
+- XML compression is now available
+- There is a new improvement for asynchronous auto update statistics concurrency
 
 <h3>Tools</h3>
-There are several tools you can use to connect to, query, and manage a SQL Server Instance. The two broad groups are Graphical User Interfaces (GUI) and Command-Line or Scripting Interfaces. 
+There are several tools you can use to connect to, query, and manage a SQL Server Instance. The two broad groups are Graphical User Interfaces (GUI) and Command-Line or Scripting Interfaces.
 
 New improvements include:
 
 - Azure Data Studio includes connection and management support for the latest version of SQL Server
 - SQL Server Management Studio connects and manages the latest version of SQL Server, and includes several other improvements
 - SqlPackage.exe provides support for the latest version of SQL Server
-- VS Code	The latest release of VS Code now supports the latest version of SQL Server
+- VS Code now supports the latest version of SQL Server
 
 <p></p>
 
@@ -197,13 +179,13 @@ SQL Server Management Studio (SSMS) is a graphical interface for the Microsoft W
 New and enhanced features in SQL Server Management Studio include: 
 - Support for Azure AD authentication, including Multi-Factor Authentication (MFA) 
 - Azure Data Studio installation integration	Installation of SSMS installs Azure Data Studio
-- Object Explorer	Dropped Columns folder now exists under the Columns folder for Ledger tables, which have been altered to remove one or more columns
-- Scripting	Compatibility level defaults to 160 when scripting
+- The Object Explorer	Dropped Columns folder now exists under the Columns folder for Ledger tables, which have been altered to remove one or more columns
+- Scripting	Compatibility level now defaults to 160 when scripting
 - Added Showplan support for Hyperscale Optimized Query Processing
 - Analysis Services	Connection to Analysis Services is now available
 - Added missing options in SqlParser for CREATE USER and CREATE LOGIN.
 - The “Schedule…” menu item in SQL Server Integration Services is now visible in the Azure SSIS Catalog
-- Added the ability to explicitly configure an attestation protocol in the "Connect To Server" dialog when using Always Encrypted with secure enclaves (column encryption).
+- Added the ability to explicitly configure an attestation protocol in the "Connect To Server" dialog when using Always Encrypted with secure enclaves (column encryption)
 - Client Driver changed to Microsoft.Data.SqlClient
 - Added support for Contained Always On Availability Groups
 - Improvements to Data Classification user interface
@@ -234,7 +216,9 @@ In this Activity you will review a few tips and tricks you may not have been fam
 
 - <a href="https://learn.microsoft.com/en-us/sql/ssms/tutorials/ssms-tricks?view=sql-server-ver16">Open this link and perform the steps you see there</a>. Bookmark for later reference.
 
+<p></p>
 <p style="border-bottom: 1px solid lightgrey;"></p>
+<p></p>
 
 <h2 id="3.3"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.3 Availability</h2>
 
@@ -277,10 +261,10 @@ The <i>backupset</i> table in the <i>msdb</i> system database contains a row for
 The latest version of SQL Server includes multiple features to enable higher performance, some without even altering your code. These improvements include: 
 
 - Online clustered columnstore index build and rebuild
-- Resumable online rowstore index build	See Perform Index Operations Online.
+- Resumable online rowstore index build	See Perform Index Operations Online
 - Suspend and resume initial scan for Transparent Data Encryption (TDE)
 - In-Memory Database - leverages memory to store more data in memory to to unlock a new level of scalability across all your database workloads. Improvements in the latest version of SQL Server include:
-  - In-memory online transaction processing (OLTP)
+  - In-memory online transaction processing (for OLTP)
   - <a href="https://learn.microsoft.com/en-us/sql/database-engine/configure-windows/hybrid-buffer-pool?view=sql-server-ver15">Hybrid buffer pool</a>, where database pages sitting on database files placed on a persistent memory (PMEM) device will be directly accessed when required
   - <a href="https://learn.microsoft.com/en-us/sql/relational-databases/databases/tempdb-database?view=sql-server-ver15#memory-optimized-tempdb-metadata">Memory-optimized TempDB metadata</a> allows effectively removes tempDB metadata bottlenecks and unlocks a new level of scalability for TempDB heavy workloads. The system tables involved in managing temporary table metadata can be moved into latch-free non-durable memory-optimized tables
   - <a href="https://learn.microsoft.com/en-us/sql/relational-databases/databases/database-snapshots-sql-server?view=sql-server-ver15">In-Memory OLTP support for Database Snapshots</a> which includes memory-optimized filegroups
@@ -290,7 +274,7 @@ You can <a href="https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-
 Two "families" of performance improvement in the newest version of SQL Server are important to call out: 
 
 1. Intelligent Performance
-2. Intelligent Query Processing 
+2. Intelligent Query Processing
 
 <h4>Intelligent Performance</h4>
 This <a href="https://www.linkedin.com/pulse/sql-server-2019-intelligent-performance-bob-ward/">group of improvements</a> help overcome known resource bottlenecks and provide options for configuring your database server to provide predictable performance across all your workloads. 
@@ -411,12 +395,12 @@ You can <a href="https://learn.microsoft.com/en-us/sql/relational-databases/secu
 In this Activity, you will implement Ledger for SQL Server on your test system. You can use any sample database, or make one specifically for this exercise.
 
 <p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
-- Open this <a href="https://learn.microsoft.com/en-us/sql/relational-databases/security/ledger/ledger-how-to-append-only-ledger-tables?view=sql-server-ver16">resource and complete the steps you see there.
-
+- Open this <a href="https://learn.microsoft.com/en-us/sql/relational-databases/security/ledger/ledger-how-to-append-only-ledger-tables?view=sql-server-ver16">resource and complete the steps you see there</a>.
+<p></p>
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
 <h2 id="3.6"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.6 Development</h2>
-Developer enhancements include not only new Transact-SQL (T-SQL) changes including new time series, JSON improvments, aggregate changes, and Bit manipulation functions, but also data types and changes to features such as using SQL Server as a Graph Database and new Unicode feature support. A few of the improvements in teh latest version of SQL Server are:
+Developer enhancements include not only new Transact-SQL (T-SQL) changes including new time series, JSON improvments, aggregate changes, and Bit manipulation functions, but also data types and changes to features such as using SQL Server as a Graph Database and new Unicode feature support. A few of the improvements in the latest version of SQL Server are:
 
 - Graph enhancements
   - <a href="https://learn.microsoft.com/en-us/sql/relational-databases/tables/graph-edge-constraints?view=sql-server-ver15">Edge constraint cascade delete actions</a> allow you to define cascaded delete actions on an edge constraint in a graph database
@@ -429,46 +413,79 @@ Developer enhancements include not only new Transact-SQL (T-SQL) changes includi
   - The Microsoft Extensibility SDK for Java for Microsoft SQL Server is now <a href="https://github.com/microsoft/sql-server-language-extensions">open source and available on GitHub</a>
   - Support for <a href="https://learn.microsoft.com/en-us/sql/language-extensions/how-to/java-to-sql-data-types?view=sql-server-ver15">new Java data types</a>
   - SQL Server <a href="https://cloudblogs.microsoft.com/sqlserver/2019/07/24/free-supported-java-in-sql-server-2019-is-now-available/">now includes Azul Systems Zulu Embedded</a> for Java support throughout the product
-  - SQL Server a href="https://learn.microsoft.com/en-us/sql/language-extensions/language-extensions-overview?view=sql-server-ver15>Language Extensions</a> allows you to execute external code with the extensibility framework
+  - SQL Server <a href="https://learn.microsoft.com/en-us/sql/language-extensions/language-extensions-overview?view=sql-server-ver15">Language Extensions</a> allows you to execute external code with the extensibility framework
   - A new Data Definition Language (DDL), <a href="https://learn.microsoft.com/en-us/sql/t-sql/statements/create-external-language-transact-sql?view=sql-server-ver15">CREATE EXTERNAL LANGUAGE</a>, registers external languages, such as Java, in SQL Server
 - New spatial reference identifiers (SRIDs), <a href="http://www.ga.gov.au/scientific-topics/positioning-navigation/geodesy/datums-projections/gda2020">using the Australian GDA2020 which provides a more robust and accurate datum</a> that's more closely aligned with global positioning systems. The new SRIDs are: 7843 for geographic 2D, 7844 for geographic 3D
-- Error messages include a href="https://learn.microsoft.com/en-us/sql/t-sql/statements/alter-database-scoped-configuration-transact-sql?view=sql-server-ver15#verbose-truncation">verbose truncation warnings</a> - the data truncation error message defaults to include table and column names, and the truncated value
+- Error messages include <a href="https://learn.microsoft.com/en-us/sql/t-sql/statements/alter-database-scoped-configuration-transact-sql?view=sql-server-ver15#verbose-truncation">verbose truncation warnings</a> - the data truncation error message defaults to include table and column names, and the truncated value
 
 You can <a href="https://learn.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2022?view=sql-server-ver16#language">learn more details about each individual language improvement at this reference</a>. 
 
 <h4>SQL Server Machine Learning Services</h4>
 SQL Server Machine Learning Services provides a mechanism to create, train, and deploy Machine Learning models that stay in the database where the source data lives. It can use the R, Java, and Python languages and libraries, and includes the ability to add other languages if desired. Improvements to this feature in the latest version of SQL Server include:
 	
-- You can process external scripts per partition of your data by using the new parameters added to sp_execute_external_script. This functionality supports training many small models (one model per partition of data) instead of one large model
+- You can process external scripts per partition of your data by using the new parameters added to <i>sp_execute_external_script</i>. This functionality supports training many small models (one model per partition of data) instead of one large model
 - You can configure high availability for Machine Learning Services on a Windows Server Failover Cluster
 
 You can <a href="https://www.bing.com/ck/a?!&&p=a1c642dd7492b7a8JmltdHM9MTY2NjA1MTIwMCZpZ3VpZD0yZjZmYzk3Ni1jZGE5LTYzZDMtMmY2NC1kOWY1Y2M2YjYyMzgmaW5zaWQ9NTQ0Mg&ptn=3&hsh=3&fclid=2f6fc976-cda9-63d3-2f64-d9f5cc6b6238&psq=sql+server+machine+learning++site%3amicrosoft.com&u=a1aHR0cHM6Ly9sZWFybi5taWNyb3NvZnQuY29tL2VuLXVzL3NxbC9tYWNoaW5lLWxlYXJuaW5nL3NxbC1zZXJ2ZXItbWFjaGluZS1sZWFybmluZy1zZXJ2aWNlcz92aWV3PXNxbC1zZXJ2ZXItdmVyMTYjOn46dGV4dD1NYWNoaW5lJTIwTGVhcm5pbmclMjBTZXJ2aWNlcyUyMGlzJTIwYSUyMGZlYXR1cmUlMjBpbiUyMFNRTCxSJTIwcGFja2FnZXMlMkMlMjBmb3IlMjBwcmVkaWN0aXZlJTIwYW5hbHl0aWNzJTIwYW5kJTIwbWFjaGluZSUyMGxlYXJuaW5nLg&ntb=1">learn more about Machine Learning Services in SQL Server at this reference, which also contains multiple tutorials</a>.
-	
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
 
-Open the the GENERATE_SERIES MS Learn article and execute the demos (2 minutes)
-https://learn.microsoft.com/en-us/sql/t-sql/functions/generate-series-transact-sql?view=sql-server-ver16
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: Work with a Graph Database</b></p>
 
-<p><b>Description</b></p>
+One of the new enhancements in the latest version of SQL Server is in the <i>SQL Graph</i> feature. Many data professionals have not worked with a Graph database before, and are not aware of how powerful it can be. In this Activity you will create a simple Graph database, and run a simple MATCH query on it. 
 
-TODO: Enter activity description with checkbox
+<br>
+<img src="https://learn.microsoft.com/en-us/sql/relational-databases/graphs/media/person-cities-restaurants-tables.png?view=sql-server-ver16" width=300>
+<br>
 
 <p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
-Open the the JSON_OBJECT MS Learn article and execute the demos (2 minutes)
-https://learn.microsoft.com/en-us/sql/t-sql/functions/json-object-transact-sql?view=sql-server-ver16
+- Open <a href="https://learn.microsoft.com/en-us/sql/relational-databases/graphs/sql-graph-sample?source=recommendations&view=sql-server-ver16">the following reference and follow all the steps you see there</a>. 
+
+<p></p>
+<p style="border-bottom: 1px solid lightgrey;"></p>
+<p></p>
 
 <h2 id="3.7"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.7 Analytics</h2>
+SQL Server contains not only Transact-SQL statements that facilitate data analysis, but also the integration of R, Python, and Java with the Extensibility Framework for extended data analysis. There are also various services included with SQL Server that provide advanced analytic capabilities, and these have had significant improvements in the latest version. 
+<p></p>
 
-Content
+- <b>SQL Server Analysis Services</b>
+  - <a href="https://learn.microsoft.com/en-us/analysis-services/tabular-models/calculation-groups">Calculation groups in tabular models</a> can significantly reduce the number of redundant measures by grouping common measure expressions as calculation items
+  - <a href="https://learn.microsoft.com/en-us/analysis-services/tabular-models/query-interleaving">Query interleaving is a new tabular mode system configuration</a> that can improve user query response times in high-concurrency scenarios
+  - <a href="https://learn.microsoft.com/en-us/analysis-services/tabular-models/relationships-ssas-tabular">Many-to-many relationships in tabular models</a> allows many-to-many relationships between tables where both columns are non-unique
+  - <a href="https://learn.microsoft.com/en-us/analysis-services/server-properties/memory-properties">New Property settings for resource governance</a> includes new memory settings: Memory\QueryMemoryLimit, DbpropMsmdRequestMemoryLimit, and OLAP\Query\RowsetSerializationLimit for resource governance
+  - <a href="https://learn.microsoft.com/en-us/analysis-services/server-properties/general-properties">Governance setting for Power BI cache refreshes</a> introduces the ClientCacheRefreshPolicy property, which overrides caching dashboard tile data and report data for initial load of Live connect reports by the Power BI service
+  - <a href="https://learn.microsoft.com/en-us/analysis-services/what-s-new-in-sql-server-analysis-services#online-attach">Online attach	Online attach</a> can be used for synchronization of read-only replicas in on-premises query scale-out environments
+  - <a href="https://learn.microsoft.com/en-us/azure/synapse-analytics/synapse-link/sql-synapse-link-overview">Azure Synapse Link for SQL</a> provides near real time analytics over operational data in SQL Server with a seamless integration between operational stores in SQL Server and Azure Synapse Analytics dedicated SQL pools, Azure Synapse Link for SQL enables you to run analytics, business intelligence and machine learning scenarios on your operational data with minimum impact on source databases with a new change feed technology
+  - A new object storage integration is now added to the data platform, enabling you to integrate SQL Server with S3-compatible object storage, in addition to Azure Storage. <a href="https://learn.microsoft.com/en-us/sql/relational-databases/backup-restore/sql-server-backup-to-url-s3-compatible-object-storage?view=sql-server-ver15">The first is backup to URL</a> and the second is <a href="https://learn.microsoft.com/en-us/sql/relational-databases/polybase/polybase-configure-s3-compatible?view=sql-server-ver15">Data Lake Virtualization</a>. Data Lake Virtualization integrates PolyBase with S3-compatible object storage, adds support for to querying parquet files with T-SQL
+  - Data Virtualization allows you to query different types of data on different types of data sources from SQL Server
+  - SuperDAX for multidimensional models (SuperDAXMD) allows DAX-based clients to use SuperDAX functions and query patterns against multidimensional models, providing improved performance when querying model data. SuperDAX first introduced DAX query optimizations for tabular models with Power BI and SQL Server Analysis Services 2016. SuperDAXMD now brings these improvements to multidimensional models
+  - Horizontal fusion is a new query execution plan optimization aimed at reducing the number of data source queries required to generate and return results. Multiple smaller data source queries are fused together into a larger data source query. Fewer data source queries mean fewer round trips and fewer expensive scans over large data sources, which results in sizeable DAX performance gains and reduced processing demand at the data source. DAX queries run faster with Horizontal Fusion, especially in DirectQuery mode. In addition, scalability also increases
 
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
+<p></p>
 
-<p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
+- <b>SQL Server Integration Services</b>
+  - <a href="https://learn.microsoft.com/en-us/sql/integration-services/control-flow/flexible-file-task?view=sql-server-ver15">Flexible file task</a> allows you to perform file operations on Local File System, Azure Blob Storage, and Azure Data Lake Storage Gen2
+  - <a href="https://learn.microsoft.com/en-us/sql/integration-services/data-flow/flexible-file-destination?view=sql-server-ver15">Flexible file source and destination</a> adds read and write data for Azure Blob Storage, and Azure Data Lake Storage Gen2
 
-Open the the JSON_OBJECT MS Learn article and execute the demos (2 minutes)
-https://learn.microsoft.com/en-us/sql/t-sql/functions/json-object-transact-sql?view=sql-server-ver16
+<p></p>
 
+- <b>SQL Server Master Data Services</b>
+  - <a href="https://learn.microsoft.com/en-us/sql/master-data-services/master-data-services-installation-and-configuration?view=sql-server-ver15#SetUpWeb">Support for Azure SQL Managed Instance databases</a> now allows you to host Master Data Services on Azure SQL Managed Instance
+  - HTML controls replace all former Silverlight components. Silverlight dependency removed.
+
+<p></p>
+
+- <b>SQL Server Reporting Services</b>
+   - Azure SQL Managed Instance support means that you can now host a database catalog used for SQL Server Reporting Services (SSRS) in an Azure SQL Managed Instance (MI) that's hosted either in a VM or in your data center
+  - Power BI Premium dataset support allows you to connect to Power BI datasets using either Microsoft Report Builder or SQL Server Data Tools (SSDT). Then you can publish those reports to SSRS using SQL Server Analysis Services connectivity
+  - AltText (alternative text) support for report elements, so that when authoring reports, you can use tooltips to specify text for each element on the report. Screen reader technology identifies these tooltips properly
+  - Azure Active Directory Application Proxy support means that you no longer need to manage your own web application proxy in order to allow secure access via the web or mobile apps
+  - New Custom headers sets header values for all URLs matching the specified regex pattern. Users can update the custom header value with valid XML to set header values for selected request URLs. Admins can add any number of headers in the XML
+  - SQL Server now supports Transparent Database Encryption for the SSRS catalog database
+  - The newly released version of Report Builder is fully compatible with the 2016, 2017, 2019 and versions of Reporting Services. It's also compatible with all released and supported versions of Power BI Report Server
+
+<p></p>
+<p style="border-bottom: 1px solid lightgrey;"></p>
 <p></p>
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/owl.png?raw=true"><b>For Further Study</b></p>
