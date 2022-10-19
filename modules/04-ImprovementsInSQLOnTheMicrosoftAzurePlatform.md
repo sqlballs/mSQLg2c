@@ -13,9 +13,9 @@ In the previous modules, you learned about how to <a href="https://github.com/sq
 
 Using the <a href="https://github.com/sqlballs/mSQLg2c/blob/main/modules/02-AuditingYour%20DataEstateArchitecture.md">processes, tools and procedures from the Auditing  Module</a>, the WideWorldImporters company has completed an initial audit of their data estate. They have settled on many architectural improvements in the latest version of SQL Server on-premises, and have decided to move to the latest version for many of their systems, using the Compatibilit settings where required. They have also started a test installation of SQL Server running on Red Hat Linux, and developers are now using SQL Server in Containers. 
 
-WideWorldImporters is now turning its attention to workloads they can use in the Microsoft Azure platform. They are particularly interested in the security, availability and elastic scale available in a cloud service. 
+WideWorldImporters is now turning its attention to workloads they can use in the Microsoft Azure platform. They are particularly interested in the security, availability and elastic scale available in a cloud service.
 
- evaluation into various categories that they are interested in:
+For consisitency, they are continuing their evaluation using the same categories that they investigated for the on-premises installations of SQL Server:
 
 <dl>
   <dt><a href="#4.1" target="_blank">4.1 - Deployment Options</dt>
@@ -30,11 +30,31 @@ WideWorldImporters is now turning its attention to workloads they can use in the
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
 <h2 id="4.1"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">4.1 Deployment Options</h2></a>
+The Microsoft Azure platform is updated on a continuous basis. It is difficult to pinpoint a time for new improvements, so WideWorld Importers is focusing on the current state of Microsoft Azure, with an eye on some of the larger improvements that have been made recently.
+<p></p>
 
+> Since Microsoft Azure and the Azure Data Platform are constantly updated, there are improvements that are not included in this Module. You can keep track of these changes in a few locations, such as the <a href="https://azure.microsoft.com/en-us/updates/">Azure Updates feed</a>, the <a href="https://learn.microsoft.com/en-us/azure/azure-sql/database/doc-changes-updates-release-notes-whats-new?view=azuresql">Azure SQL Database "What's New" page<a></a>, and the <a href="https://www.youtube.com/results?search_query=data+exposed">Data Exposed video channel</a>.
 
-![Azure SQL Overview](https://github.com/microsoft/sqlworkshops-azuresqllabs/blob/master/graphics/azuresql-overview.png?raw=true)  
+Wide World Importers does have a basic understanding of the Microsoft Azure Platform, and has deployed database offerings in the past. If you are new to these topics, consult the following references:
+<p></p>
 
-<h3>SQL Server on Microsoft Azure VM's</h3>
+- <a href="https://learn.microsoft.com/en-us/certifications/azure-fundamentals/">Microsoft Certified: Azure Fundamentals</a> - a hands-on free course on the basics of the Microsoft Azure platform
+- <a href="https://learn.microsoft.com/en-us/certifications/azure-database-administrator-associate/">Microsoft Certified: Azure Database Administrator Associate</a> - a free hands-on course that guides you through the fundamentals of the Azure SQL architecture
+
+With a firm understanding of the basics of Microsoft Azure and the Azure SQL Database environments, you can continue on with your modernization evaluation.
+
+Microsoft Azure has three basic deployment options for a SQL Server database. All of these use the same basic RDBMS engine, with a high level of compatibility for your data operations. The primary decision point is how much control and responsibility you want for each type of deployment. The data platform in Microsoft Azure includes:
+
+<p></p>
+<img src="https://github.com/microsoft/sqlworkshops-azuresqllabs/blob/master/graphics/azuresql-overview.png?raw=true" width=800>
+<p></p>
+
+WideWorld Importers has decided to take their Data Estate audit of the applications they have and decide if it is a candidate for Microsoft Azure, and which of these workloads requires a higher level of control, and which are better suited to a more fully managed environment. 
+
+<h4>SQL Server on Microsoft Azure Virtual Machines</h4>
+As <a href="https://github.com/sqlballs/mSQLg2c/blob/main/modules/03-SQLServerImprovements.md#3.1">you learned in the last Module, SQL Server can be installed directly on a Virtual Machine environment</a> just as it is on bare metal hardware, with a few considerations. This provides the highest level of control and responsibility - you own and control everything from the operating system to the installation of SQL Server. You can choose various Microsoft Windows or Linux offerings for your installation of SQL Server. 
+
+Microsoft Azure provides a huge array of Virtual Machine sizes, configurations, and licensing (or no licensing) options. You can <a href="https://azure.microsoft.com/en-us/pricing/vm-selector/">find a sizing tool at this reference</a>.
 
 Azure SQL VMs don't have specific service tiers, but there are decisions to be made around which images to choose, how to configure storage and what sizes, etc. This isn't the focus of this workshop, but if you're considering Azure SQL VMs, you'll want to review the [guidance on images to choose from](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview), the [quick checklist](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-performance) to obtain optimal performance of Azure SQL VMs, and the guidance for [storage configuration](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-storage-configuration).  
 
@@ -121,15 +141,6 @@ Click on the following <a href="https://learn.microsoft.com/en-us/azure/azure-sq
 - Page server
 - Log service
 - Azure storage
-
-<h3>Microsoft Azure Synapse</h3>
-<img src="https://learn.microsoft.com/en-us/azure/synapse-analytics/media/overview-what-is/synapse-architecture.png">
-Azure Synapse is an enterprise analytics service that accelerates time to insight across data warehouses and big data systems. Azure Synapse brings together the best of SQL technologies used in enterprise data warehousing, Spark technologies used for big data, Data Explorer for log and time series analytics, Pipelines for data integration and ETL/ELT, and deep integration with other Azure services such as Power BI, CosmosDB, and AzureML.
-
-<p>
-For a deeper overview of Azure Synapse read this MS Learn article <a href="https://learn.microsoft.com/en-us/azure/synapse-analytics/overview-what-is">Azure Synapse Overview - What is Azure Synapse?</a>
-
-
 
 ### *Summary*  
 As you've hopefully noticed, while there are a lot of options, Azure is able to provide flexibility so you get exactly what you need, nothing less. A summary of the service tier options with some additional considerations is included below, but be sure to check out [pricing information](https://azure.microsoft.com/en-us/pricing/details/sql-database/managed/) for the latest details.
@@ -388,8 +399,23 @@ When you have your envrionment in Azure there is a world of additional options a
 
 * <b>[Spider-man Homecoming Twitter Sentiment Analysis](https://learn.microsoft.com/en-us/archive/blogs/deeperinsights/how-to-measure-twitter-sentiment-with-azure-logic-apps-sql-database-and-power-bi)</b> - A true Azure Development story showing how in less than an hour and a few clicks you can get real world data, use Congnative Services, evaluate sentiment, and enrich data in your Azure SQL Database.  Then you can report off of it in Power BI. 
 
-
+<p></p>
 <p style="border-bottom: 1px solid lightgrey;"></p>
+<p></p>
+
+<h2 id="4.7"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">4.7 Analytics</h2>
+
+content
+
+<h4>Microsoft Azure Synapse</h4>
+<img src="https://learn.microsoft.com/en-us/azure/synapse-analytics/media/overview-what-is/synapse-architecture.png">
+Azure Synapse is an enterprise analytics service that accelerates time to insight across data warehouses and big data systems. Azure Synapse brings together the best of SQL technologies used in enterprise data warehousing, Spark technologies used for big data, Data Explorer for log and time series analytics, Pipelines for data integration and ETL/ELT, and deep integration with other Azure services such as Power BI, CosmosDB, and AzureML.
+
+For a deeper overview of Azure Synapse read this MS Learn article <a href="https://learn.microsoft.com/en-us/azure/synapse-analytics/overview-what-is">Azure Synapse Overview - What is Azure Synapse?</a>
+
+<p></p>
+<p style="border-bottom: 1px solid lightgrey;"></p>
+<p></p>
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/owl.png?raw=true"><b>For Further Study</b></p>
 <ul>
