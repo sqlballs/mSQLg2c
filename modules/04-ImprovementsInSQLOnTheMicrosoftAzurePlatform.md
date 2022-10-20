@@ -33,7 +33,7 @@ For consisitency, they are continuing their evaluation using the same categories
 The Microsoft Azure platform is updated on a continuous basis. It is difficult to pinpoint a time for new improvements, so WideWorld Importers is focusing on the current state of Microsoft Azure, with an eye on some of the larger improvements that have been made recently.
 <p></p>
 
-> Since Microsoft Azure and the Azure Data Platform are constantly updated, there are improvements that are not included in this Module. You can keep track of these changes in a few locations, such as the <a href="https://azure.microsoft.com/en-us/updates/">Azure Updates feed</a>, the <a href="https://learn.microsoft.com/en-us/azure/azure-sql/database/doc-changes-updates-release-notes-whats-new?view=azuresql">Azure SQL Database "What's New" page<a></a>, and the <a href="https://www.youtube.com/results?search_query=data+exposed">Data Exposed video channel</a>.
+> Since Microsoft Azure and the Azure Data Platform are constantly updated, there are improvements that are not included in this Module. You can keep track of these changes in a few locations, such as the <a href="https://azure.microsoft.com/en-us/updates/">Azure Updates feed</a>, the <a href="https://learn.microsoft.com/en-us/azure/azure-sql/database/doc-changes-updates-release-notes-whats-new?view=azuresql">Azure SQL Database "What's New" page<a></a>, and the <a href="https://www.youtube.com/results?search_query=data+exposed">Data Exposed video channel</a>, as well as the <a href="https://techcommunity.microsoft.com/t5/azure-sql-blog/azure-sql-news-update-a-year-in-review/ba-p/3034023">"Year In Review" Posts on the Azure SQL Blog</a>.
 
 Wide World Importers does have a basic understanding of the Microsoft Azure Platform, and has deployed database offerings in the past. If you are new to these topics, consult the following references:
 <p></p>
@@ -49,229 +49,218 @@ Microsoft Azure has three basic deployment options for a SQL Server database. Al
 <img src="https://github.com/microsoft/sqlworkshops-azuresqllabs/blob/master/graphics/azuresql-overview.png?raw=true" width=800>
 <p></p>
 
-WideWorld Importers has decided to take their Data Estate audit of the applications they have and decide if it is a candidate for Microsoft Azure, and which of these workloads requires a higher level of control, and which are better suited to a more fully managed environment. 
+WideWorld Importers has decided to take their Data Estate audit of the applications they have and decide if it is a candidate for Microsoft Azure, and which of these workloads requires a higher level of control, and which are better suited to a more fully managed environment.
 
 <h4>SQL Server on Microsoft Azure Virtual Machines</h4>
-As <a href="https://github.com/sqlballs/mSQLg2c/blob/main/modules/03-SQLServerImprovements.md#3.1">you learned in the last Module, SQL Server can be installed directly on a Virtual Machine environment</a> just as it is on bare metal hardware, with a few considerations. This provides the highest level of control and responsibility - you own and control everything from the operating system to the installation of SQL Server. You can choose various Microsoft Windows or Linux offerings for your installation of SQL Server. 
+As <a href="https://github.com/sqlballs/mSQLg2c/blob/main/modules/03-SQLServerImprovements.md#3.1">you learned in the last Module, SQL Server can be installed directly on a Virtual Machine environment</a> just as it is on bare metal hardware, with a few considerations. This provides the highest level of control and responsibility - you own and control everything from the operating system to the installation of SQL Server. You can choose various Microsoft Windows or Linux offerings for your installation of SQL Server.
 
 Microsoft Azure provides a huge array of Virtual Machine sizes, configurations, and licensing (or no licensing) options. You can <a href="https://azure.microsoft.com/en-us/pricing/vm-selector/">find a sizing tool at this reference</a>.
 
-Azure SQL VMs don't have specific service tiers, but there are decisions to be made around which images to choose, how to configure storage and what sizes, etc. This isn't the focus of this workshop, but if you're considering Azure SQL VMs, you'll want to review the [guidance on images to choose from](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview), the [quick checklist](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-performance) to obtain optimal performance of Azure SQL VMs, and the guidance for [storage configuration](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-storage-configuration).  
+After you select a Microsoft Azure Virtual Machine that fits your needs, you can install SQL Server Instances on it like any other Virtual Machine environment. Using Azure Virtual Machines gives you all of the advantages of the Azure Platform, such as scaling storage quickly, rapid backup and restore operations, cloning systems, scripted and automated deployments, flexible networking into subnets and Network Security Groups, global regions for deployments, extensive logging, and the Microsoft Defender security environment, <a href="https://learn.microsoft.com/en-us/azure/virtual-machines/">and many other advantages</a>.
 
-Recently, [Resource Provider](http://www.aka.ms/sqlvm_rp_documentation) was [announced](http://www.aka.ms/sqlvm_rp), which brings the functionality of Azure Marketplace images to SQL Server instances self-installed on Azure VMs.  
+Once you've installed SQL Server on a Microsoft Azure Virtual Machine, you can register the installation with the <i>Azure Resource Provider</i> system which enhances the management, monitoring and other aspects of Microsoft Azure for your instance. You can <a href="https://techcommunity.microsoft.com/t5/sql-server-blog/benefit-from-resource-provider-registration-when-self-installing/ba-p/742794">learn more about that process at this reference</a>.
 
-> Note: If you're specifically looking at SQL Server on RHEL Azure VMs, there's a full operations guide available [here](https://azure.microsoft.com/en-us/resources/sql-server-on-rhel-azure-vms-operations-guide/
-).  
+While you can install SQL Server on a Virtual Machine, Microsoft Azure has multiple sizes, operating systems and more with SQL Server pre-installed, all with pay-as-you-go or license migration options. You can <a href="https://learn.microsoft.com/en-us/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview?view=azuresql">learn more about these deployments at this reference</a>.
+
+<p></p>
+<img src="./graphics/marketplace.png" width=800>
+<p></p>
+
+Once you have your image selected, you can <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-performance">find a checklist to learn how to implement optimal performance of your Virtual Machines at this reference</a>, and you can find <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-storage-configuration">guidance for proper storage configurations for SQL Server on Azure Virtual Machiness at this reference</a>.  
+
+> If you are evaluating SQL Server on Red Hat Linux (RHEL) Azure VMs, you can <a href="https://azure.microsoft.com/en-us/resources/sql-server-on-rhel-azure-vms-operations-guide/">find an operations guide at this reference</a>. 
   
-> Note: In an earlier module of this workshop, you learned about some of the problems SQL Server 2019 is solving. The same applies in an Azure SQL VM (if you choose 2019 as the target).  
+<h4>SQL Server Managed Instance</h4>
+For the next level of control, WideWorld Importers has decided some workloads require the broadest SQL Server Instance database engine compatibility with all the benefits of a fully managed and evergreen platform as a service. Azure SQL Managed Instance has near 100% compatibility with the latest SQL Server (Enterprise Edition) database engine, providing a native virtual network (VNet) implementation that addresses common security concerns, and a business model favorable for existing SQL Server customers. 
 
-<h3>SQL Server Managed Instance</h3>
+SQL Managed Instance allows you to "lift and shift" on-premises applications to the cloud with minimal application and database changes. Azure SQL Managed Instance preserves all PaaS capabilities (automatic patching and version updates, automated backups, high availability) that drastically reduce management overhead. It can also be used as a Disaster Recovery (DR) site, among many other interoperations with on-premises and in-cloud data systems. These advantages will be discussed in the next Module.
 
-Azure SQL Managed Instance is the intelligent, scalable cloud database service that combines the broadest SQL Server database engine compatibility with all the benefits of a fully managed and evergreen platform as a service. SQL Managed Instance has near 100% compatibility with the latest SQL Server (Enterprise Edition) database engine, providing a native virtual network (VNet) implementation that addresses common security concerns, and a business model favorable for existing SQL Server customers. SQL Managed Instance allows existing SQL Server customers to lift and shift their on-premises applications to the cloud with minimal application and database changes. At the same time, SQL Managed Instance preserves all PaaS capabilities (automatic patching and version updates, automated backups, high availability) that drastically reduce management overhead and TCO.
+<p></p>
+<img src="https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/media/sql-managed-instance-paas-overview/key-features.png?view=azuresql" width=600>
+<p></p>
+
+Several <a href="https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/doc-changes-updates-release-notes-whats-new?view=azuresql#general-availability-ga">new improvements are announced for the latest release of SQL Managed Instance</a>, including:
+
+- <a href="https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/service-endpoint-policies-configure?view=azuresql">Endpoint policies</a> allow you to configure which Azure Storage accounts can be accessed from a SQL Managed Instance subnet. Grants an extra layer of protection against inadvertent or malicious data exfiltration
+- <a href="https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/instance-pools-overview?view=azuresql">Instance pools</a> are a convenient and cost-efficient way to migrate smaller SQL Server instances to the cloud
+- <a href="https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/managed-instance-link-feature-overview?view=azuresql">Managed Instance link</a> gives you an online replication of SQL Server databases hosted anywhere to Azure SQL Managed Instance
+- <a href="https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/managed-instance-link-feature-overview?view=azuresql">Maintenance window advance notifications for databases</a> allows you to configure a non-default maintenance window, and recieve advanced notifications of maintenance
+- <a href="https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/log-replay-service-migrate?view=azuresql">Migrate with Log Replay Service</a> allows you to migrate databases from SQL Server to SQL Managed Instance by using Log Replay Service
+- <a href="https://learn.microsoft.com/en-us/sql/azure-data-studio/extensions/sql-database-project-extension-sdk-style-projects">You can now use Microsoft.Build.Sql for SDK-style SQL projects</a> in the SQL Database Projects extension in Azure Data Studio or VS Code. SDK-style SQL projects are especially advantageous for applications shipped through pipelines or built in cross-platform environments
+- <a href="https://learn.microsoft.com/en-us/sql/database-engine/configure-windows/sql-server-service-broker">There is new support for cross-instance message exchange</a> using Service Broker on Azure SQL Managed Instance
+- <a href="https://learn.microsoft.com/en-us/sql/azure-data-studio/extensions/sql-database-project-extension">A new SQL Database Projects extension</a> allow you to develop databases for Azure SQL Database with Azure Data Studio and VS Code. A SQL project is a local representation of SQL objects that comprise the schema for a single database, such as tables, stored procedures, or functions
+- <a href="https://learn.microsoft.com/en-us/azure/azure-monitor/insights/sql-insights-overview">SQL Insights is a comprehensive solution</a> for monitoring any product in the Azure SQL family. SQL Insights uses dynamic management views to expose the data you need to monitor health, diagnose problems, and tune performance
+- <a href="https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/replication-transactional-overview?view=azuresql">Transactional Replication improvements</a> allow you to replicate the changes from your tables into other databases in SQL Managed Instance, SQL Database, or SQL Server. You can also update your tables when some rows are changed in other instances of SQL Managed Instance or SQL Server
+- <a href="https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/threat-detection-configure?view=azuresql">New threat detections</a> notifies you of security threats detected to your database
+
+You can <a href="https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview?view=azuresql">learn more about Azure SQL Managed Instance at this reference</a>.
 
 <h3>Azure SQL Database</h3>
+WideWorld Importers has now reviewed the highest level of control and responsibility (Azure Virtual Machines), and then evaluated abstracting the platform, operating system, and many of the responsibilities for the SQL Server deployment (Azure SQL Managed Instance). Using the Data Estate Audit process from the first Module, they find they are investing more heavily in web-based applications, not only for customers, but for some internal applications as well. 
 
-For Azure SQL Database, there are several options and tiers available, and the choices will depend on the scenario.  
+<p></p>
+<img width="600" src="https://github.com/microsoft/sqlworkshops-bdc/blob/master/graphics/WWI-001.png?raw=true">
+<p></p>
 
-There are a few main decisions to be made, which will be explored next.    
+They want the highest level of compatibility for the databases these applications use, but they do not want to stand up more SQL Server Instances, or further task the data professionals to create and manage databases. They do want automatic backups, elastic scale, automatic tuning (wherever possible) and geographic flexibility. They would like to keep the option of moving any of these databases to their other Instances or deployments. 
 
-*Decision 1: Choose the purchasing model*  
-You have two options, [virtual core (vCore)-based](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers-vcore) (recommended) or [Database transaction unit (DTU)-based](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers-dtu
-).     
+<p></p>
+Azure SQL Database is a fully managed platform as a service (PaaS) database engine that handles most of the database management functions such as upgrading, patching, backups, and monitoring without user involvement. Azure SQL Database is always running on the latest stable version of the SQL Server database engine and patched OS with 99.99% availability. PaaS capabilities built into Azure SQL Database enable you to focus on the domain-specific database administration and optimization activities that are critical.
 
-The vCore-based model is recommended because it allows you to independently choose compute and storage resources, while the DTU-based model is a bundled measure of compute, storage and I/O resources, which means you have less control over paying only for what you need. This model also allows you to use [Azure Hybrid Benefit for SQL Server](https://azure.microsoft.com/pricing/hybrid-benefit/) to gain cost savings. In the [vCore model](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers-vcore), you pay for:  
+With Azure SQL Database, you can create a highly available and high-performance data storage layer for the applications and solutions in Azure. SQL Database works with a variety of modern cloud applications because it enables you to process both relational data and non-relational structures, such as graphs, JSON, spatial, and XML.
 
-* Compute resources (the service tier + the number of vCores and the amount of memory + the generation of hardware).
-* The type and amount of data and log storage.
-* Backup storage ([read-access, geo-redundant storage (RA-GRS)](https://docs.microsoft.com/en-us/azure/storage/common/storage-designing-ha-apps-with-ragrs)).  
+Azure SQL Database is based on the latest stable version of the Microsoft SQL Server database engine. You can use advanced query processing features, such as high-performance in-memory technologies and intelligent query processing. In fact, the newest capabilities of SQL Server are released first to Azure SQL Database, and then to SQL Server itself. You get the newest SQL Server capabilities with no overhead for patching or upgrading, tested across millions of databases.
 
-For the purposes of this workshop, we'll focus on the vCore purchasing model (recommended), but you can [compare vCores and DTUs here](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-purchase-models
-).
+SQL Database enables you to easily define and scale performance within two different purchasing models: a vCore-based purchasing model and a DTU-based purchasing model. SQL Database is a fully managed service that has built-in high availability, backups, and other common maintenance operations. Microsoft handles all patching and updating of the SQL and operating system code. You don't have to manage the underlying infrastructure.
 
-*Decision 2: Choose service tier for performance and availability*  
-There are three tiers available in the vCore model for Azure SQL Database:
-* **[General purpose](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tier-general-purpose)**: Most business workloads. Offers budget-oriented, balanced, and scalable compute and storage options.
-* **[Business critical](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tier-business-critical)**: Business applications with low-latency response requirements. Offers highest resilience to failures by using several isolated replicas. This is the only tier that can leverage [in-memory OLTP](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-in-memory) to improve performance.
-* **[Hyperscale](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tier-hyperscale)**: Most business workloads with highly scalable storage and read-scale requirements. *Currently only available for single databases, not managed instances*. We'll talk more about this in separate section specifically for Hyperscale.
+In addition, WideWorld Importers has learned that their <a href="https://learn.microsoft.com/en-us/azure/azure-sql/database/local-dev-experience-sql-database-emulator?view=azuresql">developers can each have a local running instance of the Azure SQL Database offering in a local emulator</a>. This allows each developer to follow the newly established DevOps process they are setting up in the IT department.
 
-A member of the Product Group recently released a [blog](https://azure.microsoft.com/en-gb/blog/understanding-and-leveraging-azure-sql-database-sla/) and [video](https://www.youtube.com/watch?v=l7FUNJd5TSE) explaining the SLA (service level agreements that set an expectation for uptime and performance). This resource will help you make an informed decision about which tier to move to.  
+> The Azure SQL Platform is constantly evolving. You can <a href="https://learn.microsoft.com/en-us/azure/azure-sql/database/doc-changes-updates-release-notes-whats-new?view=azuresql">find a list of the latest improvements at this reference</a>.
 
-For a deeper explanation between the three tiers (including scenarios), you can also refer to the [service-tier characteristics](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers-vcore#service-tier-characteristics) in the documentation.  
+As WideWorld Importers works through the process of evaluating workloads for Azure SQL Database, they are faced with various choices and decisions.
 
-*Decision 3: Provisioned or serverless compute?*  
-If you choose **General Purpose within Single databases** and the **vCore-based model**, you have an additional decision to make regarding the compute that you pay for:
-* **Provisioned compute** is meant for more regular usage patterns with higher average compute utilization over time, or multiple databases using elastic pools. 
-* **Serverless compute** is meant for intermittent, unpredictable usage with lower average compute utilization over time. Serverless has auto-pause and resume capabilities (with a time delay you set), meaning when your database is paused, you only pay for storage. 
-![Serverless Compute Analysis](https://learn.microsoft.com/en-us/azure/azure-sql/database/media/serverless-tier-overview/serverless-billing.png?view=azuresql)
+<b>Decision 1: The purchasing model for optimal cost management</b>  
+There are two options for the cost-model in Azure SQL Databases: <a href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers-vcore">Virtual core (vCore)-based deployments (recommended)</a> or <a href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers-dtu
+">Database transaction unit (DTU)-based pricing</a>.
 
-For a deeper explanation between the two compute options (including scenarios), you can refer to the detailed [comparison in the documentation](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-serverless#comparison-with-provisioned-compute-tier).  
+The vCore-based model is recommended because it allows you to independently choose compute and storage resources, while the DTU-based model is a bundled measure of compute, storage and I/O resources, which means you have less control over paying only for what you need. This model also allows you to use the <a href="https://azure.microsoft.com/pricing/hybrid-benefit/">Azure Hybrid Benefit for SQL Server</a> for additional cost savings. In the <a href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers-vcore">vCore model</a>, your costs include:  
 
-> If you're looking for compute cost saving opportunities, you can prepay for compute resources with [Azure SQL Database reserved capacity](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-reserved-capacity).
+- Compute resources (the service tier + the number of vCores and the amount of memory + the generation of hardware)
+- The type and amount of data and log storage
+- Backup storage (<a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-designing-ha-apps-with-ragrs">such as read-access, geo-redundant storage (RA-GRS)</a>). 
+  
+> For the purposes of this workshop, we'll focus on the vCore purchasing model (recommended), but you can <a href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-purchase-models">compare vCores and DTUs at this reference</a>.
 
-*Decision 4: Choose hardware generation*  
-The vCore model lets you choose the generation of hardware:  
-* **Gen4**: Up to 24 logical CPUs based on Intel E5-2673 v3 (Haswell) 2.4-GHz processors, vCore = 1 PP (physical core), 7 GB per core, attached SSD
-* **Gen5**: Up to 80 logical CPUs based on Intel E5-2673 v4 (Broadwell) 2.3-GHz processors, vCore = 1 LP (hyper-thread), 5.1 GB per core, fast eNVM SSD  
+<b>Decision 2: The service tier for performance and availability</b>
+There are three <i>tiers</i> available in the vCore model for Azure SQL Database:
+ - <a href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tier-general-purpose">General purpose</a>:  Suitable for most business workloads. Offers budget-oriented, balanced, and scalable compute and storage options
+ - <a href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tier-business-critical">Business critical</a> - Business applications with low-latency response requirements. Offers highest resilience to failures by using several isolated replicas. This is the only tier that can leverage <a href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-in-memory">in-memory OLTP to improve performance</a>
+- <a href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tier-hyperscale">Hyperscale</a>: For business workloads with highly scalable storage and read-scale requirements
 
-Basically, Gen4 hardware offers substantially more memory per vCore. However, Gen5 hardware allows you to scale up compute resources much higher. 
+You can find a <a href="https://azure.microsoft.com/en-gb/blog/understanding-and-leveraging-azure-sql-database-sla/">discussion of the service level agreements that set an expectation for uptime and performance at this reference</a>. This resource will help you make an informed decision about which tier to use. A <a href="https://www.youtube.com/watch?v=l7FUNJd5TSE">video discussion is available at this reference</a>.
 
-> Note: If you choose General Purpose within Single databases and want to use the serverless compute tier, Gen5 hardware is the only option.  
+For a deeper explanation between the three tiers (including scenarios), you can also see <a href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers-vcore#service-tier-characteristics">this referfence on the service-tier characteristics</a>.
 
-<h3>Azure SQL Database Hyperscale</h3>
-<img src="https://learn.microsoft.com/en-us/azure/azure-sql/database/media/service-tier-hyperscale/hyperscale-architecture.png?view=azuresql">
+<b>Decision 3: The provisioning model for best use patterns</b> 
+If you choose the <i>General Purpose within Single databases</i> and the <i>vCore-based model</i>, you have an additional decision to make regarding the compute costs:
+
+- <i>Provisioned compute</i> is designed for regular usage patterns with higher average compute utilization over time, or multiple databases using elastic pools
+- <i>Serverless compute</i> is designed for intermittent, unpredictable usage with lower average compute utilization over time. Serverless has auto-pause and resume capabilities (with a time delay you set), meaning when your database is paused, costs involve storage
+
+<p></p>
+<img src="https://learn.microsoft.com/en-us/azure/azure-sql/database/media/serverless-tier-overview/serverless-billing.png?view=azuresql" width=300>
+<p></p>
+
+For a deeper explanation between the two compute options (including scenarios), you can <a href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-serverless#comparison-with-provisioned-compute-tier">find a detailed comparison in the documentation at this reference</a>. If you're looking for compute cost saving opportunities, you can prepay for compute resources with Azure SQL Database reserved capacity. You can <a href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-reserved-capacity">learn more at this reference</a>.
+
+<b>Decision 4: Choose the hardware generation for proper sizing</b>
+The vCore model lets you choose the generation of hardware you want to run the offering on:
+- Gen4: Up to 24 logical CPUs based on Intel E5-2673 v3 (Haswell) 2.4-GHz processors, vCore = 1 PP (physical core), 7 GB per core, attached SSD
+- Gen5: Up to 80 logical CPUs based on Intel E5-2673 v4 (Broadwell) 2.3-GHz processors, vCore = 1 LP (hyper-thread), 5.1 GB per core, fast eNVM SSD  
+
+The Gen4 hardware offers substantially more memory per vCore. However, Gen5 hardware allows you to scale up compute resources much higher.
+
+> If you choose General Purpose within Single databases and want to use the serverless compute tier, Gen5 hardware is the only option
+
+<h4>Azure SQL Database Hyperscale</h4>
+WideWorld Importers does have one mobile application that they anticipate to have extremely high demand, throughput, and size requirements. 
+
 The Hyperscale service tier in Azure SQL Database is the newest service tier in the vCore-based purchasing model. This service tier is a highly scalable storage and compute performance tier that uses the Azure architecture to scale out the storage and compute resources for an Azure SQL Database substantially beyond the limits available for the General Purpose and Business Critical service tiers.
 
-<p>
+<p></p>
+<img src="https://learn.microsoft.com/en-us/azure/azure-sql/database/media/service-tier-hyperscale/hyperscale-architecture.png?view=azuresql" width=800>
+<p></p>
 
+You can <a href="https://learn.microsoft.com/en-us/azure/azure-sql/database/service-tier-hyperscale?view=azuresql">learn more about Azure SQL Hyperscale at this reference</a>.
 
+There are many options and decisions for moving a workload to the Azure SQL offerings.  The Azure SQL environment provides flexibility so you get exactly what you need. You can <a href="https://azure.microsoft.com/en-us/pricing/details/sql-database/managed/">find a summary of the service tier options with some additional considerations for cost at this reference</a>.
 
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Review Azure SQL Hyperscale architecture</b></p>
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: Install the Azure SQL Database Emulator</b></p>
+In this Activity you will Install the Azure SQL Database Emulator.
 
-Gain a fuller understanding of the compute, page server, log service, and how Hyperscale works with Azure storage. 
+<p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
-<p><b>In this activity we will review the architecture of Azure SQL Hyperscale</b></p>
-
-Click on the following <a href="https://learn.microsoft.com/en-us/azure/azure-sql/database/hyperscale-architecture?view=azuresql#hyperscale-architecture-overview">Link</a>.
-
-
-<p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Review these sections of the document</b></p>
-
-- Hyperscale architecture overview
-- Compute
-- Page server
-- Log service
-- Azure storage
-
-### *Summary*  
-As you've hopefully noticed, while there are a lot of options, Azure is able to provide flexibility so you get exactly what you need, nothing less. A summary of the service tier options with some additional considerations is included below, but be sure to check out [pricing information](https://azure.microsoft.com/en-us/pricing/details/sql-database/managed/) for the latest details.
+- Open <a href="https://learn.microsoft.com/en-us/azure/azure-sql/database/local-dev-experience-set-up-dev-environment?view=azuresql&tabs=vscode">this reference</a>
+- If time and resrouces permit, install the components as listed in the steps at that reference
+- If you do not have the resources on your system, or you do not have the time to follow those steps, review with the instructor and watch their demonstration of the process
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
-
-<p style="border-bottom: 1px solid lightgrey;"></p>
-
-
 
 <h2 id="4.2"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">4.2 Manageability</h2>
+While managing SQL Server in the cloud is somewhat different than managing on premises instances, the tools and methodologies that you will use similar to the tools and methodologies that you used in your on-premises environment, whether it is a graphical user interface (GUI) or command-line tool.
 
-While managing SQL Server in the cloud is somewhat different than managing on premises instances, the tools and methodologies that you will use are mostly the same tools and methodologies that you used in your on premises environment. In this module, we'll walk through some of the tools. Some you will be familiar with, and some will be new.
+You can use SQL Server Management Studio, SQLCMD, and the other on-premises tools you reviewed in the last Module for on-premises tooling. In this Module, you will focus on the Azure Portal, the Azure Data Studio tool, and the Azure Command-line Interface (<i>az</i> commands in a cross-platform tool).
 
-<h3>Tools</h3>
+<b>The Microsoft Azure Portal</b>
+The Microsoft Azure Portal is used to deploy, manage, monitor, or delete resources in your subscription. It has sections, or "blades" for each of these operations and can be accessed with all major web browsers as well as cell phones. You can also set up various "Dashboards" to show your resrouces and other information.
 
-Depending on the deployment option of Azure SQL you choose, the manageability tools are the same or very similar to the tools you are already used to. In this section, we'll go through the different options show an overview of the tool, what you would use it for, and what tool it would be comparable to in your on premises environment.
+<p></p>
+<img src="https://azurecomcdn.azureedge.net/cvt-2a7918f3835dd5b76499d5f13b9b0bcf622c701196cff0345dcb09695a8a9b9c/images/shared/footer/portal-dashboard-full.png" width=800>
+<p></p>
 
-<h4>Azure Portal</h4>
+You can <a href="https://learn.microsoft.com/en-us/azure/azure-portal/azure-portal-overview">learn more about the Azure Portal at this reference</a>.
 
-![Azure Portal](../modules/graphics/azure_portal.png)
+<b>Azure Data Studio</b>
+Azure Data Studio is a cross-platform database tool for data professionals using on-premises and cloud data platforms on Windows, macOS, and Linux. Azure Data Studio offers a modern editor experience with IntelliSense, code snippets, source control integration, and an integrated terminal. It's engineered with the data platform user in mind, with built-in charting of query result sets and customizable dashboards.
 
-The Azure Portal is the first stop in managing your Azure environment. The portal to allows you to deploy, manage, monitor, or delete resources in your subscription. From a hands-on perspective, it is one of the most powerful single tools in your "tool belt".
-
-* [Built-in monitoring](https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-azure-sql) capabilities enable you to get the insights into performance of your databases and workload, and troubleshoot the performance issues.
-
-<h4>Azure Data Studio</h4>
-
-![Azure Data Studio](../modules/graphics/azure_data_studio.png)
-
-Azure Data Studio is a highly extensible tool that helps developers to manage and develop against multiple data processing and storage engines. Its versatility through the use of application extensions allows it to be as useful as the developer can make it.
-
-For instance, there are extensions for helping developers to migrate to Azure SQL, develop "clean" looking code, monitor and manage Azure Synapse, work on PostgreSQL instances, or even develop using Jupyter Notebooks
-
-
-<h4>Jupyter Notebooks</h4>
-
-A Jupyter *Notebook* is a web-page-based interface consisting of *Cells* that can contain text (using the Markdown specification) or code. The code depends on the Kernel that has been installed for the Notebook. Traditionally, Python and R Kernels are installed by default. 
-
-*Notebook Servers* run **.ipynb** files (the Notebooks). You can install a Notebook Server locally, remotely, or you can use something like <a href="https://notebooks.azure.com" target="_blank">Azure Notebooks</a> which provides a free, quick, easy way to work with and share Notebooks. (It's all a bit like a specific kind of web server). 
-
-*Libraries* are a container on your Notebook server where you can have Notebooks, code, directories and other files. 
-
-Notebooks are JSON files that contain areas called *Cells*, which have text or code in them. When you double-click a Notebook, the Notebook server renders and can display text or run code, such as R or Python, using a *Kernel*. Cells can hold text (such as *Markdown*, *HTML*, or *LaTeX*) which you can mix together, or Code. Double-click a Cell in a Notebook to edit it, and then click the "Run" button to render what you typed. Code runs and displays an output below the cell. You can toggle the result for code to show or hide it.
-
-*Markdown* is a simplified markup language for text. Use it for general text and simple graphics. You can <a href="https://www.markdowntutorial.com/" target="_blank">read more about Markdown here</a>, and <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" target="_blank">there's a great cheat-sheet on Markdown here</a>. 
-
-You'll use Notebooks within Azure Data Studio to work with Spark, which you'll learn about in a moment. Learn <a href="https://jupyter-notebook.readthedocs.io/en/stable/" target="_blank">more about Jupyter Notebooks here</a>.  
-
-<h4>Azure Data Studio</h4>
-
-*Azure Data Studio* is a cross-platform database tool to manage and program on-premises and cloud data platforms on Windows, MacOS, and Linux. It is extensible, and one of these extensions is how you work with Azure Data Studio code and Jupyter Notebooks. It is built on the Visual Studio Code shell. The editor in Azure Data Studio has Intellisense, code snippets, source control integration, and an integrated terminal. 
-
-If you have not completed the prerequisites for this workshop you can <a href="https://docs.microsoft.com/en-us/sql/azure-data-studio/download?view=sql-server-2017
-" target="_blank">install Azure Data Studio from this location</a>, and you will install the Extension to work with SQL Server big data clusters in a future module</a>.
+<p></p>
+<img src="https://cloudblogs.microsoft.com/uploads/prod/sites/32/2018/09/Azure-data-studio-for-sql-server-screenshot.png" width=800>
+<p></p>
 
 You can <a href="https://docs.microsoft.com/en-us/sql/azure-data-studio/what-is?view=sql-server-2017 
 " target="_blank">learn more about Azure Data Studio here</a>.
 
-<br>
-<p><img style="height: 300; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"  src="../graphics/ads.png"></p> 	 	
-<br>
+Azure Data Studio is a highly extensible tool that helps developers to manage and develop against multiple data processing and storage engines. Its versatility through the use of application extensions allows it to be as useful as the developer can make it. Multiple extensions exist for helping developers to migrate to Azure SQL, develop "clean" looking code, monitor and manage Azure Synapse, work on PostgreSQL instances, or even develop using Jupyter Notebooks
 
-You'll explore further operations with the Azure Data Studio in the <i>Operationalization</i> module.
+<i>Jupyter Notebooks</i>
+A Jupyter <i>Notebook</i> is a web-page-based interface consisting of *Cells* that can contain text (using the Markdown specification) or code. The code depends on the Kernel that has been installed for the Notebook. Traditionally, Python and R Kernels are installed by default. Notebook Servers run <i>.ipynb</i> files (the Notebooks). 
 
-<br>
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/point1.png"><b>Activity: Practice with Notebooks</b></p>
+Notebooks are JSON files that contain areas called <i>Cells</i>, which have text or code in them. When you double-click a Notebook, the Notebook server renders and can display text or run code, such as R or Python, using a <i>Kernel</i>. Cells can hold text (such as Markdown, HTML, or LaTeX) which you can mix together, or Code. Double-click a Cell in a Notebook to edit it, and then click the "Run" button to render what you typed. Code runs and displays an output below the cell. You can toggle the result for code to show or hide it.
 
-<p><b>Steps</b></p>
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/checkbox.png"><a href="https://notebooks.azure.com/BuckWoodyNoteBooks/projects/AzureNotebooks" target="_blank">Open this reference, and review the instructions you see there</a>. You can clone this Notebook to work with it later.</p>
+<i>Markdown</i> is a simplified markup language for text. Use it for general text and simple graphics. You can <a href="https://www.markdowntutorial.com/" target="_blank">read more about Markdown here</a>, and <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" target="_blank">there's a great cheat-sheet on Markdown here</a>. 
 
-<br>
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/point1.png"><b>Activity: Azure Data Studio Notebooks Overview</b></p>
+You'll use Notebooks within Azure Data Studio to work with SQL Server on-premises, in-cloud, or in the new Development Environment you set up in the last Activity. You ca learn <a href="https://jupyter-notebook.readthedocs.io/en/stable/" target="_blank">more about Jupyter Notebooks here</a>.  
 
-<p><b>Steps</b></p>
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/checkbox.png"><a href="https://docs.microsoft.com/en-us/sql/azure-data-studio/sql-notebooks?view=sql-server-2017" target="_blank">Open this reference, and read the tutorial - you do not have to follow the steps, but you can if time permits.</p>
+<b>Azure Command-Line Interface</b>
+You can work with all of your Azure properties using a command-line tool. The Azure command-line interface (Azure CLI) is a set of commands used to create and manage Azure resources. The Azure CLI is available across Azure services and is designed to get you working quickly with Azure, with an emphasis on automation. It runs on Windows, Linux, and macOS, and there is also a CLI interface in the Azure Portal and it's available as an extension in the Azure Data Studio tool.
 
+<p></p>
+<img src="https://techcommunity.microsoft.com/t5/image/serverpage/image-id/170990i4AB1FF244BCF336E?v=1.0" width=600>
+<p></p>
+
+You can <a href="https://learn.microsoft.com/en-us/cli/azure/">learn more about the Azure Command-Line Iterface at this reference</a>.
 
 <br>
 <p style="border-bottom: 1px solid lightgrey;"></p>
 <br>
 
-
-
-<h4>Command-Line Utilities</h4>
-
-##### Azure CLI
-
-The Azure command-line interface ([Azure CLI](https://learn.microsoft.com/en-us/cli/azure/)) is a set of commands used to create and manage Azure resources. The Azure CLI is available across Azure services and is designed to get you working quickly with Azure, with an emphasis on automation. 
-
-With this utility, developers can do almost everything that can be done in the Azure portal, and codify it so that it can be automated for consistent and repeatable execution.
-
-##### SQLCMD ?
-
-SQLCMD is a versatile tool that allows developers to get command line access to SQL Server, without using a tool like Azure Data Studio.
-
-<br>
-
-<br>
-
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: Overview of Azure Data Studio</b></p>
-
-<p><b>Walkthrough of Azure Data Studio and installation guidance</b></p>
-
-Azure Data Studio is a great cross platform management tool for your Azure data services like Azure SQL, Azure Database for Postgres, and Azure Data Explorer. There are also custom extensions for customer to use, or create, to simplify their day-to-day activities.
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: Review the Azure Data Studio Overview</b></p>
+In this Activity you will review the Azure Data Studio tool, and optionally follow along on your local system. 
 
 <p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
-<p><b>Watch the following YouTube Video</p></b>
-
-[Overview of Azure Data Studio](https://www.youtube.com/watch?v=Orv7fptVoUA)
-
-<p><b>Overview of and Install Azure Data Studio</p></b>
-
-[Overview of Azure Data Studio](https://learn.microsoft.com/en-us/sql/azure-data-studio/what-is-azure-data-studio)
-
-[Install Azure Data Studio](https://learn.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio)
-
+- <a href="https://learn.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver16">Install the Azure Data Studio if you have not already done so using this reference</a>
+- Open this reference to <a href="https://www.youtube.com/watch?v=Orv7fptVoUA">review a video walkthrough of the Azure Data Studio tool</a>
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
-
-
 <h2 id="4.3"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">4.3 Availability</h2>
+One of the advantages of the a managed service is the Availability resources you have. WideWorld Importers is very focused on ensuring Business Continuity, and they believe the Microsoft Azure platform can assist with this process. They have reviewed the resources on <a href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-business-continuity">databases and Business Continuity at this reference</a>, and are interested in the "Avaialability Zone" concepts.
 
-Earlier we reviewed some of the key concepts around Availability.  With an understanding of those concepts it is importaint to understand some of the key features you gain in Azure SQL.
+<p></p>
 
-<img src="https://learn.microsoft.com/en-us/azure/availability-zones/media/availability-zones.png">
+> WideWorld Importers is also  interested in the on-premises to Azure and Azure to on-premises links, but will review that as a separate task, which you will cover in the next Module
+<p></p>
 
-* [Azure Availability Zones](https://learn.microsoft.com/en-us/azure/availability-zones/az-overview) are physically separate locations within each Azure region that are tolerant to local failures.
-* [Business continuity](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-business-continuity) enables your business to continue operating in the face of disruption, particularly to its computing infrastructure.
+Azure Availability Zones are physically separate locations within each Azure region that are tolerant to local failures.
+
+<p></p>
+<img src="https://learn.microsoft.com/en-us/azure/availability-zones/media/availability-zones.png" width=600>
+<p></p>
+
+You can <a href="https://learn.microsoft.com/en-us/azure/availability-zones/az-overview">learn more about Azure Availability Zones at this reference</a>.
+
+In addition, the Azure Data Platform offers other advantages:
 
 * [Azure SQL Database High availability](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-high-availability) of Azure SQL Database guarantees your databases are up and running 99.99% of the time, no need to worry about maintenance/downtimes.
 
@@ -280,22 +269,19 @@ Earlier we reviewed some of the key concepts around Availability.  With an under
 * [Automated backups](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-automated-backups) are created and use Azure read-access geo-redundant storage (RA-GRS) to provide geo-redundancy.
 * [Long term backup retention](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-long-term-retention) enables you to store specific full databases for up to 10 years.
 * [Geo-replication](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-active-geo-replication) by creating readable replicas of your database in the same or different Azure Region.
-![Active Geo Replication](https://learn.microsoft.com/en-us/azure/azure-sql/database/media/active-geo-replication-overview/geo-replication-updated.png?view=azuresql)
 
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: Azure SQL Availability</b></p>
+<p></p>
+<img src="https://learn.microsoft.com/en-us/azure/azure-sql/database/media/active-geo-replication-overview/geo-replication-updated.png?view=azuresql" width=600>
+<p></p>
 
-Watch video from Anna Hoffman and Bob Ward
 
-<p><b>Description</b></p>
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: Review Azure SQL Availability</b></p>
 
-This video will walk you through considerations for when looking at high availability and disaster recovery needs and features in Azure SQL.
+In this Activity you will review a video which walks you through various considerations when evaluating high availability and disaster recovery needs and features in Azure SQL.
 
 <p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
-[Availability Capabilities and Tasks Video](https://www.youtube.com/watch?v=OJVXH_dPAEA
-)
-
-[Azure Docs: High Availability for Azure SQL Database and SQL Managed Instance](https://learn.microsoft.com/en-us/azure/azure-sql/database/high-availability-sla?view=azuresql&tabs=azure-powershell)
+https://www.youtube.com/watch?v=OJVXH_dPAEA
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
