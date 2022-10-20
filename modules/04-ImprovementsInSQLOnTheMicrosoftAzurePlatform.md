@@ -115,7 +115,7 @@ SQL Database enables you to easily define and scale performance within two diffe
 
 In addition, WideWorld Importers has learned that their <a href="https://learn.microsoft.com/en-us/azure/azure-sql/database/local-dev-experience-sql-database-emulator?view=azuresql">developers can each have a local running instance of the Azure SQL Database offering in a local emulator</a>. This allows each developer to follow the newly established DevOps process they are setting up in the IT department.
 
-> The Azure SQL Platform is constantly evolving. You can <a href="https://learn.microsoft.com/en-us/azure/azure-sql/database/doc-changes-updates-release-notes-whats-new?view=azuresql">find a list of the latest improvements at this reference</a>.
+> The Azure SQL Platform is constantly evolving. You can <a href="https://learn.microsoft.com/en-us/azure/azure-sql/database/doc-changes-updates-release-notes-whats-new?view=azuresql">find a list of the latest improvements at this reference</a>. <i>Note that the information that follows is accurate as of 10/23/2022</i>.
 
 As WideWorld Importers works through the process of evaluating workloads for Azure SQL Database, they are faced with various choices and decisions.
 
@@ -276,47 +276,55 @@ In addition, the Azure Data Platform offers other advantages:
 
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: Review Azure SQL Availability</b></p>
-
+<br>
 In this Activity you will review a video which walks you through various considerations when evaluating high availability and disaster recovery needs and features in Azure SQL.
 
 <p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
-https://www.youtube.com/watch?v=OJVXH_dPAEA
+- Navigate to <a href="https://www.youtube.com/watch?v=OJVXH_dPAEA">this reference and watch the resource you find there</a>. Make notes in your class document about which HADR features you need to investigate further.
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
 <h2 id="4.4"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">4.4 Performance</h2>
-
-Azure can feel like a forgien land compared to the familiarity of SQL Server on a VM.  In moments such as that it is importaint to remember that this is the same database engine we have on premise.  The key to performance tuning on premises is the same in Azure.
+Performance tuning in a cloud environment is a shared responsibility between your organization and Microsoft. The Microsoft Azure Platform has multiple automatic tuning features that seamlessly improve performance, but there are several steps in your application design and database implementation steps that you need to consider. 
+<p></p>
+Some of these considerations involve the same tools and processes you use on-premises:
 
 * [Explain estimated and actual query plans.](https://learn.microsoft.com/en-us/training/modules/explore-query-performance-optimization/3-explain-estimated-actual?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.optimize-query-performance-sql-server) The topic of actual versus estimated execution plans can be confusing. The difference is that the actual plan includes runtime statistics that aren't captured in the estimated plan. The operators used, and order of execution will be the same as the estimated plan in nearly all cases. 
 * [The Query Data Store](https://learn.microsoft.com/en-us/training/modules/explore-query-performance-optimization/5-explore-query-store) The SQL Server Query Store is a per-database feature that automatically captures a history of queries, plans, and runtime statistics to simplify performance troubleshooting and query tuning. It also provides insight into database usage patterns and resource consumption. This is on by default in all Azure SQL Databases.
 * [Wait Statistics](https://learn.microsoft.com/en-us/training/modules/evaluate-performance-improvements/2-describe-wait-statistics?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.optimize-query-performance-sql-server) When SQL Server executes any process it must wait for resources.  As that occurs Wait Statistics are accumulated by the SQL OS.  Wait Statistics will tell you what Azure SQL is waiting on.  If it is a hardware wait stat, then you may need to consider increasing your service teir.
+
+Other considerations are available in Azure that are not the same as an on-premises installation of SQL Server:
+
 * [Auto Scaling](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-scale-resources) Azure Serverless database or regular scaling Azure SQL Database, Managed Instance, or Synapse may be key to resolving hardware performance.
 * [Tune and maintain indexes.](https://learn.microsoft.com/en-us/training/modules/evaluate-performance-improvements/3-tune-and-maintain-indexes?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.optimize-query-performance-sql-server) The most common (and most effective) method for tuning T-SQL queries is to evaluate and adjust your indexing strategy.
 * [Automatic tuning](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-automatic-tuning) analyzes your workload and provides you the recommendations that can optimize performance of your applications by adding indexes, removing unused indexes, and automatically fixing the query plan issues.
 * [Built-in intelligence](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-intelligent-insights) automatically identifies the potential issues in your workload and provides you the recommendations that can [help you to fix the problems](https://azure.microsoft.com/en-us/blog/ai-helped-troubleshoot-an-intermittent-sql-database-performance-issue-in-one-day/). 
 
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: Performance Improvements</b></p>
-
-Watch videos
-
-<p><b>Automatic Tuning</b></p>
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: Understand more about the Automatic Tuning processes in Azure SQL</b></p>
 
 Automatic tuning in Azure SQL is a great feature that analyzes your workload and gives recommndations on configuration changes you can make to improve performance. In this video, you are given an overview of the feature.
 
 <p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
- [Improve Performance Tuning with Automatic Tuning](https://www.youtube.com/watch?v=HQantpWg3sg)
-
+ - Open <a href="https://learn.microsoft.com/en-us/azure/azure-sql/database/monitor-tune-overview?view=azuresql">this reference and review the information you see there</a>. Make notes in your class notebook for items you wish to review later.
+ - Open <a href="https://www.youtube.com/watch?v=HQantpWg3sg">this reference and review the information you see there</a>. Make notes in your class notebook for items you wish to review later. 
+ 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
 <h2 id="4.5"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">4.5 Security</h2>
-<img src="https://learn.microsoft.com/en-us/azure/azure-sql/database/media/security-overview/sql-security-layer.png?view=azuresql">
+Like Performance, security in a cloud environment is a shared responsibility. WideWorld Importers wants assurances that the security measures in place for the Microsoft Azure platform are the best possible. 
 
-Security is at the core of everything we do.  There is not just one are of concern for each product but multiple shared capabilities in Azure.
+<p></p>
 
-For an overview of Azure SQL Database and Azure SQL Managed Instance security capabilities review this <a href="https://learn.microsoft.com/en-us/azure/azure-sql/database/security-overview?view=azuresql">MS Learn article.</a> 
+The primary <a href="https://azure.microsoft.com/en-us/explore/trusted-cloud/">resource for Microsoft Azure is at this reference. It addresses the security measures that Microsoft follows, and the compliance and certification standards Azure follows</a>.
+
+> For a <a href="https://learn.microsoft.com/en-us/azure/azure-sql/database/security-overview?view=azuresql">complete overview of Azure SQL Database and Azure SQL Managed Instance security capabilities, review this resource.</a> 
+
+Security is often discussed as a series of "layer", as illustrated in this diagram:
+<img src="https://learn.microsoft.com/en-us/azure/azure-sql/database/media/security-overview/sql-security-layer.png?view=azuresql" width=400>
+
+Each of the following list items address the areas of concern above:
 
 * <b>[Network security](https://learn.microsoft.com/en-us/azure/azure-sql/database/security-overview?view=azuresql#network-security) </b>- To help protect customer data, firewalls prevent network access to the server until access is explicitly granted based on IP address or Azure Virtual network traffic origin.
 
@@ -324,84 +332,82 @@ For an overview of Azure SQL Database and Azure SQL Managed Instance security ca
 
 * <b>[Virtual network firewall rules](https://learn.microsoft.com/en-us/azure/azure-sql/database/security-overview?view=azuresql#virtual-network-firewall-rules)</b> - Virtual network service endpoints extend your virtual network connectivity over the Azure backbone and enable Azure SQL Database to identify the virtual network subnet that traffic originates from. To allow traffic to reach Azure SQL Database, use the SQL service tags to allow outbound traffic through Network Security Groups.
 
+<p></p>
 
 * <b>[Access management](https://learn.microsoft.com/en-us/azure/azure-sql/database/security-overview?view=azuresql#access-management)</b> - Managing databases and servers within Azure is controlled by your portal user account's role assignments. 
 
 * <b>[Authentication](https://learn.microsoft.com/en-us/azure/azure-sql/database/security-overview?view=azuresql#authentication)</b> - Authentication is the process of proving the user is who they claim to be. Azure SQL Database and SQL Managed Instance support SQL authentication and Azure AD authentication. SQL Managed instance additionally supports Windows Authentication for Azure AD principals.
 
-
 * <b>[Authorization](https://learn.microsoft.com/en-us/azure/azure-sql/database/security-overview?view=azuresql#authorization)</b> - Authorization refers to controlling access on resources and commands within a database. This is done by assigning permissions to a user within a database in Azure SQL Database or Azure SQL Managed Instance. Permissions are ideally managed by adding user accounts to database roles and assigning database-level permissions to those roles. Alternatively an individual user can also be granted certain object-level permissions. 
-
 
 * <b>[Row-level security](https://learn.microsoft.com/en-us/azure/azure-sql/database/security-overview?view=azuresql#row-level-security)</b> - Row-Level Security enables customers to control access to rows in a database table based on the characteristics of the user executing a query (for example, group membership or execution context). Row-Level Security can also be used to implement custom Label-based security concepts.
 
-
 * <b>[SQL auditing in Azure Monitor logs and Event Hubs](https://learn.microsoft.com/en-us/azure/azure-sql/database/security-overview?view=azuresql#sql-auditing-in-azure-monitor-logs-and-event-hubs)</b> - SQL Database and SQL Managed Instance auditing tracks database activities and helps maintain compliance with security standards by recording database events to an audit log in a customer-owned Azure storage account. Auditing allows users to monitor ongoing database activities, as well as analyze and investigate historical activity to identify potential threats or suspected abuse and security violations. 
 
-* <b>[Advanced Threat Protection](https://learn.microsoft.com/en-us/azure/azure-sql/database/security-overview?view=azuresql#advanced-threat-protection)</b>Advanced Threat Protection is analyzing your logs to detect unusual behavior and potentially harmful attempts to access or exploit databases. Alerts are created for suspicious activities such as SQL injection, potential data infiltration, and brute force attacks or for anomalies in access patterns to catch privilege escalations and breached credentials use. Alerts are viewed from the Microsoft Defender for Cloud, where the details of the suspicious activities are provided and recommendations for further investigation given along with actions to mitigate the threat. Advanced Threat Protection can be enabled per server for an additional fee. 
+<p></p>
+
+* <b>[Advanced Threat Protection](https://learn.microsoft.com/en-us/azure/azure-sql/database/security-overview?view=azuresql#advanced-threat-protection)</b> - Advanced Threat Protection is analyzing your logs to detect unusual behavior and potentially harmful attempts to access or exploit databases. Alerts are created for suspicious activities such as SQL injection, potential data infiltration, and brute force attacks or for anomalies in access patterns to catch privilege escalations and breached credentials use. Alerts are viewed from the Microsoft Defender for Cloud, where the details of the suspicious activities are provided and recommendations for further investigation given along with actions to mitigate the threat. Advanced Threat Protection can be enabled per server for an additional fee. 
+
+* <b>[Transport Layer Security](https://learn.microsoft.com/en-us/azure/azure-sql/database/security-overview?view=azuresql#transport-layer-security-encryption-in-transit)</b> - SQL Database, SQL Managed Instance, and Azure Synapse Analytics enforce encryption (SSL/TLS) at all times for all connections. This ensures all data is encrypted "in transit" between the client and server irrespective of the setting of Encrypt or TrustServerCertificate in the connection string.
+
+<p></p>
 
 
-* <b>[Transport Layer Security](https://learn.microsoft.com/en-us/azure/azure-sql/database/security-overview?view=azuresql#transport-layer-security-encryption-in-transit)</b>SQL Database, SQL Managed Instance, and Azure Synapse Analytics enforce encryption (SSL/TLS) at all times for all connections. This ensures all data is encrypted "in transit" between the client and server irrespective of the setting of Encrypt or TrustServerCertificate in the connection string.
+* <b>[Transparent Data Encryption (Encryption-at-rest)](https://learn.microsoft.com/en-us/azure/azure-sql/database/security-overview?view=azuresql#transparent-data-encryption-encryption-at-rest)</b> - SQL Database, SQL Managed Instance, and Azure Synapse Analytics enforce encryption (SSL/TLS) at all times for all connections. This ensures all data is encrypted "in transit" between the client and server irrespective of the setting of Encrypt or TrustServerCertificate in the connection string.
 
+* <b>[Key management with Azure Key Vault](https://learn.microsoft.com/en-us/azure/azure-sql/database/security-overview?view=azuresql#key-management-with-azure-key-vault)</b> - Bring Your Own Key (BYOK) support for Transparent Data Encryption (TDE) allows customers to take ownership of key management and rotation using Azure Key Vault, Azure's cloud-based external key management system.
 
-* <b>[Transparent Data Encryption (Encryption-at-rest)](https://learn.microsoft.com/en-us/azure/azure-sql/database/security-overview?view=azuresql#transparent-data-encryption-encryption-at-rest)</b> SQL Database, SQL Managed Instance, and Azure Synapse Analytics enforce encryption (SSL/TLS) at all times for all connections. This ensures all data is encrypted "in transit" between the client and server irrespective of the setting of Encrypt or TrustServerCertificate in the connection string.
+* <b>[Always Encrypted (Encryption-in-use)](https://learn.microsoft.com/en-us/azure/azure-sql/database/security-overview?view=azuresql#always-encrypted-encryption-in-use)</b> - Always Encrypted is a feature designed to protect sensitive data stored in specific database columns from access (for example, credit card numbers, national identification numbers, or data on a need to know basis). This includes database administrators or other privileged users who are authorized to access the database to perform management tasks, but have no business need to access the particular data in the encrypted columns.
 
-* <b>[Key management with Azure Key Vault](https://learn.microsoft.com/en-us/azure/azure-sql/database/security-overview?view=azuresql#key-management-with-azure-key-vault)</b> Bring Your Own Key (BYOK) support for Transparent Data Encryption (TDE) allows customers to take ownership of key management and rotation using Azure Key Vault, Azure's cloud-based external key management system.
+* <b>[Dynamic data masking](https://learn.microsoft.com/en-us/azure/azure-sql/database/security-overview?view=azuresql#dynamic-data-masking)</b> - Dynamic data masking limits sensitive data exposure by masking it to non-privileged users. Dynamic data masking automatically discovers potentially sensitive data in Azure SQL Database and SQL Managed Instance and provides actionable recommendations to mask these fields, with minimal impact to the application layer.
 
-* <b>[Always Encrypted (Encryption-in-use)](https://learn.microsoft.com/en-us/azure/azure-sql/database/security-overview?view=azuresql#always-encrypted-encryption-in-use)</b> Always Encrypted is a feature designed to protect sensitive data stored in specific database columns from access (for example, credit card numbers, national identification numbers, or data on a need to know basis). This includes database administrators or other privileged users who are authorized to access the database to perform management tasks, but have no business need to access the particular data in the encrypted columns.
+* <b>[Data discovery and classification](https://learn.microsoft.com/en-us/azure/azure-sql/database/security-overview?view=azuresql#data-discovery-and-classification)</b> - Data discovery and classification (currently in preview) provides basic capabilities built into Azure SQL Database and SQL Managed Instance for discovering, classifying and labeling the sensitive data in your databases. Discovering and classifying your utmost sensitive data (business/financial, healthcare, personal data, etc.) can play a pivotal role in your organizational Information protection stature
 
-* <b>[Dynamic data masking](https://learn.microsoft.com/en-us/azure/azure-sql/database/security-overview?view=azuresql#dynamic-data-masking)</b> Dynamic data masking limits sensitive data exposure by masking it to non-privileged users. Dynamic data masking automatically discovers potentially sensitive data in Azure SQL Database and SQL Managed Instance and provides actionable recommendations to mask these fields, with minimal impact to the application layer.
+* <b>[Vulnerability assessment](https://learn.microsoft.com/en-us/azure/azure-sql/database/security-overview?view=azuresql#dynamic-data-masking)</b> - Vulnerability assessment is an easy to configure service that can discover, track, and help remediate potential database vulnerabilities with the goal to proactively improve overall database security. Vulnerability assessment (VA) is part of the Microsoft Defender for SQL offering, which is a unified package for advanced SQL security capabilities.
 
-* <b>[Data discovery and classification](https://learn.microsoft.com/en-us/azure/azure-sql/database/security-overview?view=azuresql#data-discovery-and-classification)</b> Data discovery and classification (currently in preview) provides basic capabilities built into Azure SQL Database and SQL Managed Instance for discovering, classifying and labeling the sensitive data in your databases. Discovering and classifying your utmost sensitive data (business/financial, healthcare, personal data, etc.) can play a pivotal role in your organizational Information protection stature
+<p></p>
 
-* <b>[Vulnerability assessment](https://learn.microsoft.com/en-us/azure/azure-sql/database/security-overview?view=azuresql#dynamic-data-masking)</b> Vulnerability assessment is an easy to configure service that can discover, track, and help remediate potential database vulnerabilities with the goal to proactively improve overall database security. Vulnerability assessment (VA) is part of the Microsoft Defender for SQL offering, which is a unified package for advanced SQL security capabilities. 
+* <b>[Virtual Network Service Endpoints](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-service-endpoints-overview)</b> - Extend your virtual network over the Azure networking backbone and identify, and block if need be, traffic from a specific azure virtual network subnet that the traffic is originating from.
 
-
-* <b>[Virtual Network Service Endpoints](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-service-endpoints-overview)</b> extend your virtual network over the Azure networking backbone and identify, and block if need be, traffic from a specific azure virtual network subnet that the traffic is originating from.
-
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: TODO: Activity Name</b></p>
-
-Manage security and Microsoft Defender for Cloud
-
-<p><b>Defender for Cloud</b></p>
-
-Sign into Microsoft Learn on this [link](https://learn.microsoft.com/en-us/training/modules/azure-sql-secure-data/8-exercise-advanced-data-security?ns-enrollment-type=learningpath&ns-enrollment-id=learn.azure-sql-fundamentals).  Complete Unit 8 of 10 Secure your data with Azure SQL.  
-
-<p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
-
-Follow the steps in Exercise - Manage security and Microsoft Defender for Cloud.
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: Manage Azure Security with Microsoft Defender for Cloud</b></p>
+In this Activity you will use Microsoft Defender for Cloud to monitor and manage your security footprint in Microsoft Azure.
 
 <p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
-Procede to Unit 9 Learn about Data classification, dynamic data masking, and SQL Audit in this MS Learn Module.  
+- Open <a href="https://learn.microsoft.com/en-us/training/modules/azure-sql-secure-data/8-exercise-advanced-data-security?ns-enrollment-type=learningpath&ns-enrollment-id=learn.azure-sql-fundamentals">this reference and complete Unit 8 of 10: <i>Secure your data with Azure SQL</i></a>.
+- Follow the steps in the section marked <i>Exercise - Manage security and Microsoft Defender for Cloud</i>.
+- Proceed to Unit 9: <i>Learn about Data classification, dynamic data masking, and SQL Audit</i> in this MS Learn Module.  
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
 <h2 id="4.6"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">4.6 Development</h2>
 
-When you have your envrionment in Azure there is a world of additional options availble to your architecture and development practices.  In this section we will explore some of the development features in Azure SQL and in Azure. 
+The Developer experience for a cloud platform, beyond tools and languages, is a very involved topic. You can <a href="https://learn.microsoft.com/en-us/azure/azure-sql/database/develop-overview?view=azuresql">find a complete reference for development using Azure SQL Database and the Azure SQL Managed Instance at this reference</a>.
 
+You can also <a href="https://learn.microsoft.com/en-us/samples/browse/?expanded=azure&products=azure-sql-database%2Cazure-sql-managed-instance%2Cazure-sqlserver-vm%2Cazure-sql-virtual-machines">find a series of sample applications for the Azure SQL deployment options at this reference</a>. Many developers use example code as a mechanism for learning. 
 
-
-* <b>[Spider-man Homecoming Twitter Sentiment Analysis](https://learn.microsoft.com/en-us/archive/blogs/deeperinsights/how-to-measure-twitter-sentiment-with-azure-logic-apps-sql-database-and-power-bi)</b> - A true Azure Development story showing how in less than an hour and a few clicks you can get real world data, use Congnative Services, evaluate sentiment, and enrich data in your Azure SQL Database.  Then you can report off of it in Power BI. 
-
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: Review an end-to-end application using Azure SQL Database</b></p>
 <p></p>
+In this Activity you will review a process used to measure Twitter sentiment with Azure Logic Apps, Azure SQL Database, and Power BI. It will give you a perspective of how all of the components work together to create a well-formed cloud application.
+
+<p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
+
+- Open <a href="https://learn.microsoft.com/en-us/archive/blogs/deeperinsights/how-to-measure-twitter-sentiment-with-azure-logic-apps-sql-database-and-power-bi">this reference and review the information you see there</a>. Bookmark for later review.
+
 <p style="border-bottom: 1px solid lightgrey;"></p>
-<p></p>
 
 <h2 id="4.7"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">4.7 Analytics</h2>
-
-content
-
-<h4>Microsoft Azure Synapse</h4>
-<img src="https://learn.microsoft.com/en-us/azure/synapse-analytics/media/overview-what-is/synapse-architecture.png">
+You have the same T-SQL constructs and other mechanisms in Azure SQL for analysis as you do in an on-premises installation. The Microsoft Azure platform also provides interoperability with a completely integrated analysis solition called Azure Synapse. 
+<p></p>
 Azure Synapse is an enterprise analytics service that accelerates time to insight across data warehouses and big data systems. Azure Synapse brings together the best of SQL technologies used in enterprise data warehousing, Spark technologies used for big data, Data Explorer for log and time series analytics, Pipelines for data integration and ETL/ELT, and deep integration with other Azure services such as Power BI, CosmosDB, and AzureML.
 
-For a deeper overview of Azure Synapse read this MS Learn article <a href="https://learn.microsoft.com/en-us/azure/synapse-analytics/overview-what-is">Azure Synapse Overview - What is Azure Synapse?</a>
+<p></p>
+<img src="https://learn.microsoft.com/en-us/azure/synapse-analytics/media/overview-what-is/synapse-architecture.png" width=800>
+<p></p>
 
-<p></p>
+You can <a href="https://learn.microsoft.com/en-us/azure/synapse-analytics/overview-what-is">find a deeper overview of Azure Synapse at this reference</a>. 
+
 <p style="border-bottom: 1px solid lightgrey;"></p>
-<p></p>
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/owl.png?raw=true"><b>For Further Study</b></p>
 <ul>
@@ -410,20 +416,3 @@ For a deeper overview of Azure Synapse read this MS Learn article <a href="https
 
 
 Next, continue on to [Module 05 - Extending SQL Server to the Microsoft Azure Platform](https://github.com/sqlballs/mSQLg2c/blob/main/modules/05-ExtendingSQLServerToAzure.md)
-
-  
-
-
-Azure SQL Database (including single databases, elastic pools, and managed instances) is a fully managed Database Engine that automates most of the database management functions such as upgrading, patching, backups, and monitoring. Some of the built-in capabilities include:  
-
-
-
-
-
-
-> Note: Many benefits typically thought of as Platform as a Service (PaaS) are surfacing in Infrastructure as a Service (IaaS). You can learn more about automated updates, automated backups, high availability, and performance provided in Azure SQL VMs [here](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview).  
-
-In addition to the resources linked to above, several [slide decks](https://aka.ms/azuresqlslides) are available (with notes and animations) that you can review to learn more. You can also check out the [Core Cloud Services - Azure architecture and service guarantees](https://docs.microsoft.com/en-us/learn/modules/explore-azure-infrastructure/) module from Microsoft Learn.  
-<br>
-
-<p style="border-bottom: 1px solid lightgrey;"></p>
