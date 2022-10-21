@@ -22,7 +22,7 @@ This README.MD file explains how the workshop is laid out, what you will learn, 
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
-<h3><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"> Learning Objectives</h3>
+<h4><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"> Learning Objectives</h4>
 
 In this day-long, hands-on Workshop you’ll learn how to:
 
@@ -38,7 +38,7 @@ In this day-long, hands-on Workshop you’ll learn how to:
  - Understand what services are available to migrate and modernize your entire SQL Server stack
  - Make informed decisions about how your business or customers should modernize their data estate
 
-<h3><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"> Role Applications</h3>
+<h4><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"> Role Applications</h4>
 
 The concepts and skills taught in this workshop form the starting points for:
 
@@ -49,7 +49,7 @@ The concepts and skills taught in this workshop form the starting points for:
 <p style="border-bottom: 1px solid lightgrey;"></p>
 <h2><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/building1.png?raw=true"> Business Applications of this Workshop</h2>
 
-Businesses require near real-time insights from ever-larger sets of data from a variety of sources. Many have not explored the improvements made in the latest versions of SQL Server, and some are only now exploring the cloud as a computing platform. As time has progressed, a more dramatic upgrade process may be required. Business and Organizations may not be aware of the security, performance, reliability and programming capabilities in the latest version of SQL Server and the improvements in Microsoft Azure, and need to know how to evaulate those improvements to see if they warrant a change in their data estate.
+Businesses require near real-time insights from ever-larger sets of data from a variety of sources. Many have not explored the improvements made in the latest versions of SQL Server, and some are only now exploring the cloud as a computing platform. As time has progressed, a more dramatic upgrade process may be required. Business and Organizations may not be aware of the security, performance, reliability and programming capabilities in the latest version of SQL Server and the improvements in Microsoft Azure, and need to know how to evaluate those improvements to see if they warrant a change in their data estate.
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
 <h2><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/listcheck.png?raw=true"> <a name="technologies">Technologies and Topics covered in this Workshop</a></h2>
@@ -83,13 +83,13 @@ If you are new to these, here are a few references you can complete prior to cla
 -  [Microsoft Azure](https://docs.microsoft.com/en-us/learn/paths/azure-fundamentals/)
 
 
-<h3><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/bulletlist.png?raw=true"> Setup</h3>
+<h4><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/bulletlist.png?raw=true"> Setup</h4>
 
-<a href="https://github.com/sqlballs/mSQLg2c/blob/Buck/modules/01-SetupandWorkshopMethodology.md" target="_blank">A full prerequisites document is located here</a>. These instructions should be completed before the workshop starts, since you will not have time to cover these in class. <i>Remember to "Stop" any Virtual Machines from the Azure Portal when not taking the class so that you do incur charges (shutting down the machine in the VM itself is not sufficient)</i>.
+<a href="https://github.com/sqlballs/mSQLg2c/blob/main/modules/01-SetupandWorkshopMethodology.md" target="_blank">A full prerequisites document is located here</a>. These instructions should be completed before the workshop starts, since you will not have time to cover these in class. <i>Remember to "Stop" any Virtual Machines from the Azure Portal when not taking the class so that you do incur charges (shutting down the machine in the VM itself is not sufficient)</i>.
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
-<h3><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/bulletlist.png?raw=true"> Intended Audience</h3>
+<h4><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/bulletlist.png?raw=true"> Intended Audience</h4>
 
 <p>The following roles will find this workshop useful. Others may also attend, as described in the Secondary Audience section.</p>
 
@@ -105,7 +105,7 @@ If you are new to these, here are a few references you can complete prior to cla
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
-<h3><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/bookpencil.png?raw=true"> Workshop Modules and In-Class Agenda</h3>
+<h4><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/bookpencil.png?raw=true"> Workshop Modules and In-Class Agenda</h4>
 
 This is a modular workshop, and in each section, you'll learn concepts, technologies and processes to help you complete the solution. The times shown below are for an instructor-led course, you may also take the modules in a self-paced fashion.
 
@@ -114,13 +114,13 @@ This is a modular workshop, and in each section, you'll learn concepts, technolo
   <tr><td style="background-color: AliceBlue; color: black;"><b>Module</b></td>
   <td style="background-color: AliceBlue; color: black;"><b>Topics</b></td></tr>
 
-  <tr><td style="vertical-align: top;"><a href="https://github.com/sqlballs/mSQLg2c/blob/Buck/modules/01-SetupandWorkshopMethodology.md" target="_blank">01 - Setup and Workshop Methodology </a></td><td> Workshop introduction, logistics, setup checks</td></tr>
+  <tr><td style="vertical-align: top;"><a href="https://github.com/sqlballs/mSQLg2c/blob/main/modules/01-SetupandWorkshopMethodology.md" target="_blank">01 - Setup and Workshop Methodology </a></td><td> Workshop introduction, logistics, setup checks</td></tr>
   
-  <tr><td style="vertical-align: top;background-color: AliceBlue; color: black;"><a href="https://github.com/sqlballs/mSQLg2c/blob/Buck/modules/02-AuditingYour%20DataEstateArchitecture.md" target="_blank">02 - Auditing your Data Estate Architecture</a> <td style="vertical-align: top;background-color: AliceBlue; color: black;"> This module shows the processes and tools you can use to audit your current data estate and how to identify gaps for leveraging data to make intelligent decisions </td></tr>
-  <tr><td style="vertical-align: top;"><a href="https://github.com/sqlballs/mSQLg2c/blob/Buck/modules/03-SQLServerImprovements.md" target="_blank"> 03 - SQL Server Improvements </a></td><td>Explains the improvements in SQL Server's manageability, availability, performance, security and more.</td></tr>
-  <tr><td style="vertical-align: top;background-color: AliceBlue; color: black;"><a href="https://github.com/sqlballs/mSQLg2c/blob/Buck/modules/04-ImprovementsInSQLOnTheMicrosoftAzurePlatform.md" target="_blank">04 - Improvements in SQL on the Microsoft Azure Platform </a> </td><td style="background-color: AliceBlue; color: black;"> Covers the improvements in SQL Server technologies on the Microsoft Azure Platform, along with the fundamentals of SQL in Azure with additional deeper resources provided.</td></tr>  
+  <tr><td style="vertical-align: top;background-color: AliceBlue; color: black;"><a href="https://github.com/sqlballs/mSQLg2c/blob/main/modules/02-AuditingYour%20DataEstateArchitecture.md" target="_blank">02 - Auditing your Data Estate Architecture</a> <td style="vertical-align: top;background-color: AliceBlue; color: black;"> This module shows the processes and tools you can use to audit your current data estate and how to identify gaps for leveraging data to make intelligent decisions </td></tr>
+  <tr><td style="vertical-align: top;"><a href="https://github.com/sqlballs/mSQLg2c/blob/main/modules/03-SQLServerImprovements.md" target="_blank"> 03 - SQL Server Improvements </a></td><td>Explains the improvements in SQL Server's manageability, availability, performance, security and more.</td></tr>
+  <tr><td style="vertical-align: top;background-color: AliceBlue; color: black;"><a href="https://github.com/sqlballs/mSQLg2c/blob/main/modules/04-ImprovementsInSQLOnTheMicrosoftAzurePlatform.md" target="_blank">04 - Improvements in SQL on the Microsoft Azure Platform </a> </td><td style="background-color: AliceBlue; color: black;"> Covers the improvements in SQL Server technologies on the Microsoft Azure Platform, along with the fundamentals of SQL in Azure with additional deeper resources provided.</td></tr>  
 
-  <tr><td style="vertical-align: top;"><a href="https://github.com/sqlballs/mSQLg2c/blob/Buck/modules/05-ExtendingSQLServerToAzure.md" target="_blank"> 05 - Extending SQL Server to Azure </a></td><td>Details the methods of connecting your on-premises data systems to cloud platforms such as Microsoft Azure and Amazon's AWS, migration workflows and tools for assessing, planning, and connecting and/or migrating SQL workloads to Azure that meets the business requirements.</td></tr>
+  <tr><td style="vertical-align: top;"><a href="https://github.com/sqlballs/mSQLg2c/blob/mainmodules/05-ExtendingSQLServerToAzure.md" target="_blank"> 05 - Extending SQL Server to Azure </a></td><td>Details the methods of connecting your on-premises data systems to cloud platforms such as Microsoft Azure and Amazon's AWS, migration workflows and tools for assessing, planning, and connecting and/or migrating SQL workloads to Azure that meets the business requirements.</td></tr>
 
 </table>
 

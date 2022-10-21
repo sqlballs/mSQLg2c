@@ -11,11 +11,11 @@ In this workshop you'll cover how to systematically create a modern data estate 
 
 In each module you'll get more references, which you should follow up on to learn more. Also watch for links within the text - click on each one to explore that topic.
 
-(<a href="file:///url" target="_blank">Make sure you check out the <b>Pre-Requisites</b> page before you start</a>. You'll need all of the items loaded there before you can proceed with the workshop.)
+(<a href="https://github.com/sqlballs/mSQLg2c/blob/main/modules/01-SetupandWorkshopMethodology.md" target="_blank">Make sure you check out the <b>Pre-Requisites</b> page before you start</a>. You'll need all of the items loaded there before you can proceed with the workshop.)
 
-Using the <a href="https://github.com/sqlballs/mSQLg2c/blob/main/modules/02-AuditingYour%20DataEstateArchitecture.md">processes, tools and procedures from the Auditing  Module</a>, the WideWorldImporters company has completed an initial audit of their data estate.They found multiple sources of data in their organization, including text files, spreadsheets, and Relational Database Management Systems (RDBMS) including SQL Server 2012 Instances along with some Instances of SQL Server 2017 for <a href = "https://docs.microsoft.com/en-us/sql/samples/wide-world-importers-what-is?view=sql-server-2017" target="_blank">their primary Line of Business (LOB) databases</a>.
+Using the <a href="https://github.com/sqlballs/mSQLg2c/blob/main/modules/02-AuditingYour%20DataEstateArchitecture.md">processes, tools and procedures from the Auditing  Module</a>, the WideWorldImporters company has completed an initial audit of their data estate. They found multiple sources of data in their organization, including text files, spreadsheets, and Relational Database Management Systems (RDBMS) including SQL Server 2012 Instances along with some Instances of SQL Server 2017 for <a href = "https://docs.microsoft.com/en-us/sql/samples/wide-world-importers-what-is?view=sql-server-2017" target="_blank">their primary Line of Business (LOB) databases</a>.
 
-WideWorldImporters <a href="https://learn.microsoft.com/en-us/sql/sql-server/end-of-support/sql-server-end-of-support-overview?view=sql-server-ver16#lifecycle-dates">needs to upgrade the software that is out of support</a> and also evaulate which versions and editions will solve their problems. They have settled on evaulating the delta between SQL Server 2017 and the latest version of the on-premises SQL Server product, and they have divided their evaluation into various categories that they are interested in:
+WideWorldImporters <a href="https://learn.microsoft.com/en-us/sql/sql-server/end-of-support/sql-server-end-of-support-overview?view=sql-server-ver16#lifecycle-dates">needs to upgrade the software that is out of support</a> and also evaluate which versions and editions will solve their problems. They have settled on evaluating the delta between SQL Server 2017 and the latest version of the on-premises SQL Server product, and they have divided their evaluation into various categories that they are interested in:
 
 <dl>
   <dt><a href="#3.1" target="_blank">3.1 - Deployment Options</dt></a>
@@ -37,17 +37,17 @@ In the latest version, you can deploy SQL Server to the Microsoft Windows operat
 
 <p></p>
 
-<h3>SQL Server on Windows</h3>
+<h4>SQL Server on Windows</h4>
 The latest version of SQL Server is supported on all current Microsoft Windows desktop and server operating systems, including Windows 11 (Developer and Express Editions) and Windows 2022 Server. You can <a href="https://learn.microsoft.com/en-us/troubleshoot/sql/general/use-sql-server-in-windows">learn more about each version of the Microsoft Windows operating system and the SQL Server version it supports at this reference</a>.
 
 Your selection of features and components should be based on your application needs. The different <i>Editions</i> of SQL Server have unique features, performance, runtime, and cost implications. You can <a href="https://learn.microsoft.com/en-us/sql/sql-server/editions-and-components-of-sql-server-2019?view=sql-server-ver16#-editions">learn more about the Editions of SQL Server and the features supported in each at this reference</a>.
 
 All features in each Edition for the latest version of SQL Server are supported on the Microsoft Windows operating system, including:
-- Hybrid buffer pool with direct write, which reduces the number of memcpy commands that need to be performed on modified data or index pages residing on PMEM devices
+- Hybrid buffer pool with direct write, which reduces the number of <i>memcpy</i> commands that need to be performed on modified data or index pages residing on PMEM devices
 - Integrated acceleration & offloading acceleration technologies from partners such as Intel to provide extended capabilities, such as Intel® QuickAssist Technology (QAT) which provides backup compression and hardware offloading
 - Leverages new hardware capabilities, including the Advanced Vector Extension (AVX) 512 extension to improve batch mode operations
 
-<h3>SQL Server on Virtual Machines</h3>
+<h4>SQL Server on Virtual Machines</h4>
 Bare-metal installations of an operating system such as Windows are deployed on hardware using an operating system <i>Kernel</i>, and additional software to bring all of the hardware into a set of calls to the "Big Four": CPU, Memory, Storage, and Networking.
 
 One abstraction layer above installing software directly on hardware is using a <i>Hypervisor</i>. In essence, this layer uses the base operating system to emulate hardware. You install an operating system (called a Guest OS) on the Hypervisor (called the Host), and the Guest OS acts as if it is on bare-metal.
@@ -58,10 +58,10 @@ In this abstraction level, you have full control (and responsibility) for the en
 
 You can read <a href="https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/tlfs">the details of Microsoft's Hypervisor at this reference</a>.
 
-The latest version of SQL Server supports all of the features associated with the applicable Edition for both Windows and Linux in a Virtualized environemnt, with <a href="https://learn.microsoft.com/en-us/troubleshoot/sql/general/support-policy-hardware-virtualization-product">the considerations described at this reference</a>.
+The latest version of SQL Server supports all of the features associated with the applicable Edition for both Windows and Linux in a Virtualized environment, with <a href="https://learn.microsoft.com/en-us/troubleshoot/sql/general/support-policy-hardware-virtualization-product">the considerations described at this reference</a>.
 
-<h3>SQL Server on Linux</h3>
-In the latest version, SQL Server runs on Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu Linux. WideWorld Importers is currently running Red Hat Linux at one of their processing plants, and is interested in some of the workloads that might be useful on that platform. As they test, their primary concern is the performance aspect of SQL Server in Linux, and they find that performance is on-par with the Windows deployments due to the architecture of the Platform Abstration Layer (PAL) implemented to run the SQL Server Engine code on Linux:
+<h4>SQL Server on Linux</h4>
+In the latest version, SQL Server runs on Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu Linux. WideWorld Importers is currently running Red Hat Linux at one of their processing plants, and is interested in some of the workloads that might be useful on that platform. As they test, their primary concern is the performance aspect of SQL Server in Linux, and they find that performance is on-par with the Windows deployments due to the architecture of the Platform Abstraction Layer (PAL) implemented to run the SQL Server Engine code on Linux:
 
 <p></p>
 <img src="https://cloudblogs.microsoft.com/uploads/prod/2016/12/04_thumb.png" width=300>
@@ -81,7 +81,7 @@ There are specific versions and support considerations for each distribution of 
 
 You can <a href="https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-overview?view=sql-server-ver16">learn more about the SQL Server on Linux architecture at this reference</a>.
 
-<h3>SQL Server in Containers</h3>
+<h4>SQL Server in Containers</h4>
 The introduction of SQL Server running on Linux allows for the next level of hardware abstraction, called a <i>Container</i>. There are various types of Container technologies, in this workshop, you will focus on the Docker container format, as implemented in Windows using the <i>Moby</i> framework.
 
 A Container is provided by the Container Runtime (Such as <i>containerd</i>) runtime engine, which sits above the operating system (Windows or Linux). In this abstraction, you do not control the hardware or the operating system. The Container has a specific protected memory space, and can contain binaries such as Python, R, SQL Server, or other binaries. A Container with all its binaries is called an Image. You create a container from a file.
@@ -96,7 +96,7 @@ You can have several Containers running at any one time, based on the amount of 
 
 You can <a href="https://hackernoon.com/docker-commands-the-ultimate-cheat-sheet-994ac78e2888">read more about Container Runtimes (Such as Docker) at this reference</a>.
 
-<h3>SQL Server on Kubernetes</h3>
+<h4>SQL Server on Kubernetes</h4>
 For Big Data systems, having lots of Containers is very advantageous to segment purpose and performance profiles. However, dealing with many Container Images, allowing persisted storage, and interconnecting them for network and internetwork communications is a complex task. One such Container Orchestration tool is <i>Kubernetes</i>, an open source Container orchestrator, which can scale Container deployments according to need. The following table defines some important Container Orchestration Tools (Such as Kubernetes or OpenShift) terminology:
 
 <table style="tr:nth-child(even) {background-color: #f2f2f2;}; text-align: left; display: table; border-collapse: collapse; border-spacing: 5px; border-color: gray;">
@@ -114,7 +114,7 @@ You can <a href="https://kubernetes.io/docs/tutorials/kubernetes-basics/" target
 
 > You can <a href="https://kubernetes.io/docs/tutorials/kubernetes-basics/create-cluster/cluster-interactive/">practice with Kubernetes using online emulator to work with the `minikube` platform</a>.  
 
-You can deploy the latest version of SQL Server deployments on Kubernetes. In this case, the Container Orchestration system (Such as Kubernetes or OpenShift) is responsible for the state of the BDC; it is responsible for building and configuring the Nodes, assigns Pods to Nodes,creates and manages the Persistent Volumes (durable storage), and manages the operation of the Cluster.
+You can deploy the latest version of SQL Server deployments on Kubernetes. In this case, the Container Orchestration system (Such as Kubernetes or OpenShift) is responsible for the state of the BDC; it is responsible for building and configuring the Nodes, assigns Pods to Nodes, creates and manages the Persistent Volumes (durable storage), and manages the operation of the Cluster.
 
 You can learn more about <a href="https://learn.microsoft.com/en-us/shows/data-exposed/deploying-sql-server-2019-in-kubernetes">deploying SQL Server to Kubernetes at this reference</a>. SQL Server containers can also be deployed to Kubernetes using Helm charts.  To understand how to deploy a container to Kubernetes see this Microsoft Learn article: https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-containers-deploy-helm-charts-kubernetes?view=sql-server-ver16
 
@@ -145,7 +145,7 @@ For the administration team for the Data Estate, manageability includes everythi
 - XML compression is now available
 - There is a new improvement for asynchronous auto update statistics concurrency
 
-<h3>Tools</h3>
+<h4>Tools</h4>
 There are several tools you can use to connect to, query, and manage a SQL Server Instance. The two broad groups are Graphical User Interfaces (GUI) and Command-Line or Scripting Interfaces.
 
 New improvements include:
@@ -168,7 +168,7 @@ SQL Server Management Studio (SSMS) is a graphical interface for the Microsoft W
 - Configuration of connection options
 - Scripting database options
 - Creation of SQL Server Agent Jobs and Schedules
-- Creation of Maintance plans, backup and restore operations
+- Creation of Maintenance plans, backup and restore operations
 - Multiple out-of-the-box reports and the ability to create custom reports
 - Multiple "wizards" for tasks such as security compliance and risk reports
 - Multiple graphical tools to view and report performance and query plans and the query store feature
@@ -222,10 +222,10 @@ In this Activity you will review a few tips and tricks you may not have been fam
 
 <h2 id="3.3"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.3 Availability</h2>
 
-One of the important considerations for WideWorld Importers is ensuring Business Continuity. As part of their strategy, the Data Estate is an important component. The general area for Business Continuity in Data is <i>High Availablity</i>, which in turn contains important concepts such as Recovery Point Objectives (RPO) and Recovery Time Objectives (RTO). A few key terms are important to note as we dsicuss the improvements in this area of the latest version of SQL Server: 
+One of the important considerations for WideWorld Importers is ensuring Business Continuity. As part of their strategy, the Data Estate is an important component. The general area for Business Continuity in Data is <i>High Availability</i>, which in turn contains important concepts such as Recovery Point Objectives (RPO) and Recovery Time Objectives (RTO). A few key terms are important to note as we discuss the improvements in this area of the latest version of SQL Server: 
 
 - <b>High Availability</b> (HA): The ability for your systems to recover from localized events in an automated way
-- <b>Disaster Recovery</b> (DR): The process of recoving from a diaster of some sort.  A natural or man-made disaster has occured and manual intervention may be required.  While some things can be automated, other items may require manual intervention  
+- <b>Disaster Recovery</b> (DR): The process of recovering from a disaster of some sort.  A natural or man-made disaster has occurred and manual intervention may be required.  While some things can be automated, other items may require manual intervention  
 - <b>Business Continuity</b>: The planning process for how businesses and their IT systems will react in the event of an outage.  This planning will typically be for DR, but it could also include HA planning
 
 There are multiple capabilities in SQL Server that serve as part of an overall Availability strategy, including several that have new improvements in the latest version:
@@ -238,13 +238,13 @@ There are multiple capabilities in SQL Server that serve as part of an overall A
   - "Last Writer Wins" conflict detection
 - <b>Database Log Shipping</b>
 - <b>Failover Clustering</b> 
-  - Simplfied Failover Clustering setup for Virtual Machines 
+  - Simplified Failover Clustering setup for Virtual Machines
 - <b>Always-On Availability Groups</b> - <a href="https://learn.microsoft.com/en-us/sql/database-engine/availability-groups/windows/contained-availability-groups-overview?view=sql-server-ver16">Improvements in the latest version of SQL Server include</a>:
   - Up to five synchronous replicas	<a href="https://learn.microsoft.com/en-us/sql/database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups?view=sql-server-ver16">starting in SQL Server 2019 (15.x) increases the maximum number of synchronous replicas to 5, up from 3 in SQL Server 2017 (14.x)</a>. You can configure this group of five replicas to have automatic failover within the group. There is one primary replica, plus four synchronous secondary replicas
   - Secondary-to-primary replica connection redirection	allows client application connections to be directed to the primary replica regardless of the target server specified in the connection string
   - Create an <a href="https://learn.microsoft.com/en-us/sql/database-engine/availability-groups/windows/contained-availability-groups-overview?view=sql-server-ver16">Always On Contained Availability Group</a> that manages its own metadata objects (users, logins, permissions, SQL Agent jobs etc.) at the availability group level in addition to the instance level, and includes specialized contained system databases within the availability group
 
-> The latest version of SQL Server also has the ability to participate in Availablity to and from the Microsoft Azure Platform. These improvements will be detailed in the last Module of this Workshop.
+> The latest version of SQL Server also has the ability to participate in Availability to and from the Microsoft Azure Platform. These improvements will be detailed in the last Module of this Workshop.
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: Examine the new Information in the backupset system table</b></p>
 
@@ -253,7 +253,7 @@ The <i>backupset</i> table in the <i>msdb</i> system database contains a row for
 <p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
 - Back Up your WideWorld Importers database to disk
-- <a href="https://learn.microsoft.com/en-us/sql/relational-databases/system-tables/backupset-transact-sql?view=sql-server-ver16#examples">Open this link and perform the steps you see there</a> to revoiew the new information for backups. Bookmark for later reference.
+- <a href="https://learn.microsoft.com/en-us/sql/relational-databases/system-tables/backupset-transact-sql?view=sql-server-ver16#examples">Open this link and perform the steps you see there</a> to review the new information for backups. Bookmark for later reference.
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
@@ -263,7 +263,7 @@ The latest version of SQL Server includes multiple features to enable higher per
 - Online clustered columnstore index build and rebuild
 - Resumable online rowstore index build	See Perform Index Operations Online
 - Suspend and resume initial scan for Transparent Data Encryption (TDE)
-- In-Memory Database - leverages memory to store more data in memory to to unlock a new level of scalability across all your database workloads. Improvements in the latest version of SQL Server include:
+- In-Memory Database - leverages memory to store more data in memory to unlock a new level of scalability across all your database workloads. Improvements in the latest version of SQL Server include:
   - In-memory online transaction processing (for OLTP)
   - <a href="https://learn.microsoft.com/en-us/sql/database-engine/configure-windows/hybrid-buffer-pool?view=sql-server-ver15">Hybrid buffer pool</a>, where database pages sitting on database files placed on a persistent memory (PMEM) device will be directly accessed when required
   - <a href="https://learn.microsoft.com/en-us/sql/relational-databases/databases/tempdb-database?view=sql-server-ver15#memory-optimized-tempdb-metadata">Memory-optimized TempDB metadata</a> allows effectively removes tempDB metadata bottlenecks and unlocks a new level of scalability for TempDB heavy workloads. The system tables involved in managing temporary table metadata can be moved into latch-free non-durable memory-optimized tables
@@ -371,7 +371,7 @@ Row-Level Security enables you to use Role membership or execution context to co
 You can <a href="https://learn.microsoft.com/en-us/sql/relational-databases/security/row-level-security?view=sql-server-ver16">learn more about Row-Level Security and find a tutorial on implementing it at this reference</a>.
 
 <b>Always Encrypted with Secure Enclaves</b>
-the latest version of SQL Server expands on the <i>Always Encrypted</i> fesatures with in-place encryption and rich computations by enabling computations on plaintext data inside a server-side secure enclave. In-place encryption improves the performance and the reliability of cryptographic operations (encrypting columns, rotating columns, encryption keys, and so on), because it avoids moving data out of the database.
+the latest version of SQL Server expands on the <i>Always Encrypted</i> features with in-place encryption and rich computations by enabling computations on plaintext data inside a server-side secure enclave. In-place encryption improves the performance and the reliability of cryptographic operations (encrypting columns, rotating columns, encryption keys, and so on), because it avoids moving data out of the database.
 
 This improvement also supports rich computations (pattern matching and comparison operations) which unlocks Always Encrypted to a much broader set of scenarios and applications that demand sensitive data protection, while also requiring richer functionality in Transact-SQL queries.
 
@@ -400,7 +400,7 @@ In this Activity, you will implement Ledger for SQL Server on your test system. 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
 <h2 id="3.6"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">3.6 Development</h2>
-Developer enhancements include not only new Transact-SQL (T-SQL) changes including new time series, JSON improvments, aggregate changes, and Bit manipulation functions, but also data types and changes to features such as using SQL Server as a Graph Database and new Unicode feature support. A few of the improvements in the latest version of SQL Server are:
+Developer enhancements include not only new Transact-SQL (T-SQL) changes including new time series, JSON improvements, aggregate changes, and Bit manipulation functions, but also data types and changes to features such as using SQL Server as a Graph Database and new Unicode feature support. A few of the improvements in the latest version of SQL Server are:
 
 - Graph enhancements
   - <a href="https://learn.microsoft.com/en-us/sql/relational-databases/tables/graph-edge-constraints?view=sql-server-ver15">Edge constraint cascade delete actions</a> allow you to define cascaded delete actions on an edge constraint in a graph database

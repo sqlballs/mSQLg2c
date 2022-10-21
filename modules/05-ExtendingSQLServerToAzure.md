@@ -5,17 +5,17 @@
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
-<img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/textbubble.png?raw=true"> <h2>Extending SQL Server to Microsoft Azure</h2>
+<img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/textbubble.png?raw=true"> <h2>05 - Extending SQL Server to Microsoft Azure</h2>
 
 In this workshop you'll cover how to systematically create a modern data estate using SQL Server in on-premises, in-cloud and hybrid solutions. In each module you'll get more references, which you should follow up on to learn more. Also watch for links within the text - right-click each one and select "Open in New Tab" to explore that topic.
 
-(<a href="https://github.com/sqlballs/mSQLg2c/blob/Buck/modules/01-SetupandWorkshopMethodology.md" target="_blank">Make sure you check out the <b>Pre-Requisites</b> page before you start</a>. You'll need all of the items loaded there before you can proceed with the workshop.)
+(<a href="https://github.com/sqlballs/mSQLg2c/blob/main/modules/01-SetupandWorkshopMethodology.md" target="_blank">Make sure you check out the <b>Pre-Requisites</b> page before you start</a>. You'll need all of the items loaded there before you can proceed with the workshop.)
 
 You'll cover these topics in the workshop:
 <dl>
-  <dt><a href="#5.1" target="_blank">5.1 - Extending on-Premises SQL Server Instances to Microsoft Azure</a><dt>
-  <dt><a href="#5.2" target="_blank">5.2 - Extending Microsoft Azure services to on-Premises environments</a><dt>
-  <dt><a href="#5.3" target="_blank">5.3 - Migrating SQL Server Instances to the Microsoft Azure Platform</a><dt>
+  <dt><a href="#5.1" target="_blank">5.1 - Extending on-Premises SQL Server Instances to Microsoft Azure</a></dt>
+  <dt><a href="#5.2" target="_blank">5.2 - Extending Microsoft Azure services to on-Premises environments</a></dt>
+  <dt><a href="#5.3" target="_blank">5.3 - Migrating SQL Server Instances to the Microsoft Azure Platform</a></dt>
 </dl>
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
@@ -24,7 +24,7 @@ You'll cover these topics in the workshop:
 
 In many cases you may find that staying on-premises for your SQL Server and other data processing systems is the correct architecture for at least part of your data estate. You may, however, still want to leverage a cloud service as part of your modernization. There are many options you can use to connect your SQL Server Instances to the Microsoft Azure platform, giving you advantages in disaster recovery, replication, security and other considerations for your architecture.
 
-<h3>Backup/Restore to URL</h3>
+<h4>Backup/Restore to URL</h4>
 One of the simplest methods you can use to extend your Data Estate to Microsoft Azure is to leverage the triple-redundant, secure, and geo-replicated storage as a backup location for your databases using the "Backup to URL" feature in SQL Server. 
 
 Ater you <a href="https://learn.microsoft.com/en-us/sql/relational-databases/backup-restore/sql-server-backup-to-url?view=sql-server-ver16">set up a Shared Access Key, an example of that syntax</a> is here:
@@ -45,8 +45,8 @@ You have two options for the storage types, a <a href="https://azure.microsoft.c
 
 Starting in SQL Server 2022, you can also use backup and restore to Object Stores, such as the S3 API. You can <a href="https://learn.microsoft.com/en-us/sql/relational-databases/backup-restore/sql-server-backup-and-restore-with-s3-compatible-object-storage?view=sql-server-ver16 ">learn more about that process at this reference</a>.
 
-<h3>Use Microsoft Azure as a Disaster Recovery site</h3>
-For a complete Disaster Recovery strategy at your organization, you should consider that the geographic location of your datacenter could be compromized, and even a comprehensive backup/restore strategy would not be sufficient to guarantee your Recovery Point Objective (RPO) and Recovery Time Objective (RTO). It's a best-practice to ensure that you have a separate location to fall back to for your organization's operations.
+<h4>Use Microsoft Azure as a Disaster Recovery site</h4>
+For a complete Disaster Recovery strategy at your organization, you should consider that the geographic location of your datacenter could be compromised, and even a comprehensive backup/restore strategy would not be sufficient to guarantee your Recovery Point Objective (RPO) and Recovery Time Objective (RTO). It's a best-practice to ensure that you have a separate location to fall back to for your organization's operations.
 <p></p>
 Microsoft Azure has a series of tools you can use for a more complete strategy for Disaster Recovery, starting with <i>Azure Site Recovery</i>.
 <p></p>
@@ -76,13 +76,13 @@ Originally introduced for on-premises SQL Server Instances, the Always On Availa
 You can <a href="https://learn.microsoft.com/en-us/azure/azure-sql/virtual-machines/windows/availability-group-overview?view=azuresql">learn more about Always On Availability Groups in Microsoft Azure at this reference</a>.
 
 <h4>Use Azure resources in a Failover Cluster</h4>
-Like the Always On Availability Group feature, Failover Clustering was originally introduced for on-premises SQL Server Instances, and leverages Windows Server Failover Clustering (WSFC) to provide high availability through redundancy at the server-instance level, called a <i>failover cluster instance</i> (FCI). An FCI is a single instance of SQL Server that is installed across Windows Server Failover Clustering (WSFC) nodes. An FCI appears to be an instance of SQL Server running on a single computer, but the FCI provides failover from one WSFC node to another if the current node becomes unavailable. This feature is now enhanced to allow the Microsoft Azure platform to provide nodes and networks as part of the FCI infrastre. An FCI can also leverage Availability Groups to provide remote disaster recovery at the database level.
+Like the Always On Availability Group feature, Failover Clustering was originally introduced for on-premises SQL Server Instances, and leverages Windows Server Failover Clustering (WSFC) to provide high availability through redundancy at the server-Instance level, called a <i>failover cluster Instance</i> (FCI). An FCI is a single Instance of SQL Server that is installed across Windows Server Failover Clustering (WSFC) nodes. An FCI appears to be an Instance of SQL Server running on a single computer, but the FCI provides failover from one WSFC node to another if the current node becomes unavailable. This feature is now enhanced to allow the Microsoft Azure platform to provide nodes and networks as part of the FCI infrastructure. An FCI can also leverage Availability Groups to provide remote disaster recovery at the database level.
 
 <p></p>
 <img src="https://learn.microsoft.com/en-us/sql/sql-server/failover-clusters/windows/media/alwaysoncomponentcontextdiagram.gif?view=sql-server-ver16" width=500>
 <p></p>
 
-You can <a href="https://learn.microsoft.com/en-us/azure/azure-sql/virtual-machines/windows/failover-cluster-instance-overview?view=azuresql">learn more about FCI using Microsoft Azure at this reference</a>.
+You can <a href="https://learn.microsoft.com/en-us/azure/azure-sql/virtual-machines/windows/failover-cluster-Instance-overview?view=azuresql">learn more about FCI using Microsoft Azure at this reference</a>.
 
 <h4>Link for Managed Instance feature</h4>
 The Link feature for SQL Server Managed Instance allows a connection between a SQL Server Instance and the fully managed PaaS service Azure SQL Managed InstanceIt uses near real-time data replication to Azure using Always On technology so that you can offload workloads to read-only secondaries on Azure to take advantage of a fully managed database platform, performance, and scale. The link can be operated for as long as you need it. 
@@ -95,7 +95,7 @@ Each link is database-scoped, meaning that one link connects a single database. 
 <img src="https://techcommunity.microsoft.com/t5/image/serverpage/image-id/323023i2A489D1FF2149CF9/image-dimensions/777x369?v=v2" width=500>
 <p></p>
 
-You can <a href="https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/managed-instance-link-preparation?view=azuresql">learn more about Managed Instance Link at this reference</a>.
+You can <a href="https://learn.microsoft.com/en-us/azure/azure-sql/managed-Instance/managed-Instance-link-preparation?view=azuresql">learn more about Managed Instance Link at this reference</a>.
 
 <h4>Use Azure Resources as a Log Shipping or Replication target</h4>
 SQL Server Log shipping allows you to automatically send all transaction log backups from a primary database on a primary server Instance to one or more secondary databases on separate secondary server Instances. The transaction log backups are applied to each of the secondary databases individually. An optional third server Instance, known as the monitor server, records the history and status of backup and restore operations and, optionally, raises alerts if these operations fail to occur as scheduled. You can use Log shipping to a Microsoft Azure Virtual Machine running SQL Server.
@@ -124,7 +124,7 @@ In this Activity you will review the Tutorial provided for Azure Site Recovery. 
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
-<h3>Data Virtualization</h3>
+<h4>Data Virtualization</h4>
 SQL Server has long had the ability to query data outside of a specific database. Cross-database queries, Linked Servers, and Open Database Connectivity (ODBC) data sources are all available from all currently supported versions.
 <p></p>
 Starting in SQL Server 2019, new methods and capabilities have been added to allow you to have a single language, security model, and query mechanism to allow SQL Server to become a "Data Hub", even without ingesting the data. Two of these changes are improvements to the ODBC function, and the <i>EXTERNAL DATA SOURCE</i> T-SQL statement.
@@ -140,16 +140,16 @@ The latest versions of SQL Server make use of an ODBC connection directly within
 You can <a href="https://learn.microsoft.com/en-us/sql/relational-databases/polybase/data-virtualization?view=sql-server-ver16">learn more about creating an External table with a wizard in the tools for SQL Server at this reference</a>.
 
 <b>PolyBase and EXTERNAL DATA</b>
-PolyBase is a feature that enables you to query data with T-SQL in your current Instance from sources such as SQL Server, Oracle, Teradata, MongoDB, Hadoop clusters, Cosmos DB, and S3-compatible object storage. You do not have to install client connection software for these systems. You can also use an ODBC connector to query additional providers. PolyBase allows your T-SQL queries to join the data from external sources to relational tables stored in an instance of SQL Server.
+PolyBase is a feature that enables you to query data with T-SQL in your current Instance from sources such as SQL Server, Oracle, Teradata, MongoDB, Hadoop clusters, Cosmos DB, and S3-compatible object storage. You do not have to install client connection software for these systems. You can also use an ODBC connector to query additional providers. PolyBase allows your T-SQL queries to join the data from external sources to relational tables stored in an Instance of SQL Server.
 
-One key use-case for data virtualization with the PolyBase feature is to allow the data to stay in its original location and format. You can virtualize the external data through the SQL Server instance, so that it can be queried in place like any other table in SQL Server.
+One key use-case for data virtualization with the PolyBase feature is to allow the data to stay in its original location and format. You can virtualize the external data through the SQL Server Instance, so that it can be queried in place like any other table in SQL Server.
 
 You can <a href="https://learn.microsoft.com/en-us/sql/relational-databases/polybase/polybase-guide?view=sql-server-ver16">learn more about PolyBase in for SQL Server at this reference</a>.
 
 To use PolyBase, you need to set up a network connection between the source and your SQL Server Instance, provide any credentials, set a format for the data (if required) and then create an External Table to the source. You can <a href="https://learn.microsoft.com/en-us/sql/relational-databases/polybase/polybase-t-sql-objects?source=recommendations&view=sql-server-ver16">learn more about that process and the T-SQL commands used at this reference</a>.
 
 <h4>Linked Servers</h4>
-The Linked Servers feature enables SQL Server to execute a Transact-SQL statement that references tables in another Instance of SQL Server or other specific database engines such as Oracle. Many types of data sources can be configured as linked servers, including third-party database providers and Azure Cosmos DB. After a linked server is created, distributed queries can be run against this server, and queries can join tables from more than one data source. If the linked server is defined as an instance of SQL Server or an Azure SQL Managed Instance, you can also execute remote stored procedures. The capabilities and required arguments of the linked server can vary significantly, based on the target you are connecting to.
+The Linked Servers feature enables SQL Server to execute a Transact-SQL statement that references tables in another Instance of SQL Server or other specific database engines such as Oracle. Many types of data sources can be configured as linked servers, including third-party database providers and Azure Cosmos DB. After a linked server is created, distributed queries can be run against this server, and queries can join tables from more than one data source. If the linked server is defined as an Instance of SQL Server or an Azure SQL Managed Instance, you can also execute remote stored procedures. The capabilities and required arguments of the linked server can vary significantly, based on the target you are connecting to.
 <p></p>
 
 > Linked Servers can have significant security and performance implications, and you should carefully review the documentation below prior to implementing them.
@@ -160,7 +160,7 @@ The Linked Servers feature enables SQL Server to execute a Transact-SQL statemen
 
 You can <a href="https://learn.microsoft.com/en-us/sql/relational-databases/linked-servers/linked-servers-database-engine?view=sql-server-ver16">learn more about the Linked Servers feature at this reference</a>.
 
-<h3>Azure Data Sync</h3>
+<h4>Azure Data Sync</h4>
 Another connection mechanism between a SQL Server Instance and Azure SQL Database is Azure Data Sync.  SQL Data Sync is a Microsoft Azure service that can synchronize data bi-directionally  - across multiple databases, both on-premises and in the cloud.
 
 <p></p>
@@ -169,8 +169,8 @@ Another connection mechanism between a SQL Server Instance and Azure SQL Databas
 
 You can <a href="https://learn.microsoft.com/en-us/azure/azure-sql/database/sql-data-sync-data-sql-server-sql-database?view=azuresql">learn more about the Linked Servers feature at this reference</a>.
 
-<h3>Azure Key Vault</h3> 
-Keys are used throughout a Data Estate, inside and outside SQL Server for purposes as varied as database backups and connections to other systems. SQL Server has various keys it uses from a Service Master Key (SMK) to a Database Master Key (DBMK). Those keys, in turn, should be protected outside of the system to prevent high-level compromise. The system that allows this separation of protection is calle <i>Extensible Key Management</i> (EKM). 
+<h4>Azure Key Vault</h4> 
+Keys are used throughout a Data Estate, inside and outside SQL Server for purposes as varied as database backups and connections to other systems. SQL Server has various keys it uses from a Service Master Key (SMK) to a Database Master Key (DBMK). Those keys, in turn, should be protected outside of the system to prevent high-level compromise. The system that allows this separation of protection is called <i>Extensible Key Management</i> (EKM). 
 
 The EKM system with the latest versions of SQL Server can leverage the Azure Key Vault, an Azure service that provides high-grade protection of secrets and allows separation of duties.  
 
@@ -180,14 +180,14 @@ The EKM system with the latest versions of SQL Server can leverage the Azure Key
 
 You can <a href="https://learn.microsoft.com/en-us/sql/relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server?view=sql-server-ver16">learn more about using Azure Key Vault with SQL Server at this reference</a>.
 
-<h3>Synapse Link</h3> 
-Setting up a <i>link connection</i> maps a connection between SQL Server and an Azure Synapse Analytics dedicated SQL pool. You can use the Synapse Poprtal to create, manage, monitor and delete link connections in your Synapse workspace. This allows the operational data from your source database to be automatically replicated to the destination Synapse dedicated SQL pool. This gives you near-real time analytics from ground to cloud.
+<h4>Synapse Link</h4> 
+Setting up a <i>link connection</i> maps a connection between SQL Server and an Azure Synapse Analytics dedicated SQL pool. You can use the Synapse Portal to create, manage, monitor and delete link connections in your Synapse workspace. This allows the operational data from your source database to be automatically replicated to the destination Synapse dedicated SQL pool. This gives you near-real time analytics from ground to cloud.
 
 <p></p>
 <img src="https://learn.microsoft.com/en-us/azure/synapse-analytics/media/sql-synapse-link-overview/synapse-link-sql-architecture.png" width=400>
 <p></p>
 
-You can <a href="https://learn.microsoft.com/en-us/azure/synapse-analytics/synapse-link/sql-server-2022-synapse-link">learn more about using SQL Server Synpase Link at this reference</a>.
+You can <a href="https://learn.microsoft.com/en-us/azure/synapse-analytics/synapse-link/sql-server-2022-synapse-link">learn more about using SQL Server Synapse Link at this reference</a>.
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: Detail Ground-to-Cloud features of Interest</b></p>
 
@@ -201,9 +201,9 @@ In this Activity, you will continue your notes from the first Activity, and reco
 
 <h2 id="5.2"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">5.2 - Extending Microsoft Azure services to on-Premises environments</h2>
 
-In some cases you will want to leverage cloud services in your on-premises environment. This can be as little as inventoring your Instances, up to using a security platform that is always up to date, all the way to a completely managed Instance of SQL Server, residing not only in your on-premises data center, but even other cloud providers.
+In some cases you will want to leverage cloud services in your on-premises environment. This can be as little as creating an inventory of your Instances, up to using a security platform that is always up to date, all the way to a completely managed Instance of SQL Server, residing not only in your on-premises data center, but even other cloud providers.
 
-<h3>Microsoft Defender, Microsoft SQL Defender, and Advanced Threat Protection</h3>
+<h4>Microsoft Defender, Microsoft SQL Defender, and Advanced Threat Protection</h4>
 Computing security, and in specific data security, is essential in any organization. However, keeping on top of methods and processes to secure computing and data security elements, along with keeping up with threats and mitigations is very difficult and time-consuming. As covered in an earlier Module, SQL Server Management Studio (SSMS) has a built-in vulnerability scanner, and there are also older tools you can use to detect issues and protect your servers.
 
 <p></p>
@@ -237,7 +237,7 @@ In this Activity, you will review a section of the <i>Deployment of Microsoft De
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
-<h3>Data Governance with Microsoft Purview</h3>
+<h4>Data Governance with Microsoft Purview</h4>
 In the first Module you learned how to create a Data Catalog with Microsoft Purview. You can also govern your on-premises latest version SQL Server Instances with Purview Policies. 
 <p></p>
 Purview Policies allow you to define a range of SQL Server Instances, set up Policies for access (such as Read, Write and so on), and then publish the policies down to the Instances. The latest version of SQL Server is instrumented to accept these policies and handle the Data Control Language (DCL) T-SQL Statements to apply the applicable permissions and user logins to the Instance. 
@@ -245,10 +245,10 @@ Purview Policies allow you to define a range of SQL Server Instances, set up Pol
 
 You can <a href="https://cloudblogs.microsoft.com/sqlserver/2022/08/11/microsoft-purview-access-policies-for-sql-server-2022/">learn more about Microsoft Purview Policies for SQL at this reference</a>.
 
-<h3>Azure Arc and SQL Server</h3>
+<h4>Azure Arc and SQL Server</h4>
 Microsoft Azure Arc is a set of technologies that allow you to manage your entire environment together by projecting your existing non-Azure and/or on-premises resources into Azure Resource Manager. It can help you manage virtual machines, Kubernetes clusters, and databases as if they are running in Azure, using familiar Azure services and management capabilities, regardless of where they live. Azure Arc technologies allow you to continue using traditional ITOps while introducing DevOps practices to support new cloud native patterns in your environment, configure custom locations as an abstraction layer on top of Azure Arc-enabled Kubernetes clusters and cluster extensions.
 <p></p>
-Azure Arc allows you to manage various resources hosted outside of Azure including Servers, Kubernetes clusters, Azure data services such as SQL Managed Instance and PostgreSQL server, SQL Server Instances, and Virtual machines. 
+Azure Arc allows you to manage various resources hosted outside of Azure including Servers, Kubernetes clusters, Azure data services such as SQL Managed Instance and PostgreSQL server, SQL Server Instances, and Virtual machines.
 
 <p></p>
 <img style="margin: 0px 15px 15px 0px;" src="https://learn.microsoft.com/en-us/azure/azure-arc/media/overview/azure-arc-control-plane.png" width=800>
@@ -261,12 +261,12 @@ There are two Azure Arc implementations that allow you to extend various Microso
 <b>Microsoft Azure Arc-enabled SQL Server</b>
 The first method you can use to extend Microsoft Azure resources to your environment is Microsoft Azure Arc-enabled SQL Server. This deployment method allows you to use monitoring, security, and inventory systems in Microsoft Azure on your local SQL Servers. 
 
-To enable Azure services, you <i>>onboard</i> a  SQL Server Instance to Azure Arc. The onboarding process installs a Azure extension for SQL Server to the Connected Machine agent, which in turn will create an Azure resource for each SQL Server instance. 
+To enable Azure services, you <i>>onboard</i> a  SQL Server Instance to Azure Arc. The onboarding process installs an Azure extension for SQL Server to the Connected Machine agent, which in turn will create an Azure resource for each SQL Server Instance.
 
 You can <a href="https://learn.microsoft.com/en-us/sql/sql-server/azure-arc/overview?view=sql-server-ver16">learn more about Microsoft Azure Arc-enabled SQL Server at this reference</a>.
 
 <b>Microsoft Azure Arc-enabled data services</b>
-Azure Arc-enabled data services uses your Kubernetes environment to run SQL managed instance and PostgreSQL server. They will automatically receive updates on a frequent basis including servicing patches and new features similar to the experience in Azure. Updates from the Microsoft Container Registry are provided to you and deployment cadences are set by you in accordance with your policies. You also get elasticity for your on-premises systems which enables you to scale databases up or down dynamically in much the same way as they do in Azure, based on the available capacity of your infrastructure. 
+Azure Arc-enabled data services uses your Kubernetes environment to run SQL managed Instance and PostgreSQL server. They will automatically receive updates on a frequent basis including servicing patches and new features similar to the experience in Azure. Updates from the Microsoft Container Registry are provided to you and deployment cadences are set by you in accordance with your policies. You also get elasticity for your on-premises systems which enables you to scale databases up or down dynamically in much the same way as they do in Azure, based on the available capacity of your infrastructure. 
 
 Azure Arc also provides other cloud benefits such as fast deployment and automation at scale. You can deploy a database in seconds using either GUI or CLI tools. It also allows you to use familiar tools such as the Azure portal, Azure Data Studio, and the Azure CLI to get a unified view of all your data assets deployed with Azure Arc. You also get logs and telemetry from Kubernetes APIs to analyze the underlying infrastructure capacity and health. Besides having localized log analytics and performance monitoring, you can now leverage Azure Monitor for comprehensive operational insights across your entire estate.
 
@@ -274,7 +274,7 @@ You can <a href="https://learn.microsoft.com/en-us/azure/azure-arc/data/overview
 
 You can try these scenarios using the <a href="https://azurearcjumpstart.io/overview/"> Azure Arc Jumpstart</a> site. There are also <a href="https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/hybrid/enterprise-scale-landing-zone">additional learning resources for Azure Arc at this reference</a>. 
  
-<h3>Connect with Azure Active Directory</h3>
+<h4>Connect with Azure Active Directory</h4>
 Fully securing your Data Estate requires strong access and authentication mechanisms. The newest versions of SQL Server now support connecting to SQL Server using Azure AD identities with Azure Active Directory Password, Azure Active Directory Integrated, Azure Active Directory Universal with Multi-Factor Authentication, and Azure Active Directory access token authentication modes. 
 
 > Current connection methods such as SQL authentication and Windows authentication remain unchanged
@@ -334,7 +334,7 @@ In the first Module of this course, you laid out a few areas you would like to f
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/owl.png?raw=true"><b>For Further Study</b></p>
 <ul>
-    <li><a href="url" target="_blank">A whitepaper on <i>Five Steps to Modernizing Your Data</i> is available here</a>.</li>
+    <li><a href="[url](https://azure.microsoft.com/en-us/resources/five-steps-to-modernizing-your-data/)" target="_blank">A whitepaper on <i>Five Steps to Modernizing Your Data</i> is available here</a>.</li>
 </ul>
 
 Congratulations! You have completed this workshop on Modernizing Your Data Estate With SQL Ground-to-Cloud. You now have the tools, assets, and processes you need to extrapolate this information into other applications.

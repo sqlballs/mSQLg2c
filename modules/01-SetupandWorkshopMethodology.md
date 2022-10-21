@@ -8,7 +8,7 @@
 
 <img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/textbubble.png?raw=true"><h2>01 Workshop Setup and Methodology</h2>
 <p></p>
-The <a href="https://github.com/sqlballs/mSQLg2c">Modernizing Your Data Estate With SQL Ground-to-Cloud workshop</a> uses the following components. Read through this list, and in the Activities that follow you will see specific steps for each installation. You can also simply read through each of these steps, and observe the activities in the workshop if you cannot install the hands-on poritions.
+The <a href="https://github.com/sqlballs/mSQLg2c">Modernizing Your Data Estate With SQL Ground-to-Cloud workshop</a> uses the following components. Read through this list, and in the Activities that follow you will see specific steps for each installation. You can also simply read through each of these steps, and observe the activities in the workshop if you cannot install the hands-on portions.
 <p></p>
 
 > You must have **at least** SQL Server 2022 and SQL Server Management Studio installed to take this course. 
@@ -72,7 +72,7 @@ You can create your workstation for this course using **one** of the following m
 - <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/windows/quick-create-portal" target="_blank">Microsoft Azure Virtual Machine.</a> Select a system that has at least 2 processors, a minimum of 8GB of RAM and 150GB drive space free. Ensure you create all assets for this course in a single Resource Group, so that you can delete all these assets when you complete the workshop. **Do not use your organization's production subscription for this workshop.**
 - Another Cloud Provider's Virtual Machine Environment. See the provider's documentation for this process. This system should have a minimum of 8GB of RAM and 150GB drive space free. **Do not use your organization's production subscription for this workshop.**
 
-> If you use a Microsoft Azure Virtual Machine,  **ensure that you "Stop" the VM in the Portal to ensure that you do no exceed the cost limits on this account. Simply shutting down the Virtual Machine will continue to cost you.** <a href="https://build5nines.com/properly-shutdown-azure-vm-to-save-money/" target="_blank">You can read more about properly stopping a Microsoft Azure Virtual Machine here.</a>
+> If you use a Microsoft Azure Virtual Machine,  **ensure that you "Stop" the VM in the Portal to ensure that you do not exceed the cost limits on this account. Simply shutting down the Virtual Machine will continue to cost you.** <a href="https://build5nines.com/properly-shutdown-azure-vm-to-save-money/" target="_blank">You can read more about properly stopping a Microsoft Azure Virtual Machine here.</a>
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="./graphics/checkbox.png"> Apply Operating System Updates</b></p>
 
@@ -153,7 +153,7 @@ python SimpleConnection.py
 
 <br>
  
-> If you are using an Azure Virtual Machine, when you are done with the installation and with each time period of lab exercises, shut down the Virtual Machine from the Microsoft Azure Portal by selecting "Stop" in the Virutal Machine Panel. Simply shutting down the Virtual Machine using the Power Off feature in the operation system does not release the assets and you are charged until the machine is Stopped in the Portal. [https://build5nines.com/properly-shutdown-azure-vm-to-save-money/](https://build5nines.com/properly-shutdown-azure-vm-to-save-money/) 
+> If you are using an Azure Virtual Machine, when you are done with the installation and with each time period of lab exercises, shut down the Virtual Machine from the Microsoft Azure Portal by selecting "Stop" in the Virutal Machine Panel. Simply shutting down the Virtual Machine using the Power Off feature in the operating system does not release the assets and you are charged until the machine is Stopped in the Portal. [https://build5nines.com/properly-shutdown-azure-vm-to-save-money/](https://build5nines.com/properly-shutdown-azure-vm-to-save-money/) 
     
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity 3: Create a Microsoft Azure SQL Database</b></p>
 <br>

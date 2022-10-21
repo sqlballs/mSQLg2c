@@ -9,13 +9,13 @@
 
 In the previous modules, you learned about how to <a href="https://github.com/sqlballs/mSQLg2c/blob/Josh/modules/02-AuditingYourDataEstateArchitecture.md" target="_blank"> <b>audit your data estate</b></a>, and the most recent <a href="https://github.com/sqlballs/mSQLg2c/blob/Josh/modules/03-SQLServerImprovements.md" target="_blank"><b>SQL Server improvements</a>.</b> In this module, you will learn about the different options available for running SQL Server in Azure and all the considerations that are involved with running an architecture in the cloud, like Manageability, Availability, Performance, Security, and Deployment.
 
-(As a reminder, make sure you check out the <a href="https://github.com/sqlballs/mSQLg2c/blob/Josh/modules/01-SetupandWorkshopMethodology.md" target="_blank"><b>Pre-Requisites</b></a> page before you start. You'll need all of the items loaded there before you can proceed with the workshop.)
+(<a href="https://github.com/sqlballs/mSQLg2c/blob/main/modules/01-SetupandWorkshopMethodology.md" target="_blank">Make sure you check out the <b>Pre-Requisites</b> page before you start</a>. You'll need all of the items loaded there before you can proceed with the workshop.)
 
-Using the <a href="https://github.com/sqlballs/mSQLg2c/blob/main/modules/02-AuditingYour%20DataEstateArchitecture.md">processes, tools and procedures from the Auditing  Module</a>, the WideWorldImporters company has completed an initial audit of their data estate. They have settled on many architectural improvements in the latest version of SQL Server on-premises, and have decided to move to the latest version for many of their systems, using the Compatibilit settings where required. They have also started a test installation of SQL Server running on Red Hat Linux, and developers are now using SQL Server in Containers. 
+Using the <a href="https://github.com/sqlballs/mSQLg2c/blob/main/modules/02-AuditingYour%20DataEstateArchitecture.md">processes, tools and procedures from the Auditing  Module</a>, the WideWorldImporters company has completed an initial audit of their data estate. They have settled on many architectural improvements in the latest version of SQL Server on-premises, and have decided to move to the latest version for many of their systems, using the Compatibility settings where required. They have also started a test installation of SQL Server running on Red Hat Linux, and developers are now using SQL Server in Containers. 
 
 WideWorldImporters is now turning its attention to workloads they can use in the Microsoft Azure platform. They are particularly interested in the security, availability and elastic scale available in a cloud service.
 
-For consisitency, they are continuing their evaluation using the same categories that they investigated for the on-premises installations of SQL Server:
+For consistency, they are continuing their evaluation using the same categories that they investigated for the on-premises installations of SQL Server:
 
 <dl>
   <dt><a href="#4.1" target="_blank">4.1 - Deployment Options</dt>
@@ -84,7 +84,7 @@ Several <a href="https://learn.microsoft.com/en-us/azure/azure-sql/managed-insta
 - <a href="https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/service-endpoint-policies-configure?view=azuresql">Endpoint policies</a> allow you to configure which Azure Storage accounts can be accessed from a SQL Managed Instance subnet. Grants an extra layer of protection against inadvertent or malicious data exfiltration
 - <a href="https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/instance-pools-overview?view=azuresql">Instance pools</a> are a convenient and cost-efficient way to migrate smaller SQL Server instances to the cloud
 - <a href="https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/managed-instance-link-feature-overview?view=azuresql">Managed Instance link</a> gives you an online replication of SQL Server databases hosted anywhere to Azure SQL Managed Instance
-- <a href="https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/managed-instance-link-feature-overview?view=azuresql">Maintenance window advance notifications for databases</a> allows you to configure a non-default maintenance window, and recieve advanced notifications of maintenance
+- <a href="https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/managed-instance-link-feature-overview?view=azuresql">Maintenance window advance notifications for databases</a> allows you to configure a non-default maintenance window, and receive advanced notifications of maintenance
 - <a href="https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/log-replay-service-migrate?view=azuresql">Migrate with Log Replay Service</a> allows you to migrate databases from SQL Server to SQL Managed Instance by using Log Replay Service
 - <a href="https://learn.microsoft.com/en-us/sql/azure-data-studio/extensions/sql-database-project-extension-sdk-style-projects">You can now use Microsoft.Build.Sql for SDK-style SQL projects</a> in the SQL Database Projects extension in Azure Data Studio or VS Code. SDK-style SQL projects are especially advantageous for applications shipped through pipelines or built in cross-platform environments
 - <a href="https://learn.microsoft.com/en-us/sql/database-engine/configure-windows/sql-server-service-broker">There is new support for cross-instance message exchange</a> using Service Broker on Azure SQL Managed Instance
@@ -95,7 +95,7 @@ Several <a href="https://learn.microsoft.com/en-us/azure/azure-sql/managed-insta
 
 You can <a href="https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview?view=azuresql">learn more about Azure SQL Managed Instance at this reference</a>.
 
-<h3>Azure SQL Database</h3>
+<h4>Azure SQL Database</h4>
 WideWorld Importers has now reviewed the highest level of control and responsibility (Azure Virtual Machines), and then evaluated abstracting the platform, operating system, and many of the responsibilities for the SQL Server deployment (Azure SQL Managed Instance). Using the Data Estate Audit process from the first Module, they find they are investing more heavily in web-based applications, not only for customers, but for some internal applications as well. 
 
 <p></p>
@@ -139,7 +139,7 @@ There are three <i>tiers</i> available in the vCore model for Azure SQL Database
 
 You can find a <a href="https://azure.microsoft.com/en-gb/blog/understanding-and-leveraging-azure-sql-database-sla/">discussion of the service level agreements that set an expectation for uptime and performance at this reference</a>. This resource will help you make an informed decision about which tier to use. A <a href="https://www.youtube.com/watch?v=l7FUNJd5TSE">video discussion is available at this reference</a>.
 
-For a deeper explanation between the three tiers (including scenarios), you can also see <a href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers-vcore#service-tier-characteristics">this referfence on the service-tier characteristics</a>.
+For a deeper explanation between the three tiers (including scenarios), you can also see <a href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers-vcore#service-tier-characteristics">this reference on the service-tier characteristics</a>.
 
 <b>Decision 3: The provisioning model for best use patterns</b> 
 If you choose the <i>General Purpose within Single databases</i> and the <i>vCore-based model</i>, you have an additional decision to make regarding the compute costs:
@@ -181,7 +181,7 @@ In this Activity you will Install the Azure SQL Database Emulator.
 <p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
 - Open <a href="https://learn.microsoft.com/en-us/azure/azure-sql/database/local-dev-experience-set-up-dev-environment?view=azuresql&tabs=vscode">this reference</a>
-- If time and resrouces permit, install the components as listed in the steps at that reference
+- If time and resources permit, install the components as listed in the steps at that reference
 - If you do not have the resources on your system, or you do not have the time to follow those steps, review with the instructor and watch their demonstration of the process
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
@@ -192,7 +192,7 @@ While managing SQL Server in the cloud is somewhat different than managing on pr
 You can use SQL Server Management Studio, SQLCMD, and the other on-premises tools you reviewed in the last Module for on-premises tooling. In this Module, you will focus on the Azure Portal, the Azure Data Studio tool, and the Azure Command-line Interface (<i>az</i> commands in a cross-platform tool).
 
 <b>The Microsoft Azure Portal</b>
-The Microsoft Azure Portal is used to deploy, manage, monitor, or delete resources in your subscription. It has sections, or "blades" for each of these operations and can be accessed with all major web browsers as well as cell phones. You can also set up various "Dashboards" to show your resrouces and other information.
+The Microsoft Azure Portal is used to deploy, manage, monitor, or delete resources in your subscription. It has sections, or "blades" for each of these operations and can be accessed with all major web browsers as well as cell phones. You can also set up various "Dashboards" to show your resources and other information.
 
 <p></p>
 <img src="https://azurecomcdn.azureedge.net/cvt-2a7918f3835dd5b76499d5f13b9b0bcf622c701196cff0345dcb09695a8a9b9c/images/shared/footer/portal-dashboard-full.png" width=800>
@@ -245,7 +245,7 @@ In this Activity you will review the Azure Data Studio tool, and optionally foll
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
 <h2 id="4.3"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">4.3 Availability</h2>
-One of the advantages of the a managed service is the Availability resources you have. WideWorld Importers is very focused on ensuring Business Continuity, and they believe the Microsoft Azure platform can assist with this process. They have reviewed the resources on <a href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-business-continuity">databases and Business Continuity at this reference</a>, and are interested in the "Avaialability Zone" concepts.
+One of the advantages of the a managed service is the Availability resources you have. WideWorld Importers is very focused on ensuring Business Continuity, and they believe the Microsoft Azure platform can assist with this process. They have reviewed the resources on <a href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-business-continuity">databases and Business Continuity at this reference</a>, and are interested in the "Availability Zone" concepts.
 
 <p></p>
 
@@ -292,7 +292,7 @@ Some of these considerations involve the same tools and processes you use on-pre
 
 * [Explain estimated and actual query plans.](https://learn.microsoft.com/en-us/training/modules/explore-query-performance-optimization/3-explain-estimated-actual?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.optimize-query-performance-sql-server) The topic of actual versus estimated execution plans can be confusing. The difference is that the actual plan includes runtime statistics that aren't captured in the estimated plan. The operators used, and order of execution will be the same as the estimated plan in nearly all cases. 
 * [The Query Data Store](https://learn.microsoft.com/en-us/training/modules/explore-query-performance-optimization/5-explore-query-store) The SQL Server Query Store is a per-database feature that automatically captures a history of queries, plans, and runtime statistics to simplify performance troubleshooting and query tuning. It also provides insight into database usage patterns and resource consumption. This is on by default in all Azure SQL Databases.
-* [Wait Statistics](https://learn.microsoft.com/en-us/training/modules/evaluate-performance-improvements/2-describe-wait-statistics?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.optimize-query-performance-sql-server) When SQL Server executes any process it must wait for resources.  As that occurs Wait Statistics are accumulated by the SQL OS.  Wait Statistics will tell you what Azure SQL is waiting on.  If it is a hardware wait stat, then you may need to consider increasing your service teir.
+* [Wait Statistics](https://learn.microsoft.com/en-us/training/modules/evaluate-performance-improvements/2-describe-wait-statistics?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.optimize-query-performance-sql-server) When SQL Server executes any process it must wait for resources.  As that occurs Wait Statistics are accumulated by the SQL OS.  Wait Statistics will tell you what Azure SQL is waiting on.  If it is a hardware wait stat, then you may need to consider increasing your service tier.
 
 Other considerations are available in Azure that are not the same as an on-premises installation of SQL Server:
 
@@ -303,7 +303,7 @@ Other considerations are available in Azure that are not the same as an on-premi
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: Understand more about the Automatic Tuning processes in Azure SQL</b></p>
 
-Automatic tuning in Azure SQL is a great feature that analyzes your workload and gives recommndations on configuration changes you can make to improve performance. In this video, you are given an overview of the feature.
+Automatic tuning in Azure SQL is a great feature that analyzes your workload and gives recommendations on configuration changes you can make to improve performance. In this video, you are given an overview of the feature.
 
 <p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
@@ -397,7 +397,7 @@ In this Activity you will review a process used to measure Twitter sentiment wit
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
 <h2 id="4.7"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">4.7 Analytics</h2>
-You have the same T-SQL constructs and other mechanisms in Azure SQL for analysis as you do in an on-premises installation. The Microsoft Azure platform also provides interoperability with a completely integrated analysis solition called Azure Synapse. 
+You have the same T-SQL constructs and other mechanisms in Azure SQL for analysis as you do in an on-premises installation. The Microsoft Azure platform also provides interoperability with a completely integrated analysis solution called <i>Azure Synapse</i>.
 <p></p>
 Azure Synapse is an enterprise analytics service that accelerates time to insight across data warehouses and big data systems. Azure Synapse brings together the best of SQL technologies used in enterprise data warehousing, Spark technologies used for big data, Data Explorer for log and time series analytics, Pipelines for data integration and ETL/ELT, and deep integration with other Azure services such as Power BI, CosmosDB, and AzureML.
 
