@@ -412,6 +412,9 @@ You can <a href="https://learn.microsoft.com/en-us/azure/synapse-analytics/overv
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/owl.png?raw=true"><b>For Further Study</b></p>
 <ul>
         <li><a href="https://learn.microsoft.com/en-us/training/paths/azure-sql-fundamentals/" target="_blank">You can find a complete hands-on, beginner course on Azure SQL for free at this reference</a></li>
+        <li><a href="https://www.youtube.com/watch?v=rf0FvDMm0f0&t=15s" target="_blank">You can find out how to develop Apps with Azure SQL Database for free at this reference</a></li>
+  
+  
 </ul>
 
 Next, continue on to [Module 05 - Extending SQL Server to the Microsoft Azure Platform](https://github.com/sqlballs/mSQLg2c/blob/main/modules/05-ExtendingSQLServerToAzure.md)
