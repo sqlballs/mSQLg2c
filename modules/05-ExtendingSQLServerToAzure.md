@@ -261,7 +261,7 @@ There are two Azure Arc implementations that allow you to extend various Microso
 <b>Microsoft Azure Arc-enabled SQL Server</b>
 The first method you can use to extend Microsoft Azure resources to your environment is Microsoft Azure Arc-enabled SQL Server. This deployment method allows you to use monitoring, security, and inventory systems in Microsoft Azure on your local SQL Servers. 
 
-To enable Azure services, you <i>>onboard</i> a  SQL Server Instance to Azure Arc. The onboarding process installs an Azure extension for SQL Server to the Connected Machine agent, which in turn will create an Azure resource for each SQL Server Instance.
+To enable Azure services, you <i>onboard</i> a  SQL Server Instance to Azure Arc. The onboarding process installs an Azure extension for SQL Server to the Connected Machine agent, which in turn will create an Azure resource for each SQL Server Instance.
 
 You can <a href="https://learn.microsoft.com/en-us/sql/sql-server/azure-arc/overview?view=sql-server-ver16">learn more about Microsoft Azure Arc-enabled SQL Server at this reference</a>.
 
