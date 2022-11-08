@@ -53,7 +53,7 @@ A few primary industry IT Frameworks are:
 
 And of course there are many other Frameworks, some general-purpose, others specific to a particular use or industry. You can <a href="https://en.wikipedia.org/wiki/Enterprise_architecture_framework">see a list of more Frameworks here</a>.
 
-Some of these Frameworks focus on a top-down, central IT team approach, providing a consolidated view of the entire estate - including the data platforms. Other that are more data-centric, such as the Data Mesh, push the responsibilities for each data area out to the affected part of the organization. In any case, these frameworks are ideals - and a complete and comprehensive view of any single aspect (compute, security, file storage, and so on) is fairly rare. It is a huge effort to locate and catalog each and every facet of the IT infrastructure. 
+Some of these Frameworks focus on a top-down, central IT team approach, providing a consolidated view of the entire estate - including the data platforms. Other that are more data-centric, such as the Data Mesh, push the responsibilities for each data area out to the affected part of the organization. In any case, these frameworks are <i>ideals</i> - and a complete and comprehensive view of any single aspect (compute, security, file storage, and so on) is fairly rare. It is a huge effort to locate and catalog each and every facet of the IT infrastructure. 
   
 Whichever framework your organization uses - even if there is no defined framework - you should have a general map of your Data Estate. A Data Estate (for the purposes of this workshop) is the processes, platforms, and people involved in creating, storing, processing and disposing of organizational data. This includes not only the data your organization maintains, but the data your organization leverages.
   
@@ -67,7 +67,7 @@ You can <a href="https://www.frevvo.com/blog/business-process-analysis/">learn m
 In many cases your organization will already have a BPA completed. If your organization has a Business Analyst role, you should contact that team to start your data investigation. Data discovery and movement is at the core of this discipline. You can <a href="https://www.indeed.com/hire/job-description/business-analyst">read more about the Business Analyst role here</a>.
 
 <h4>Mapping Business Processes to data with Business Process Model and Notation</h4>
-You may not have a Business Analyst (BA)at your organization or have had a BPA completed. In this case, you can start with the main applications you are aware of in your organization and create a data map from there. If you do have a BA in your organization, they will often document processes using a specific tool.
+You may not have a Business Analyst (BA) at your organization or have had a BPA completed. In this case, you can start with the main applications you are aware of in your organization and create a data map from there. If you do have a BA in your organization, they will often document processes using a specific tool.
 
 Other professionals in your organization may not be as familiar with database and other technologies, and will normally describe these systems in terms if what actions they take, rather than in the systems they use. To bridge the gap between business processes and communicate effectively with your BA's, you can use <i>Business Process Model and Notation</i> (BPMN). BPMN uses a series of "swimlanes" or rectangles that capture a particular process, person, or group, and the actions they take represented by icons. When the process, person or group completes part of their process, another icon is added. If one swimlane passes off the results of an action to another process, person, or group, another rectangle is documented and arrows show the direction of flow.
 
@@ -83,16 +83,16 @@ In this Activity, you will create a list of goals for your Data Estate similar t
 
 <p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
-- Review the Wide World Importers Scenario above.
+- Review the Wide World Importers Scenario.
 - Briefly review the IT Frameworks described above, and bookmark them for later reference for a discussion with your larger IT organization to see if you are using any of them, or should be leveraging them.
 - Open [this reference in a new tab](https://i.pinimg.com/originals/3b/58/d7/3b58d79b6b60a579f4ea9635d910977e.png) to see some basic BPMN icons.
 - Review the Contoso graphic shown earlier and review how the data elements show a process flow.
-- Document at least three areas of emphasis for your data estate for your current organization. 
+- Document at least three areas of emphasis for your data estate for your current organization, similar to the one WWI did in this Module. You will return to this document throughout the course, so ensure that you make notes on it as you progress.
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
 <h2 id="2.2"><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/pencil2.png?raw=true">2.2 Identify Data Sources and Sinks</h2>
-The focus of your design is locating where data originates, and how it moves through the applications and processes in your organization. In general, your organization's data resides in data storage, and some systems also include a data processing engine or engines. Identifying these locations is essential to proper security, processing, reporting and applications. 
+The focus of your architecture design is locating where your data originates, and how it moves through the applications and processes in your organization. In general, your organization's data resides in some strcutured or unstructured data storage, and some systems also include a data processing engine or engines. Identifying these locations is essential to proper security, processing, reporting and applications. 
 <p></p>
 Creating a data map is a non-trivial task, and you should bias towards having the tier-1 application's data documented at the very least, as opposed to only creating the Architecture Diagram if everything is documented. You can always add information later.
 
@@ -120,8 +120,7 @@ Once you start the Collection action, the Toolkit produces several reports that 
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: Evaluate and Bookmark the MAP Toolkit</b></p>
 <br>
-In this Activity, you will complete a Learning Path for the MAP Toolkit. If time is limited, bookmark this Path for future use.
-This Activity can be completed alone or as a group.
+In this Activity, you will complete a Learning Path for the MAP Toolkit. If time is limited, bookmark this Path for future use. This Activity can be completed alone or as a group.
 
 <p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
@@ -146,7 +145,7 @@ You can see <a href="https://learn.microsoft.com/en-us/azure/purview/microsoft-p
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/point1.png?raw=true"><b>Activity: Complete an Overview of Microsoft Purview</b></p>
 
-In this Activity you will review the process for creating an on-premises or in-VM SQL Server Instance Data Source, and if time permits, complete an Overview Learning Path for Microsoft Purview. This Activity can be done individually or as a group.
+In this Activity you will review the process for creating an on-premises or in-VM SQL Server Instance Data Source, and if time permits, complete an Overview Learning Path for Microsoft Purview.
 
 <p><img style="margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/checkmark.png?raw=true"><b>Steps</b></p>
 
@@ -182,14 +181,14 @@ There are several decision points to consider when designing or purchasing a Dat
 There are various levels of tools you can use to build a pipeline, from using a scripting or command language, all the way to a fully dedicated Data Pipeline environment. Each has benefits and costs to consider.
 
 <h4>Non-Dedicated Data Movement Systems</h4>
-Processes, Scripts, and Platform-Specific tools move data from a sink to another sink either on a schedule, manually, or through some data trigger. They can push the data from one system to another, or pull the data from one system into another.
+Processes, Scripts, and platform-specific tools move data from a sink to another sink either on a schedule, manually, or through some data trigger. They can push the data from one system to another, or pull the data from one system into another.
 
-PowerShell is a tool shipped with all modern version of Microsoft Windows, and it is available for other platforms as well. It has the ability to work with files, e-mail, schedules, cloud environments such as Microsoft Azure, it can interface with SQL Server on-premises as well as all major database vendors, and much more. It is possible to build a complete Data Pipeline with a scripting language such as PowerShell, but care should be taken to ensure that security and maintainability are considered when defining a manual Data Pipeline. 
+<i>PowerShell</i> is a tool shipped with all modern version of Microsoft Windows, and it is available for other platforms as well. It has the ability to work with files, e-mail, schedules, cloud environments such as Microsoft Azure, it can interface with SQL Server on-premises as well as all major database vendors, and much more. It is possible to build a complete Data Pipeline with a scripting language such as PowerShell, but care should be taken to ensure that security and maintainability are considered when defining a manual Data Pipeline. 
 
 You can find a <a href="https://www.powershellgallery.com/">large variety of code examples and libraries in the PowerShell Gallery</a>.
 
 <h4>SQL Server Integration Services</h4>
-One of the most mature tools in the SQL Server ecostructure is <a href="https://learn.microsoft.com/en-us/sql/integration-services/sql-server-integration-services?view=sql-server-ver16">SQL Server Integration Services</a>, or SSIS. SSIS can run in an on-premises and in-VM SQL Server, and its packages can also work within the Azure Data Factory tool described next. SSIS is a complete platform for building data integration and data transformations solutions. SSIS can copy or extract files, load data into databases or data warehouses, clean and mine data, and manage SQL Server objects and data.
+One of the most mature tools in the SQL Server ecostructure is <a href="https://learn.microsoft.com/en-us/sql/integration-services/sql-server-integration-services?view=sql-server-ver16"><i>SQL Server Integration Services</i></a>, or SSIS. SSIS can run in an on-premises and in-VM SQL Server, and its packages can also work within the Azure Data Factory tool described next. SSIS is a complete platform for building data integration and data transformations solutions. SSIS can copy or extract files, load data into databases or data warehouses, clean and mine data, and manage SQL Server objects and data.
 <p></p>
 In SSIS, you define data connections, and tie them together with tasks. You have full visibility into the metadata of SSIS, and it has routing, notification, alerting, retry logic, and rudimentary path logic included.
 <p></p>
@@ -199,7 +198,7 @@ In SSIS, you define data connections, and tie them together with tasks. You have
 You can find a complete <a href="https://learn.microsoft.com/en-us/sql/integration-services/integration-services-programming-overview?view=sql-server-ver16">programming overview of SQL Server Integration Services at this reference</a>.
 
 <h4>Microsoft Azure Data Factory</h4>
-Microsoft Azure Data Factory is a managed cloud service in Azure that's built for complex hybrid extract-transform-load (ETL), extract-load-transform (ELT), and data integration projects.
+The <i>Microsoft Azure Data Factory</i> is a managed cloud service in Azure that's built for complex hybrid extract-transform-load (ETL), extract-load-transform (ELT), and data integration projects.
 <p></p>
 <img src="https://learn.microsoft.com/en-us/azure/data-factory/media/data-flow/overview.svg" alt="Graphic" width="600">
 <p></p>
