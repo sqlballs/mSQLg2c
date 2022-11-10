@@ -64,7 +64,7 @@ The latest version of SQL Server supports all of the features associated with th
 In the latest version, SQL Server runs on Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu Linux. WideWorld Importers is currently running Red Hat Linux at one of their processing plants, and is interested in some of the workloads that might be useful on that platform. As they test, their primary concern is the performance aspect of SQL Server in Linux, and they find that performance is on-par with the Windows deployments due to the architecture of the Platform Abstraction Layer (PAL) implemented to run the SQL Server Engine code on Linux:
 
 <p></p>
-<img src="https://cloudblogs.microsoft.com/uploads/prod/2016/12/04_thumb.png" width=300>
+<img src="https://cloudblogs.microsoft.com/wp-content/uploads/2016/12/02_thumb.png" width=300>
 <p></p>
 
 The latest version of SQL Server on Linux supports the following improvements:
@@ -85,10 +85,6 @@ You can <a href="https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-ov
 The introduction of SQL Server running on Linux allows for the next level of hardware abstraction, called a <i>Container</i>. There are various types of Container technologies, in this workshop, you will focus on the Docker container format, as implemented in Windows using the <i>Moby</i> framework.
 
 A Container is provided by the Container Runtime (Such as <i>containerd</i>) runtime engine, which sits above the operating system (Windows or Linux). In this abstraction, you do not control the hardware or the operating system. The Container has a specific protected memory space, and can contain binaries such as Python, R, SQL Server, or other binaries. A Container with all its binaries is called an Image. You create a container from a file.
-
-You can see the difference between Virtual Machines and Container technologies here:
-
-<img src="https://cloudblogs.microsoft.com/uploads/prod/sites/37/2019/07/Demystifying-containers_image1.png" width=600>
 
 This abstraction holds everything for an application to isolate it from other running processes. It is also completely portable - you can create an image on one system, and another system can run it so long as the same Container Runtime (Such as Docker) is installed. Containers also start very quickly, are easy to create (called Composing) using a simple text file with instructions of what to install (called a manifest or Dockerfile) on the image. The instructions pull the base image, and then any binaries you want to install. Several pre-built Containers are already available, and SQL Server is one of these. You can <a href="https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017">read more about installing SQL Server on Container Runtimes (Such as Docker) at this reference</a>.
 
