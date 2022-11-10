@@ -59,11 +59,11 @@ The information covered in this workshop includes the following technologies and
  <table style="tr:nth-child(even) {background-color: #f2f2f2;}; text-align: left; display: table; border-collapse: collapse; border-spacing: 2px; border-color: gray;">
 
   <tr><th style="background-color: #1b20a1; color: white;">Technology/Concept</th> <th style="background-color: #1b20a1; color: white;">Description</th></tr>
-  <tr><td style="vertical-align: top">Data Architectures</i></td><td style="vertical-align: top">Explains how to evaluate the current data estate in your organization and how to identify and document gaps</td></tr>
-  <tr><td style="vertical-align: top">SQL Server</i></td><td style="vertical-align: top">Covers challenges and solutions in management, reliability, performance, security, data virtualization, and Linux for SQL Server spanning on-premise, Virtual Machines, Containers, Kubernetes, and cloud platforms.</td></tr>
-  <tr><td style="vertical-align: top">Microsoft Azure</i></td><td style="vertical-align: top">Covers the tools, processes and procedures for SQL Server Virtual Machines on the Microsoft Azure platform </td></tr>
-  <tr><td style="vertical-align: top">Hybrid Data Systems</i></td><td style="vertical-align: top">Covers the tools, processes and procedures for Azure SQL (Managed Instance, Single Database, and Elastic Pool)</td></tr>
-  <tr><td style="vertical-align: top">Upgrading and Migrating SQL Server</i></td><td style="vertical-align: top">Explains the tools and processes to extend on-premises SQL Server installations to the Microsoft Azure platform </td></tr>
+  <tr><td style="vertical-align: top">Data Architectures</i></td><td style="vertical-align: top">Evaluating and configuring data architectures to match an organization's application needs</td></tr>
+  <tr><td style="vertical-align: top">SQL Server</i></td><td style="vertical-align: top">Services, Files, maintenance, tuning, recovery and programming the Microsoft SQL Server platform</td></tr>
+  <tr><td style="vertical-align: top">Microsoft Azure</i></td><td style="vertical-align: top">Services, control and use, authentication and access to the Microsoft Azure Platform</td></tr>
+  <tr><td style="vertical-align: top">Hybrid Data Systems</i></td><td style="vertical-align: top">Processe and procedures for connecting data systems from on-prem to Cloud Computing serivces, and visa-versa</td></tr>
+  <tr><td style="vertical-align: top">Upgrading and Migrating SQL Server</i></td><td style="vertical-align: top">Processes and procedures for planning and implementing a migration to a new version or platform for SQL Server, accounting for application transition and fallback strategies</td></tr>
 
 </table>
 
