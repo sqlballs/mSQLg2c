@@ -59,11 +59,11 @@ The information covered in this workshop includes the following technologies and
  <table style="tr:nth-child(even) {background-color: #f2f2f2;}; text-align: left; display: table; border-collapse: collapse; border-spacing: 2px; border-color: gray;">
 
   <tr><th style="background-color: #1b20a1; color: white;">Technology/Concept</th> <th style="background-color: #1b20a1; color: white;">Description</th></tr>
-  <tr><td style="vertical-align: top">Creating a Data Estate Architecture Audit</i></td><td style="vertical-align: top">Explains how to evaluate the current data estate in your organization and how to identify and document gaps</td></tr>
-  <tr><td style="vertical-align: top">SQL Server improvements (on-prem and in-cloud)</i></td><td style="vertical-align: top">Covers challenges and solutions in management, reliability, performance, security, data virtualization, and Linux for SQL Server spanning on-premise, Virtual Machines, Containers, Kubernetes, and cloud platforms.</td></tr>
-  <tr><td style="vertical-align: top">SQL Server Virtual Machines in Microsoft Azure </i></td><td style="vertical-align: top">Covers the tools, processes and procedures for SQL Server Virtual Machines on the Microsoft Azure platform </td></tr>
-  <tr><td style="vertical-align: top">Azure SQL </i></td><td style="vertical-align: top">Covers the tools, processes and procedures for Azure SQL (Managed Instance, Single Database, and Elastic Pool)</td></tr>
-  <tr><td style="vertical-align: top">Migrating SQL Server installations to Microsoft Azure </i></td><td style="vertical-align: top">Explains the tools and processes to extend on-premises SQL Server installations to the Microsoft Azure platform </td></tr>
+  <tr><td style="vertical-align: top">Data Architectures</i></td><td style="vertical-align: top">Explains how to evaluate the current data estate in your organization and how to identify and document gaps</td></tr>
+  <tr><td style="vertical-align: top">SQL Server</i></td><td style="vertical-align: top">Covers challenges and solutions in management, reliability, performance, security, data virtualization, and Linux for SQL Server spanning on-premise, Virtual Machines, Containers, Kubernetes, and cloud platforms.</td></tr>
+  <tr><td style="vertical-align: top">Microsoft Azure</i></td><td style="vertical-align: top">Covers the tools, processes and procedures for SQL Server Virtual Machines on the Microsoft Azure platform </td></tr>
+  <tr><td style="vertical-align: top">Hybrid Data Systems</i></td><td style="vertical-align: top">Covers the tools, processes and procedures for Azure SQL (Managed Instance, Single Database, and Elastic Pool)</td></tr>
+  <tr><td style="vertical-align: top">Upgrading and Migrating SQL Server</i></td><td style="vertical-align: top">Explains the tools and processes to extend on-premises SQL Server installations to the Microsoft Azure platform </td></tr>
 
 </table>
 
