@@ -204,7 +204,7 @@ You can <a href="https://learn.microsoft.com/en-us/azure/azure-portal/azure-port
 Azure Data Studio is a cross-platform database tool for data professionals using on-premises and cloud data platforms on Windows, macOS, and Linux. Azure Data Studio offers a modern editor experience with IntelliSense, code snippets, source control integration, and an integrated terminal. It's engineered with the data platform user in mind, with built-in charting of query result sets and customizable dashboards.
 
 <p></p>
-<img src="https://cloudblogs.microsoft.com/uploads/prod/sites/32/2018/09/Azure-data-studio-for-sql-server-screenshot.png" width=800>
+<img src="https://learn.microsoft.com/en-us/sql/azure-data-studio/media/tutorial-sql-editor/quick-search-widget.png?view=sql-server-ver16" width=800>
 <p></p>
 
 You can <a href="https://docs.microsoft.com/en-us/sql/azure-data-studio/what-is?view=sql-server-2017 
