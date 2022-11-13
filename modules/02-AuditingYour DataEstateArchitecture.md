@@ -234,6 +234,7 @@ After you complete the rest of the Modules in this Workshop, you should return t
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/owl.png?raw=true"><b>For Further Study</b></p>
 <br>
 <ul>
+    <li><a href="https://learn.microsoft.com/en-us/training/paths/govern-data-across-enterprise/" target="_blank">Microsoft Purview Microsoft Learn Path: Govern data across an enterprise</a></li>
     <li><a href="https://docs.microsoft.com/en-us/azure/architecture/framework/" target="_blank">The Microsoft Well-Architected Framework</a></li>
     <li><a href="https://docs.microsoft.com/en-us/azure/architecture/data-guide/" target="_blank">Azure Data Architecture Guide</a></li>
     <li><a href="https://docs.microsoft.com/en-us/azure/architecture/data-guide/relational-data/online-transaction-processing" target="_blank">Online transaction processing (OLTP)</a></li>
