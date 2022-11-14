@@ -219,7 +219,7 @@ Notebooks are JSON files that contain areas called <i>Cells</i>, which have text
 
 <i>Markdown</i> is a simplified markup language for text. Use it for general text and simple graphics. You can <a href="https://www.markdowntutorial.com/" target="_blank">read more about Markdown here</a>, and <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" target="_blank">there's a great cheat-sheet on Markdown here</a>. 
 
-You'll use Notebooks within Azure Data Studio to work with SQL Server on-premises, in-cloud, or in the new Development Environment you set up in the last Activity. You ca learn <a href="https://jupyter-notebook.readthedocs.io/en/stable/" target="_blank">more about Jupyter Notebooks here</a>.  
+You'll use Notebooks within Azure Data Studio to work with SQL Server on-premises, in-cloud, or in the new Development Environment you set up in the last Activity. You can learn <a href="https://jupyter-notebook.readthedocs.io/en/stable/" target="_blank">more about Jupyter Notebooks here</a>.  
 
 <b>Azure Command-Line Interface</b>
 You can work with all of your Azure properties using a command-line tool. The Azure command-line interface (Azure CLI) is a set of commands used to create and manage Azure resources. The Azure CLI is available across Azure services and is designed to get you working quickly with Azure, with an emphasis on automation. It runs on Windows, Linux, and macOS, and there is also a CLI interface in the Azure Portal and it's available as an extension in the Azure Data Studio tool.
