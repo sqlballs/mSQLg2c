@@ -333,8 +333,7 @@ In the first Module of this course, you laid out a few areas you would like to f
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="https://github.com/microsoft/sqlworkshops/blob/master/graphics/owl.png?raw=true"><b>For Further Study</b></p>
-<ul>
-    <li><a href="[url](https://azure.microsoft.com/en-us/resources/five-steps-to-modernizing-your-data/)" target="_blank">A whitepaper on <i>Five Steps to Modernizing Your Data</i> is available here</a>.</li>
-</ul>
 
+- A whitepaper on <a href= "https://azure.microsoft.com/en-us/resources/five-steps-to-modernizing-your-data/">Five Steps to Modernizing Your Data is available here</a>.
+ 
 Congratulations! You have completed this workshop on Modernizing Your Data Estate With SQL Ground-to-Cloud. You now have the tools, assets, and processes you need to extrapolate this information into other applications.
